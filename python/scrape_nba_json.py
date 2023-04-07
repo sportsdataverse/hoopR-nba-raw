@@ -100,7 +100,7 @@ def download_game(game, process, path_to_raw, path_to_final):
 
     time.sleep(0.5)
 
-def add_game_to_schedule(schedule):
+def add_game_to_schedule(schedule, year):
     game_files = [int(game_file.replace(".json", "")) for game_file in os.listdir(path_to_final)]
     schedule["game_json"] = schedule["game_id"].astype(int).isin(game_files)
     schedule["game_json_url"] = np.where(
