@@ -131,11 +131,8 @@ def main():
         schedule["game_id"] = schedule["game_id"].astype(int)
         schedule = schedule[schedule["status_type_completed"] == True]
         if args.rescrape == False:
-            schedule_in_repo = pd.read_parquet("https://raw.githubusercontent.com/sportsdataverse/hoopR-nba-data/blob/main/nba/nba_games_in_data_repo.parquet",
-                                               engine = "auto", columns = None)
-            schedule_in_repo["game_id"] = schedule_in_repo["game_id"].astype(int)
-            done_already = schedule_in_repo["game_id"]
-            schedule = schedule[~schedule["game_id"].isin(done_already)]
+            game_files = [int(game_file.replace(".json", "")) for game_file in os.listdir(path_to_final)]
+            schedule = schedule[~schedule["game_id"].isin(game_files)]
         schedule = schedule[schedule["season"] >= 2002]
 
         logger.info(f"Scraping NBA PBP for {year}...")
@@ -143,19 +140,18 @@ def main():
 
         if len(games) == 0:
             logger.info(f"{len(games)} Games to be scraped, skipping")
-            continue
 
-        logger.info(f"Number of Games: {len(games)}")
-        bad_schedule_keys = pd.DataFrame()
-
-        t0 = time.time()
-        download_game_pbps(games, process, path_to_raw, path_to_final)
-        t1 = time.time()
-        logger.info(f"{(t1-t0)/60} minutes to download {len(games)} game play-by-plays.")
+        elif len(games) > 0:
+            logger.info(f"Number of Games: {len(games)}")
+            bad_schedule_keys = pd.DataFrame()
+            t0 = time.time()
+            download_game_pbps(games, process, path_to_raw, path_to_final)
+            t1 = time.time()
+            logger.info(f"{(t1-t0)/60} minutes to download {len(games)} game play-by-plays.")
 
         logger.info(f"Finished NBA PBP for {year}...")
 
-        schedule = add_game_to_schedule(schedule)
+        schedule = add_game_to_schedule(schedule, year)
 
 
     gc.collect()

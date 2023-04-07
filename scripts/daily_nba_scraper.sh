@@ -7,7 +7,7 @@ do
         r) RESCRAPE=${OPTARG};;
     esac
 done
-for i in $(seq "${START_YEAR}" "${END_YEAR}")
+for i in $(seq ${START_YEAR} ${END_YEAR})
 do
     echo "$i"
     git config --local user.email "action@github.com"
