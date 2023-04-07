@@ -20,6 +20,10 @@ from itertools import chain, starmap, repeat
 from pathlib import Path
 from tqdm import tqdm
 
+
+logging.basicConfig(level=logging.INFO, filename='hoopR_nba_raw_logfile.txt')
+logger = logging.getLogger(__name__)
+
 path_to_raw = "nba/json/raw"
 path_to_final = "nba/json/final"
 path_to_errors = "nba/errors"
@@ -95,6 +99,8 @@ def download_game(game, process, path_to_raw, path_to_final):
 
     time.sleep(0.5)
 
+def add_game_to_schedule()
+
 def main():
 
     if args.start_year < 2002:
@@ -119,7 +125,7 @@ def main():
             schedule_in_repo["game_id"] = schedule_in_repo["game_id"].astype(int)
             done_already = schedule_in_repo["game_id"]
             schedule = schedule[~schedule["game_id"].isin(done_already)]
-        schedule_with_pbp = schedule[schedule["season"] >= 2002]
+        schedule = schedule[schedule["season"] >= 2002]
 
         print(f"Scraping NBA PBP for {year}...")
         games = schedule[(schedule["season"] == year)].reset_index()["game_id"].tolist()
