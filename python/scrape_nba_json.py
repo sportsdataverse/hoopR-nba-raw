@@ -1,24 +1,29 @@
-import os
-import json
-import re
-import http
-import time
-import urllib.request
-import pyreadr
-import pyarrow as pa
-import pandas as pd
-import sportsdataverse as sdv
-import argparse
-import time
-import urllib.request
+
 import argparse
 import concurrent.futures
 import gc
+import json
+import http
+import logging
+import numpy as np
+import os
+import pyreadr
+import pyarrow as pa
+import pandas as pd
+import re
+import sportsdataverse as sdv
+import time
+import traceback
+import urllib.request
 from urllib.error import URLError, HTTPError, ContentTooShortError
 from datetime import datetime
 from itertools import chain, starmap, repeat
 from pathlib import Path
 from tqdm import tqdm
+
+
+logging.basicConfig(level=logging.INFO, filename = 'hoopR_nba_raw_logfile.txt')
+logger = logging.getLogger(__name__)
 
 path_to_raw = "nba/json/raw"
 path_to_final = "nba/json/final"
@@ -46,19 +51,19 @@ def download_game(game, process, path_to_raw, path_to_final):
         with open(f"{path_to_raw_json}{game}.json", "w") as f:
             json.dump(g, f, indent = 0, sort_keys = False)
     except (TypeError) as e:
-        print(f"TypeError: game_id = {game}\n {e}")
+        logger.exception(f"TypeError: game_id = {game}\n {traceback.format_exc()}")
         pass
     except (IndexError) as e:
-        print(f"IndexError:  game_id = {game}\n {e}")
+        logger.exception(f"IndexError:  game_id = {game}\n {traceback.format_exc()}")
         pass
     except (KeyError) as e:
-        print(f"KeyError: game_id =  game_id = {game}\n {e}")
+        logger.exception(f"KeyError: game_id =  game_id = {game}\n {traceback.format_exc()}")
         pass
     except (ValueError) as e:
-        print(f"DecodeError: game_id = {game}\n {e}")
+        logger.exception(f"DecodeError: game_id = {game}\n {traceback.format_exc()}")
         pass
     except (AttributeError) as e:
-        print(f"AttributeError: game_id = {game}\n {e}")
+        logger.exception(f"AttributeError: game_id = {game}\n {traceback.format_exc()}")
         pass
     if process == True:
         try:
@@ -75,25 +80,37 @@ def download_game(game, process, path_to_raw, path_to_final):
             with open(fp, "w") as f:
                 json.dump(result, f, indent = 0, sort_keys = False)
         except (FileNotFoundError) as e:
-            print(f"FileNotFoundError: game_id = {game}\n {e}")
+            logger.exception(f"FileNotFoundError: game_id = {game}\n {traceback.format_exc()}")
             pass
         except (TypeError) as e:
-            print(f"TypeError: game_id = {game}\n {e}")
+            logger.exception(f"TypeError: game_id = {game}\n {traceback.format_exc()}")
             pass
         except (IndexError) as e:
-            print(f"IndexError:  game_id = {game}\n {e}")
+            logger.exception(f"IndexError:  game_id = {game}\n {traceback.format_exc()}")
             pass
         except (KeyError) as e:
-            print(f"KeyError: game_id =  game_id = {game}\n {e}")
+            logger.exception(f"KeyError: game_id =  game_id = {game}\n {traceback.format_exc()}")
             pass
         except (ValueError) as e:
-            print(f"DecodeError: game_id = {game}\n {e}")
+            logger.exception(f"DecodeError: game_id = {game}\n {traceback.format_exc()}")
             pass
         except (AttributeError) as e:
-            print(f"AttributeError: game_id = {game}\n {e}")
+            logger.exception(f"AttributeError: game_id = {game}\n {traceback.format_exc()}")
             pass
 
     time.sleep(0.5)
+
+def add_game_to_schedule(schedule):
+    game_files = [int(game_file.replace(".json", "")) for game_file in os.listdir(path_to_final)]
+    schedule["game_json"] = schedule["game_id"].astype(int).isin(game_files)
+    schedule["game_json_url"] = np.where(
+        schedule["game_json"] == True,
+        schedule["game_id"].apply(lambda x: f"https://raw.githubusercontent.com/sportsdataverse/hoopR-nba-raw/main/nba/json/final/{x}.json"),
+        None
+    )
+    schedule.to_parquet(f"nba/schedules/parquet/nba_schedule_{year}.parquet", index = None)
+    pyreadr.write_rds(f"nba/schedules/rds/nba_schedule_{year}.rds", schedule, compress = "gzip")
+    return
 
 def main():
 
@@ -107,34 +124,39 @@ def main():
         end_year = args.end_year
     process = args.process
     years_arr = range(start_year, end_year + 1)
-    schedule = pd.read_parquet("nba/nba_schedule_master.parquet", engine = "auto", columns = None)
-    schedule = schedule.sort_values(by = ["season", "season_type"], ascending = True)
-    schedule["game_id"] = schedule["game_id"].astype(int)
-    schedule = schedule[schedule["status_type_completed"] == True]
-    if args.rescrape == False:
-        schedule_in_repo = pd.read_parquet("nba/nba_games_in_data_repo.parquet", engine = "auto", columns = None)
-        schedule_in_repo["game_id"] = schedule_in_repo["game_id"].astype(int)
-        done_already = schedule_in_repo["game_id"]
-        schedule = schedule[~schedule["game_id"].isin(done_already)]
-    schedule_with_pbp = schedule[schedule["season"] >= 2002]
 
     for year in years_arr:
-        print(f"Scraping NBA PBP for {year}...")
+        schedule = pd.read_parquet(f"nba/schedules/parquet/nba_schedule_{year}.parquet", engine = "auto", columns = None)
+        schedule = schedule.sort_values(by = ["season", "season_type"], ascending = True)
+        schedule["game_id"] = schedule["game_id"].astype(int)
+        schedule = schedule[schedule["status_type_completed"] == True]
+        if args.rescrape == False:
+            schedule_in_repo = pd.read_parquet("https://raw.githubusercontent.com/sportsdataverse/hoopR-nba-data/blob/main/nba/nba_games_in_data_repo.parquet",
+                                               engine = "auto", columns = None)
+            schedule_in_repo["game_id"] = schedule_in_repo["game_id"].astype(int)
+            done_already = schedule_in_repo["game_id"]
+            schedule = schedule[~schedule["game_id"].isin(done_already)]
+        schedule = schedule[schedule["season"] >= 2002]
+
+        logger.info(f"Scraping NBA PBP for {year}...")
         games = schedule[(schedule["season"] == year)].reset_index()["game_id"].tolist()
 
         if len(games) == 0:
-            print(f"{len(games)} Games to be scraped, skipping")
+            logger.info(f"{len(games)} Games to be scraped, skipping")
             continue
 
-        print(f"Number of Games: {len(games)}")
+        logger.info(f"Number of Games: {len(games)}")
         bad_schedule_keys = pd.DataFrame()
 
         t0 = time.time()
         download_game_pbps(games, process, path_to_raw, path_to_final)
         t1 = time.time()
-        print(f"{(t1-t0)/60} minutes to download {len(games)} game play-by-plays.")
+        logger.info(f"{(t1-t0)/60} minutes to download {len(games)} game play-by-plays.")
 
-        print(f"Finished NBA PBP for {year}...")
+        logger.info(f"Finished NBA PBP for {year}...")
+
+        schedule = add_game_to_schedule(schedule)
+
 
     gc.collect()
 

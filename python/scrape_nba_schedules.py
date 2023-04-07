@@ -19,7 +19,7 @@ from itertools import chain, starmap, repeat
 from pathlib import Path
 from tqdm import tqdm
 
-logging.basicConfig(level=logging.info, filename = 'hoopR_nba_raw_logfile.txt')
+logging.basicConfig(level=logging.DEBUG, filename = 'hoopR_nba_raw_logfile.txt')
 logger = logging.getLogger(__name__)
 
 path_to_schedules = "nba/schedules"
@@ -34,7 +34,7 @@ def download_game_schedules(seasons, path_to_schedules):
         return result
 
 def download_schedule(season, path_to_schedules = None):
-    print(f"Scraping NBA schedules for year {season}...")
+    logger.info(f"Scraping NBA schedules for year {season}...")
     df = sdv.nba.espn_nba_calendar(season, ondays = True)
     calendar = df["dateURL"].tolist()
     ev = pd.DataFrame()

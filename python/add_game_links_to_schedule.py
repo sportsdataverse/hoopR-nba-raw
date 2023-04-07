@@ -22,7 +22,7 @@ from pathlib import Path
 from tqdm import tqdm
 
 
-logging.basicConfig(level=logging.info, filename = 'hoopR_nba_raw_logfile.txt')
+logging.basicConfig(level=logging.INFO, filename = 'hoopR_nba_raw_logfile.txt')
 logger = logging.getLogger(__name__)
 
 path_to_raw = "nba/json/raw"
