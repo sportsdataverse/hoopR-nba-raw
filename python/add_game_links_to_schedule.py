@@ -99,7 +99,12 @@ def download_game(game, process, path_to_raw, path_to_final):
 
     time.sleep(0.5)
 
-def add_game_to_schedule()
+def add_game_to_schedule(schedule):
+    game_files = [game_file.replace(".json", "").astype(int) for game_file in pos.listdir(path_to_final)]
+    schedule["game_json"] = schedule["game_id"].astype(int).isin(game_files)
+    schedule["game_json_url"] = np.where(schedule["game_json"] == True,
+                                         schedule["game_id"].apply(lambda x: f"https://raw.githubusercontent.com/sportsdataverse/hoopR-nba-raw/main/nba/json/final/{x}.json"),
+                                         None)
 
 def main():
 
