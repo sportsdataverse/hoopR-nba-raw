@@ -63,10 +63,11 @@ def main():
         end_year = args.end_year
     years_arr = range(start_year, end_year + 1)
 
-    t0 = time.time()
-    download_game_schedules(years_arr, path_to_schedules)
-    t1 = time.time()
-    logger.info(f"{(t1-t0)/60} minutes to download {len(years_arr)} years of season schedules.")
+    if args.rescrape == True:
+        t0 = time.time()
+        download_game_schedules(years_arr, path_to_schedules)
+        t1 = time.time()
+        logger.info(f"{(t1-t0)/60} minutes to download {len(years_arr)} years of season schedules.")
 
     parquet_files = [pos_parquet.replace(".parquet", "") for pos_parquet in os.listdir(path_to_schedules+"/parquet") if pos_parquet.endswith(".parquet")]
     glued_data = pd.DataFrame()
@@ -81,6 +82,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--start_year", "-s", type = int, required = True, help = "Start year of NBA Schedule period (YYYY)")
     parser.add_argument("--end_year", "-e", type = int, help = "End year of NBA Schedule period (YYYY)")
+    parser.add_argument("--rescrape", "-r", type = bool, default = True, help = "Rescrape all games in the schedule period")
     args = parser.parse_args()
 
     main()
