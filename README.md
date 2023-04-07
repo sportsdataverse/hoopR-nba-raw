@@ -29,8 +29,7 @@ flowchart LR;
         C3[espn_nba_player_boxscores];
     end;
 
-    "hoopR-nba-raw"-->"hoopR-nba-data";
-    "hoopR-nba-data"-->"sportsdataverse Releases";
+    hoopR-nba-raw-->hoopR-nba-data-->sportsdataverse Releases
     A2[python/scrape_nba_json.py]-->B1[R/espn_nba_01_pbp_creation.R];
     A2[python/scrape_nba_json.py]-->B2[R/espn_nba_02_team_box_creation.R];
     A2[python/scrape_nba_json.py]-->B3[R/espn_nba_03_player_box_creation.R];
