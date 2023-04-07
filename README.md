@@ -11,7 +11,8 @@
 
 ```mermaid
 flowchart LR;
-    A[hoopR-nba-raw]--B[hoopR-nba-data]--C[sportsdataverse releases]
+    A[hoopR-nba-raw]--B[hoopR-nba-data]
+    B[hoopR-nba-data]--C[sportsdataverse releases]
     subgraph "hoopR-nba-raw";
         direction TB;
         A1[python/scrape_nba_schedules.py]-->A2[python/scrape_nba_json.py]
@@ -19,7 +20,8 @@ flowchart LR;
 
     subgraph "hoopR-nba-data";
         direction TB;
-        B1[R/espn_nba_01_pbp_creation.R]-->B2[R/espn_nba_02_team_box_creation.R]-->B3[R/espn_nba_03_player_box_creation.R]
+        B1[R/espn_nba_01_pbp_creation.R]-->B2[R/espn_nba_02_team_box_creation.R]
+        B2[R/espn_nba_02_team_box_creation.R]-->B3[R/espn_nba_03_player_box_creation.R]
     end;
 
     subgraph "sportsdataverse Releases";
