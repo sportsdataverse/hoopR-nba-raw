@@ -166,3 +166,69 @@ INFO:__main__:Scraping NBA PBP for 2021...
 INFO:__main__:Number of Games: 1166
 INFO:__main__:6.662259451548258 minutes to download 1166 game play-by-plays.
 INFO:__main__:Finished NBA PBP for 2021...
+INFO:__main__:Scraping NBA schedules for year 2022...
+INFO:__main__:1.3746099670728047 minutes to download 1 years of season schedules.
+INFO:__main__:Scraping NBA PBP for 2022...
+INFO:__main__:Number of Games: 1318
+ERROR:__main__:TypeError: game_id = 401360069
+ Traceback (most recent call last):
+  File "python/scrape_nba_json.py", line 50, in download_game
+    g = sdv.nba.espn_nba_pbp(game_id = game, raw = True)
+  File "/usr/local/lib/python3.8/dist-packages/sportsdataverse/nba/nba_pbp.py", line 30, in espn_nba_pbp
+    summary = json.loads(summary_resp)
+  File "/usr/lib/python3.8/json/__init__.py", line 341, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+Traceback (most recent call last):
+  File "python/scrape_nba_json.py", line 50, in download_game
+    g = sdv.nba.espn_nba_pbp(game_id = game, raw = True)
+  File "/usr/local/lib/python3.8/dist-packages/sportsdataverse/nba/nba_pbp.py", line 30, in espn_nba_pbp
+    summary = json.loads(summary_resp)
+  File "/usr/lib/python3.8/json/__init__.py", line 341, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+ERROR:__main__:FileNotFoundError: game_id = 401360069
+ Traceback (most recent call last):
+  File "python/scrape_nba_json.py", line 70, in download_game
+    processed_data = sdv.nba.nba_pbp_disk(
+  File "/usr/local/lib/python3.8/dist-packages/sportsdataverse/nba/nba_pbp.py", line 76, in nba_pbp_disk
+    with open(os.path.join(path_to_json, "{}.json".format(game_id))) as json_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'nba/json/raw/401360069.json'
+Traceback (most recent call last):
+  File "python/scrape_nba_json.py", line 70, in download_game
+    processed_data = sdv.nba.nba_pbp_disk(
+  File "/usr/local/lib/python3.8/dist-packages/sportsdataverse/nba/nba_pbp.py", line 76, in nba_pbp_disk
+    with open(os.path.join(path_to_json, "{}.json".format(game_id))) as json_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'nba/json/raw/401360069.json'
+ERROR:__main__:TypeError: game_id = 401434114
+ Traceback (most recent call last):
+  File "python/scrape_nba_json.py", line 50, in download_game
+    g = sdv.nba.espn_nba_pbp(game_id = game, raw = True)
+  File "/usr/local/lib/python3.8/dist-packages/sportsdataverse/nba/nba_pbp.py", line 30, in espn_nba_pbp
+    summary = json.loads(summary_resp)
+  File "/usr/lib/python3.8/json/__init__.py", line 341, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+Traceback (most recent call last):
+  File "python/scrape_nba_json.py", line 50, in download_game
+    g = sdv.nba.espn_nba_pbp(game_id = game, raw = True)
+  File "/usr/local/lib/python3.8/dist-packages/sportsdataverse/nba/nba_pbp.py", line 30, in espn_nba_pbp
+    summary = json.loads(summary_resp)
+  File "/usr/lib/python3.8/json/__init__.py", line 341, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+ERROR:__main__:FileNotFoundError: game_id = 401434114
+ Traceback (most recent call last):
+  File "python/scrape_nba_json.py", line 70, in download_game
+    processed_data = sdv.nba.nba_pbp_disk(
+  File "/usr/local/lib/python3.8/dist-packages/sportsdataverse/nba/nba_pbp.py", line 76, in nba_pbp_disk
+    with open(os.path.join(path_to_json, "{}.json".format(game_id))) as json_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'nba/json/raw/401434114.json'
+Traceback (most recent call last):
+  File "python/scrape_nba_json.py", line 70, in download_game
+    processed_data = sdv.nba.nba_pbp_disk(
+  File "/usr/local/lib/python3.8/dist-packages/sportsdataverse/nba/nba_pbp.py", line 76, in nba_pbp_disk
+    with open(os.path.join(path_to_json, "{}.json".format(game_id))) as json_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'nba/json/raw/401434114.json'
+INFO:__main__:7.743442936738332 minutes to download 1318 game play-by-plays.
+INFO:__main__:Finished NBA PBP for 2022...
