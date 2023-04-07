@@ -30,8 +30,6 @@ flowchart TB;
     end;
 
     A2[python/scrape_nba_json.py]-->B1[R/espn_nba_01_pbp_creation.R];
-    A2[python/scrape_nba_json.py]-->B2[R/espn_nba_02_team_box_creation.R];
-    A2[python/scrape_nba_json.py]-->B3[R/espn_nba_03_player_box_creation.R];
     B1[R/espn_nba_01_pbp_creation.R]-->C1[espn_nba_pbp];
     B2[R/espn_nba_02_team_box_creation.R]-->C2[espn_nba_team_boxscores];
     B3[R/espn_nba_03_player_box_creation.R]-->C3[espn_nba_player_boxscores];
