@@ -1,4 +1,5 @@
 
+import argparse
 import concurrent.futures
 import gc
 import json
@@ -11,8 +12,8 @@ import pandas as pd
 import re
 import sportsdataverse as sdv
 import time
+import traceback
 import urllib.request
-import argparse
 from urllib.error import URLError, HTTPError, ContentTooShortError
 from datetime import datetime
 from itertools import chain, starmap, repeat
