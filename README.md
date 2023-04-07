@@ -5,12 +5,12 @@
     A[hoopR-nba-raw]-->B[hoopR-nba-data];
     B[hoopR-nba-data]-->C1[espn_nba_pbp];
     B[hoopR-nba-data]-->C2[espn_nba_team_boxscores];
-    B[hoopR-nba-data]-->C3[espn_nba_player_boxscores];
+    B[hoopR-nba-data]-->C2[espn_nba_team_boxscores];
 
 ```
 
 ```mermaid
-  graph TB;
+  graph LR;
     a2-->b1[R/espn_nba_01_pbp_creation.R];
     a2-->b2[R/espn_nba_02_team_box_creation.R];
     a2-->b3[R/espn_nba_03_player_box_creation.R];
@@ -23,6 +23,11 @@
     subgraph "hoopR-nba-data";
     b1[R/espn_nba_01_pbp_creation.R]-->b2[R/espn_nba_02_team_box_creation.R]
     b2[R/espn_nba_02_team_box_creation.R]-->b3[R/espn_nba_02_player_box_creation.R]
+    end;
+    subgraph "sportsdataverse Releases";
+    C1[espn_nba_pbp]
+    C2[espn_nba_team_boxscores]
+    C2[espn_nba_team_boxscores]
     end;
 ```
 
