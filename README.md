@@ -10,7 +10,7 @@
 ```
 
 ```mermaid
-  graph LR;
+flowchart LR;
     subgraph "hoopR-nba-raw";
         direction TB;
         a1[python/scrape_nba_schedules.py]-->a2[python/scrape_nba_json.py]
