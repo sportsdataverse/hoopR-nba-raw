@@ -30,9 +30,9 @@ flowchart TB;
     end;
 
     A-->B;
-    B1-->C1;
-    B2-->C2;
-    B3-->C3;
+    B-->C1;
+    B-->C2;
+    B-->C3;
 
 ```
 
