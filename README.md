@@ -1,7 +1,7 @@
 # hoopR-nba-raw
 
 ```mermaid
-  graph RL;
+  graph LR;
     A[hoopR-nba-raw]-->B[hoopR-nba-data];
 ```
 
