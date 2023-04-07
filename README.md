@@ -13,7 +13,8 @@
 flowchart LR;
     subgraph A[hoopR-nba-raw];
         direction TB;
-        A1[python/scrape_nba_schedules.py]-->A2[python/scrape_nba_json.py];
+        A1[python/scrape_nba_schedules.py]
+        A2[python/scrape_nba_json.py];
     end;
 
     subgraph B[hoopR-nba-data];
