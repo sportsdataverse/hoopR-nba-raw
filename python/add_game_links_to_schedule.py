@@ -5,6 +5,7 @@ import gc
 import json
 import http
 import logging
+import numpy as np
 import os
 import pyreadr
 import pyarrow as pa
@@ -100,11 +101,12 @@ def download_game(game, process, path_to_raw, path_to_final):
     time.sleep(0.5)
 
 def add_game_to_schedule(schedule):
-    game_files = [game_file.replace(".json", "").astype(int) for game_file in pos.listdir(path_to_final)]
+    game_files = [int(game_file.replace(".json", "")) for game_file in os.listdir(path_to_final)]
     schedule["game_json"] = schedule["game_id"].astype(int).isin(game_files)
     schedule["game_json_url"] = np.where(schedule["game_json"] == True,
                                          schedule["game_id"].apply(lambda x: f"https://raw.githubusercontent.com/sportsdataverse/hoopR-nba-raw/main/nba/json/final/{x}.json"),
                                          None)
+    return schedule
 
 def main():
 
@@ -120,7 +122,7 @@ def main():
     years_arr = range(start_year, end_year + 1)
 
     for year in years_arr:
-        schedule = pd.read_parquet(f"nba/schedules/nba_schedule_{year}.parquet", engine = "auto", columns = None)
+        schedule = pd.read_parquet(f"nba/schedules/parquet/nba_schedule_{year}.parquet", engine = "auto", columns = None)
         schedule = schedule.sort_values(by = ["season", "season_type"], ascending = True)
         schedule["game_id"] = schedule["game_id"].astype(int)
         schedule = schedule[schedule["status_type_completed"] == True]
@@ -139,15 +141,19 @@ def main():
             print(f"{len(games)} Games to be scraped, skipping")
             continue
 
-        print(f"Number of Games: {len(games)}")
-        bad_schedule_keys = pd.DataFrame()
+        # print(f"Number of Games: {len(games)}")
+        # bad_schedule_keys = pd.DataFrame()
 
-        t0 = time.time()
-        download_game_pbps(games, process, path_to_raw, path_to_final)
-        t1 = time.time()
-        print(f"{(t1-t0)/60} minutes to download {len(games)} game play-by-plays.")
+        # t0 = time.time()
+        # download_game_pbps(games, process, path_to_raw, path_to_final)
+        # t1 = time.time()
+        # print(f"{(t1-t0)/60} minutes to download {len(games)} game play-by-plays.")
 
         print(f"Finished NBA PBP for {year}...")
+
+        schedule = add_game_to_schedule(schedule)
+        schedule.to_parquet(f"nba/schedules/parquet/nba_schedule_{year}.parquet", index = None)
+        pyreadr.write_rds(f"nba/schedules/rds/nba_schedule_{year}.rds", schedule, compress = "gzip")
 
     gc.collect()
 
