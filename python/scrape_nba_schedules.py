@@ -1,24 +1,26 @@
-import os
+
+import argparse
+import concurrent.futures
 import json
-import re
 import http
-import time
-import urllib.request
+import logging
+import os
 import pyreadr
 import pyarrow as pa
 import pandas as pd
+import re
 import sportsdataverse as sdv
-import argparse
 import time
 import urllib.request
-import argparse
-import concurrent.futures
 import gc
 from urllib.error import URLError, HTTPError, ContentTooShortError
 from datetime import datetime
 from itertools import chain, starmap, repeat
 from pathlib import Path
 from tqdm import tqdm
+
+logging.basicConfig(level=logging.info, filename = 'hoopR_nba_raw_logfile.txt')
+logger = logging.getLogger(__name__)
 
 path_to_schedules = "nba/schedules"
 final_file_name = "nba/nba_schedule_master.parquet"
@@ -64,7 +66,7 @@ def main():
     t0 = time.time()
     download_game_schedules(years_arr, path_to_schedules)
     t1 = time.time()
-    print(f"{(t1-t0)/60} minutes to download {len(years_arr)} years of season schedules.")
+    logger.info(f"{(t1-t0)/60} minutes to download {len(years_arr)} years of season schedules.")
 
     parquet_files = [pos_parquet.replace(".parquet", "") for pos_parquet in os.listdir(path_to_schedules+"/parquet") if pos_parquet.endswith(".parquet")]
     glued_data = pd.DataFrame()

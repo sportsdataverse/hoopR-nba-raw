@@ -22,7 +22,7 @@ from pathlib import Path
 from tqdm import tqdm
 
 
-logging.basicConfig(level=logging.info, filename='hoopR_nba_raw_logfile.txt')
+logging.basicConfig(level=logging.info, filename = 'hoopR_nba_raw_logfile.txt')
 logger = logging.getLogger(__name__)
 
 path_to_raw = "nba/json/raw"
@@ -51,19 +51,19 @@ def download_game(game, process, path_to_raw, path_to_final):
         with open(f"{path_to_raw_json}{game}.json", "w") as f:
             json.dump(g, f, indent = 0, sort_keys = False)
     except (TypeError) as e:
-        logger.info(f"TypeError: game_id = {game}\n {traceback.format_exc()}")
+        logger.exception(f"TypeError: game_id = {game}\n {traceback.format_exc()}")
         pass
     except (IndexError) as e:
-        logger.info(f"IndexError:  game_id = {game}\n {traceback.format_exc()}")
+        logger.exception(f"IndexError:  game_id = {game}\n {traceback.format_exc()}")
         pass
     except (KeyError) as e:
-        logger.info(f"KeyError: game_id =  game_id = {game}\n {traceback.format_exc()}")
+        logger.exception(f"KeyError: game_id =  game_id = {game}\n {traceback.format_exc()}")
         pass
     except (ValueError) as e:
-        logger.info(f"DecodeError: game_id = {game}\n {traceback.format_exc()}")
+        logger.exception(f"DecodeError: game_id = {game}\n {traceback.format_exc()}")
         pass
     except (AttributeError) as e:
-        logger.info(f"AttributeError: game_id = {game}\n {traceback.format_exc()}")
+        logger.exception(f"AttributeError: game_id = {game}\n {traceback.format_exc()}")
         pass
     if process == True:
         try:
@@ -80,22 +80,22 @@ def download_game(game, process, path_to_raw, path_to_final):
             with open(fp, "w") as f:
                 json.dump(result, f, indent = 0, sort_keys = False)
         except (FileNotFoundError) as e:
-            logger.info(f"FileNotFoundError: game_id = {game}\n {traceback.format_exc()}")
+            logger.exception(f"FileNotFoundError: game_id = {game}\n {traceback.format_exc()}")
             pass
         except (TypeError) as e:
-            logger.info(f"TypeError: game_id = {game}\n {traceback.format_exc()}")
+            logger.exception(f"TypeError: game_id = {game}\n {traceback.format_exc()}")
             pass
         except (IndexError) as e:
-            logger.info(f"IndexError:  game_id = {game}\n {traceback.format_exc()}")
+            logger.exception(f"IndexError:  game_id = {game}\n {traceback.format_exc()}")
             pass
         except (KeyError) as e:
-            logger.info(f"KeyError: game_id =  game_id = {game}\n {traceback.format_exc()}")
+            logger.exception(f"KeyError: game_id =  game_id = {game}\n {traceback.format_exc()}")
             pass
         except (ValueError) as e:
-            logger.info(f"DecodeError: game_id = {game}\n {traceback.format_exc()}")
+            logger.exception(f"DecodeError: game_id = {game}\n {traceback.format_exc()}")
             pass
         except (AttributeError) as e:
-            logger.info(f"AttributeError: game_id = {game}\n {traceback.format_exc()}")
+            logger.exception(f"AttributeError: game_id = {game}\n {traceback.format_exc()}")
             pass
 
     time.sleep(0.5)
