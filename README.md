@@ -18,16 +18,19 @@
     b2[R/espn_nba_02_team_box_creation.R]-->C2[espn_nba_team_boxscores];
     b3[R/espn_nba_03_player_box_creation.R]-->C3[espn_nba_player_boxscores];
     subgraph "hoopR-nba-raw";
+    direction TB;
     a1[python/scrape_nba_schedules.py]-->a2[python/scrape_nba_json.py]
     end;
     subgraph "hoopR-nba-data";
+    direction TB;
     b1[R/espn_nba_01_pbp_creation.R]-->b2[R/espn_nba_02_team_box_creation.R]
     b2[R/espn_nba_02_team_box_creation.R]-->b3[R/espn_nba_02_player_box_creation.R]
     end;
     subgraph "sportsdataverse Releases";
+    direction TB;
     C1[espn_nba_pbp]
     C2[espn_nba_team_boxscores]
-    C2[espn_nba_team_boxscores]
+    C3[espn_nba_player_boxscores]
     end;
 ```
 
