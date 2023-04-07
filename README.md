@@ -11,24 +11,24 @@
 
 ```mermaid
 flowchart LR;
-    A[hoopR-nba-raw] -- B[hoopR-nba-data]
-    B[hoopR-nba-data] -- C[sportsdataverse releases]
+    A[hoopR-nba-raw]-->B[hoopR-nba-data];
+    B[hoopR-nba-data]-->C[sportsdataverse releases];
     subgraph "hoopR-nba-raw";
         direction TB;
-        A1[python/scrape_nba_schedules.py]-->A2[python/scrape_nba_json.py]
+        A1[python/scrape_nba_schedules.py]-->A2[python/scrape_nba_json.py];
     end;
 
     subgraph "hoopR-nba-data";
         direction TB;
-        B1[R/espn_nba_01_pbp_creation.R]-->B2[R/espn_nba_02_team_box_creation.R]
-        B2[R/espn_nba_02_team_box_creation.R]-->B3[R/espn_nba_03_player_box_creation.R]
+        B1[R/espn_nba_01_pbp_creation.R]-->B2[R/espn_nba_02_team_box_creation.R];
+        B2[R/espn_nba_02_team_box_creation.R]-->B3[R/espn_nba_03_player_box_creation.R];
     end;
 
     subgraph "sportsdataverse Releases";
         direction TB;
-        C1[espn_nba_pbp]
-        C2[espn_nba_team_boxscores]
-        C3[espn_nba_player_boxscores]
+        C1[espn_nba_pbp];
+        C2[espn_nba_team_boxscores];
+        C3[espn_nba_player_boxscores];
     end;
 
     A2-->B1[R/espn_nba_01_pbp_creation.R];
