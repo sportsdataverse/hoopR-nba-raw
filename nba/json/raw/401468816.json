@@ -4415,6 +4415,170 @@
 ]
 }
 ]
+},
+{
+"type": "play-in",
+"title": "Play-In Series",
+"description": "Play-In Series",
+"summary": "",
+"completed": false,
+"totalCompetitions": 1,
+"events": [
+{
+"id": "401539671",
+"uid": "s:40~l:46~e:401539671~c:401539671",
+"date": "2023-04-11T04:00:00Z",
+"timeValid": false,
+"status": "pre",
+"statusType": {
+"id": "1",
+"name": "STATUS_SCHEDULED",
+"state": "pre",
+"completed": false,
+"description": "Scheduled",
+"detail": "4/11 - TBD",
+"shortDetail": "TBD"
+},
+"broadcasts": [
+{
+"type": {
+"id": "1",
+"shortName": "TV"
+},
+"market": {
+"id": "1",
+"type": "National"
+},
+"media": {
+"shortName": "TNT"
+},
+"lang": "en",
+"region": "us"
+}
+],
+"competitors": [
+{
+"homeAway": "home",
+"team": {
+"id": "14",
+"uid": "s:40~l:46~t:14",
+"displayName": "Miami Heat",
+"abbreviation": "MIA",
+"links": [
+{
+"href": "https://www.espn.com/nba/team/_/name/mia/miami-heat",
+"text": "Clubhouse"
+},
+{
+"href": "https://www.espn.com/nba/team/schedule/_/name/mia",
+"text": "Schedule"
+}
+],
+"logo": "https://a.espncdn.com/i/teamlogos/nba/500/mia.png",
+"logos": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/mia.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2018-06-05T12:08Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/mia.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"dark"
+],
+"lastUpdated": "2018-06-05T12:08Z"
+}
+]
+},
+"score": "0"
+},
+{
+"homeAway": "away",
+"team": {
+"id": "1",
+"uid": "s:40~l:46~t:1",
+"displayName": "Atlanta Hawks",
+"abbreviation": "ATL",
+"links": [
+{
+"href": "https://www.espn.com/nba/team/_/name/atl/atlanta-hawks",
+"text": "Clubhouse"
+},
+{
+"href": "https://www.espn.com/nba/team/schedule/_/name/atl",
+"text": "Schedule"
+}
+],
+"logo": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
+"logos": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2021-02-04T15:47Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/atl.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"dark"
+],
+"lastUpdated": "2018-06-05T12:08Z"
+}
+]
+},
+"score": "0"
+}
+],
+"links": [
+{
+"language": "en-US",
+"rel": [
+"summary",
+"desktop",
+"event"
+],
+"href": "https://www.espn.com/nba/game/_/gameId/401539671",
+"text": "Gamecast",
+"shortText": "Summary",
+"isExternal": false,
+"isPremium": false
+},
+{
+"language": "en-US",
+"rel": [
+"summary",
+"sportscenter",
+"app",
+"event"
+],
+"href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401539671",
+"text": "Gamecast",
+"shortText": "Summary",
+"isExternal": false,
+"isPremium": false
+}
+]
+}
+]
 }
 ],
 "broadcasts": [
@@ -4518,9 +4682,9 @@
 "moneyLine": -105,
 "spreadRecord": {
 "wins": 29,
-"losses": 48,
+"losses": 49,
 "pushes": 3,
-"summary": "29-48-3"
+"summary": "29-49-3"
 },
 "spreadOdds": -105.0,
 "teamId": "14"
@@ -4532,9 +4696,9 @@
 "moneyLine": -115,
 "spreadRecord": {
 "wins": 36,
-"losses": 43,
+"losses": 44,
 "pushes": 1,
-"summary": "36-43-1"
+"summary": "36-44-1"
 },
 "spreadOdds": -105.0,
 "teamId": "1"
@@ -7171,6 +7335,40 @@
 {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/events/401469129?lang=en&region=us",
 "id": "401469129"
+}
+]
+},
+{
+"type": "play-in",
+"title": "Play-In Series",
+"description": "Play-In Series",
+"summary": "",
+"completed": false,
+"totalCompetitions": 1,
+"competitors": [
+{
+"id": "1",
+"uid": "s:40~l:46~t:1",
+"wins": 0,
+"ties": 0,
+"team": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2023/teams/1?lang=en&region=us"
+}
+},
+{
+"id": "14",
+"uid": "s:40~l:46~t:14",
+"wins": 0,
+"ties": 0,
+"team": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2023/teams/14?lang=en&region=us"
+}
+}
+],
+"events": [
+{
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/events/401539671?lang=en&region=us",
+"id": "401539671"
 }
 ]
 }
@@ -26202,8 +26400,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 37.0,
-"displayValue": "37"
+"value": 38.0,
+"displayValue": "38"
 },
 {
 "name": "streak",
@@ -26212,8 +26410,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 3.0,
-"displayValue": "W3"
+"value": -1.0,
+"displayValue": "L1"
 },
 {
 "name": "winPercent",
@@ -26222,8 +26420,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.5375,
-"displayValue": ".538"
+"value": 0.5308642,
+"displayValue": ".531"
 },
 {
 "name": "wins",
@@ -26285,8 +26483,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 39.0,
-"displayValue": "39"
+"value": 40.0,
+"displayValue": "40"
 },
 {
 "name": "streak",
@@ -26295,8 +26493,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 3.0,
-"displayValue": "W3"
+"value": -1.0,
+"displayValue": "L1"
 },
 {
 "name": "winPercent",
@@ -26305,8 +26503,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.5125,
-"displayValue": ".513"
+"value": 0.50617284,
+"displayValue": ".506"
 },
 {
 "name": "wins",
@@ -26358,8 +26556,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 9.0,
-"displayValue": "9"
+"value": 8.0,
+"displayValue": "8"
 },
 {
 "name": "losses",
@@ -26378,8 +26576,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -4.0,
-"displayValue": "L4"
+"value": 1.0,
+"displayValue": "W1"
 },
 {
 "name": "winPercent",
@@ -26388,8 +26586,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.425,
-"displayValue": ".425"
+"value": 0.43209878,
+"displayValue": ".432"
 },
 {
 "name": "wins",
@@ -26398,8 +26596,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 34.0,
-"displayValue": "34"
+"value": 35.0,
+"displayValue": "35"
 }
 ],
 "logo": [
@@ -26451,8 +26649,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 46.0,
-"displayValue": "46"
+"value": 47.0,
+"displayValue": "47"
 },
 {
 "name": "streak",
@@ -26461,8 +26659,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -2.0,
-"displayValue": "L2"
+"value": -3.0,
+"displayValue": "L3"
 },
 {
 "name": "winPercent",
@@ -26471,8 +26669,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.425,
-"displayValue": ".425"
+"value": 0.41975307,
+"displayValue": ".420"
 },
 {
 "name": "wins",
@@ -26534,8 +26732,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 54.0,
-"displayValue": "54"
+"value": 55.0,
+"displayValue": "55"
 },
 {
 "name": "streak",
@@ -26544,8 +26742,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -3.0,
-"displayValue": "L3"
+"value": -4.0,
+"displayValue": "L4"
 },
 {
 "name": "winPercent",
@@ -26554,8 +26752,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.325,
-"displayValue": ".325"
+"value": 0.32098764,
+"displayValue": ".321"
 },
 {
 "name": "wins",
