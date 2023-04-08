@@ -36,12 +36,14 @@ flowchart TB;
 
 ```
 
-[hoopR-nba-raw data repository](https://github.com/sportsdataverse/hoopR-nba-raw)
+[hoopR-nba-raw data repository (source: ESPN)](https://github.com/sportsdataverse/hoopR-nba-raw)
 
-[hoopR-nba-data repository](https://github.com/sportsdataverse/hoopR-nba-data)
+[hoopR-nba-data repository (source: ESPN)](https://github.com/sportsdataverse/hoopR-nba-data)
 
-[hoopR-nba-stats-data repository](https://github.com/sportsdataverse/hoopR-nba-stats-data)
+[hoopR-nba-stats-data Repo (source: NBA Stats)](https://github.com/sportsdataverse/hoopR-nba-stats-data)
 
-[hoopR-mbb-raw data repository](https://github.com/sportsdataverse/hoopR-mbb-raw)
+[hoopR-mbb-raw data repository (source: ESPN)](https://github.com/sportsdataverse/hoopR-mbb-raw)
 
-[hoopR-mbb-data repository](https://github.com/sportsdataverse/hoopR-mbb-data)
+[hoopR-mbb-data repository (source: ESPN)](https://github.com/sportsdataverse/hoopR-mbb-data)
+
+[hoopR-kp-data Repo (source: KenPom)](https://github.com/sportsdataverse/hoopR-kp-data)
