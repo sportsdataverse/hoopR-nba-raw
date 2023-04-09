@@ -21,6 +21,6 @@ do
     git add nba/* >> /dev/null
     git pull  >> /dev/null
     git commit -m "NBA Raw Updated (Start: $i End: $i)" || echo "No changes to commit"
-    git pull  >> /dev/null
+    git pull --rebase  >> /dev/null
     git push --quiet
 done
