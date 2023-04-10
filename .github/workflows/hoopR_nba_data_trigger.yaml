@@ -13,4 +13,6 @@ jobs:
                   repository: sportsdataverse/hoopR-nba-data
                   event-type: daily_nba_data
                   client-payload: '{"ref": "refs/heads/main",
-                                    "event_name": "daily_nba_data"}'
+                                    "event_name": "daily_nba_data",
+                                    "commit_message": "${{ github.event.head_commit.message }}"
+                                    }'
