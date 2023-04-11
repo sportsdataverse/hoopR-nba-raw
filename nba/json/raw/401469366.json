@@ -4588,6 +4588,170 @@
 ]
 }
 ]
+},
+{
+"type": "playoff",
+"title": "Playoff Series",
+"description": "Playoff Series",
+"summary": "Series starts 4/15",
+"completed": false,
+"totalCompetitions": 7,
+"events": [
+{
+"id": "401540753",
+"uid": "s:40~l:46~e:401540753~c:401540753",
+"date": "2023-04-16T00:30:00Z",
+"timeValid": true,
+"status": "pre",
+"statusType": {
+"id": "1",
+"name": "STATUS_SCHEDULED",
+"state": "pre",
+"completed": false,
+"description": "Scheduled",
+"detail": "Sat, April 15th at 8:30 PM EDT",
+"shortDetail": "4/15 - 8:30 PM EDT"
+},
+"broadcasts": [
+{
+"type": {
+"id": "1",
+"shortName": "TV"
+},
+"market": {
+"id": "1",
+"type": "National"
+},
+"media": {
+"shortName": "ABC"
+},
+"lang": "en",
+"region": "us"
+}
+],
+"competitors": [
+{
+"homeAway": "home",
+"team": {
+"id": "23",
+"uid": "s:40~l:46~t:23",
+"displayName": "Sacramento Kings",
+"abbreviation": "SAC",
+"links": [
+{
+"href": "https://www.espn.com/nba/team/_/name/sac/sacramento-kings",
+"text": "Clubhouse"
+},
+{
+"href": "https://www.espn.com/nba/team/schedule/_/name/sac",
+"text": "Schedule"
+}
+],
+"logo": "https://a.espncdn.com/i/teamlogos/nba/500/sac.png",
+"logos": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/sac.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2018-06-05T12:08Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/sac.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"dark"
+],
+"lastUpdated": "2018-06-05T12:08Z"
+}
+]
+},
+"score": "0"
+},
+{
+"homeAway": "away",
+"team": {
+"id": "9",
+"uid": "s:40~l:46~t:9",
+"displayName": "Golden State Warriors",
+"abbreviation": "GS",
+"links": [
+{
+"href": "https://www.espn.com/nba/team/_/name/gs/golden-state-warriors",
+"text": "Clubhouse"
+},
+{
+"href": "https://www.espn.com/nba/team/schedule/_/name/gs",
+"text": "Schedule"
+}
+],
+"logo": "https://a.espncdn.com/i/teamlogos/nba/500/gs.png",
+"logos": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/gs.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2019-09-23T15:45Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/gs.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"dark"
+],
+"lastUpdated": "2019-09-30T14:23Z"
+}
+]
+},
+"score": "0"
+}
+],
+"links": [
+{
+"language": "en-US",
+"rel": [
+"summary",
+"desktop",
+"event"
+],
+"href": "https://www.espn.com/nba/game/_/gameId/401540753",
+"text": "Gamecast",
+"shortText": "Summary",
+"isExternal": false,
+"isPremium": false
+},
+{
+"language": "en-US",
+"rel": [
+"summary",
+"sportscenter",
+"app",
+"event"
+],
+"href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401540753",
+"text": "Gamecast",
+"shortText": "Summary",
+"isExternal": false,
+"isPremium": false
+}
+]
+}
+]
 }
 ],
 "broadcasts": [],
@@ -4670,10 +4834,10 @@
 "underdog": false,
 "moneyLine": -399,
 "spreadRecord": {
-"wins": 38,
+"wins": 39,
 "losses": 42,
 "pushes": 1,
-"summary": "38-42-1"
+"summary": "39-42-1"
 },
 "spreadOdds": -103.0,
 "teamId": "9"
@@ -4685,9 +4849,9 @@
 "moneyLine": 332,
 "spreadRecord": {
 "wins": 45,
-"losses": 35,
+"losses": 36,
 "pushes": 1,
-"summary": "45-35-1"
+"summary": "45-36-1"
 },
 "spreadOdds": -107.0,
 "teamId": "23"
@@ -7487,6 +7651,40 @@
 {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/events/401469366?lang=en&region=us",
 "id": "401469366"
+}
+]
+},
+{
+"type": "playoff",
+"title": "Playoff Series",
+"description": "Playoff Series",
+"summary": "Series starts 4/15",
+"completed": false,
+"totalCompetitions": 7,
+"competitors": [
+{
+"id": "23",
+"uid": "s:40~l:46~t:23",
+"wins": 0,
+"ties": 0,
+"team": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2023/teams/23?lang=en&region=us"
+}
+},
+{
+"id": "9",
+"uid": "s:40~l:46~t:9",
+"wins": 0,
+"ties": 0,
+"team": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2023/teams/9?lang=en&region=us"
+}
+}
+],
+"events": [
+{
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/events/401540753?lang=en&region=us",
+"id": "401540753"
 }
 ]
 }
@@ -27450,8 +27648,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 33.0,
-"displayValue": "33"
+"value": 34.0,
+"displayValue": "34"
 },
 {
 "name": "streak",
@@ -27460,8 +27658,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -2.0,
-"displayValue": "L2"
+"value": -3.0,
+"displayValue": "L3"
 },
 {
 "name": "winPercent",
@@ -27470,8 +27668,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.5925926,
-"displayValue": ".593"
+"value": 0.58536583,
+"displayValue": ".585"
 },
 {
 "name": "wins",
@@ -27533,8 +27731,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 36.0,
-"displayValue": "36"
+"value": 37.0,
+"displayValue": "37"
 },
 {
 "name": "streak",
@@ -27543,8 +27741,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -1.0,
-"displayValue": "L1"
+"value": -2.0,
+"displayValue": "L2"
 },
 {
 "name": "winPercent",
@@ -27553,8 +27751,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.5555556,
-"displayValue": ".556"
+"value": 0.5487805,
+"displayValue": ".549"
 },
 {
 "name": "wins",
@@ -27606,8 +27804,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 5.0,
-"displayValue": "5"
+"value": 4.0,
+"displayValue": "4"
 },
 {
 "name": "losses",
@@ -27626,8 +27824,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 2.0,
-"displayValue": "W2"
+"value": 3.0,
+"displayValue": "W3"
 },
 {
 "name": "winPercent",
@@ -27636,8 +27834,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.5308642,
-"displayValue": ".531"
+"value": 0.5365854,
+"displayValue": ".537"
 },
 {
 "name": "wins",
@@ -27646,8 +27844,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 43.0,
-"displayValue": "43"
+"value": 44.0,
+"displayValue": "44"
 }
 ],
 "logo": [
@@ -27689,8 +27887,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 5.0,
-"displayValue": "5"
+"value": 4.0,
+"displayValue": "4"
 },
 {
 "name": "losses",
@@ -27709,8 +27907,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 2.0,
-"displayValue": "W2"
+"value": 3.0,
+"displayValue": "W3"
 },
 {
 "name": "winPercent",
@@ -27719,8 +27917,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.5308642,
-"displayValue": ".531"
+"value": 0.5365854,
+"displayValue": ".537"
 },
 {
 "name": "wins",
@@ -27729,8 +27927,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 43.0,
-"displayValue": "43"
+"value": 44.0,
+"displayValue": "44"
 }
 ],
 "logo": [
@@ -27772,8 +27970,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 6.0,
-"displayValue": "6"
+"value": 5.0,
+"displayValue": "5"
 },
 {
 "name": "losses",
@@ -27792,8 +27990,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": 2.0,
+"displayValue": "W2"
 },
 {
 "name": "winPercent",
@@ -27802,8 +28000,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.5185185,
-"displayValue": ".519"
+"value": 0.5243902,
+"displayValue": ".524"
 },
 {
 "name": "wins",
@@ -27812,8 +28010,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 42.0,
-"displayValue": "42"
+"value": 43.0,
+"displayValue": "43"
 }
 ],
 "logo": [
