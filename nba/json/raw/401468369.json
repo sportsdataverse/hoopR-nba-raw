@@ -4485,7 +4485,7 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "BOS leads series 3-1",
+"summary": "BOS leads series 3-2",
 "completed": false,
 "totalCompetitions": 7,
 "events": [
@@ -5050,36 +5050,20 @@
 "uid": "s:40~l:46~e:401541243~c:401541243",
 "date": "2023-04-25T23:30:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Tue, April 25th at 7:30 PM EDT",
-"shortDetail": "4/25 - 7:30 PM EDT"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "TNT"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": false,
 "team": {
 "id": "2",
 "uid": "s:40~l:46~t:2",
@@ -5121,10 +5105,11 @@
 }
 ]
 },
-"score": "0"
+"score": "117"
 },
 {
 "homeAway": "away",
+"winner": true,
 "team": {
 "id": "1",
 "uid": "s:40~l:46~t:1",
@@ -5166,7 +5151,7 @@
 }
 ]
 },
-"score": "0"
+"score": "119"
 }
 ],
 "links": [
@@ -5202,8 +5187,8 @@
 {
 "id": "401541244",
 "uid": "s:40~l:46~e:401541244~c:401541244",
-"date": "2023-04-27T04:00:00Z",
-"timeValid": false,
+"date": "2023-04-28T00:30:00Z",
+"timeValid": true,
 "status": "pre",
 "statusType": {
 "id": "1",
@@ -5211,10 +5196,26 @@
 "state": "pre",
 "completed": false,
 "description": "Scheduled",
-"detail": "4/27 - TBD",
-"shortDetail": "TBD"
+"detail": "Thu, April 27th at 8:30 PM EDT",
+"shortDetail": "4/27 - 8:30 PM EDT"
 },
-"broadcasts": [],
+"broadcasts": [
+{
+"type": {
+"id": "1",
+"shortName": "TV"
+},
+"market": {
+"id": "1",
+"type": "National"
+},
+"media": {
+"shortName": "TNT"
+},
+"lang": "en",
+"region": "us"
+}
+],
 "competitors": [
 {
 "homeAway": "home",
@@ -5573,9 +5574,9 @@
 "moneyLine": -110,
 "spreadRecord": {
 "wins": 49,
-"losses": 37,
+"losses": 38,
 "pushes": 0,
-"summary": "49-37-0"
+"summary": "49-38-0"
 },
 "spreadOdds": -107.0,
 "teamId": "2"
@@ -5586,10 +5587,10 @@
 "underdog": true,
 "moneyLine": -105,
 "spreadRecord": {
-"wins": 38,
+"wins": 39,
 "losses": 48,
 "pushes": 1,
-"summary": "38-48-1"
+"summary": "39-48-1"
 },
 "spreadOdds": -107.0,
 "teamId": "1"
@@ -8223,14 +8224,14 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "BOS leads series 3-1",
+"summary": "BOS leads series 3-2",
 "completed": false,
 "totalCompetitions": 7,
 "competitors": [
 {
 "id": "1",
 "uid": "s:40~l:46~t:1",
-"wins": 1,
+"wins": 2,
 "ties": 0,
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2023/teams/1?lang=en&region=us"
