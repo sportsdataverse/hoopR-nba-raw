@@ -32781,10 +32781,6 @@
 {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/events/401544339?lang=en&region=us",
 "id": "401544339"
-},
-{
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/events/401544340?lang=en&region=us",
-"id": "401544340"
 }
 ]
 }
@@ -37193,36 +37189,20 @@
 "uid": "s:40~l:46~e:401544339~c:401544339",
 "date": "2023-05-12T02:00:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Thu, May 11th at 10:00 PM EDT",
-"shortDetail": "5/11 - 10:00 PM EDT"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "ESPN"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": false,
 "team": {
 "id": "21",
 "uid": "s:40~l:46~t:21",
@@ -37264,10 +37244,11 @@
 }
 ]
 },
-"score": "0"
+"score": "100"
 },
 {
 "homeAway": "away",
+"winner": true,
 "team": {
 "id": "7",
 "uid": "s:40~l:46~t:7",
@@ -37309,7 +37290,7 @@
 }
 ]
 },
-"score": "0"
+"score": "125"
 }
 ],
 "links": [
@@ -37335,144 +37316,6 @@
 "event"
 ],
 "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401544339",
-"text": "Gamecast",
-"shortText": "Summary",
-"isExternal": false,
-"isPremium": false
-}
-]
-},
-{
-"id": "401544340",
-"uid": "s:40~l:46~e:401544340~c:401544340",
-"date": "2023-05-14T04:00:00Z",
-"timeValid": false,
-"status": "pre",
-"statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "5/14 - TBD",
-"shortDetail": "TBD"
-},
-"broadcasts": [],
-"competitors": [
-{
-"homeAway": "home",
-"team": {
-"id": "7",
-"uid": "s:40~l:46~t:7",
-"displayName": "Denver Nuggets",
-"abbreviation": "DEN",
-"links": [
-{
-"href": "https://www.espn.com/nba/team/_/name/den/denver-nuggets",
-"text": "Clubhouse"
-},
-{
-"href": "https://www.espn.com/nba/team/schedule/_/name/den",
-"text": "Schedule"
-}
-],
-"logo": "https://a.espncdn.com/i/teamlogos/nba/500/den.png",
-"logos": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/den.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2018-10-04T15:12Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/den.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"dark"
-],
-"lastUpdated": "2018-10-04T15:12Z"
-}
-]
-},
-"score": "0"
-},
-{
-"homeAway": "away",
-"team": {
-"id": "21",
-"uid": "s:40~l:46~t:21",
-"displayName": "Phoenix Suns",
-"abbreviation": "PHX",
-"links": [
-{
-"href": "https://www.espn.com/nba/team/_/name/phx/phoenix-suns",
-"text": "Clubhouse"
-},
-{
-"href": "https://www.espn.com/nba/team/schedule/_/name/phx",
-"text": "Schedule"
-}
-],
-"logo": "https://a.espncdn.com/i/teamlogos/nba/500/phx.png",
-"logos": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/phx.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2018-06-05T12:08Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/phx.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"dark"
-],
-"lastUpdated": "2018-06-05T12:08Z"
-}
-]
-},
-"score": "0"
-}
-],
-"links": [
-{
-"language": "en-US",
-"rel": [
-"summary",
-"desktop",
-"event"
-],
-"href": "https://www.espn.com/nba/game/_/gameId/401544340",
-"text": "Gamecast",
-"shortText": "Summary",
-"isExternal": false,
-"isPremium": false
-},
-{
-"language": "en-US",
-"rel": [
-"summary",
-"sportscenter",
-"app",
-"event"
-],
-"href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401544340",
 "text": "Gamecast",
 "shortText": "Summary",
 "isExternal": false,
@@ -38122,10 +37965,6 @@
 {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/events/401544339?lang=en&region=us",
 "id": "401544339"
-},
-{
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/events/401544340?lang=en&region=us",
-"id": "401544340"
 }
 ]
 }
