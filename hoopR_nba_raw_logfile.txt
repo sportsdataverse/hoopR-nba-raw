@@ -2636,3 +2636,43 @@ Traceback (most recent call last):
 TypeError: the JSON object must be str, bytes or bytearray, not NoneType
 INFO:__main__:8.838037180900574 minutes to download 1312 game play-by-plays.
 INFO:__main__:Finished NBA PBP for 2023...
+INFO:__main__:Scraping NBA schedules for year 2023...
+INFO:__main__:0.9226361274719238 minutes to download 1 years of season schedules.
+INFO:__main__:Scraping NBA PBP for 2023...
+INFO:__main__:Number of Games: 1312
+ERROR:__main__:TypeError: game_id = 401468295
+ Traceback (most recent call last):
+  File "python/scrape_nba_json.py", line 50, in download_game
+    g = sdv.nba.espn_nba_pbp(game_id = game, raw = True)
+  File "/mnt/sdv_repos/sdv-py/sportsdataverse/nba/nba_pbp.py", line 30, in espn_nba_pbp
+    summary = json.loads(summary_resp)
+  File "/usr/lib/python3.8/json/__init__.py", line 341, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+Traceback (most recent call last):
+  File "python/scrape_nba_json.py", line 50, in download_game
+    g = sdv.nba.espn_nba_pbp(game_id = game, raw = True)
+  File "/mnt/sdv_repos/sdv-py/sportsdataverse/nba/nba_pbp.py", line 30, in espn_nba_pbp
+    summary = json.loads(summary_resp)
+  File "/usr/lib/python3.8/json/__init__.py", line 341, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+ERROR:__main__:TypeError: game_id = 401468904
+ Traceback (most recent call last):
+  File "python/scrape_nba_json.py", line 50, in download_game
+    g = sdv.nba.espn_nba_pbp(game_id = game, raw = True)
+  File "/mnt/sdv_repos/sdv-py/sportsdataverse/nba/nba_pbp.py", line 30, in espn_nba_pbp
+    summary = json.loads(summary_resp)
+  File "/usr/lib/python3.8/json/__init__.py", line 341, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+Traceback (most recent call last):
+  File "python/scrape_nba_json.py", line 50, in download_game
+    g = sdv.nba.espn_nba_pbp(game_id = game, raw = True)
+  File "/mnt/sdv_repos/sdv-py/sportsdataverse/nba/nba_pbp.py", line 30, in espn_nba_pbp
+    summary = json.loads(summary_resp)
+  File "/usr/lib/python3.8/json/__init__.py", line 341, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+INFO:__main__:8.765723578135173 minutes to download 1312 game play-by-plays.
+INFO:__main__:Finished NBA PBP for 2023...
