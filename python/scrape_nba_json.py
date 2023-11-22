@@ -129,14 +129,14 @@ def main():
         schedule = pd.read_parquet(f"nba/schedules/parquet/nba_schedule_{year}.parquet", engine = "auto", columns = None)
         schedule = schedule.sort_values(by = ["season", "season_type"], ascending = True)
         schedule["game_id"] = schedule["game_id"].astype(int)
-        schedule = schedule[schedule["status_type_completed"] == True]
+        completed_schedule = schedule[schedule["status_type_completed"] == True]
         if args.rescrape == False:
             game_files = [int(game_file.replace(".json", "")) for game_file in os.listdir(path_to_final)]
-            schedule = schedule[~schedule["game_id"].isin(game_files)]
-        schedule = schedule[schedule["season"] >= 2002]
+            completed_schedule = completed_schedule[~completed_schedule["game_id"].isin(game_files)]
+        completed_schedule = completed_schedule[completed_schedule["season"] >= 2002]
 
         logger.info(f"Scraping NBA PBP for {year}...")
-        games = schedule[(schedule["season"] == year)].reset_index()["game_id"].tolist()
+        games = completed_schedule[(completed_schedule["season"] == year)].reset_index()["game_id"].tolist()
 
         if len(games) == 0:
             logger.info(f"{len(games)} Games to be scraped, skipping")
