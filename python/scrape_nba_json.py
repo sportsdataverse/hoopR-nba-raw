@@ -65,6 +65,9 @@ def download_game(game, process, path_to_raw, path_to_final):
     except (AttributeError) as e:
         logger.exception(f"AttributeError: game_id = {game}\n {traceback.format_exc()}")
         pass
+    except Exception as e:
+        logger.exception(f"Exception: game_id = {game}\n {traceback.format_exc()}")
+        pass
     if process == True:
         try:
             processed_data = sdv.nba.nba_pbp_disk(
@@ -96,6 +99,9 @@ def download_game(game, process, path_to_raw, path_to_final):
             pass
         except (AttributeError) as e:
             logger.exception(f"AttributeError: game_id = {game}\n {traceback.format_exc()}")
+            pass
+        except Exception as e:
+            logger.exception(f"Exception: game_id = {game}\n {traceback.format_exc()}")
             pass
 
     time.sleep(0.5)
