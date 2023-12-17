@@ -19807,3 +19807,26 @@ INFO:__main__:Scraping NBA PBP for 2024...
 INFO:__main__:Number of Games: 364
 INFO:__main__:1.2248145659764609 minutes to download 364 game play-by-plays.
 INFO:__main__:Finished NBA PBP for 2024...
+INFO:__main__:Scraping NBA schedules for year 2024...
+INFO:__main__:0.9545481006304423 minutes to download 1 years of season schedules.
+INFO:__main__:Scraping NBA PBP for 2024...
+INFO:__main__:Number of Games: 374
+ERROR:__main__:KeyError: game_id =  game_id = 401584710
+ Traceback (most recent call last):
+  File "python/scrape_nba_json.py", line 78, in download_game
+    result = sdv.nba.helper_nba_pbp(
+  File "/mnt/sdv_repos/sdv-py/sportsdataverse/nba/nba_pbp.py", line 102, in helper_nba_pbp
+    pbp_txt, init = helper_nba_game_data(pbp_txt, init)
+  File "/mnt/sdv_repos/sdv-py/sportsdataverse/nba/nba_pbp.py", line 139, in helper_nba_game_data
+    pbp_txt["teamInfo"] = pbp_txt["header"]["competitions"][0]
+KeyError: 'competitions'
+Traceback (most recent call last):
+  File "python/scrape_nba_json.py", line 78, in download_game
+    result = sdv.nba.helper_nba_pbp(
+  File "/mnt/sdv_repos/sdv-py/sportsdataverse/nba/nba_pbp.py", line 102, in helper_nba_pbp
+    pbp_txt, init = helper_nba_game_data(pbp_txt, init)
+  File "/mnt/sdv_repos/sdv-py/sportsdataverse/nba/nba_pbp.py", line 139, in helper_nba_game_data
+    pbp_txt["teamInfo"] = pbp_txt["header"]["competitions"][0]
+KeyError: 'competitions'
+INFO:__main__:1.2286968151728312 minutes to download 374 game play-by-plays.
+INFO:__main__:Finished NBA PBP for 2024...
