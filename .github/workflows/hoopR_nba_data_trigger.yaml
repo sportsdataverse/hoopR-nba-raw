@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Trigger hoopR NBA Data
-              uses: peter-evans/repository-dispatch@v2
+              uses: peter-evans/repository-dispatch@v3
               with:
                   token: ${{ secrets.SDV_GH_TOKEN }}
                   repository: sportsdataverse/hoopR-nba-data
