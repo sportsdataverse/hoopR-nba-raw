@@ -3473,7 +3473,7 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "IND leads series 3-1",
+"summary": "IND leads series 3-2",
 "completed": false,
 "totalCompetitions": 7,
 "events": [
@@ -4223,36 +4223,20 @@
 "uid": "s:40~l:46~e:401655115~c:401655115",
 "date": "2024-05-01T01:30:00Z",
 "timeValid": true,
-"status": "in",
+"status": "post",
 "statusType": {
-"id": "2",
-"name": "STATUS_IN_PROGRESS",
-"state": "in",
-"completed": false,
-"description": "In Progress",
-"detail": "5:44 - 4th Quarter",
-"shortDetail": "5:44 - 4th"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "TNT"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": true,
 "team": {
 "id": "15",
 "uid": "s:40~l:46~t:15",
@@ -4317,10 +4301,11 @@
 }
 ]
 },
-"score": "101"
+"score": "115"
 },
 {
 "homeAway": "away",
+"winner": false,
 "team": {
 "id": "11",
 "uid": "s:40~l:46~t:11",
@@ -4385,34 +4370,34 @@
 }
 ]
 },
-"score": "80"
+"score": "92"
 }
 ],
 "links": [
 {
 "language": "en-US",
 "rel": [
-"live",
+"summary",
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nba/game?gameId=401655115",
+"href": "https://www.espn.com/nba/game/_/gameId/401655115/pacers-bucks",
 "text": "Gamecast",
-"shortText": "Gamecast",
+"shortText": "Summary",
 "isExternal": false,
 "isPremium": false
 },
 {
 "language": "en-US",
 "rel": [
-"live",
+"summary",
 "sportscenter",
 "app",
 "event"
 ],
 "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401655115",
 "text": "Gamecast",
-"shortText": "Gamecast",
+"shortText": "Summary",
 "isExternal": false,
 "isPremium": false
 }
@@ -4421,8 +4406,8 @@
 {
 "id": "401655116",
 "uid": "s:40~l:46~e:401655116~c:401655116",
-"date": "2024-05-02T04:00:00Z",
-"timeValid": false,
+"date": "2024-05-02T22:30:00Z",
+"timeValid": true,
 "status": "pre",
 "statusType": {
 "id": "1",
@@ -4430,8 +4415,8 @@
 "state": "pre",
 "completed": false,
 "description": "Scheduled",
-"detail": "5/2 - TBD",
-"shortDetail": "TBD"
+"detail": "Thu, May 2nd at 6:30 PM EDT",
+"shortDetail": "5/2 - 6:30 PM EDT"
 },
 "broadcasts": [
 {
@@ -7690,7 +7675,7 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "IND leads series 3-1",
+"summary": "IND leads series 3-2",
 "completed": false,
 "totalCompetitions": 7,
 "competitors": [
@@ -7706,7 +7691,7 @@
 {
 "id": "15",
 "uid": "s:40~l:46~t:15",
-"wins": 1,
+"wins": 2,
 "ties": 0,
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2024/teams/15?lang=en&region=us"
