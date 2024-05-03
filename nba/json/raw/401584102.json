@@ -3019,7 +3019,7 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "Series tied 2-2",
+"summary": "DAL leads series 3-2",
 "completed": false,
 "totalCompetitions": 7,
 "events": [
@@ -3768,52 +3768,20 @@
 "uid": "s:40~l:46~e:401655097~c:401655097",
 "date": "2024-05-02T02:00:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Wed, May 1st at 10:00 PM EDT",
-"shortDetail": "5/1 - 10:00 PM EDT"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "TNT"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "5",
-"shortName": "Radio"
-},
-"url": "https://cerebro.espn.com/cerebro/search/airing/a120068914",
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "ESPNRM"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": false,
 "team": {
 "id": "12",
 "uid": "s:40~l:46~t:12",
@@ -3878,10 +3846,11 @@
 }
 ]
 },
-"score": "0"
+"score": "93"
 },
 {
 "homeAway": "away",
+"winner": true,
 "team": {
 "id": "6",
 "uid": "s:40~l:46~t:6",
@@ -3946,7 +3915,7 @@
 }
 ]
 },
-"score": "0"
+"score": "123"
 }
 ],
 "links": [
@@ -4006,6 +3975,22 @@
 },
 "media": {
 "shortName": "ESPN"
+},
+"lang": "en",
+"region": "us"
+},
+{
+"type": {
+"id": "5",
+"shortName": "Radio"
+},
+"url": "https://cerebro.espn.com/cerebro/search/airing/a120075521",
+"market": {
+"id": "1",
+"type": "National"
+},
+"media": {
+"shortName": "ESPNRM"
 },
 "lang": "en",
 "region": "us"
@@ -4182,8 +4167,8 @@
 {
 "id": "401655099",
 "uid": "s:40~l:46~e:401655099~c:401655099",
-"date": "2024-05-05T04:00:00Z",
-"timeValid": false,
+"date": "2024-05-06T00:00:00Z",
+"timeValid": true,
 "status": "pre",
 "statusType": {
 "id": "1",
@@ -4191,10 +4176,26 @@
 "state": "pre",
 "completed": false,
 "description": "Scheduled",
-"detail": "5/5 - TBD",
-"shortDetail": "TBD"
+"detail": "Sun, May 5th at 8:00 PM EDT",
+"shortDetail": "5/5 - 8:00 PM EDT"
 },
-"broadcasts": [],
+"broadcasts": [
+{
+"type": {
+"id": "1",
+"shortName": "TV"
+},
+"market": {
+"id": "1",
+"type": "National"
+},
+"media": {
+"shortName": "TNT"
+},
+"lang": "en",
+"region": "us"
+}
+],
 "competitors": [
 {
 "homeAway": "home",
@@ -7341,14 +7342,14 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "Series tied 2-2",
+"summary": "DAL leads series 3-2",
 "completed": false,
 "totalCompetitions": 7,
 "competitors": [
 {
 "id": "6",
 "uid": "s:40~l:46~t:6",
-"wins": 2,
+"wins": 3,
 "ties": 0,
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2024/teams/6?lang=en&region=us"
