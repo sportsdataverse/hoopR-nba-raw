@@ -152,7 +152,8 @@
 "label": "Largest Lead"
 }
 ],
-"displayOrder": 1
+"displayOrder": 1,
+"homeAway": "away"
 },
 {
 "team": {
@@ -305,7 +306,8 @@
 "label": "Largest Lead"
 }
 ],
-"displayOrder": 2
+"displayOrder": 2,
+"homeAway": "home"
 }
 ],
 "players": [
@@ -3019,8 +3021,8 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "DAL leads series 3-2",
-"completed": false,
+"summary": "DAL wins series 4-2",
+"completed": true,
 "totalCompetitions": 7,
 "events": [
 {
@@ -3953,52 +3955,20 @@
 "uid": "s:40~l:46~e:401655098~c:401655098",
 "date": "2024-05-04T01:30:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Fri, May 3rd at 9:30 PM EDT",
-"shortDetail": "5/3 - 9:30 PM EDT"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "ESPN"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "5",
-"shortName": "Radio"
-},
-"url": "https://cerebro.espn.com/cerebro/search/airing/a120075521",
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "ESPNRM"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": true,
 "team": {
 "id": "6",
 "uid": "s:40~l:46~t:6",
@@ -4063,10 +4033,11 @@
 }
 ]
 },
-"score": "0"
+"score": "114"
 },
 {
 "homeAway": "away",
+"winner": false,
 "team": {
 "id": "12",
 "uid": "s:40~l:46~t:12",
@@ -4131,7 +4102,7 @@
 }
 ]
 },
-"score": "0"
+"score": "101"
 }
 ],
 "links": [
@@ -4157,206 +4128,6 @@
 "event"
 ],
 "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401655098",
-"text": "Gamecast",
-"shortText": "Summary",
-"isExternal": false,
-"isPremium": false
-}
-]
-},
-{
-"id": "401655099",
-"uid": "s:40~l:46~e:401655099~c:401655099",
-"date": "2024-05-06T00:00:00Z",
-"timeValid": true,
-"status": "pre",
-"statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Sun, May 5th at 8:00 PM EDT",
-"shortDetail": "5/5 - 8:00 PM EDT"
-},
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "TNT"
-},
-"lang": "en",
-"region": "us"
-}
-],
-"competitors": [
-{
-"homeAway": "home",
-"team": {
-"id": "12",
-"uid": "s:40~l:46~t:12",
-"displayName": "LA Clippers",
-"abbreviation": "LAC",
-"links": [
-{
-"href": "https://www.espn.com/nba/team/_/name/lac/la-clippers",
-"text": "Clubhouse"
-},
-{
-"href": "https://www.espn.com/nba/team/schedule/_/name/lac",
-"text": "Schedule"
-}
-],
-"logo": "https://a.espncdn.com/i/teamlogos/nba/500/lac.png",
-"logos": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/lac.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2023-09-01T14:09Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/lac.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"dark"
-],
-"lastUpdated": "2023-08-31T21:59Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard"
-],
-"lastUpdated": "2023-09-01T14:09Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/lac.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2023-08-31T22:00Z"
-}
-]
-},
-"score": "0"
-},
-{
-"homeAway": "away",
-"team": {
-"id": "6",
-"uid": "s:40~l:46~t:6",
-"displayName": "Dallas Mavericks",
-"abbreviation": "DAL",
-"links": [
-{
-"href": "https://www.espn.com/nba/team/_/name/dal/dallas-mavericks",
-"text": "Clubhouse"
-},
-{
-"href": "https://www.espn.com/nba/team/schedule/_/name/dal",
-"text": "Schedule"
-}
-],
-"logo": "https://a.espncdn.com/i/teamlogos/nba/500/dal.png",
-"logos": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/dal.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2023-08-24T22:00Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/dal.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"dark"
-],
-"lastUpdated": "2023-08-24T21:58Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard"
-],
-"lastUpdated": "2018-06-05T12:08Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/dal.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2018-06-05T12:08Z"
-}
-]
-},
-"score": "0"
-}
-],
-"links": [
-{
-"language": "en-US",
-"rel": [
-"summary",
-"desktop",
-"event"
-],
-"href": "https://www.espn.com/nba/game/_/gameId/401655099/mavericks-clippers",
-"text": "Gamecast",
-"shortText": "Summary",
-"isExternal": false,
-"isPremium": false
-},
-{
-"language": "en-US",
-"rel": [
-"summary",
-"sportscenter",
-"app",
-"event"
-],
-"href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401655099",
 "text": "Gamecast",
 "shortText": "Summary",
 "isExternal": false,
@@ -7342,14 +7113,14 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "DAL leads series 3-2",
-"completed": false,
+"summary": "DAL wins series 4-2",
+"completed": true,
 "totalCompetitions": 7,
 "competitors": [
 {
 "id": "6",
 "uid": "s:40~l:46~t:6",
-"wins": 3,
+"wins": 4,
 "ties": 0,
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2024/teams/6?lang=en&region=us"
@@ -7389,10 +7160,6 @@
 {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/events/401655098?lang=en&region=us",
 "id": "401655098"
-},
-{
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/events/401655099?lang=en&region=us",
-"id": "401655099"
 }
 ],
 "startDate": "2024-04-21T19:30Z"
@@ -26843,6 +26610,7 @@
 "type": "whitelist",
 "devices": [
 "desktop",
+"ipad",
 "settop",
 "handset",
 "tablet"
@@ -26963,24 +26731,21 @@
 "links": {
 "api": {
 "self": {
-"href": "http://api.espn.com/v1/video/clips/38866084"
+"href": "http://api-app.espn.com/v1/video/clips/38866084"
 },
 "artwork": {
 "href": "https://artwork.api.espn.com/artwork/collections/media/f5fecfd0-397e-4e14-963c-8abc1e7c53a5"
 }
 },
 "web": {
-"href": "https://www.espn.com/video/clip?id=38866084&ex_cid=espnapi_internal",
-"short": {
-"href": "https://www.espn.com/video/clip?id=38866084"
-},
+"href": "http://espn.com/video/clip?id=38866084",
 "self": {
-"href": "https://www.espn.com/video/clip?id=38866084&ex_cid=espnapi_internal"
+"href": "http://espn.com/video/clip?id=38866084"
 }
 },
 "source": {
 "mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_204803824_2391231/ss_20231110_204803824_2391231.mp4"
+"href": "http://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_204803824_2391231/ss_20231110_204803824_2391231.mp4"
 },
 "flash": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_204803824_2391231/ss_20231110_204803824_2391231.smil"
@@ -27004,7 +26769,7 @@
 },
 "mobile": {
 "alert": {
-"href": "http://m.espn.go.com/general/video/videoAlert?vid=38866084&ex_cid=espnapi_internal"
+"href": "http://m.espn.com/general/video/videoAlert?vid=38866084"
 },
 "source": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_204803824_2391231/ss_20231110_204803824_2391231.mp4"
@@ -27046,6 +26811,7 @@
 "type": "whitelist",
 "devices": [
 "desktop",
+"ipad",
 "settop",
 "handset",
 "tablet"
@@ -27166,24 +26932,21 @@
 "links": {
 "api": {
 "self": {
-"href": "http://api.espn.com/v1/video/clips/38866120"
+"href": "http://api-app.espn.com/v1/video/clips/38866120"
 },
 "artwork": {
 "href": "https://artwork.api.espn.com/artwork/collections/media/6bdf799f-5eb9-4726-a4d6-afaeab0ed1b4"
 }
 },
 "web": {
-"href": "https://www.espn.com/video/clip?id=38866120&ex_cid=espnapi_internal",
-"short": {
-"href": "https://www.espn.com/video/clip?id=38866120"
-},
+"href": "http://espn.com/video/clip?id=38866120",
 "self": {
-"href": "https://www.espn.com/video/clip?id=38866120&ex_cid=espnapi_internal"
+"href": "http://espn.com/video/clip?id=38866120"
 }
 },
 "source": {
 "mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_205326879_2391252/ss_20231110_205326879_2391252.mp4"
+"href": "http://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_205326879_2391252/ss_20231110_205326879_2391252.mp4"
 },
 "flash": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_205326879_2391252/ss_20231110_205326879_2391252.smil"
@@ -27207,7 +26970,7 @@
 },
 "mobile": {
 "alert": {
-"href": "http://m.espn.go.com/general/video/videoAlert?vid=38866120&ex_cid=espnapi_internal"
+"href": "http://m.espn.com/general/video/videoAlert?vid=38866120"
 },
 "source": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_205326879_2391252/ss_20231110_205326879_2391252.mp4"
@@ -27249,6 +27012,7 @@
 "type": "whitelist",
 "devices": [
 "desktop",
+"ipad",
 "settop",
 "handset",
 "tablet"
@@ -27369,24 +27133,21 @@
 "links": {
 "api": {
 "self": {
-"href": "http://api.espn.com/v1/video/clips/38866146"
+"href": "http://api-app.espn.com/v1/video/clips/38866146"
 },
 "artwork": {
 "href": "https://artwork.api.espn.com/artwork/collections/media/cb10d93f-2225-44ac-9fcc-b91585d4418c"
 }
 },
 "web": {
-"href": "https://www.espn.com/video/clip?id=38866146&ex_cid=espnapi_internal",
-"short": {
-"href": "https://www.espn.com/video/clip?id=38866146"
-},
+"href": "http://espn.com/video/clip?id=38866146",
 "self": {
-"href": "https://www.espn.com/video/clip?id=38866146&ex_cid=espnapi_internal"
+"href": "http://espn.com/video/clip?id=38866146"
 }
 },
 "source": {
 "mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_205936515_2391267/ss_20231110_205936515_2391267.mp4"
+"href": "http://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_205936515_2391267/ss_20231110_205936515_2391267.mp4"
 },
 "flash": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_205936515_2391267/ss_20231110_205936515_2391267.smil"
@@ -27410,7 +27171,7 @@
 },
 "mobile": {
 "alert": {
-"href": "http://m.espn.go.com/general/video/videoAlert?vid=38866146&ex_cid=espnapi_internal"
+"href": "http://m.espn.com/general/video/videoAlert?vid=38866146"
 },
 "source": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_205936515_2391267/ss_20231110_205936515_2391267.mp4"
@@ -27452,6 +27213,7 @@
 "type": "whitelist",
 "devices": [
 "desktop",
+"ipad",
 "settop",
 "handset",
 "tablet"
@@ -27572,24 +27334,21 @@
 "links": {
 "api": {
 "self": {
-"href": "http://api.espn.com/v1/video/clips/38866321"
+"href": "http://api-app.espn.com/v1/video/clips/38866321"
 },
 "artwork": {
 "href": "https://artwork.api.espn.com/artwork/collections/media/d77dc650-0fcf-467c-9f39-29ecfd361429"
 }
 },
 "web": {
-"href": "https://www.espn.com/video/clip?id=38866321&ex_cid=espnapi_internal",
-"short": {
-"href": "https://www.espn.com/video/clip?id=38866321"
-},
+"href": "http://espn.com/video/clip?id=38866321",
 "self": {
-"href": "https://www.espn.com/video/clip?id=38866321&ex_cid=espnapi_internal"
+"href": "http://espn.com/video/clip?id=38866321"
 }
 },
 "source": {
 "mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_211953431_2391310/ss_20231110_211953431_2391310.mp4"
+"href": "http://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_211953431_2391310/ss_20231110_211953431_2391310.mp4"
 },
 "flash": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_211953431_2391310/ss_20231110_211953431_2391310.smil"
@@ -27613,7 +27372,7 @@
 },
 "mobile": {
 "alert": {
-"href": "http://m.espn.go.com/general/video/videoAlert?vid=38866321&ex_cid=espnapi_internal"
+"href": "http://m.espn.com/general/video/videoAlert?vid=38866321"
 },
 "source": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_211953431_2391310/ss_20231110_211953431_2391310.mp4"
@@ -27655,6 +27414,7 @@
 "type": "whitelist",
 "devices": [
 "desktop",
+"ipad",
 "settop",
 "handset",
 "tablet"
@@ -27775,24 +27535,21 @@
 "links": {
 "api": {
 "self": {
-"href": "http://api.espn.com/v1/video/clips/38866418"
+"href": "http://api-app.espn.com/v1/video/clips/38866418"
 },
 "artwork": {
 "href": "https://artwork.api.espn.com/artwork/collections/media/e7e87cf1-ba11-4e04-a551-c0c95848b5ea"
 }
 },
 "web": {
-"href": "https://www.espn.com/video/clip?id=38866418&ex_cid=espnapi_internal",
-"short": {
-"href": "https://www.espn.com/video/clip?id=38866418"
-},
+"href": "http://espn.com/video/clip?id=38866418",
 "self": {
-"href": "https://www.espn.com/video/clip?id=38866418&ex_cid=espnapi_internal"
+"href": "http://espn.com/video/clip?id=38866418"
 }
 },
 "source": {
 "mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_212943634_2391342/ss_20231110_212943634_2391342.mp4"
+"href": "http://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_212943634_2391342/ss_20231110_212943634_2391342.mp4"
 },
 "flash": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_212943634_2391342/ss_20231110_212943634_2391342.smil"
@@ -27816,7 +27573,7 @@
 },
 "mobile": {
 "alert": {
-"href": "http://m.espn.go.com/general/video/videoAlert?vid=38866418&ex_cid=espnapi_internal"
+"href": "http://m.espn.com/general/video/videoAlert?vid=38866418"
 },
 "source": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_212943634_2391342/ss_20231110_212943634_2391342.mp4"
@@ -27858,6 +27615,7 @@
 "type": "whitelist",
 "devices": [
 "desktop",
+"ipad",
 "settop",
 "handset",
 "tablet"
@@ -27978,24 +27736,21 @@
 "links": {
 "api": {
 "self": {
-"href": "http://api.espn.com/v1/video/clips/38866479"
+"href": "http://api-app.espn.com/v1/video/clips/38866479"
 },
 "artwork": {
 "href": "https://artwork.api.espn.com/artwork/collections/media/5e810837-b0bb-410e-a26e-736b6a03d91b"
 }
 },
 "web": {
-"href": "https://www.espn.com/video/clip?id=38866479&ex_cid=espnapi_internal",
-"short": {
-"href": "https://www.espn.com/video/clip?id=38866479"
-},
+"href": "http://espn.com/video/clip?id=38866479",
 "self": {
-"href": "https://www.espn.com/video/clip?id=38866479&ex_cid=espnapi_internal"
+"href": "http://espn.com/video/clip?id=38866479"
 }
 },
 "source": {
 "mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_213705292_2391362/ss_20231110_213705292_2391362.mp4"
+"href": "http://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_213705292_2391362/ss_20231110_213705292_2391362.mp4"
 },
 "flash": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_213705292_2391362/ss_20231110_213705292_2391362.smil"
@@ -28019,7 +27774,7 @@
 },
 "mobile": {
 "alert": {
-"href": "http://m.espn.go.com/general/video/videoAlert?vid=38866479&ex_cid=espnapi_internal"
+"href": "http://m.espn.com/general/video/videoAlert?vid=38866479"
 },
 "source": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_213705292_2391362/ss_20231110_213705292_2391362.mp4"
@@ -28061,6 +27816,7 @@
 "type": "whitelist",
 "devices": [
 "desktop",
+"ipad",
 "settop",
 "handset",
 "tablet"
@@ -28181,24 +27937,21 @@
 "links": {
 "api": {
 "self": {
-"href": "http://api.espn.com/v1/video/clips/38866554"
+"href": "http://api-app.espn.com/v1/video/clips/38866554"
 },
 "artwork": {
 "href": "https://artwork.api.espn.com/artwork/collections/media/a5dad649-8c2f-49e7-ac87-c51fca02ccde"
 }
 },
 "web": {
-"href": "https://www.espn.com/video/clip?id=38866554&ex_cid=espnapi_internal",
-"short": {
-"href": "https://www.espn.com/video/clip?id=38866554"
-},
+"href": "http://espn.com/video/clip?id=38866554",
 "self": {
-"href": "https://www.espn.com/video/clip?id=38866554&ex_cid=espnapi_internal"
+"href": "http://espn.com/video/clip?id=38866554"
 }
 },
 "source": {
 "mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_214650586_2391388/ss_20231110_214650586_2391388.mp4"
+"href": "http://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_214650586_2391388/ss_20231110_214650586_2391388.mp4"
 },
 "flash": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_214650586_2391388/ss_20231110_214650586_2391388.smil"
@@ -28222,7 +27975,7 @@
 },
 "mobile": {
 "alert": {
-"href": "http://m.espn.go.com/general/video/videoAlert?vid=38866554&ex_cid=espnapi_internal"
+"href": "http://m.espn.com/general/video/videoAlert?vid=38866554"
 },
 "source": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_214650586_2391388/ss_20231110_214650586_2391388.mp4"
@@ -28264,6 +28017,7 @@
 "type": "whitelist",
 "devices": [
 "desktop",
+"ipad",
 "settop",
 "handset",
 "tablet"
@@ -28384,24 +28138,21 @@
 "links": {
 "api": {
 "self": {
-"href": "http://api.espn.com/v1/video/clips/38866759"
+"href": "http://api-app.espn.com/v1/video/clips/38866759"
 },
 "artwork": {
 "href": "https://artwork.api.espn.com/artwork/collections/media/d2185117-d587-417e-8413-bc6e7293b3f5"
 }
 },
 "web": {
-"href": "https://www.espn.com/video/clip?id=38866759&ex_cid=espnapi_internal",
-"short": {
-"href": "https://www.espn.com/video/clip?id=38866759"
-},
+"href": "http://espn.com/video/clip?id=38866759",
 "self": {
-"href": "https://www.espn.com/video/clip?id=38866759&ex_cid=espnapi_internal"
+"href": "http://espn.com/video/clip?id=38866759"
 }
 },
 "source": {
 "mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_221347560_2391461/ss_20231110_221347560_2391461.mp4"
+"href": "http://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_221347560_2391461/ss_20231110_221347560_2391461.mp4"
 },
 "flash": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_221347560_2391461/ss_20231110_221347560_2391461.smil"
@@ -28425,7 +28176,7 @@
 },
 "mobile": {
 "alert": {
-"href": "http://m.espn.go.com/general/video/videoAlert?vid=38866759&ex_cid=espnapi_internal"
+"href": "http://m.espn.com/general/video/videoAlert?vid=38866759"
 },
 "source": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_221347560_2391461/ss_20231110_221347560_2391461.mp4"
@@ -28467,6 +28218,7 @@
 "type": "whitelist",
 "devices": [
 "desktop",
+"ipad",
 "settop",
 "handset",
 "tablet"
@@ -28587,24 +28339,21 @@
 "links": {
 "api": {
 "self": {
-"href": "http://api.espn.com/v1/video/clips/38866800"
+"href": "http://api-app.espn.com/v1/video/clips/38866800"
 },
 "artwork": {
 "href": "https://artwork.api.espn.com/artwork/collections/media/ef20739e-24cc-48a5-a835-63548f5d23eb"
 }
 },
 "web": {
-"href": "https://www.espn.com/video/clip?id=38866800&ex_cid=espnapi_internal",
-"short": {
-"href": "https://www.espn.com/video/clip?id=38866800"
-},
+"href": "http://espn.com/video/clip?id=38866800",
 "self": {
-"href": "https://www.espn.com/video/clip?id=38866800&ex_cid=espnapi_internal"
+"href": "http://espn.com/video/clip?id=38866800"
 }
 },
 "source": {
 "mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_222234660_2391480/ss_20231110_222234660_2391480.mp4"
+"href": "http://media.video-origin.espn.com/espnvideo/2023/1110/ss_20231110_222234660_2391480/ss_20231110_222234660_2391480.mp4"
 },
 "flash": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_222234660_2391480/ss_20231110_222234660_2391480.smil"
@@ -28628,7 +28377,7 @@
 },
 "mobile": {
 "alert": {
-"href": "http://m.espn.go.com/general/video/videoAlert?vid=38866800&ex_cid=espnapi_internal"
+"href": "http://m.espn.com/general/video/videoAlert?vid=38866800"
 },
 "source": {
 "href": "https://media.video-cdn.espn.com/motion/2023/1110/ss_20231110_222234660_2391480/ss_20231110_222234660_2391480.mp4"
