@@ -3460,7 +3460,7 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "MIN leads series 2-1",
+"summary": "Series tied 2-2",
 "completed": false,
 "totalCompetitions": 7,
 "events": [
@@ -4024,36 +4024,20 @@
 "uid": "s:40~l:46~e:401657185~c:401657185",
 "date": "2024-05-13T00:00:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Sun, May 12th at 8:00 PM EDT",
-"shortDetail": "5/12 - 8:00 PM EDT"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "TNT"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": false,
 "team": {
 "id": "16",
 "uid": "s:40~l:46~t:16",
@@ -4118,10 +4102,11 @@
 }
 ]
 },
-"score": "0"
+"score": "107"
 },
 {
 "homeAway": "away",
+"winner": true,
 "team": {
 "id": "7",
 "uid": "s:40~l:46~t:7",
@@ -4186,7 +4171,7 @@
 }
 ]
 },
-"score": "0"
+"score": "115"
 }
 ],
 "links": [
@@ -4246,6 +4231,22 @@
 },
 "media": {
 "shortName": "TNT"
+},
+"lang": "en",
+"region": "us"
+},
+{
+"type": {
+"id": "5",
+"shortName": "Radio"
+},
+"url": "https://cerebro.espn.com/cerebro/search/airing/a120098104",
+"market": {
+"id": "1",
+"type": "National"
+},
+"media": {
+"shortName": "ESPNRM"
 },
 "lang": "en",
 "region": "us"
@@ -4634,23 +4635,7 @@
 "detail": "5/19 - TBD",
 "shortDetail": "TBD"
 },
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "TNT"
-},
-"lang": "en",
-"region": "us"
-}
-],
+"broadcasts": [],
 "competitors": [
 {
 "homeAway": "home",
@@ -7567,14 +7552,14 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "MIN leads series 2-1",
+"summary": "Series tied 2-2",
 "completed": false,
 "totalCompetitions": 7,
 "competitors": [
 {
 "id": "7",
 "uid": "s:40~l:46~t:7",
-"wins": 1,
+"wins": 2,
 "ties": 0,
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2024/teams/7?lang=en&region=us"
