@@ -21712,3 +21712,130 @@ INFO:__main__:Scraping NBA PBP for 2024...
 INFO:__main__:Number of Games: 1309
 INFO:__main__:5.177240773042043 minutes to download 1309 game play-by-plays.
 INFO:__main__:Finished NBA PBP for 2024...
+INFO:__main__:Scraping NBA schedules for year 2024...
+INFO:__main__:1.3674604932467143 minutes to download 1 years of season schedules.
+INFO:__main__:Scraping NBA PBP for 2024...
+INFO:__main__:Number of Games: 1309
+ERROR:__main__:Exception: game_id = 401585034
+ Traceback (most recent call last):
+  File "/root/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/root/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 461, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/root/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/root/.local/lib/python3.8/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/root/.local/lib/python3.8/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/root/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/root/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/root/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 357, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='site.api.espn.com', port=80): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/sdv_repos/sdv-py/sportsdataverse/dl_utils.py", line 20, in download
+    response = session.get(url, params=params, proxies=proxy, headers=headers, timeout=timeout)
+  File "/usr/local/lib/python3.8/dist-packages/requests/sessions.py", line 600, in get
+    return self.request("GET", url, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/requests/adapters.py", line 578, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='site.api.espn.com', port=80): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "python/scrape_nba_json.py", line 50, in download_game
+    g = sdv.nba.espn_nba_pbp(game_id = game, raw = True)
+  File "/mnt/sdv_repos/sdv-py/sportsdataverse/nba/nba_pbp.py", line 33, in espn_nba_pbp
+    summary_resp = download(summary_url, **kwargs)
+  File "/mnt/sdv_repos/sdv-py/sportsdataverse/dl_utils.py", line 31, in download
+    logger.warning("%s: %i - %s for url (%s)", e, response.status_code, response.reason, response.url)
+UnboundLocalError: local variable 'response' referenced before assignment
+Traceback (most recent call last):
+  File "/root/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/root/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 461, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/root/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/root/.local/lib/python3.8/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/root/.local/lib/python3.8/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/root/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/root/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/root/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 357, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='site.api.espn.com', port=80): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/sdv_repos/sdv-py/sportsdataverse/dl_utils.py", line 20, in download
+    response = session.get(url, params=params, proxies=proxy, headers=headers, timeout=timeout)
+  File "/usr/local/lib/python3.8/dist-packages/requests/sessions.py", line 600, in get
+    return self.request("GET", url, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/requests/adapters.py", line 578, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='site.api.espn.com', port=80): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "python/scrape_nba_json.py", line 50, in download_game
+    g = sdv.nba.espn_nba_pbp(game_id = game, raw = True)
+  File "/mnt/sdv_repos/sdv-py/sportsdataverse/nba/nba_pbp.py", line 33, in espn_nba_pbp
+    summary_resp = download(summary_url, **kwargs)
+  File "/mnt/sdv_repos/sdv-py/sportsdataverse/dl_utils.py", line 31, in download
+    logger.warning("%s: %i - %s for url (%s)", e, response.status_code, response.reason, response.url)
+UnboundLocalError: local variable 'response' referenced before assignment
+INFO:__main__:5.285450359185536 minutes to download 1309 game play-by-plays.
+INFO:__main__:Finished NBA PBP for 2024...
