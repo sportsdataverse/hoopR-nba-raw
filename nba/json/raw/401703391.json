@@ -1303,12 +1303,12 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/3907387.png",
 "alt": "Ben Simmons"
 },
-"jersey": "10",
 "position": {
 "name": "Point Guard",
 "displayName": "Point Guard",
 "abbreviation": "PG"
-}
+},
+"jersey": "10"
 },
 "starter": true,
 "didNotPlay": false,
@@ -2003,18 +2003,17 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/3907387.png",
 "alt": "Ben Simmons"
 },
-"jersey": "10",
 "position": {
 "abbreviation": "PG"
 },
 "team": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/17?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/12?lang=en&region=us"
 },
 "status": {
-"id": "9",
-"name": "Free Agent",
-"type": "free-agent",
-"abbreviation": "FA"
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -2738,66 +2737,20 @@
 "uid": "s:40~l:46~e:401705324~c:401705324",
 "date": "2025-02-11T00:30:00Z",
 "timeValid": true,
-"status": "in",
+"status": "post",
 "statusType": {
-"id": "2",
-"name": "STATUS_IN_PROGRESS",
-"state": "in",
-"completed": false,
-"description": "In Progress",
-"detail": "6:09 - 3rd Quarter",
-"shortDetail": "6:09 - 3rd"
-},
-"broadcasts": [
-{
-"type": {
-"id": "6",
-"shortName": "Subscription Package"
-},
-"market": {
 "id": "3",
-"type": "Away"
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
-"media": {
-"shortName": "NBA League Pass"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "YES"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "FanDuel SN SE"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": true,
 "team": {
 "id": "17",
 "uid": "s:40~l:46~t:17",
@@ -2862,10 +2815,11 @@
 }
 ]
 },
-"score": "74"
+"score": "97"
 },
 {
 "homeAway": "away",
+"winner": false,
 "team": {
 "id": "30",
 "uid": "s:40~l:46~t:30",
@@ -2930,34 +2884,34 @@
 }
 ]
 },
-"score": "59"
+"score": "89"
 }
 ],
 "links": [
 {
 "language": "en-US",
 "rel": [
-"live",
+"summary",
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nba/game?gameId=401705324",
+"href": "https://www.espn.com/nba/game/_/gameId/401705324/hornets-nets",
 "text": "Gamecast",
-"shortText": "Gamecast",
+"shortText": "Summary",
 "isExternal": false,
 "isPremium": false
 },
 {
 "language": "en-US",
 "rel": [
-"live",
+"summary",
 "sportscenter",
 "app",
 "event"
 ],
 "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401705324",
 "text": "Gamecast",
-"shortText": "Gamecast",
+"shortText": "Summary",
 "isExternal": false,
 "isPremium": false
 }
@@ -27092,8 +27046,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 25.0,
-"displayValue": "25"
+"value": 26.0,
+"displayValue": "26"
 },
 {
 "name": "streak",
@@ -27102,8 +27056,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -1.0,
-"displayValue": "L1"
+"value": -2.0,
+"displayValue": "L2"
 },
 {
 "name": "winPercent",
@@ -27112,8 +27066,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.5,
-"displayValue": ".500"
+"value": 0.49019608,
+"displayValue": ".490"
 },
 {
 "name": "wins",
@@ -27153,6 +27107,89 @@
 ]
 },
 {
+"team": "Atlanta",
+"link": "https://www.espn.com/nba/team/_/name/atl/atlanta-hawks",
+"id": "1",
+"uid": "s:40~l:46~t:1",
+"stats": [
+{
+"name": "gamesBehind",
+"displayName": "Games Back",
+"shortDisplayName": "GB",
+"description": "Games Back",
+"abbreviation": "GB",
+"type": "gamesbehind",
+"value": 0.5,
+"displayValue": "0.5"
+},
+{
+"name": "losses",
+"displayName": "Losses",
+"shortDisplayName": "L",
+"description": "Losses",
+"abbreviation": "L",
+"type": "losses",
+"value": 28.0,
+"displayValue": "28"
+},
+{
+"name": "streak",
+"displayName": "Streak",
+"shortDisplayName": "STRK",
+"description": "Current Streak",
+"abbreviation": "STRK",
+"type": "streak",
+"value": 3.0,
+"displayValue": "W3"
+},
+{
+"name": "winPercent",
+"displayName": "Win Percentage",
+"shortDisplayName": "PCT",
+"description": "Winning Percentage",
+"abbreviation": "PCT",
+"type": "winpercent",
+"value": 0.4814815,
+"displayValue": ".481"
+},
+{
+"name": "wins",
+"displayName": "Wins",
+"shortDisplayName": "W",
+"description": "Wins",
+"abbreviation": "W",
+"type": "wins",
+"value": 26.0,
+"displayValue": "26"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/atl.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:13Z"
+}
+]
+},
+{
 "team": "Orlando",
 "link": "https://www.espn.com/nba/team/_/name/orl/orlando-magic",
 "id": "19",
@@ -27175,8 +27212,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 28.0,
-"displayValue": "28"
+"value": 29.0,
+"displayValue": "29"
 },
 {
 "name": "streak",
@@ -27185,8 +27222,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": -1.0,
+"displayValue": "L1"
 },
 {
 "name": "winPercent",
@@ -27195,8 +27232,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.4814815,
-"displayValue": ".481"
+"value": 0.47272727,
+"displayValue": ".473"
 },
 {
 "name": "wins",
@@ -27236,89 +27273,6 @@
 ]
 },
 {
-"team": "Atlanta",
-"link": "https://www.espn.com/nba/team/_/name/atl/atlanta-hawks",
-"id": "1",
-"uid": "s:40~l:46~t:1",
-"stats": [
-{
-"name": "gamesBehind",
-"displayName": "Games Back",
-"shortDisplayName": "GB",
-"description": "Games Back",
-"abbreviation": "GB",
-"type": "gamesbehind",
-"value": 1.5,
-"displayValue": "1.5"
-},
-{
-"name": "losses",
-"displayName": "Losses",
-"shortDisplayName": "L",
-"description": "Losses",
-"abbreviation": "L",
-"type": "losses",
-"value": 28.0,
-"displayValue": "28"
-},
-{
-"name": "streak",
-"displayName": "Streak",
-"shortDisplayName": "STRK",
-"description": "Current Streak",
-"abbreviation": "STRK",
-"type": "streak",
-"value": 2.0,
-"displayValue": "W2"
-},
-{
-"name": "winPercent",
-"displayName": "Win Percentage",
-"shortDisplayName": "PCT",
-"description": "Winning Percentage",
-"abbreviation": "PCT",
-"type": "winpercent",
-"value": 0.4716981,
-"displayValue": ".472"
-},
-{
-"name": "wins",
-"displayName": "Wins",
-"shortDisplayName": "W",
-"description": "Wins",
-"abbreviation": "W",
-"type": "wins",
-"value": 25.0,
-"displayValue": "25"
-}
-],
-"logo": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2024-06-25T21:17Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/atl.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2024-06-25T21:13Z"
-}
-]
-},
-{
 "team": "Charlotte",
 "link": "https://www.espn.com/nba/team/_/name/cha/charlotte-hornets",
 "id": "30",
@@ -27341,8 +27295,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 37.0,
-"displayValue": "37"
+"value": 38.0,
+"displayValue": "38"
 },
 {
 "name": "streak",
@@ -27351,8 +27305,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -1.0,
-"displayValue": "L1"
+"value": -2.0,
+"displayValue": "L2"
 },
 {
 "name": "winPercent",
@@ -27361,8 +27315,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.26,
-"displayValue": ".260"
+"value": 0.25490198,
+"displayValue": ".255"
 },
 {
 "name": "wins",
@@ -27424,8 +27378,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 43.0,
-"displayValue": "43"
+"value": 44.0,
+"displayValue": "44"
 },
 {
 "name": "streak",
@@ -27434,8 +27388,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -2.0,
-"displayValue": "L2"
+"value": -3.0,
+"displayValue": "L3"
 },
 {
 "name": "winPercent",
@@ -27444,8 +27398,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.17307693,
-"displayValue": ".173"
+"value": 0.16981132,
+"displayValue": ".170"
 },
 {
 "name": "wins",
@@ -27525,8 +27479,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": 2.0,
+"displayValue": "W2"
 },
 {
 "name": "winPercent",
@@ -27535,8 +27489,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.6981132,
-"displayValue": ".698"
+"value": 0.7037037,
+"displayValue": ".704"
 },
 {
 "name": "wins",
@@ -27545,8 +27499,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 37.0,
-"displayValue": "37"
+"value": 38.0,
+"displayValue": "38"
 }
 ],
 "logo": [
@@ -27608,8 +27562,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -1.0,
-"displayValue": "L1"
+"value": 1.0,
+"displayValue": "W1"
 },
 {
 "name": "winPercent",
@@ -27618,8 +27572,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.65384614,
-"displayValue": ".654"
+"value": 0.6603774,
+"displayValue": ".660"
 },
 {
 "name": "wins",
@@ -27628,8 +27582,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 34.0,
-"displayValue": "34"
+"value": 35.0,
+"displayValue": "35"
 }
 ],
 "logo": [
@@ -27671,8 +27625,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 16.5,
-"displayValue": "16.5"
+"value": 17.5,
+"displayValue": "17.5"
 },
 {
 "name": "losses",
@@ -27681,8 +27635,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 32.0,
-"displayValue": "32"
+"value": 33.0,
+"displayValue": "33"
 },
 {
 "name": "streak",
@@ -27691,8 +27645,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -3.0,
-"displayValue": "L3"
+"value": -4.0,
+"displayValue": "L4"
 },
 {
 "name": "winPercent",
@@ -27701,8 +27655,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.3846154,
-"displayValue": ".385"
+"value": 0.3773585,
+"displayValue": ".377"
 },
 {
 "name": "wins",
@@ -27774,8 +27728,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": 2.0,
+"displayValue": "W2"
 },
 {
 "name": "winPercent",
@@ -27784,8 +27738,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.34615386,
-"displayValue": ".346"
+"value": 0.35849056,
+"displayValue": ".358"
 },
 {
 "name": "wins",
@@ -27794,8 +27748,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 18.0,
-"displayValue": "18"
+"value": 19.0,
+"displayValue": "19"
 }
 ],
 "logo": [
@@ -27857,8 +27811,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -4.0,
-"displayValue": "L4"
+"value": 1.0,
+"displayValue": "W1"
 },
 {
 "name": "winPercent",
@@ -27867,8 +27821,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.3018868,
-"displayValue": ".302"
+"value": 0.3148148,
+"displayValue": ".315"
 },
 {
 "name": "wins",
@@ -27877,8 +27831,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 16.0,
-"displayValue": "16"
+"value": 17.0,
+"displayValue": "17"
 }
 ],
 "logo": [
