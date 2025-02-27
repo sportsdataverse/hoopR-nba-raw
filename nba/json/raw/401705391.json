@@ -2781,66 +2781,20 @@
 "uid": "s:40~l:46~e:401705407~c:401705407",
 "date": "2025-02-27T00:30:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Wed, February 26th at 7:30 PM EST",
-"shortDetail": "2/26 - 7:30 PM EST"
-},
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "FanDuel SN Sun"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "FanDuel SN SE"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "6",
-"shortName": "Subscription Package"
-},
-"market": {
 "id": "3",
-"type": "Away"
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
-"media": {
-"shortName": "NBA League Pass"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": true,
 "team": {
 "id": "14",
 "uid": "s:40~l:46~t:14",
@@ -2905,10 +2859,11 @@
 }
 ]
 },
-"score": "0"
+"score": "131"
 },
 {
 "homeAway": "away",
+"winner": false,
 "team": {
 "id": "1",
 "uid": "s:40~l:46~t:1",
@@ -2973,7 +2928,7 @@
 }
 ]
 },
-"score": "0"
+"score": "109"
 }
 ],
 "links": [
@@ -24690,10 +24645,10 @@
 ]
 },
 {
-"team": "Atlanta",
-"link": "https://www.espn.com/nba/team/_/name/atl/atlanta-hawks",
-"id": "1",
-"uid": "s:40~l:46~t:1",
+"team": "Miami",
+"link": "https://www.espn.com/nba/team/_/name/mia/miami-heat",
+"id": "14",
+"uid": "s:40~l:46~t:14",
 "stats": [
 {
 "name": "gamesBehind",
@@ -24702,8 +24657,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 1.0,
-"displayValue": "1"
+"value": 0.5,
+"displayValue": "0.5"
 },
 {
 "name": "losses",
@@ -24712,8 +24667,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 31.0,
-"displayValue": "31"
+"value": 30.0,
+"displayValue": "30"
 },
 {
 "name": "streak",
@@ -24732,8 +24687,91 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.46551725,
-"displayValue": ".466"
+"value": 0.47368422,
+"displayValue": ".474"
+},
+{
+"name": "wins",
+"displayName": "Wins",
+"shortDisplayName": "W",
+"description": "Wins",
+"abbreviation": "W",
+"type": "wins",
+"value": 27.0,
+"displayValue": "27"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/mia.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/mia.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
+}
+]
+},
+{
+"team": "Atlanta",
+"link": "https://www.espn.com/nba/team/_/name/atl/atlanta-hawks",
+"id": "1",
+"uid": "s:40~l:46~t:1",
+"stats": [
+{
+"name": "gamesBehind",
+"displayName": "Games Back",
+"shortDisplayName": "GB",
+"description": "Games Back",
+"abbreviation": "GB",
+"type": "gamesbehind",
+"value": 1.5,
+"displayValue": "1.5"
+},
+{
+"name": "losses",
+"displayName": "Losses",
+"shortDisplayName": "L",
+"description": "Losses",
+"abbreviation": "L",
+"type": "losses",
+"value": 32.0,
+"displayValue": "32"
+},
+{
+"name": "streak",
+"displayName": "Streak",
+"shortDisplayName": "STRK",
+"description": "Current Streak",
+"abbreviation": "STRK",
+"type": "streak",
+"value": -1.0,
+"displayValue": "L1"
+},
+{
+"name": "winPercent",
+"displayName": "Win Percentage",
+"shortDisplayName": "PCT",
+"description": "Winning Percentage",
+"abbreviation": "PCT",
+"type": "winpercent",
+"value": 0.45762712,
+"displayValue": ".458"
 },
 {
 "name": "wins",
@@ -24769,89 +24807,6 @@
 "dark"
 ],
 "lastUpdated": "2024-06-25T21:13Z"
-}
-]
-},
-{
-"team": "Miami",
-"link": "https://www.espn.com/nba/team/_/name/mia/miami-heat",
-"id": "14",
-"uid": "s:40~l:46~t:14",
-"stats": [
-{
-"name": "gamesBehind",
-"displayName": "Games Back",
-"shortDisplayName": "GB",
-"description": "Games Back",
-"abbreviation": "GB",
-"type": "gamesbehind",
-"value": 1.0,
-"displayValue": "1"
-},
-{
-"name": "losses",
-"displayName": "Losses",
-"shortDisplayName": "L",
-"description": "Losses",
-"abbreviation": "L",
-"type": "losses",
-"value": 30.0,
-"displayValue": "30"
-},
-{
-"name": "streak",
-"displayName": "Streak",
-"shortDisplayName": "STRK",
-"description": "Current Streak",
-"abbreviation": "STRK",
-"type": "streak",
-"value": -2.0,
-"displayValue": "L2"
-},
-{
-"name": "winPercent",
-"displayName": "Win Percentage",
-"shortDisplayName": "PCT",
-"description": "Winning Percentage",
-"abbreviation": "PCT",
-"type": "winpercent",
-"value": 0.4642857,
-"displayValue": ".464"
-},
-{
-"name": "wins",
-"displayName": "Wins",
-"shortDisplayName": "W",
-"description": "Wins",
-"abbreviation": "W",
-"type": "wins",
-"value": 26.0,
-"displayValue": "26"
-}
-],
-"logo": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/mia.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2024-06-25T21:17Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/mia.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -24951,8 +24906,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 17.5,
-"displayValue": "17.5"
+"value": 18.0,
+"displayValue": "18"
 },
 {
 "name": "losses",
@@ -24961,8 +24916,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 47.0,
-"displayValue": "47"
+"value": 48.0,
+"displayValue": "48"
 },
 {
 "name": "streak",
@@ -24971,8 +24926,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": -1.0,
+"displayValue": "L1"
 },
 {
 "name": "winPercent",
@@ -24981,8 +24936,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.1754386,
-"displayValue": ".175"
+"value": 0.1724138,
+"displayValue": ".172"
 },
 {
 "name": "wins",
