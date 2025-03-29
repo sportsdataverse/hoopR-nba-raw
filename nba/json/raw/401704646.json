@@ -2373,11 +2373,27 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/8?lang=en&region=us"
 },
-"status": {
-"id": "1",
-"name": "Active",
-"type": "active",
-"abbreviation": "Active"
+"status": "Out",
+"injuries": {
+"status": "Out",
+"date": "2025-03-28T16:32Z",
+"type": {
+"id": "4",
+"name": "INJURY_STATUS_OUT",
+"description": "out",
+"abbreviation": "O"
+},
+"details": {
+"fantasyStatus": {
+"description": "OUT",
+"abbreviation": "OUT"
+},
+"type": "Calf",
+"location": "Leg",
+"detail": "Bruise",
+"side": "Left",
+"returnDate": "2025-03-30"
+}
 }
 },
 "statistics": [
@@ -2448,11 +2464,27 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/8?lang=en&region=us"
 },
-"status": {
-"id": "1",
-"name": "Active",
-"type": "active",
-"abbreviation": "Active"
+"status": "Out",
+"injuries": {
+"status": "Out",
+"date": "2025-03-28T16:32Z",
+"type": {
+"id": "4",
+"name": "INJURY_STATUS_OUT",
+"description": "out",
+"abbreviation": "O"
+},
+"details": {
+"fantasyStatus": {
+"description": "OUT",
+"abbreviation": "OUT"
+},
+"type": "Calf",
+"location": "Leg",
+"detail": "Bruise",
+"side": "Left",
+"returnDate": "2025-03-30"
+}
 }
 },
 "statistics": [
@@ -3143,15 +3175,15 @@
 "uid": "s:40~l:46~e:401705633~c:401705633",
 "date": "2025-03-28T23:00:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "in",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
+"id": "2",
+"name": "STATUS_IN_PROGRESS",
+"state": "in",
 "completed": false,
-"description": "Scheduled",
-"detail": "Fri, March 28th at 7:00 PM EDT",
-"shortDetail": "3/28 - 7:00 PM EDT"
+"description": "In Progress",
+"detail": "3:31 - 4th Quarter",
+"shortDetail": "3:31 - 4th"
 },
 "broadcasts": [
 {
@@ -3267,7 +3299,7 @@
 }
 ]
 },
-"score": "0"
+"score": "119"
 },
 {
 "homeAway": "away",
@@ -3335,34 +3367,34 @@
 }
 ]
 },
-"score": "0"
+"score": "117"
 }
 ],
 "links": [
 {
 "language": "en-US",
 "rel": [
-"summary",
+"live",
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nba/game/_/gameId/401705633/cavaliers-pistons",
+"href": "https://www.espn.com/nba/game?gameId=401705633",
 "text": "Gamecast",
-"shortText": "Summary",
+"shortText": "Gamecast",
 "isExternal": false,
 "isPremium": false
 },
 {
 "language": "en-US",
 "rel": [
-"summary",
+"live",
 "sportscenter",
 "app",
 "event"
 ],
 "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401705633",
 "text": "Gamecast",
-"shortText": "Summary",
+"shortText": "Gamecast",
 "isExternal": false,
 "isPremium": false
 }
@@ -3372,17 +3404,7 @@
 }
 ],
 "broadcasts": [],
-"predictor": {
-"header": "Matchup Predictor",
-"homeTeam": {
-"id": "5"
-},
-"awayTeam": {
-"id": "8",
-"gameProjection": "27.3",
-"teamChanceLoss": "72.7"
-}
-},
+"predictor": {},
 "pickcenter": [],
 "againstTheSpread": [
 {
