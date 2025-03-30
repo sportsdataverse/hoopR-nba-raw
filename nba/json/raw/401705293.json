@@ -2211,11 +2211,26 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/23?lang=en&region=us"
 },
-"status": {
-"id": "1",
-"name": "Active",
-"type": "active",
-"abbreviation": "Active"
+"status": "Out",
+"injuries": {
+"status": "Out",
+"date": "2025-03-29T22:20Z",
+"type": {
+"id": "4",
+"name": "INJURY_STATUS_OUT",
+"description": "out",
+"abbreviation": "O"
+},
+"details": {
+"fantasyStatus": {
+"description": "OUT",
+"abbreviation": "OUT"
+},
+"type": "Shoulder",
+"location": "Arm",
+"side": "Right",
+"returnDate": "2025-03-31"
+}
 }
 },
 "statistics": [
@@ -2838,15 +2853,15 @@
 "uid": "s:40~l:46~e:401705640~c:401705640",
 "date": "2025-03-29T21:00:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "in",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
+"id": "2",
+"name": "STATUS_IN_PROGRESS",
+"state": "in",
 "completed": false,
-"description": "Scheduled",
-"detail": "Sat, March 29th at 5:00 PM EDT",
-"shortDetail": "3/29 - 5:00 PM EDT"
+"description": "In Progress",
+"detail": "6:49 - 3rd Quarter",
+"shortDetail": "6:49 - 3rd"
 },
 "broadcasts": [
 {
@@ -2962,7 +2977,7 @@
 }
 ]
 },
-"score": "0"
+"score": "74"
 },
 {
 "homeAway": "away",
@@ -3030,34 +3045,34 @@
 }
 ]
 },
-"score": "0"
+"score": "54"
 }
 ],
 "links": [
 {
 "language": "en-US",
 "rel": [
-"summary",
+"live",
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nba/game/_/gameId/401705640/kings-magic",
+"href": "https://www.espn.com/nba/game?gameId=401705640",
 "text": "Gamecast",
-"shortText": "Summary",
+"shortText": "Gamecast",
 "isExternal": false,
 "isPremium": false
 },
 {
 "language": "en-US",
 "rel": [
-"summary",
+"live",
 "sportscenter",
 "app",
 "event"
 ],
 "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401705640",
 "text": "Gamecast",
-"shortText": "Summary",
+"shortText": "Gamecast",
 "isExternal": false,
 "isPremium": false
 }
