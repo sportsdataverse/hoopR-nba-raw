@@ -2247,11 +2247,27 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/7?lang=en&region=us"
 },
-"status": {
-"id": "1",
-"name": "Active",
-"type": "active",
-"abbreviation": "Active"
+"status": "Day-To-Day",
+"injuries": {
+"status": "Day-To-Day",
+"date": "2025-04-03T04:21Z",
+"type": {
+"id": "6",
+"name": "INJURY_STATUS_DAYTODAY",
+"description": "day-to-day",
+"abbreviation": "DD"
+},
+"details": {
+"fantasyStatus": {
+"description": "GTD",
+"abbreviation": "GTD"
+},
+"type": "Calf",
+"location": "Leg",
+"detail": "Not Specified",
+"side": "Right",
+"returnDate": "2025-04-04"
+}
 }
 },
 "statistics": [
@@ -2322,11 +2338,27 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/7?lang=en&region=us"
 },
-"status": {
-"id": "1",
-"name": "Active",
-"type": "active",
-"abbreviation": "Active"
+"status": "Day-To-Day",
+"injuries": {
+"status": "Day-To-Day",
+"date": "2025-04-03T04:21Z",
+"type": {
+"id": "6",
+"name": "INJURY_STATUS_DAYTODAY",
+"description": "day-to-day",
+"abbreviation": "DD"
+},
+"details": {
+"fantasyStatus": {
+"description": "GTD",
+"abbreviation": "GTD"
+},
+"type": "Ankle",
+"location": "Leg",
+"detail": "Pinched Nerve",
+"side": "Left",
+"returnDate": "2025-04-04"
+}
 }
 },
 "statistics": [
@@ -2406,11 +2438,27 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/7?lang=en&region=us"
 },
-"status": {
-"id": "1",
-"name": "Active",
-"type": "active",
-"abbreviation": "Active"
+"status": "Day-To-Day",
+"injuries": {
+"status": "Day-To-Day",
+"date": "2025-04-03T04:21Z",
+"type": {
+"id": "6",
+"name": "INJURY_STATUS_DAYTODAY",
+"description": "day-to-day",
+"abbreviation": "DD"
+},
+"details": {
+"fantasyStatus": {
+"description": "GTD",
+"abbreviation": "GTD"
+},
+"type": "Calf",
+"location": "Leg",
+"detail": "Not Specified",
+"side": "Right",
+"returnDate": "2025-04-04"
+}
 }
 },
 "statistics": [
@@ -3017,66 +3065,21 @@
 "uid": "s:40~l:46~e:401705668~c:401705668",
 "date": "2025-04-02T02:00:00Z",
 "timeValid": true,
-"status": "in",
+"status": "post",
 "statusType": {
-"id": "2",
-"name": "STATUS_IN_PROGRESS",
-"state": "in",
-"completed": false,
-"description": "In Progress",
-"detail": "9:52 - 2nd Quarter",
-"shortDetail": "9:52 - 2nd"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final/2OT",
+"shortDetail": "Final/2OT",
+"altDetail": "2OT"
 },
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "TNT"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "truTV"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "4",
-"shortName": "Streaming"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "Max"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": false,
 "team": {
 "id": "7",
 "uid": "s:40~l:46~t:7",
@@ -3141,10 +3144,11 @@
 }
 ]
 },
-"score": "36"
+"score": "139"
 },
 {
 "homeAway": "away",
+"winner": true,
 "team": {
 "id": "16",
 "uid": "s:40~l:46~t:16",
@@ -3209,34 +3213,34 @@
 }
 ]
 },
-"score": "33"
+"score": "140"
 }
 ],
 "links": [
 {
 "language": "en-US",
 "rel": [
-"live",
+"summary",
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nba/game?gameId=401705668",
+"href": "https://www.espn.com/nba/game/_/gameId/401705668/timberwolves-nuggets",
 "text": "Gamecast",
-"shortText": "Gamecast",
+"shortText": "Summary",
 "isExternal": false,
 "isPremium": false
 },
 {
 "language": "en-US",
 "rel": [
-"live",
+"summary",
 "sportscenter",
 "app",
 "event"
 ],
 "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401705668",
 "text": "Gamecast",
-"shortText": "Gamecast",
+"shortText": "Summary",
 "isExternal": false,
 "isPremium": false
 }
@@ -27466,8 +27470,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 10.0,
-"displayValue": "W10"
+"value": 11.0,
+"displayValue": "W11"
 },
 {
 "name": "winPercent",
@@ -27476,8 +27480,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.84,
-"displayValue": ".840"
+"value": 0.84210527,
+"displayValue": ".842"
 },
 {
 "name": "wins",
@@ -27486,8 +27490,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 63.0,
-"displayValue": "63"
+"value": 64.0,
+"displayValue": "64"
 }
 ],
 "logo": [
@@ -27529,8 +27533,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 16.0,
-"displayValue": "16"
+"value": 17.5,
+"displayValue": "17.5"
 },
 {
 "name": "losses",
@@ -27539,8 +27543,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 28.0,
-"displayValue": "28"
+"value": 30.0,
+"displayValue": "30"
 },
 {
 "name": "streak",
@@ -27549,8 +27553,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 2.0,
-"displayValue": "W2"
+"value": -2.0,
+"displayValue": "L2"
 },
 {
 "name": "winPercent",
@@ -27559,8 +27563,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.62666667,
-"displayValue": ".627"
+"value": 0.6103896,
+"displayValue": ".610"
 },
 {
 "name": "wins",
@@ -27632,8 +27636,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 2.0,
-"displayValue": "W2"
+"value": 3.0,
+"displayValue": "W3"
 },
 {
 "name": "winPercent",
@@ -27642,8 +27646,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.5733333,
-"displayValue": ".573"
+"value": 0.57894737,
+"displayValue": ".579"
 },
 {
 "name": "wins",
@@ -27652,8 +27656,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 43.0,
-"displayValue": "43"
+"value": 44.0,
+"displayValue": "44"
 }
 ],
 "logo": [
@@ -27695,8 +27699,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 30.5,
-"displayValue": "30.5"
+"value": 31.0,
+"displayValue": "31"
 },
 {
 "name": "losses",
@@ -27778,8 +27782,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 47.5,
-"displayValue": "47.5"
+"value": 48.5,
+"displayValue": "48.5"
 },
 {
 "name": "losses",
@@ -27788,8 +27792,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 60.0,
-"displayValue": "60"
+"value": 61.0,
+"displayValue": "61"
 },
 {
 "name": "streak",
@@ -27798,8 +27802,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -6.0,
-"displayValue": "L6"
+"value": -7.0,
+"displayValue": "L7"
 },
 {
 "name": "winPercent",
@@ -27808,8 +27812,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.21052632,
-"displayValue": ".211"
+"value": 0.20779221,
+"displayValue": ".208"
 },
 {
 "name": "wins",
