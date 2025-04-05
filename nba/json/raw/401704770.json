@@ -2301,20 +2301,20 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/27?lang=en&region=us"
 },
-"status": "Out",
+"status": "Day-To-Day",
 "injuries": {
-"status": "Out",
-"date": "2025-04-03T17:40Z",
+"status": "Day-To-Day",
+"date": "2025-04-04T05:32Z",
 "type": {
-"id": "4",
-"name": "INJURY_STATUS_OUT",
-"description": "out",
-"abbreviation": "O"
+"id": "6",
+"name": "INJURY_STATUS_DAYTODAY",
+"description": "day-to-day",
+"abbreviation": "DD"
 },
 "details": {
 "fantasyStatus": {
-"description": "OUT",
-"abbreviation": "OUT"
+"description": "GTD",
+"abbreviation": "GTD"
 },
 "type": "Elbow",
 "location": "Arm",
@@ -2504,8 +2504,8 @@
 },
 "details": {
 "fantasyStatus": {
-"description": "OUT",
-"abbreviation": "OUT"
+"description": "GTD",
+"abbreviation": "GTD"
 },
 "type": "Ankle",
 "location": "Leg",
@@ -3119,66 +3119,20 @@
 "uid": "s:40~l:46~e:401705678~c:401705678",
 "date": "2025-04-03T23:00:00Z",
 "timeValid": true,
-"status": "in",
+"status": "post",
 "statusType": {
-"id": "22",
-"name": "STATUS_END_PERIOD",
-"state": "in",
-"completed": false,
-"description": "End of Period",
-"detail": "End of 1st Quarter",
-"shortDetail": "End of 1st"
-},
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "MNMT"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "FanDuel SN FL"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "6",
-"shortName": "Subscription Package"
-},
-"market": {
 "id": "3",
-"type": "Away"
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
-"media": {
-"shortName": "NBA League Pass"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": false,
 "team": {
 "id": "27",
 "uid": "s:40~l:46~t:27",
@@ -3243,10 +3197,11 @@
 }
 ]
 },
-"score": "27"
+"score": "97"
 },
 {
 "homeAway": "away",
+"winner": true,
 "team": {
 "id": "19",
 "uid": "s:40~l:46~t:19",
@@ -3311,34 +3266,34 @@
 }
 ]
 },
-"score": "32"
+"score": "109"
 }
 ],
 "links": [
 {
 "language": "en-US",
 "rel": [
-"live",
+"summary",
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nba/game?gameId=401705678",
+"href": "https://www.espn.com/nba/game/_/gameId/401705678/magic-wizards",
 "text": "Gamecast",
-"shortText": "Gamecast",
+"shortText": "Summary",
 "isExternal": false,
 "isPremium": false
 },
 {
 "language": "en-US",
 "rel": [
-"live",
+"summary",
 "sportscenter",
 "app",
 "event"
 ],
 "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401705678",
 "text": "Gamecast",
-"shortText": "Gamecast",
+"shortText": "Summary",
 "isExternal": false,
 "isPremium": false
 }
@@ -25155,8 +25110,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": 2.0,
+"displayValue": "W2"
 },
 {
 "name": "winPercent",
@@ -25165,8 +25120,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.48051947,
-"displayValue": ".481"
+"value": 0.4871795,
+"displayValue": ".487"
 },
 {
 "name": "wins",
@@ -25175,8 +25130,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 37.0,
-"displayValue": "37"
+"value": 38.0,
+"displayValue": "38"
 }
 ],
 "logo": [
@@ -25218,8 +25173,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 0.5,
-"displayValue": "0.5"
+"value": 1.0,
+"displayValue": "1"
 },
 {
 "name": "losses",
@@ -25301,8 +25256,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 1.5,
-"displayValue": "1.5"
+"value": 2.5,
+"displayValue": "2.5"
 },
 {
 "name": "losses",
@@ -25311,8 +25266,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 41.0,
-"displayValue": "41"
+"value": 42.0,
+"displayValue": "42"
 },
 {
 "name": "streak",
@@ -25321,8 +25276,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 6.0,
-"displayValue": "W6"
+"value": -1.0,
+"displayValue": "L1"
 },
 {
 "name": "winPercent",
@@ -25331,8 +25286,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.46052632,
-"displayValue": ".461"
+"value": 0.45454547,
+"displayValue": ".455"
 },
 {
 "name": "wins",
@@ -25384,8 +25339,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 17.5,
-"displayValue": "17.5"
+"value": 18.5,
+"displayValue": "18.5"
 },
 {
 "name": "losses",
@@ -25394,8 +25349,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 57.0,
-"displayValue": "57"
+"value": 58.0,
+"displayValue": "58"
 },
 {
 "name": "streak",
@@ -25404,8 +25359,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -1.0,
-"displayValue": "L1"
+"value": -2.0,
+"displayValue": "L2"
 },
 {
 "name": "winPercent",
@@ -25414,8 +25369,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.25,
-"displayValue": ".250"
+"value": 0.24675325,
+"displayValue": ".247"
 },
 {
 "name": "wins",
@@ -25467,8 +25422,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 19.5,
-"displayValue": "19.5"
+"value": 20.5,
+"displayValue": "20.5"
 },
 {
 "name": "losses",
@@ -25477,8 +25432,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 59.0,
-"displayValue": "59"
+"value": 60.0,
+"displayValue": "60"
 },
 {
 "name": "streak",
@@ -25487,8 +25442,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": -1.0,
+"displayValue": "L1"
 },
 {
 "name": "winPercent",
@@ -25497,8 +25452,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.2236842,
-"displayValue": ".224"
+"value": 0.22077923,
+"displayValue": ".221"
 },
 {
 "name": "wins",
