@@ -124,8 +124,8 @@
 {
 "name": "turnoverPoints",
 "displayValue": "16",
-"abbreviation": "PTS OFF TO",
-"label": "Points Off Turnovers"
+"abbreviation": "Points Conceded Off Turnovers",
+"label": "Points Conceded Off Turnovers"
 },
 {
 "name": "fastBreakPoints",
@@ -151,7 +151,9 @@
 "abbreviation": "LL",
 "label": "Largest Lead"
 }
-]
+],
+"displayOrder": 1,
+"homeAway": "away"
 },
 {
 "team": {
@@ -276,8 +278,8 @@
 {
 "name": "turnoverPoints",
 "displayValue": "15",
-"abbreviation": "PTS OFF TO",
-"label": "Points Off Turnovers"
+"abbreviation": "Points Conceded Off Turnovers",
+"label": "Points Conceded Off Turnovers"
 },
 {
 "name": "fastBreakPoints",
@@ -303,7 +305,9 @@
 "abbreviation": "LL",
 "label": "Largest Lead"
 }
-]
+],
+"displayOrder": 2,
+"homeAway": "home"
 }
 ],
 "players": [
@@ -464,9 +468,9 @@
 },
 "jersey": "12",
 "position": {
-"name": "Power Forward",
-"displayName": "Power Forward",
-"abbreviation": "PF"
+"name": "Forward",
+"displayName": "Forward",
+"abbreviation": "F"
 }
 },
 "starter": true,
@@ -515,9 +519,9 @@
 },
 "jersey": "44",
 "position": {
-"name": "Small Forward",
-"displayName": "Small Forward",
-"abbreviation": "SF"
+"name": "Forward",
+"displayName": "Forward",
+"abbreviation": "F"
 }
 },
 "starter": true,
@@ -666,11 +670,11 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/4066731.png",
 "alt": "Jalen McDaniels"
 },
-"jersey": "2",
+"jersey": "7",
 "position": {
-"name": "Power Forward",
-"displayName": "Power Forward",
-"abbreviation": "PF"
+"name": "Forward",
+"displayName": "Forward",
+"abbreviation": "F"
 }
 },
 "starter": false,
@@ -957,12 +961,12 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/3929325.png",
 "alt": "Furkan Korkmaz"
 },
-"jersey": "30",
 "position": {
 "name": "Shooting Guard",
 "displayName": "Shooting Guard",
 "abbreviation": "SG"
-}
+},
+"jersey": "30"
 },
 "starter": false,
 "didNotPlay": true,
@@ -1024,7 +1028,8 @@
 "96"
 ]
 }
-]
+],
+"displayOrder": 1
 },
 {
 "team": {
@@ -1436,7 +1441,7 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/2528794.png",
 "alt": "Joe Harris"
 },
-"jersey": "31",
+"jersey": "12",
 "position": {
 "name": "Small Forward",
 "displayName": "Small Forward",
@@ -1733,7 +1738,7 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/4397107.png",
 "alt": "David Duke Jr."
 },
-"jersey": "28",
+"jersey": "6",
 "position": {
 "name": "Guard",
 "displayName": "Guard",
@@ -1764,7 +1769,8 @@
 "88"
 ]
 }
-]
+],
+"displayOrder": 2
 }
 ]
 },
@@ -1787,7 +1793,6 @@
 "city": "Brooklyn",
 "state": "NY"
 },
-"capacity": 17732,
 "grass": false,
 "images": [
 {
@@ -1874,7 +1879,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/bkn.png",
@@ -1885,7 +1890,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
@@ -1896,7 +1901,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/bkn.png",
@@ -1908,7 +1913,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 }
 ]
 },
@@ -1948,6 +1953,12 @@
 },
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2023/teams/17?lang=en&region=us"
+},
+"status": {
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -2017,6 +2028,12 @@
 },
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2023/teams/17?lang=en&region=us"
+},
+"status": {
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -2095,6 +2112,12 @@
 },
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2023/teams/17?lang=en&region=us"
+},
+"status": {
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -2158,7 +2181,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/phi.png",
@@ -2169,7 +2192,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
@@ -2180,7 +2203,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/phi.png",
@@ -2192,7 +2215,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -2228,10 +2251,16 @@
 },
 "jersey": "12",
 "position": {
-"abbreviation": "PF"
+"abbreviation": "F"
 },
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2023/teams/20?lang=en&region=us"
+},
+"status": {
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -2301,6 +2330,12 @@
 },
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2023/teams/20?lang=en&region=us"
+},
+"status": {
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -2373,12 +2408,18 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/4278562.png",
 "alt": "Paul Reed"
 },
-"jersey": "44",
+"jersey": "7",
 "position": {
-"abbreviation": "SF"
+"abbreviation": "F"
 },
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2023/teams/20?lang=en&region=us"
+},
+"status": {
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -2421,7 +2462,7 @@
 "type": "season",
 "title": "Regular Season Series",
 "description": "Regular Season Series",
-"summary": "PHI Wins series 4-0",
+"summary": "PHI wins series 4-0",
 "completed": true,
 "totalCompetitions": 4,
 "events": [
@@ -2470,7 +2511,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/phi.png",
@@ -2481,7 +2522,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
@@ -2492,7 +2533,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/phi.png",
@@ -2504,7 +2545,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -2539,7 +2580,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/bkn.png",
@@ -2550,7 +2591,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
@@ -2561,7 +2602,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/bkn.png",
@@ -2573,7 +2614,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 }
 ]
 },
@@ -2588,7 +2629,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nba/game/_/gameId/401468411",
+"href": "https://www.espn.com/nba/game/_/gameId/401468411/nets-76ers",
 "text": "Gamecast",
 "shortText": "Summary",
 "isExternal": false,
@@ -2655,7 +2696,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/phi.png",
@@ -2666,7 +2707,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
@@ -2677,7 +2718,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/phi.png",
@@ -2689,7 +2730,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -2724,7 +2765,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/bkn.png",
@@ -2735,7 +2776,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
@@ -2746,7 +2787,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/bkn.png",
@@ -2758,7 +2799,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 }
 ]
 },
@@ -2773,7 +2814,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nba/game/_/gameId/401468876",
+"href": "https://www.espn.com/nba/game/_/gameId/401468876/nets-76ers",
 "text": "Gamecast",
 "shortText": "Summary",
 "isExternal": false,
@@ -2840,7 +2881,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/bkn.png",
@@ -2851,7 +2892,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
@@ -2862,7 +2903,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/bkn.png",
@@ -2874,7 +2915,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 }
 ]
 },
@@ -2909,7 +2950,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/phi.png",
@@ -2920,7 +2961,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
@@ -2931,7 +2972,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/phi.png",
@@ -2943,7 +2984,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -2958,7 +2999,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nba/game/_/gameId/401469001",
+"href": "https://www.espn.com/nba/game/_/gameId/401469001/76ers-nets",
 "text": "Gamecast",
 "shortText": "Summary",
 "isExternal": false,
@@ -3025,7 +3066,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/bkn.png",
@@ -3036,7 +3077,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
@@ -3047,7 +3088,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/bkn.png",
@@ -3059,7 +3100,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 }
 ]
 },
@@ -3094,7 +3135,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/phi.png",
@@ -3105,7 +3146,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
@@ -3116,7 +3157,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/phi.png",
@@ -3128,7 +3169,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -3143,7 +3184,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nba/game/_/gameId/401469372",
+"href": "https://www.espn.com/nba/game/_/gameId/401469372/76ers-nets",
 "text": "Gamecast",
 "shortText": "Summary",
 "isExternal": false,
@@ -3171,7 +3212,7 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "PHI Wins series 4-0",
+"summary": "PHI wins series 4-0",
 "completed": true,
 "totalCompetitions": 7,
 "events": [
@@ -3220,7 +3261,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/phi.png",
@@ -3231,7 +3272,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
@@ -3242,7 +3283,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/phi.png",
@@ -3254,7 +3295,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -3289,7 +3330,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/bkn.png",
@@ -3300,7 +3341,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
@@ -3311,7 +3352,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/bkn.png",
@@ -3323,7 +3364,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 }
 ]
 },
@@ -3338,7 +3379,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nba/game/_/gameId/401540750",
+"href": "https://www.espn.com/nba/game/_/gameId/401540750/nets-76ers",
 "text": "Gamecast",
 "shortText": "Summary",
 "isExternal": false,
@@ -3405,7 +3446,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/phi.png",
@@ -3416,7 +3457,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
@@ -3427,7 +3468,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/phi.png",
@@ -3439,7 +3480,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -3474,7 +3515,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/bkn.png",
@@ -3485,7 +3526,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
@@ -3496,7 +3537,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/bkn.png",
@@ -3508,7 +3549,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 }
 ]
 },
@@ -3523,7 +3564,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nba/game/_/gameId/401541173",
+"href": "https://www.espn.com/nba/game/_/gameId/401541173/nets-76ers",
 "text": "Gamecast",
 "shortText": "Summary",
 "isExternal": false,
@@ -3590,7 +3631,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/bkn.png",
@@ -3601,7 +3642,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
@@ -3612,7 +3653,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/bkn.png",
@@ -3624,7 +3665,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 }
 ]
 },
@@ -3659,7 +3700,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/phi.png",
@@ -3670,7 +3711,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
@@ -3681,7 +3722,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/phi.png",
@@ -3693,7 +3734,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -3708,7 +3749,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nba/game/_/gameId/401541181",
+"href": "https://www.espn.com/nba/game/_/gameId/401541181/76ers-nets",
 "text": "Gamecast",
 "shortText": "Summary",
 "isExternal": false,
@@ -3775,7 +3816,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/bkn.png",
@@ -3786,7 +3827,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
@@ -3797,7 +3838,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/bkn.png",
@@ -3809,7 +3850,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 }
 ]
 },
@@ -3844,7 +3885,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/phi.png",
@@ -3855,7 +3896,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
@@ -3866,7 +3907,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/phi.png",
@@ -3878,7 +3919,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -3893,7 +3934,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nba/game/_/gameId/401541189",
+"href": "https://www.espn.com/nba/game/_/gameId/401541189/76ers-nets",
 "text": "Gamecast",
 "shortText": "Summary",
 "isExternal": false,
@@ -3919,17 +3960,7 @@
 }
 ],
 "broadcasts": [],
-"predictor": {
-"header": "Matchup Predictor",
-"homeTeam": {
-"id": "17"
-},
-"awayTeam": {
-"id": "20",
-"gameProjection": "66.1",
-"teamChanceLoss": "33.9"
-}
-},
+"predictor": {},
 "pickcenter": [
 {
 "provider": {
@@ -3937,7 +3968,7 @@
 "name": "consensus",
 "priority": 0
 },
-"details": "PHI -2.0",
+"details": "PHI -2",
 "overUnder": 210.5,
 "spread": 2.0,
 "overOdds": -110.0,
@@ -3950,13 +3981,16 @@
 "spreadOdds": -109.0,
 "current": {
 "pointSpread": {
-"alternateDisplayValue": "-2"
+"alternateDisplayValue": "-2",
+"american": "-2"
 },
 "spread": {
-"alternateDisplayValue": "-109"
+"alternateDisplayValue": "-109",
+"american": "-109"
 },
 "moneyLine": {
-"alternateDisplayValue": "-132"
+"alternateDisplayValue": "-132",
+"american": "-132"
 }
 },
 "teamId": "20"
@@ -3969,27 +4003,32 @@
 "spreadOdds": -111.0,
 "current": {
 "pointSpread": {
-"alternateDisplayValue": "+2"
+"alternateDisplayValue": "+2",
+"american": "+2"
 },
 "spread": {
-"alternateDisplayValue": "-111"
+"alternateDisplayValue": "-111",
+"american": "-111"
 },
 "moneyLine": {
-"alternateDisplayValue": "+112"
+"alternateDisplayValue": "+112",
+"american": "+112"
 }
 },
 "teamId": "17"
 },
-"links": [],
 "current": {
 "over": {
-"alternateDisplayValue": "-110"
+"alternateDisplayValue": "-110",
+"american": "-110"
 },
 "under": {
-"alternateDisplayValue": "-110"
+"alternateDisplayValue": "-110",
+"american": "-110"
 },
 "total": {
-"alternateDisplayValue": "210.5"
+"alternateDisplayValue": "210.5",
+"american": "210.5"
 }
 }
 },
@@ -3999,7 +4038,7 @@
 "name": "teamrankings",
 "priority": 0
 },
-"details": "PHI -2.0",
+"details": "PHI -2",
 "overUnder": 210.5,
 "spread": 2.0,
 "overOdds": -106.0,
@@ -4018,13 +4057,16 @@
 "spreadOdds": -111.0,
 "current": {
 "pointSpread": {
-"alternateDisplayValue": "-2"
+"alternateDisplayValue": "-2",
+"american": "-2"
 },
 "spread": {
-"alternateDisplayValue": "-111"
+"alternateDisplayValue": "-111",
+"american": "-111"
 },
 "moneyLine": {
-"alternateDisplayValue": "-127"
+"alternateDisplayValue": "-127",
+"american": "-127"
 }
 },
 "teamId": "20"
@@ -4043,27 +4085,32 @@
 "spreadOdds": -109.0,
 "current": {
 "pointSpread": {
-"alternateDisplayValue": "+2"
+"alternateDisplayValue": "+2",
+"american": "+2"
 },
 "spread": {
-"alternateDisplayValue": "-109"
+"alternateDisplayValue": "-109",
+"american": "-109"
 },
 "moneyLine": {
-"alternateDisplayValue": "+115"
+"alternateDisplayValue": "+115",
+"american": "+115"
 }
 },
 "teamId": "17"
 },
-"links": [],
 "current": {
 "over": {
-"alternateDisplayValue": "-106"
+"alternateDisplayValue": "-106",
+"american": "-106"
 },
 "under": {
-"alternateDisplayValue": "-106"
+"alternateDisplayValue": "-106",
+"american": "-106"
 },
 "total": {
-"alternateDisplayValue": "210.5"
+"alternateDisplayValue": "210.5",
+"american": "210.5"
 }
 }
 }
@@ -4096,7 +4143,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/phi.png",
@@ -4107,7 +4154,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
@@ -4118,7 +4165,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/phi.png",
@@ -4130,7 +4177,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -4163,7 +4210,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/bkn.png",
@@ -4174,7 +4221,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
@@ -4185,7 +4232,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/bkn.png",
@@ -4197,7 +4244,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 }
 ]
 },
@@ -4207,2198 +4254,2198 @@
 "odds": [],
 "winprobability": [
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.348,
+"tiePercentage": 0.0,
 "playId": "4015411894"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.335,
+"tiePercentage": 0.0,
 "playId": "4015411897"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.331,
+"tiePercentage": 0.0,
 "playId": "4015411898"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.306,
+"tiePercentage": 0.0,
 "playId": "4015411899"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.352,
+"tiePercentage": 0.0,
 "playId": "40154118910"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.374,
+"tiePercentage": 0.0,
 "playId": "40154118911"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.381,
+"tiePercentage": 0.0,
 "playId": "40154118912"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.361,
+"tiePercentage": 0.0,
 "playId": "40154118913"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.354,
+"tiePercentage": 0.0,
 "playId": "40154118914"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.375,
+"tiePercentage": 0.0,
 "playId": "40154118915"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.383,
+"tiePercentage": 0.0,
 "playId": "40154118916"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.426,
+"tiePercentage": 0.0,
 "playId": "40154118917"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.45,
+"tiePercentage": 0.0,
 "playId": "40154118918"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.428,
+"tiePercentage": 0.0,
 "playId": "40154118920"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.405,
+"tiePercentage": 0.0,
 "playId": "40154118921"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.429,
+"tiePercentage": 0.0,
 "playId": "40154118922"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.452,
+"tiePercentage": 0.0,
 "playId": "40154118924"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.46,
+"tiePercentage": 0.0,
 "playId": "40154118925"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.498,
+"tiePercentage": 0.0,
 "playId": "40154118926"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.505,
+"tiePercentage": 0.0,
 "playId": "40154118929"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.485,
+"tiePercentage": 0.0,
 "playId": "40154118930"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.513,
+"tiePercentage": 0.0,
 "playId": "40154118931"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.541,
+"tiePercentage": 0.0,
 "playId": "40154118932"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.564,
+"tiePercentage": 0.0,
 "playId": "40154118934"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.571,
+"tiePercentage": 0.0,
 "playId": "40154118935"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.551,
+"tiePercentage": 0.0,
 "playId": "40154118936"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.545,
+"tiePercentage": 0.0,
 "playId": "40154118937"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.565,
+"tiePercentage": 0.0,
 "playId": "40154118938"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.572,
+"tiePercentage": 0.0,
 "playId": "40154118939"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.599,
+"tiePercentage": 0.0,
 "playId": "40154118940"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.599,
+"tiePercentage": 0.0,
 "playId": "40154118941"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.622,
+"tiePercentage": 0.0,
 "playId": "40154118942"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.602,
+"tiePercentage": 0.0,
 "playId": "40154118943"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.578,
+"tiePercentage": 0.0,
 "playId": "40154118945"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.559,
+"tiePercentage": 0.0,
 "playId": "40154118946"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.58,
+"tiePercentage": 0.0,
 "playId": "40154118947"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.559,
+"tiePercentage": 0.0,
 "playId": "40154118948"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.58,
+"tiePercentage": 0.0,
 "playId": "40154118949"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.607,
+"tiePercentage": 0.0,
 "playId": "40154118950"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.583,
+"tiePercentage": 0.0,
 "playId": "40154118952"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.635,
+"tiePercentage": 0.0,
 "playId": "40154118953"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.599,
+"tiePercentage": 0.0,
 "playId": "40154118955"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.592,
+"tiePercentage": 0.0,
 "playId": "40154118958"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.592,
+"tiePercentage": 0.0,
 "playId": "40154118959"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.592,
+"tiePercentage": 0.0,
 "playId": "40154118960"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.592,
+"tiePercentage": 0.0,
 "playId": "40154118961"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.614,
+"tiePercentage": 0.0,
 "playId": "40154118965"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.593,
+"tiePercentage": 0.0,
 "playId": "40154118966"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.615,
+"tiePercentage": 0.0,
 "playId": "40154118968"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.594,
+"tiePercentage": 0.0,
 "playId": "40154118970"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.587,
+"tiePercentage": 0.0,
 "playId": "40154118971"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.61,
+"tiePercentage": 0.0,
 "playId": "40154118972"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.588,
+"tiePercentage": 0.0,
 "playId": "40154118973"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.61,
+"tiePercentage": 0.0,
 "playId": "40154118974"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.618,
+"tiePercentage": 0.0,
 "playId": "40154118975"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.596,
+"tiePercentage": 0.0,
 "playId": "40154118976"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.589,
+"tiePercentage": 0.0,
 "playId": "40154118977"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.549,
+"tiePercentage": 0.0,
 "playId": "40154118978"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.541,
+"tiePercentage": 0.0,
 "playId": "40154118980"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.541,
+"tiePercentage": 0.0,
 "playId": "40154118981"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.541,
+"tiePercentage": 0.0,
 "playId": "40154118982"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.567,
+"tiePercentage": 0.0,
 "playId": "40154118985"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.606,
+"tiePercentage": 0.0,
 "playId": "40154118986"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.587,
+"tiePercentage": 0.0,
 "playId": "40154118988"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.569,
+"tiePercentage": 0.0,
 "playId": "40154118989"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.569,
+"tiePercentage": 0.0,
 "playId": "40154118990"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.564,
+"tiePercentage": 0.0,
 "playId": "40154118992"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.587,
+"tiePercentage": 0.0,
 "playId": "40154118993"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.595,
+"tiePercentage": 0.0,
 "playId": "40154118994"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.567,
+"tiePercentage": 0.0,
 "playId": "40154118995"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.541,
+"tiePercentage": 0.0,
 "playId": "40154118997"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.522,
+"tiePercentage": 0.0,
 "playId": "40154118998"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.516,
+"tiePercentage": 0.0,
 "playId": "40154118999"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.537,
+"tiePercentage": 0.0,
 "playId": "401541189100"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.517,
+"tiePercentage": 0.0,
 "playId": "401541189101"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.517,
+"tiePercentage": 0.0,
 "playId": "401541189103"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.491,
+"tiePercentage": 0.0,
 "playId": "401541189105"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.47,
+"tiePercentage": 0.0,
 "playId": "401541189106"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.462,
+"tiePercentage": 0.0,
 "playId": "401541189107"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.486,
+"tiePercentage": 0.0,
 "playId": "401541189108"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.494,
+"tiePercentage": 0.0,
 "playId": "401541189109"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.463,
+"tiePercentage": 0.0,
 "playId": "401541189110"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.463,
+"tiePercentage": 0.0,
 "playId": "401541189112"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.463,
+"tiePercentage": 0.0,
 "playId": "401541189113"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.463,
+"tiePercentage": 0.0,
 "playId": "401541189116"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.488,
+"tiePercentage": 0.0,
 "playId": "401541189117"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.495,
+"tiePercentage": 0.0,
 "playId": "401541189119"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.488,
+"tiePercentage": 0.0,
 "playId": "401541189120"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.466,
+"tiePercentage": 0.0,
 "playId": "401541189121"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.438,
+"tiePercentage": 0.0,
 "playId": "401541189122"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.465,
+"tiePercentage": 0.0,
 "playId": "401541189123"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.468,
+"tiePercentage": 0.0,
 "playId": "401541189125"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.5,
+"tiePercentage": 0.0,
 "playId": "401541189127"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.5,
+"tiePercentage": 0.0,
 "playId": "401541189128"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.5,
+"tiePercentage": 0.0,
 "playId": "401541189129"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.5,
+"tiePercentage": 0.0,
 "playId": "401541189130"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.528,
+"tiePercentage": 0.0,
 "playId": "401541189134"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.551,
+"tiePercentage": 0.0,
 "playId": "401541189136"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.558,
+"tiePercentage": 0.0,
 "playId": "401541189137"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.531,
+"tiePercentage": 0.0,
 "playId": "401541189138"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.505,
+"tiePercentage": 0.0,
 "playId": "401541189139"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.533,
+"tiePercentage": 0.0,
 "playId": "401541189141"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.505,
+"tiePercentage": 0.0,
 "playId": "401541189142"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.563,
+"tiePercentage": 0.0,
 "playId": "401541189143"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.579,
+"tiePercentage": 0.0,
 "playId": "401541189144"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.579,
+"tiePercentage": 0.0,
 "playId": "401541189146"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.579,
+"tiePercentage": 0.0,
 "playId": "401541189147"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.541,
+"tiePercentage": 0.0,
 "playId": "401541189151"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.517,
+"tiePercentage": 0.0,
 "playId": "401541189152"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.509,
+"tiePercentage": 0.0,
 "playId": "401541189153"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.484,
+"tiePercentage": 0.0,
 "playId": "401541189154"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.46,
+"tiePercentage": 0.0,
 "playId": "401541189155"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.452,
+"tiePercentage": 0.0,
 "playId": "401541189156"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.486,
+"tiePercentage": 0.0,
 "playId": "401541189157"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.454,
+"tiePercentage": 0.0,
 "playId": "401541189158"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.429,
+"tiePercentage": 0.0,
 "playId": "401541189161"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.429,
+"tiePercentage": 0.0,
 "playId": "401541189162"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.405,
+"tiePercentage": 0.0,
 "playId": "401541189163"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.397,
+"tiePercentage": 0.0,
 "playId": "401541189164"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.423,
+"tiePercentage": 0.0,
 "playId": "401541189165"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.432,
+"tiePercentage": 0.0,
 "playId": "401541189166"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.492,
+"tiePercentage": 0.0,
 "playId": "401541189167"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.525,
+"tiePercentage": 0.0,
 "playId": "401541189169"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.525,
+"tiePercentage": 0.0,
 "playId": "401541189170"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.525,
+"tiePercentage": 0.0,
 "playId": "401541189171"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.525,
+"tiePercentage": 0.0,
 "playId": "401541189174"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.524,
+"tiePercentage": 0.0,
 "playId": "401541189176"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.524,
+"tiePercentage": 0.0,
 "playId": "401541189178"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.524,
+"tiePercentage": 0.0,
 "playId": "401541189179"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.501,
+"tiePercentage": 0.0,
 "playId": "401541189182"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.493,
+"tiePercentage": 0.0,
 "playId": "401541189183"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.519,
+"tiePercentage": 0.0,
 "playId": "401541189184"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.528,
+"tiePercentage": 0.0,
 "playId": "401541189185"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.574,
+"tiePercentage": 0.0,
 "playId": "401541189186"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.581,
+"tiePercentage": 0.0,
 "playId": "401541189188"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.529,
+"tiePercentage": 0.0,
 "playId": "401541189189"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.529,
+"tiePercentage": 0.0,
 "playId": "401541189190"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.554,
+"tiePercentage": 0.0,
 "playId": "401541189191"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.563,
+"tiePercentage": 0.0,
 "playId": "401541189192"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.539,
+"tiePercentage": 0.0,
 "playId": "401541189193"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.563,
+"tiePercentage": 0.0,
 "playId": "401541189194"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.592,
+"tiePercentage": 0.0,
 "playId": "401541189195"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.592,
+"tiePercentage": 0.0,
 "playId": "401541189197"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.619,
+"tiePercentage": 0.0,
 "playId": "401541189199"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.627,
+"tiePercentage": 0.0,
 "playId": "401541189200"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.658,
+"tiePercentage": 0.0,
 "playId": "401541189201"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.597,
+"tiePercentage": 0.0,
 "playId": "401541189202"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.575,
+"tiePercentage": 0.0,
 "playId": "401541189204"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.568,
+"tiePercentage": 0.0,
 "playId": "401541189206"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.568,
+"tiePercentage": 0.0,
 "playId": "401541189207"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.57,
+"tiePercentage": 0.0,
 "playId": "401541189209"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.594,
+"tiePercentage": 0.0,
 "playId": "401541189212"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.571,
+"tiePercentage": 0.0,
 "playId": "401541189213"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.594,
+"tiePercentage": 0.0,
 "playId": "401541189214"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.602,
+"tiePercentage": 0.0,
 "playId": "401541189216"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.604,
+"tiePercentage": 0.0,
 "playId": "401541189217"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.604,
+"tiePercentage": 0.0,
 "playId": "401541189219"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.604,
+"tiePercentage": 0.0,
 "playId": "401541189220"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.604,
+"tiePercentage": 0.0,
 "playId": "401541189223"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.581,
+"tiePercentage": 0.0,
 "playId": "401541189225"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.573,
+"tiePercentage": 0.0,
 "playId": "401541189226"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.526,
+"tiePercentage": 0.0,
 "playId": "401541189227"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.518,
+"tiePercentage": 0.0,
 "playId": "401541189229"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.542,
+"tiePercentage": 0.0,
 "playId": "401541189230"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.592,
+"tiePercentage": 0.0,
 "playId": "401541189231"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.52,
+"tiePercentage": 0.0,
 "playId": "401541189233"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.512,
+"tiePercentage": 0.0,
 "playId": "401541189234"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.513,
+"tiePercentage": 0.0,
 "playId": "401541189235"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.538,
+"tiePercentage": 0.0,
 "playId": "401541189237"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.515,
+"tiePercentage": 0.0,
 "playId": "401541189238"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.539,
+"tiePercentage": 0.0,
 "playId": "401541189239"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.547,
+"tiePercentage": 0.0,
 "playId": "401541189240"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.597,
+"tiePercentage": 0.0,
 "playId": "401541189241"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.605,
+"tiePercentage": 0.0,
 "playId": "401541189243"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.579,
+"tiePercentage": 0.0,
 "playId": "401541189244"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.514,
+"tiePercentage": 0.0,
 "playId": "401541189245"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.483,
+"tiePercentage": 0.0,
 "playId": "401541189246"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.508,
+"tiePercentage": 0.0,
 "playId": "401541189248"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.516,
+"tiePercentage": 0.0,
 "playId": "401541189249"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.492,
+"tiePercentage": 0.0,
 "playId": "401541189250"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.517,
+"tiePercentage": 0.0,
 "playId": "401541189251"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.516,
+"tiePercentage": 0.0,
 "playId": "401541189253"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.516,
+"tiePercentage": 0.0,
 "playId": "401541189254"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.516,
+"tiePercentage": 0.0,
 "playId": "401541189255"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.553,
+"tiePercentage": 0.0,
 "playId": "401541189259"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.612,
+"tiePercentage": 0.0,
 "playId": "401541189261"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.586,
+"tiePercentage": 0.0,
 "playId": "401541189263"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.614,
+"tiePercentage": 0.0,
 "playId": "401541189264"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.623,
+"tiePercentage": 0.0,
 "playId": "401541189265"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.656,
+"tiePercentage": 0.0,
 "playId": "401541189266"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.627,
+"tiePercentage": 0.0,
 "playId": "401541189268"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.604,
+"tiePercentage": 0.0,
 "playId": "401541189269"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.596,
+"tiePercentage": 0.0,
 "playId": "401541189270"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.622,
+"tiePercentage": 0.0,
 "playId": "401541189271"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.631,
+"tiePercentage": 0.0,
 "playId": "401541189272"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.606,
+"tiePercentage": 0.0,
 "playId": "401541189273"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.632,
+"tiePercentage": 0.0,
 "playId": "401541189274"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.68,
+"tiePercentage": 0.0,
 "playId": "401541189275"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.687,
+"tiePercentage": 0.0,
 "playId": "401541189277"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.687,
+"tiePercentage": 0.0,
 "playId": "401541189278"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.687,
+"tiePercentage": 0.0,
 "playId": "401541189279"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.632,
+"tiePercentage": 0.0,
 "playId": "401541189282"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.633,
+"tiePercentage": 0.0,
 "playId": "401541189283"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.602,
+"tiePercentage": 0.0,
 "playId": "401541189284"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.577,
+"tiePercentage": 0.0,
 "playId": "401541189286"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.568,
+"tiePercentage": 0.0,
 "playId": "401541189287"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.597,
+"tiePercentage": 0.0,
 "playId": "401541189288"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.569,
+"tiePercentage": 0.0,
 "playId": "401541189289"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.598,
+"tiePercentage": 0.0,
 "playId": "401541189290"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.607,
+"tiePercentage": 0.0,
 "playId": "401541189292"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.58,
+"tiePercentage": 0.0,
 "playId": "401541189293"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.571,
+"tiePercentage": 0.0,
 "playId": "401541189294"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.6,
+"tiePercentage": 0.0,
 "playId": "401541189295"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.61,
+"tiePercentage": 0.0,
 "playId": "401541189296"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.646,
+"tiePercentage": 0.0,
 "playId": "401541189297"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.702,
+"tiePercentage": 0.0,
 "playId": "401541189298"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.702,
+"tiePercentage": 0.0,
 "playId": "401541189300"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.702,
+"tiePercentage": 0.0,
 "playId": "401541189301"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.702,
+"tiePercentage": 0.0,
 "playId": "401541189302"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.676,
+"tiePercentage": 0.0,
 "playId": "401541189306"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.699,
+"tiePercentage": 0.0,
 "playId": "401541189307"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.674,
+"tiePercentage": 0.0,
 "playId": "401541189308"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.699,
+"tiePercentage": 0.0,
 "playId": "401541189309"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.674,
+"tiePercentage": 0.0,
 "playId": "401541189310"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.691,
+"tiePercentage": 0.0,
 "playId": "401541189311"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.691,
+"tiePercentage": 0.0,
 "playId": "401541189312"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.691,
+"tiePercentage": 0.0,
 "playId": "401541189313"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.691,
+"tiePercentage": 0.0,
 "playId": "401541189314"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.708,
+"tiePercentage": 0.0,
 "playId": "401541189319"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.683,
+"tiePercentage": 0.0,
 "playId": "401541189320"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.655,
+"tiePercentage": 0.0,
 "playId": "401541189321"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.627,
+"tiePercentage": 0.0,
 "playId": "401541189322"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.618,
+"tiePercentage": 0.0,
 "playId": "401541189323"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.65,
+"tiePercentage": 0.0,
 "playId": "401541189324"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.66,
+"tiePercentage": 0.0,
 "playId": "401541189325"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.621,
+"tiePercentage": 0.0,
 "playId": "401541189326"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.662,
+"tiePercentage": 0.0,
 "playId": "401541189327"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.692,
+"tiePercentage": 0.0,
 "playId": "401541189330"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.728,
+"tiePercentage": 0.0,
 "playId": "401541189333"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.73,
+"tiePercentage": 0.0,
 "playId": "401541189334"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.788,
+"tiePercentage": 0.0,
 "playId": "401541189336"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.733,
+"tiePercentage": 0.0,
 "playId": "401541189338"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.71,
+"tiePercentage": 0.0,
 "playId": "401541189340"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.702,
+"tiePercentage": 0.0,
 "playId": "401541189341"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.728,
+"tiePercentage": 0.0,
 "playId": "401541189342"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.736,
+"tiePercentage": 0.0,
 "playId": "401541189343"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.735,
+"tiePercentage": 0.0,
 "playId": "401541189344"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.713,
+"tiePercentage": 0.0,
 "playId": "401541189346"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.705,
+"tiePercentage": 0.0,
 "playId": "401541189347"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.734,
+"tiePercentage": 0.0,
 "playId": "401541189348"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.709,
+"tiePercentage": 0.0,
 "playId": "401541189349"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.64,
+"tiePercentage": 0.0,
 "playId": "401541189350"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.602,
+"tiePercentage": 0.0,
 "playId": "401541189352"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.546,
+"tiePercentage": 0.0,
 "playId": "401541189354"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.537,
+"tiePercentage": 0.0,
 "playId": "401541189356"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.568,
+"tiePercentage": 0.0,
 "playId": "401541189357"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.539,
+"tiePercentage": 0.0,
 "playId": "401541189358"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.529,
+"tiePercentage": 0.0,
 "playId": "401541189359"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.561,
+"tiePercentage": 0.0,
 "playId": "401541189360"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.572,
+"tiePercentage": 0.0,
 "playId": "401541189361"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.57,
+"tiePercentage": 0.0,
 "playId": "401541189362"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.627,
+"tiePercentage": 0.0,
 "playId": "401541189364"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.541,
+"tiePercentage": 0.0,
 "playId": "401541189366"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.531,
+"tiePercentage": 0.0,
 "playId": "401541189367"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.563,
+"tiePercentage": 0.0,
 "playId": "401541189368"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.573,
+"tiePercentage": 0.0,
 "playId": "401541189369"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.544,
+"tiePercentage": 0.0,
 "playId": "401541189370"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.534,
+"tiePercentage": 0.0,
 "playId": "401541189371"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.534,
+"tiePercentage": 0.0,
 "playId": "401541189373"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.497,
+"tiePercentage": 0.0,
 "playId": "401541189374"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.466,
+"tiePercentage": 0.0,
 "playId": "401541189376"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.455,
+"tiePercentage": 0.0,
 "playId": "401541189377"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.489,
+"tiePercentage": 0.0,
 "playId": "401541189378"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.5,
+"tiePercentage": 0.0,
 "playId": "401541189379"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.456,
+"tiePercentage": 0.0,
 "playId": "401541189380"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.489,
+"tiePercentage": 0.0,
 "playId": "401541189382"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.456,
+"tiePercentage": 0.0,
 "playId": "401541189383"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.458,
+"tiePercentage": 0.0,
 "playId": "401541189384"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.458,
+"tiePercentage": 0.0,
 "playId": "401541189386"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.419,
+"tiePercentage": 0.0,
 "playId": "401541189388"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.388,
+"tiePercentage": 0.0,
 "playId": "401541189389"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.377,
+"tiePercentage": 0.0,
 "playId": "401541189390"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.342,
+"tiePercentage": 0.0,
 "playId": "401541189391"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.311,
+"tiePercentage": 0.0,
 "playId": "401541189393"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.301,
+"tiePercentage": 0.0,
 "playId": "401541189394"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.332,
+"tiePercentage": 0.0,
 "playId": "401541189395"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.3,
+"tiePercentage": 0.0,
 "playId": "401541189396"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.342,
+"tiePercentage": 0.0,
 "playId": "401541189397"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.342,
+"tiePercentage": 0.0,
 "playId": "401541189398"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.379,
+"tiePercentage": 0.0,
 "playId": "401541189400"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.342,
+"tiePercentage": 0.0,
 "playId": "401541189402"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.379,
+"tiePercentage": 0.0,
 "playId": "401541189403"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.342,
+"tiePercentage": 0.0,
 "playId": "401541189405"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.309,
+"tiePercentage": 0.0,
 "playId": "401541189406"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.298,
+"tiePercentage": 0.0,
 "playId": "401541189407"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.331,
+"tiePercentage": 0.0,
 "playId": "401541189408"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.297,
+"tiePercentage": 0.0,
 "playId": "401541189409"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.33,
+"tiePercentage": 0.0,
 "playId": "401541189410"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.297,
+"tiePercentage": 0.0,
 "playId": "401541189411"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.33,
+"tiePercentage": 0.0,
 "playId": "401541189412"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.342,
+"tiePercentage": 0.0,
 "playId": "401541189413"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.297,
+"tiePercentage": 0.0,
 "playId": "401541189414"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.224,
+"tiePercentage": 0.0,
 "playId": "401541189416"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.224,
+"tiePercentage": 0.0,
 "playId": "401541189418"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.224,
+"tiePercentage": 0.0,
 "playId": "401541189419"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.224,
+"tiePercentage": 0.0,
 "playId": "401541189420"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.224,
+"tiePercentage": 0.0,
 "playId": "401541189421"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.257,
+"tiePercentage": 0.0,
 "playId": "401541189425"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.287,
+"tiePercentage": 0.0,
 "playId": "401541189427"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.298,
+"tiePercentage": 0.0,
 "playId": "401541189428"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.266,
+"tiePercentage": 0.0,
 "playId": "401541189429"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.255,
+"tiePercentage": 0.0,
 "playId": "401541189430"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.219,
+"tiePercentage": 0.0,
 "playId": "401541189431"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.161,
+"tiePercentage": 0.0,
 "playId": "401541189432"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.161,
+"tiePercentage": 0.0,
 "playId": "401541189434"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.161,
+"tiePercentage": 0.0,
 "playId": "401541189435"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.188,
+"tiePercentage": 0.0,
 "playId": "401541189438"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.218,
+"tiePercentage": 0.0,
 "playId": "401541189439"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.153,
+"tiePercentage": 0.0,
 "playId": "401541189441"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.331,
+"tiePercentage": 0.0,
 "playId": "401541189442"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.298,
+"tiePercentage": 0.0,
 "playId": "401541189443"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.153,
+"tiePercentage": 0.0,
 "playId": "401541189444"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.153,
+"tiePercentage": 0.0,
 "playId": "401541189445"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.248,
+"tiePercentage": 0.0,
 "playId": "401541189448"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.256,
+"tiePercentage": 0.0,
 "playId": "401541189449"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.296,
+"tiePercentage": 0.0,
 "playId": "401541189450"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.316,
+"tiePercentage": 0.0,
 "playId": "401541189451"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.316,
+"tiePercentage": 0.0,
 "playId": "401541189452"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.316,
+"tiePercentage": 0.0,
 "playId": "401541189453"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.316,
+"tiePercentage": 0.0,
 "playId": "401541189454"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.387,
+"tiePercentage": 0.0,
 "playId": "401541189461"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.371,
+"tiePercentage": 0.0,
 "playId": "401541189463"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.391,
+"tiePercentage": 0.0,
 "playId": "401541189465"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.293,
+"tiePercentage": 0.0,
 "playId": "401541189467"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.335,
+"tiePercentage": 0.0,
 "playId": "401541189469"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.371,
+"tiePercentage": 0.0,
 "playId": "401541189470"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.371,
+"tiePercentage": 0.0,
 "playId": "401541189471"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.335,
+"tiePercentage": 0.0,
 "playId": "401541189472"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.322,
+"tiePercentage": 0.0,
 "playId": "401541189473"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.306,
+"tiePercentage": 0.0,
 "playId": "401541189475"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.229,
+"tiePercentage": 0.0,
 "playId": "401541189477"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.199,
+"tiePercentage": 0.0,
 "playId": "401541189479"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.227,
+"tiePercentage": 0.0,
 "playId": "401541189480"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.239,
+"tiePercentage": 0.0,
 "playId": "401541189481"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.239,
+"tiePercentage": 0.0,
 "playId": "401541189483"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.271,
+"tiePercentage": 0.0,
 "playId": "401541189485"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.307,
+"tiePercentage": 0.0,
 "playId": "401541189486"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.32,
+"tiePercentage": 0.0,
 "playId": "401541189487"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.418,
+"tiePercentage": 0.0,
 "playId": "401541189488"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.418,
+"tiePercentage": 0.0,
 "playId": "401541189490"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.418,
+"tiePercentage": 0.0,
 "playId": "401541189494"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.464,
+"tiePercentage": 0.0,
 "playId": "401541189497"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.479,
+"tiePercentage": 0.0,
 "playId": "401541189498"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.533,
+"tiePercentage": 0.0,
 "playId": "401541189499"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.58,
+"tiePercentage": 0.0,
 "playId": "401541189500"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.534,
+"tiePercentage": 0.0,
 "playId": "401541189502"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.534,
+"tiePercentage": 0.0,
 "playId": "401541189504"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.426,
+"tiePercentage": 0.0,
 "playId": "401541189507"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.383,
+"tiePercentage": 0.0,
 "playId": "401541189509"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.369,
+"tiePercentage": 0.0,
 "playId": "401541189511"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.413,
+"tiePercentage": 0.0,
 "playId": "401541189513"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.427,
+"tiePercentage": 0.0,
 "playId": "401541189514"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.534,
+"tiePercentage": 0.0,
 "playId": "401541189515"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.481,
+"tiePercentage": 0.0,
 "playId": "401541189517"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.437,
+"tiePercentage": 0.0,
 "playId": "401541189518"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.437,
+"tiePercentage": 0.0,
 "playId": "401541189519"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.376,
+"tiePercentage": 0.0,
 "playId": "401541189521"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.376,
+"tiePercentage": 0.0,
 "playId": "401541189522"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.319,
+"tiePercentage": 0.0,
 "playId": "401541189523"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.22,
+"tiePercentage": 0.0,
 "playId": "401541189524"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.22,
+"tiePercentage": 0.0,
 "playId": "401541189526"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.22,
+"tiePercentage": 0.0,
 "playId": "401541189528"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.258,
+"tiePercentage": 0.0,
 "playId": "401541189530"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.218,
+"tiePercentage": 0.0,
 "playId": "401541189531"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.204,
+"tiePercentage": 0.0,
 "playId": "401541189532"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.165,
+"tiePercentage": 0.0,
 "playId": "401541189533"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.246,
+"tiePercentage": 0.0,
 "playId": "401541189535"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.248,
+"tiePercentage": 0.0,
 "playId": "401541189537"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.248,
+"tiePercentage": 0.0,
 "playId": "401541189538"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.208,
+"tiePercentage": 0.0,
 "playId": "401541189541"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.243,
+"tiePercentage": 0.0,
 "playId": "401541189542"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.203,
+"tiePercentage": 0.0,
 "playId": "401541189543"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.126,
+"tiePercentage": 0.0,
 "playId": "401541189544"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.099,
+"tiePercentage": 0.0,
 "playId": "401541189546"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.121,
+"tiePercentage": 0.0,
 "playId": "401541189547"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.098,
+"tiePercentage": 0.0,
 "playId": "401541189548"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.09,
+"tiePercentage": 0.0,
 "playId": "401541189549"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.119,
+"tiePercentage": 0.0,
 "playId": "401541189550"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.095,
+"tiePercentage": 0.0,
 "playId": "401541189552"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.087,
+"tiePercentage": 0.0,
 "playId": "401541189553"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.105,
+"tiePercentage": 0.0,
 "playId": "401541189554"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.111,
+"tiePercentage": 0.0,
 "playId": "401541189555"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.088,
+"tiePercentage": 0.0,
 "playId": "401541189556"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.11,
+"tiePercentage": 0.0,
 "playId": "401541189557"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.087,
+"tiePercentage": 0.0,
 "playId": "401541189559"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.079,
+"tiePercentage": 0.0,
 "playId": "401541189561"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.055,
+"tiePercentage": 0.0,
 "playId": "401541189562"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.071,
+"tiePercentage": 0.0,
 "playId": "401541189563"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.086,
+"tiePercentage": 0.0,
 "playId": "401541189564"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.065,
+"tiePercentage": 0.0,
 "playId": "401541189565"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.045,
+"tiePercentage": 0.0,
 "playId": "401541189566"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.045,
+"tiePercentage": 0.0,
 "playId": "401541189567"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.029,
+"tiePercentage": 0.0,
 "playId": "401541189569"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.024,
+"tiePercentage": 0.0,
 "playId": "401541189571"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.03,
+"tiePercentage": 0.0,
 "playId": "401541189575"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.02,
+"tiePercentage": 0.0,
 "playId": "401541189576"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.02,
+"tiePercentage": 0.0,
 "playId": "401541189577"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.009,
+"tiePercentage": 0.0,
 "playId": "401541189579"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.007,
+"tiePercentage": 0.0,
 "playId": "401541189581"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.012,
+"tiePercentage": 0.0,
 "playId": "401541189582"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.007,
+"tiePercentage": 0.0,
 "playId": "401541189583"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.005,
+"tiePercentage": 0.0,
 "playId": "401541189584"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.002,
+"tiePercentage": 0.0,
 "playId": "401541189585"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.004,
+"tiePercentage": 0.0,
 "playId": "401541189587"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.005,
+"tiePercentage": 0.0,
 "playId": "401541189589"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.006,
+"tiePercentage": 0.0,
 "playId": "401541189590"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.003,
+"tiePercentage": 0.0,
 "playId": "401541189591"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.002,
+"tiePercentage": 0.0,
 "playId": "401541189592"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189593"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189595"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189596"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189598"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.004,
+"tiePercentage": 0.0,
 "playId": "401541189599"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189601"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189602"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189603"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189604"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189606"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189607"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189608"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189610"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189611"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189612"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189613"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189615"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189616"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.001,
+"tiePercentage": 0.0,
 "playId": "401541189617"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.0,
+"tiePercentage": 0.0,
 "playId": "401541189618"
 },
 {
-"tiePercentage": 0.0,
 "homeWinPercentage": 0.0,
+"tiePercentage": 0.0,
 "playId": "401541189619"
 }
 ],
@@ -6425,6 +6472,7 @@
 "possessionArrowAvailable": false,
 "onWatchESPN": false,
 "recent": false,
+"wallclockAvailable": true,
 "boxscoreSource": "full",
 "playByPlaySource": "full",
 "competitors": [
@@ -6453,7 +6501,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/bkn.png",
@@ -6464,7 +6512,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
@@ -6475,7 +6523,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-24T21:46Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/bkn.png",
@@ -6487,7 +6535,95 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-24T21:47Z"
+"lastUpdated": "2024-06-25T21:13Z"
+},
+{
+"href": "https://a.espncdn.com/guid/926db769-d35e-e282-9d7e-a05001d774ab/logos/primary_logo_on_white_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"primary_logo_on_white_color"
+],
+"lastUpdated": "2024-12-03T19:34Z"
+},
+{
+"href": "https://a.espncdn.com/guid/926db769-d35e-e282-9d7e-a05001d774ab/logos/primary_logo_on_black_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"primary_logo_on_black_color"
+],
+"lastUpdated": "2024-12-03T19:34Z"
+},
+{
+"href": "https://a.espncdn.com/guid/926db769-d35e-e282-9d7e-a05001d774ab/logos/primary_logo_on_primary_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"primary_logo_on_primary_color"
+],
+"lastUpdated": "2024-12-03T19:33Z"
+},
+{
+"href": "https://a.espncdn.com/guid/926db769-d35e-e282-9d7e-a05001d774ab/logos/primary_logo_on_secondary_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"primary_logo_on_secondary_color"
+],
+"lastUpdated": "2024-12-03T19:34Z"
+},
+{
+"href": "https://a.espncdn.com/guid/926db769-d35e-e282-9d7e-a05001d774ab/logos/secondary_logo_on_white_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"secondary_logo_on_white_color"
+],
+"lastUpdated": "2024-12-03T19:34Z"
+},
+{
+"href": "https://a.espncdn.com/guid/926db769-d35e-e282-9d7e-a05001d774ab/logos/secondary_logo_on_black_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"secondary_logo_on_black_color"
+],
+"lastUpdated": "2024-12-03T19:34Z"
+},
+{
+"href": "https://a.espncdn.com/guid/926db769-d35e-e282-9d7e-a05001d774ab/logos/secondary_logo_on_primary_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"secondary_logo_on_primary_color"
+],
+"lastUpdated": "2024-12-03T19:34Z"
+},
+{
+"href": "https://a.espncdn.com/guid/926db769-d35e-e282-9d7e-a05001d774ab/logos/secondary_logo_on_secondary_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"secondary_logo_on_secondary_color"
+],
+"lastUpdated": "2024-12-03T19:34Z"
 }
 ],
 "links": [
@@ -6561,7 +6697,7 @@
 "full",
 "default"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/phi.png",
@@ -6572,7 +6708,7 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:13Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
@@ -6583,7 +6719,7 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:18Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/phi.png",
@@ -6595,7 +6731,95 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:14Z"
+},
+{
+"href": "https://a.espncdn.com/guid/ca1685ed-b799-53e4-7924-e58ea6eb8f3a/logos/primary_logo_on_white_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"primary_logo_on_white_color"
+],
+"lastUpdated": "2024-12-03T19:32Z"
+},
+{
+"href": "https://a.espncdn.com/guid/ca1685ed-b799-53e4-7924-e58ea6eb8f3a/logos/primary_logo_on_black_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"primary_logo_on_black_color"
+],
+"lastUpdated": "2024-12-03T19:32Z"
+},
+{
+"href": "https://a.espncdn.com/guid/ca1685ed-b799-53e4-7924-e58ea6eb8f3a/logos/primary_logo_on_primary_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"primary_logo_on_primary_color"
+],
+"lastUpdated": "2024-12-03T19:32Z"
+},
+{
+"href": "https://a.espncdn.com/guid/ca1685ed-b799-53e4-7924-e58ea6eb8f3a/logos/primary_logo_on_secondary_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"primary_logo_on_secondary_color"
+],
+"lastUpdated": "2024-12-03T19:32Z"
+},
+{
+"href": "https://a.espncdn.com/guid/ca1685ed-b799-53e4-7924-e58ea6eb8f3a/logos/secondary_logo_on_white_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"secondary_logo_on_white_color"
+],
+"lastUpdated": "2024-12-03T19:32Z"
+},
+{
+"href": "https://a.espncdn.com/guid/ca1685ed-b799-53e4-7924-e58ea6eb8f3a/logos/secondary_logo_on_black_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"secondary_logo_on_black_color"
+],
+"lastUpdated": "2024-12-03T19:32Z"
+},
+{
+"href": "https://a.espncdn.com/guid/ca1685ed-b799-53e4-7924-e58ea6eb8f3a/logos/secondary_logo_on_primary_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"secondary_logo_on_primary_color"
+],
+"lastUpdated": "2024-12-03T19:32Z"
+},
+{
+"href": "https://a.espncdn.com/guid/ca1685ed-b799-53e4-7924-e58ea6eb8f3a/logos/secondary_logo_on_secondary_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"secondary_logo_on_secondary_color"
+],
+"lastUpdated": "2024-12-03T19:32Z"
 }
 ],
 "links": [
@@ -6670,7 +6894,8 @@
 "shortName": "TNT"
 },
 "lang": "en",
-"region": "us"
+"region": "us",
+"isNational": true
 }
 ],
 "series": [
@@ -6678,7 +6903,7 @@
 "type": "season",
 "title": "Regular Season Series",
 "description": "Regular Season Series",
-"summary": "PHI Wins series 4-0",
+"summary": "PHI wins series 4-0",
 "completed": true,
 "totalCompetitions": 4,
 "competitors": [
@@ -6718,13 +6943,14 @@
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/events/401469372?lang=en&region=us",
 "id": "401469372"
 }
-]
+],
+"startDate": "2023-04-15T04:00Z"
 },
 {
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "PHI Wins series 4-0",
+"summary": "PHI wins series 4-0",
 "completed": true,
 "totalCompetitions": 7,
 "competitors": [
@@ -6764,9 +6990,11 @@
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/events/401541189?lang=en&region=us",
 "id": "401541189"
 }
-]
+],
+"startDate": "2023-04-15T04:00Z"
 }
-]
+],
+"boxscoreMinutes": true
 }
 ],
 "links": [
@@ -6776,7 +7004,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nba/game/_/gameId/401541189",
+"href": "https://www.espn.com/nba/game/_/gameId/401541189/76ers-nets",
 "text": "Gamecast",
 "shortText": "Summary",
 "isExternal": false,
@@ -6883,7 +7111,7 @@
 "desktop",
 "league"
 ],
-"href": "http://www.espn.com/nba/standings",
+"href": "https://www.espn.com/nba/standings",
 "text": "Standings"
 },
 {
@@ -6930,7 +7158,7 @@
 "desktop",
 "league"
 ],
-"href": "http://www.espn.com/nba/stats",
+"href": "https://www.espn.com/nba/stats",
 "text": "Stats"
 },
 {
@@ -6939,7 +7167,7 @@
 "desktop",
 "league"
 ],
-"href": "http://www.espn.com/nba/teams",
+"href": "https://www.espn.com/nba/teams",
 "text": "Teams"
 },
 {
@@ -6948,7 +7176,7 @@
 "desktop",
 "league"
 ],
-"href": "http://www.espn.com/nba/players",
+"href": "https://www.espn.com/nba/players",
 "text": "Players"
 },
 {
@@ -6959,6 +7187,25 @@
 ],
 "href": "https://www.espn.com/nba/injuries",
 "text": "Injuries"
+},
+{
+"rel": [
+"odds",
+"desktop",
+"league"
+],
+"href": "https://www.espn.com/nba/odds",
+"text": "Odds"
+},
+{
+"rel": [
+"odds",
+"sportscenter",
+"app",
+"league"
+],
+"href": "sportscenter://x-callback-url/showClubhouse?uid=s:40~l:46&section=odds",
+"text": "Odds"
 }
 ]
 },
@@ -23081,112 +23328,36 @@
 }
 ],
 "article": {
-"dataSourceIdentifier": "4a4bf08429f47",
-"keywords": [],
-"description": "\u2014 All Joel Embiid could give the Philadelphia 76ers on Saturday was encouragement.",
-"source": "AP",
-"video": [],
-"type": "Recap",
-"nowId": "1-36264778",
-"premium": false,
-"related": [],
-"allowSearch": true,
-"links": {
-"api": {
-"news": {
-"href": "http://now.core.api.espn.com/v1/sports/news/36264778"
-},
-"events": {
-"href": "http://now.core.api.espn.com/v1/sports/basketball/nba/events/401541189"
-}
-},
-"web": {
-"href": "http://www.espn.com/nba/recap?gameId=401541189"
-},
-"app": {
-"sportscenter": {
-"href": "sportscenter://x-callback-url/showStory?uid=36264778"
-}
-},
-"mobile": {
-"href": "http://scores.espn.com/nba/gamecast?gameId=401541189&version=mobile"
-}
-},
 "id": 36264778,
+"nowId": "1-36264778",
+"contentKey": "36264778-1-21-1",
+"dataSourceIdentifier": "4a4bf08429f47",
+"type": "Recap",
+"gameId": "401541189",
+"headline": "76ers finish sweep of Nets without Embiid in 96-88 win",
+"description": "\u2014 All Joel Embiid could give the Philadelphia 76ers on Saturday was encouragement.",
+"linkText": "76ers finish sweep of Nets without Embiid in 96-88 win",
+"categorized": "2023-04-22T23:54:04Z",
+"originallyPosted": "2023-04-22T23:54:05Z",
+"lastModified": "2023-04-22T23:54:04Z",
+"published": "2023-04-22T23:54:05Z",
+"section": "NBA",
+"source": "AP",
+"images": [],
+"video": [],
 "categories": [
 {
-"id": 9577,
-"description": "NBA",
-"type": "league",
-"sportId": 46,
-"leagueId": 46,
-"league": {
-"id": 46,
-"description": "NBA",
-"links": {
-"api": {
-"leagues": {
-"href": "http://now.core.api.espn.com/v1/sports/basketball/nba"
-}
-},
-"web": {
-"leagues": {
-"href": "https://www.espn.com/nba/"
-}
-},
-"mobile": {
-"leagues": {
-"href": "http://m.espn.com/nba/"
-}
-}
-}
-},
-"uid": "s:40~l:46"
-},
-{
-"id": 104965,
-"description": "Brooklyn Nets",
-"type": "team",
-"sportId": 46,
-"teamId": 17,
-"team": {
-"id": 17,
-"description": "Brooklyn Nets",
-"links": {
-"api": {
-"teams": {
-"href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/17"
-}
-},
-"web": {
-"teams": {
-"href": "https://www.espn.com/nba/team/_/name/bkn/brooklyn-nets"
-}
-},
-"mobile": {
-"teams": {
-"href": "http://m.espn.com/nba/clubhouse?teamId=17"
-}
-}
-}
-},
-"uid": "s:40~l:46~t:17"
-},
-{
 "id": 4323,
-"description": "Philadelphia 76ers",
 "type": "team",
+"uid": "s:40~l:46~t:20",
+"guid": "ca1685ed-b799-53e4-7924-e58ea6eb8f3a",
+"description": "Philadelphia 76ers",
 "sportId": 46,
 "teamId": 20,
 "team": {
 "id": 20,
 "description": "Philadelphia 76ers",
 "links": {
-"api": {
-"teams": {
-"href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/20"
-}
-},
 "web": {
 "teams": {
 "href": "https://www.espn.com/nba/team/_/name/phi/philadelphia-76ers"
@@ -23194,60 +23365,116 @@
 },
 "mobile": {
 "teams": {
-"href": "http://m.espn.com/nba/clubhouse?teamId=20"
+"href": "https://www.espn.com/nba/team/_/name/phi/philadelphia-76ers"
+}
 }
 }
 }
 },
-"uid": "s:40~l:46~t:20"
+{
+"id": 9577,
+"type": "league",
+"uid": "s:40~l:46",
+"guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
+"description": "NBA",
+"sportId": 46,
+"leagueId": 46,
+"league": {
+"id": 46,
+"description": "NBA",
+"abbreviation": "NBA",
+"links": {
+"web": {
+"leagues": {
+"href": "https://www.espn.com/nba/"
+}
+},
+"mobile": {
+"leagues": {
+"href": "https://www.espn.com/nba/"
+}
+}
+}
+}
+},
+{
+"id": 104965,
+"type": "team",
+"uid": "s:40~l:46~t:17",
+"guid": "926db769-d35e-e282-9d7e-a05001d774ab",
+"description": "Brooklyn Nets",
+"sportId": 46,
+"teamId": 17,
+"team": {
+"id": 17,
+"description": "Brooklyn Nets",
+"links": {
+"web": {
+"teams": {
+"href": "https://www.espn.com/nba/team/_/name/bkn/brooklyn-nets"
+}
+},
+"mobile": {
+"teams": {
+"href": "https://www.espn.com/nba/team/_/name/bkn/brooklyn-nets"
+}
+}
+}
+}
+},
+{
+"type": "guid",
+"guid": "6874fc54-9575-3557-ad06-fd7a5a90650a"
+},
+{
+"type": "guid",
+"guid": "ca1685ed-b799-53e4-7924-e58ea6eb8f3a"
+},
+{
+"type": "guid",
+"guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154"
+},
+{
+"type": "guid",
+"guid": "926db769-d35e-e282-9d7e-a05001d774ab"
 }
 ],
-"headline": "76ers finish sweep of Nets without Embiid in 96-88 win",
-"gameId": "401541189",
-"images": [],
-"linkText": "76ers finish sweep of Nets without Embiid in 96-88 win",
-"published": "2023-04-22T19:31:16Z",
+"keywords": [
+"Philadelphia 76ers",
+"NBA",
+"Brooklyn Nets"
+],
+"story": "NEW YORK -- \u2014 All <a href=\"http://www.espn.com/nba/player/_/id/3059318/joel-embiid\">Joel Embiid</a> could give the <a href=\"http://www.espn.com/nba/team/_/name/phi/philadelphia-76ers\">Philadelphia 76ers</a> on Saturday was encouragement.\n\n\r\n              The NBA's leading scorer and MVP finalist couldn't play because of a sprained right knee, but still provided a presence for his team. \n\n\r\n              \u201cIt starts with Joel,\u201d guard <a href=\"http://www.espn.com/nba/player/_/id/4431678/tyrese-maxey\">Tyrese Maxey</a> said. \u201cHe\u2019s the leader of this team and for him, he takes the guys before the game and he told us good luck and we appreciate him for that. And we need him to get healthy.\u201d\n\n\r\n              The 76ers bought him plenty of time to do that. \n\n\r\n              <a href=\"http://www.espn.com/nba/player/_/id/6440/tobias-harris\">Tobias Harris</a> had 25 points and 12 rebounds, and the 76ers beat the <a href=\"http://www.espn.com/nba/team/_/name/bkn/brooklyn-nets\">Brooklyn Nets</a> 96-88 to complete a sweep and become the first team to reach the second round of the playoffs.\n\n\r\n              <a href=\"http://www.espn.com/nba/player/_/id/3992/james-harden\">James Harden</a> added 17 points, 11 assists and eight rebounds for the third-seeded 76ers, who will wait for the winner of the series between the <a href=\"http://www.espn.com/nba/team/_/name/bos/boston-celtics\">Boston Celtics</a> and <a href=\"http://www.espn.com/nba/team/_/name/atl/atlanta-hawks\">Atlanta Hawks</a>. The defending Eastern Conference champion Celtics have a 2-1 lead.\n\n\r\n              By sweeping a seven-game series for the first time since beating Milwaukee in 1985, the 76ers ensured that Embiid will have at least a week to recover before they play again.\n\n\r\n              \u201cObviously, today was big for us so we can get Big Fella healthy,\u201d Harden said. \u201cThat's priority No. 1.\u201d \n\n\r\n              The Sixers turned to their defense without him and ended up outscoring the Nets 21-4 during a stretch of more than eight minutes in the third quarter. \n\n\r\n              Maxey finished a strong series with 16 points and <a href=\"http://www.espn.com/nba/player/_/id/4278562/paul-reed\">Paul Reed</a> added 10 points and 15 rebounds after replacing Embiid in the starting lineup.\n\n\r\n              <a href=\"http://www.espn.com/nba/player/_/id/2580782/spencer-dinwiddie\">Spencer Dinwiddie</a> scored 20 points and <a href=\"http://www.espn.com/nba/player/_/id/4278067/nic-claxton\">Nic Claxton</a> had 19 points and 12 rebounds for the Nets, who were swept for the second straight year and have lost 10 straight postseason games. They went 0-8 this season against the 76ers.\n\n\r\n              Embiid went to the locker room early in Game 3 and was limping a couple times later in the game, but <a href=\"https://apnews.com/article/76ers-nets-nba-playoffs-2023-harden-embiid-c4cafea0a03a1204c7e97353fcff19f0\">had a blocked shot</a> to preserve a two-point lead with 8.8 seconds left and said afterward he was OK. But coach Doc Rivers said Embiid was complaining of soreness behind his knee and already had swelling shortly after the game. An MRI exam revealed the sprain.\n\n\r\n              Dorian Finney-Smith\u2019s 3-pointer two minutes into the third quarter made it 53-42, matching the Nets\u2019 largest lead of the game. But Harden and <a href=\"http://www.espn.com/nba/player/_/id/3033/pj-tucker\">P.J. Tucker</a> hit consecutive 3s to get the Sixers started on what became a 14-0 run that made it 56-53 on Reed\u2019s basket.\n\n\r\n              Maxey\u2019s 3-pointer extended it to 63-57 with 1:49 remaining in the period, capping the Nets' lengthy drought that would have seemed unimaginable when <a href=\"http://www.espn.com/nba/player/_/id/3202/kevin-durant\">Kevin Durant</a> and <a href=\"http://www.espn.com/nba/player/_/id/6442/kyrie-irving\">Kyrie Irving</a> were in Brooklyn. They were both dealt at midseason, and this team went down just as quickly as the one the duo led last season, when Brooklyn was also the first team eliminated after getting swept by Boston. \n\n\r\n              \u201cI told them they should feel extremely proud when they walk around the borough of Brooklyn,\u201d coach Jacque Vaughn said. \u201cThe way that we competed, we didn\u2019t make excuses this year. We figured out how to stay together. That locker room was together even until the end of the game.\u201d \n\n\r\n              Embiid averaged only 20 points in the series, 13 below his NBA-leading average of 33.1, as the Nets heavily double-teamed him. \n\n\r\n              But those double-teams were leaving open looks for their guards that weren\u2019t available Saturday, and the Sixers were just 2 for 11 from 3-point range in the first half as the Nets led 48-40.\n\n\r\n              But the 76ers limited them to 40 points in the second half and eventually pulled away to a 14-point lead as the cheers of the Sixers fans in the building grew louder. \n\n\r\n              TIP-INS\n\n\r\n              76ers: Philadelphia's eight-game winning streak against Brooklyn in the playoffs is its second-longest ever against an opponent. The 76ers beat the <a href=\"http://www.espn.com/nba/team/_/name/ny/new-york-knicks\">New York Knicks</a> 10 straight times in the early 1980s.\n\n\r\n              Nets: The Nets fell to 0-7 all-time at home against the 76ers in the postseason. ... <a href=\"http://www.espn.com/nba/player/_/id/4004/patty-mills\">Patty Mills</a> played for the first time in the series, going scoreless in five minutes. ... Brooklyn's last playoff win remains Game 5 against Milwaukee in the 2021 East semifinals.\n\n\r\n              DREADED LETTERS\n\n\r\n              Rivers said he doesn't worry when he sees Embiid appear to be hurting, as he was at times during Game 3. His concerns begin when he is told the medical staff wants to do an MRI exam. \n\n\r\n              \u201cAs a coach I hate that word, I hate those three letters. I mean, because it never comes out well,\u201d Rivers said. \u201cIt just feels like that whenever they tell a coach, \u2018Hey, we\u2019re going to get an MRI,\u2019 it doesn\u2019t turn out well most of the time and this one did not.\u201d \n\n\r\n              ------\n\n\r\n              AP NBA: https://apnews.com/hub/NBA and https://twitter.com/AP--Sports",
+"premium": false,
+"links": {
+"web": {
+"href": "http://www.espn.com/nba/recap?gameId=401541189"
+},
+"mobile": {
+"href": "http://m.espn.go.com/nba/story?storyId=36264778"
+},
+"api": {
+"self": {
+"href": "https://content.core.api.espn.com/v1/sports/news/36264778"
+}
+},
+"app": {
+"sportscenter": {
+"href": "sportscenter://x-callback-url/showStory?uid=36264778"
+}
+}
+},
 "allowComments": true,
-"lastModified": "2023-04-22T23:54:04Z",
-"metrics": [
-{
-"count": 0,
-"type": "views"
-},
-{
-"count": 0,
-"type": "fShares"
-},
-{
-"count": 0,
-"type": "tweets"
-},
-{
-"count": 0,
-"type": "comments"
-},
-{
-"count": 0,
-"type": "emails"
-},
-{
-"count": 0,
-"type": "votes"
-},
-{
-"count": 0,
-"type": "popularity"
-}
-],
-"inlines": [],
-"story": "NEW YORK -- \u2014 All <a href=\"http://www.espn.com/nba/player/_/id/3059318/joel-embiid\">Joel Embiid</a> could give the <a href=\"http://www.espn.com/nba/team/_/name/phi/philadelphia-76ers\">Philadelphia 76ers</a> on Saturday was encouragement.\n\n\r\n              The NBA's leading scorer and MVP finalist couldn't play because of a sprained right knee, but still provided a presence for his team. \n\n\r\n              \u201cIt starts with Joel,\u201d guard <a href=\"http://www.espn.com/nba/player/_/id/4431678/tyrese-maxey\">Tyrese Maxey</a> said. \u201cHe\u2019s the leader of this team and for him, he takes the guys before the game and he told us good luck and we appreciate him for that. And we need him to get healthy.\u201d\n\n\r\n              The 76ers bought him plenty of time to do that. \n\n\r\n              <a href=\"http://www.espn.com/nba/player/_/id/6440/tobias-harris\">Tobias Harris</a> had 25 points and 12 rebounds, and the 76ers beat the <a href=\"http://www.espn.com/nba/team/_/name/bkn/brooklyn-nets\">Brooklyn Nets</a> 96-88 to complete a sweep and become the first team to reach the second round of the playoffs.\n\n\r\n              <a href=\"http://www.espn.com/nba/player/_/id/3992/james-harden\">James Harden</a> added 17 points, 11 assists and eight rebounds for the third-seeded 76ers, who will wait for the winner of the series between the <a href=\"http://www.espn.com/nba/team/_/name/bos/boston-celtics\">Boston Celtics</a> and <a href=\"http://www.espn.com/nba/team/_/name/atl/atlanta-hawks\">Atlanta Hawks</a>. The defending Eastern Conference champion Celtics have a 2-1 lead.\n\n\r\n              By sweeping a seven-game series for the first time since beating Milwaukee in 1985, the 76ers ensured that Embiid will have at least a week to recover before they play again.\n\n\r\n              \u201cObviously, today was big for us so we can get Big Fella healthy,\u201d Harden said. \u201cThat's priority No. 1.\u201d \n\n\r\n              The Sixers turned to their defense without him and ended up outscoring the Nets 21-4 during a stretch of more than eight minutes in the third quarter. \n\n\r\n              Maxey finished a strong series with 16 points and <a href=\"http://www.espn.com/nba/player/_/id/4278562/paul-reed\">Paul Reed</a> added 10 points and 15 rebounds after replacing Embiid in the starting lineup.\n\n\r\n              <a href=\"http://www.espn.com/nba/player/_/id/2580782/spencer-dinwiddie\">Spencer Dinwiddie</a> scored 20 points and <a href=\"http://www.espn.com/nba/player/_/id/4278067/nic-claxton\">Nic Claxton</a> had 19 points and 12 rebounds for the Nets, who were swept for the second straight year and have lost 10 straight postseason games. They went 0-8 this season against the 76ers.\n\n\r\n              Embiid went to the locker room early in Game 3 and was limping a couple times later in the game, but <a href=\"https://apnews.com/article/76ers-nets-nba-playoffs-2023-harden-embiid-c4cafea0a03a1204c7e97353fcff19f0\">had a blocked shot</a> to preserve a two-point lead with 8.8 seconds left and said afterward he was OK. But coach Doc Rivers said Embiid was complaining of soreness behind his knee and already had swelling shortly after the game. An MRI exam revealed the sprain.\n\n\r\n              Dorian Finney-Smith\u2019s 3-pointer two minutes into the third quarter made it 53-42, matching the Nets\u2019 largest lead of the game. But Harden and <a href=\"http://www.espn.com/nba/player/_/id/3033/pj-tucker\">P.J. Tucker</a> hit consecutive 3s to get the Sixers started on what became a 14-0 run that made it 56-53 on Reed\u2019s basket.\n\n\r\n              Maxey\u2019s 3-pointer extended it to 63-57 with 1:49 remaining in the period, capping the Nets' lengthy drought that would have seemed unimaginable when <a href=\"http://www.espn.com/nba/player/_/id/3202/kevin-durant\">Kevin Durant</a> and <a href=\"http://www.espn.com/nba/player/_/id/6442/kyrie-irving\">Kyrie Irving</a> were in Brooklyn. They were both dealt at midseason, and this team went down just as quickly as the one the duo led last season, when Brooklyn was also the first team eliminated after getting swept by Boston. \n\n\r\n              \u201cI told them they should feel extremely proud when they walk around the borough of Brooklyn,\u201d coach Jacque Vaughn said. \u201cThe way that we competed, we didn\u2019t make excuses this year. We figured out how to stay together. That locker room was together even until the end of the game.\u201d \n\n\r\n              Embiid averaged only 20 points in the series, 13 below his NBA-leading average of 33.1, as the Nets heavily double-teamed him. \n\n\r\n              But those double-teams were leaving open looks for their guards that weren\u2019t available Saturday, and the Sixers were just 2 for 11 from 3-point range in the first half as the Nets led 48-40.\n\n\r\n              But the 76ers limited them to 40 points in the second half and eventually pulled away to a 14-point lead as the cheers of the Sixers fans in the building grew louder. \n\n\r\n              TIP-INS\n\n\r\n              76ers: Philadelphia's eight-game winning streak against Brooklyn in the playoffs is its second-longest ever against an opponent. The 76ers beat the <a href=\"http://www.espn.com/nba/team/_/name/ny/new-york-knicks\">New York Knicks</a> 10 straight times in the early 1980s.\n\n\r\n              Nets: The Nets fell to 0-7 all-time at home against the 76ers in the postseason. ... <a href=\"http://www.espn.com/nba/player/_/id/4004/patty-mills\">Patty Mills</a> played for the first time in the series, going scoreless in five minutes. ... Brooklyn's last playoff win remains Game 5 against Milwaukee in the 2021 East semifinals.\n\n\r\n              DREADED LETTERS\n\n\r\n              Rivers said he doesn't worry when he sees Embiid appear to be hurting, as he was at times during Game 3. His concerns begin when he is told the medical staff wants to do an MRI exam. \n\n\r\n              \u201cAs a coach I hate that word, I hate those three letters. I mean, because it never comes out well,\u201d Rivers said. \u201cIt just feels like that whenever they tell a coach, \u2018Hey, we\u2019re going to get an MRI,\u2019 it doesn\u2019t turn out well most of the time and this one did not.\u201d \n\n\r\n              ------\n\n\r\n              AP NBA: https://apnews.com/hub/NBA and https://twitter.com/AP--Sports"
+"allowSearch": true,
+"allowContentReactions": false
 },
 "videos": [],
 "standings": {
 "fullViewLink": {
 "text": "Full Standings",
-"href": "http://www.espn.com/nba/standings"
+"href": "https://www.espn.com/nba/standings"
 },
+"header": "2025 Standings",
 "groups": [
 {
 "standings": {
@@ -23275,91 +23502,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 3.0,
-"displayValue": "3"
-},
-{
-"name": "streak",
-"displayName": "Streak",
-"shortDisplayName": "STRK",
-"description": "Current Streak",
-"abbreviation": "STRK",
-"type": "streak",
-"value": -1.0,
-"displayValue": "L1"
-},
-{
-"name": "winPercent",
-"displayName": "Win Percentage",
-"shortDisplayName": "PCT",
-"description": "Winning Percentage",
-"abbreviation": "PCT",
-"type": "winpercent",
-"value": 0.78571427,
-"displayValue": ".786"
-},
-{
-"name": "wins",
-"displayName": "Wins",
-"shortDisplayName": "W",
-"description": "Wins",
-"abbreviation": "W",
-"type": "wins",
-"value": 11.0,
-"displayValue": "11"
-}
-],
-"logo": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard"
-],
-"lastUpdated": "2023-08-24T21:18Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/bos.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2023-08-24T21:19Z"
-}
-]
-},
-{
-"team": "Philadelphia",
-"link": "https://www.espn.com/nba/team/_/name/phi/philadelphia-76ers",
-"id": "20",
-"uid": "s:40~l:46~t:20",
-"stats": [
-{
-"name": "gamesBehind",
-"displayName": "Games Back",
-"shortDisplayName": "GB",
-"description": "Games Back",
-"abbreviation": "GB",
-"type": "gamesbehind",
-"value": 0.5,
-"displayValue": "0.5"
-},
-{
-"name": "losses",
-"displayName": "Losses",
-"shortDisplayName": "L",
-"description": "Losses",
-"abbreviation": "L",
-"type": "losses",
-"value": 3.0,
-"displayValue": "3"
+"value": 21.0,
+"displayValue": "21"
 },
 {
 "name": "streak",
@@ -23378,8 +23522,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.7692308,
-"displayValue": ".769"
+"value": 0.74390244,
+"displayValue": ".744"
 },
 {
 "name": "wins",
@@ -23388,24 +23532,24 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 10.0,
-"displayValue": "10"
+"value": 61.0,
+"displayValue": "61"
 }
 ],
 "logo": [
 {
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/bos.png",
 "width": 500,
 "height": 500,
 "alt": "",
 "rel": [
 "full",
-"scoreboard"
+"default"
 ],
-"lastUpdated": "2023-08-28T21:12Z"
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/phi.png",
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/bos.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -23414,7 +23558,7 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2023-08-28T21:13Z"
+"lastUpdated": "2024-06-25T21:13Z"
 }
 ]
 },
@@ -23431,8 +23575,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 3.0,
-"displayValue": "3"
+"value": 10.0,
+"displayValue": "10"
 },
 {
 "name": "losses",
@@ -23441,174 +23585,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 6.0,
-"displayValue": "6"
-},
-{
-"name": "streak",
-"displayName": "Streak",
-"shortDisplayName": "STRK",
-"description": "Current Streak",
-"abbreviation": "STRK",
-"type": "streak",
-"value": -1.0,
-"displayValue": "L1"
-},
-{
-"name": "winPercent",
-"displayName": "Win Percentage",
-"shortDisplayName": "PCT",
-"description": "Winning Percentage",
-"abbreviation": "PCT",
-"type": "winpercent",
-"value": 0.5714286,
-"displayValue": ".571"
-},
-{
-"name": "wins",
-"displayName": "Wins",
-"shortDisplayName": "W",
-"description": "Wins",
-"abbreviation": "W",
-"type": "wins",
-"value": 8.0,
-"displayValue": "8"
-}
-],
-"logo": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard"
-],
-"lastUpdated": "2023-08-28T20:13Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/ny.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2023-08-28T20:12Z"
-}
-]
-},
-{
-"team": "Brooklyn",
-"link": "https://www.espn.com/nba/team/_/name/bkn/brooklyn-nets",
-"id": "17",
-"uid": "s:40~l:46~t:17",
-"stats": [
-{
-"name": "gamesBehind",
-"displayName": "Games Back",
-"shortDisplayName": "GB",
-"description": "Games Back",
-"abbreviation": "GB",
-"type": "gamesbehind",
-"value": 4.5,
-"displayValue": "4.5"
-},
-{
-"name": "losses",
-"displayName": "Losses",
-"shortDisplayName": "L",
-"description": "Losses",
-"abbreviation": "L",
-"type": "losses",
-"value": 7.0,
-"displayValue": "7"
-},
-{
-"name": "streak",
-"displayName": "Streak",
-"shortDisplayName": "STRK",
-"description": "Current Streak",
-"abbreviation": "STRK",
-"type": "streak",
-"value": -2.0,
-"displayValue": "L2"
-},
-{
-"name": "winPercent",
-"displayName": "Win Percentage",
-"shortDisplayName": "PCT",
-"description": "Winning Percentage",
-"abbreviation": "PCT",
-"type": "winpercent",
-"value": 0.46153846,
-"displayValue": ".462"
-},
-{
-"name": "wins",
-"displayName": "Wins",
-"shortDisplayName": "W",
-"description": "Wins",
-"abbreviation": "W",
-"type": "wins",
-"value": 6.0,
-"displayValue": "6"
-}
-],
-"logo": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard"
-],
-"lastUpdated": "2023-08-24T21:46Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/bkn.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2023-08-24T21:47Z"
-}
-]
-},
-{
-"team": "Toronto",
-"link": "https://www.espn.com/nba/team/_/name/tor/toronto-raptors",
-"id": "28",
-"uid": "s:40~l:46~t:28",
-"stats": [
-{
-"name": "gamesBehind",
-"displayName": "Games Back",
-"shortDisplayName": "GB",
-"description": "Games Back",
-"abbreviation": "GB",
-"type": "gamesbehind",
-"value": 4.5,
-"displayValue": "4.5"
-},
-{
-"name": "losses",
-"displayName": "Losses",
-"shortDisplayName": "L",
-"description": "Losses",
-"abbreviation": "L",
-"type": "losses",
-"value": 7.0,
-"displayValue": "7"
+"value": 31.0,
+"displayValue": "31"
 },
 {
 "name": "streak",
@@ -23627,8 +23605,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.46153846,
-"displayValue": ".462"
+"value": 0.6219512,
+"displayValue": ".622"
 },
 {
 "name": "wins",
@@ -23637,21 +23615,104 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 6.0,
-"displayValue": "6"
+"value": 51.0,
+"displayValue": "51"
 }
 ],
 "logo": [
 {
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png",
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/ny.png",
 "width": 500,
 "height": 500,
 "alt": "",
 "rel": [
 "full",
-"scoreboard"
+"default"
 ],
-"lastUpdated": "2018-10-11T13:47Z"
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/ny.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
+}
+]
+},
+{
+"team": "Toronto",
+"link": "https://www.espn.com/nba/team/_/name/tor/toronto-raptors",
+"id": "28",
+"uid": "s:40~l:46~t:28",
+"stats": [
+{
+"name": "gamesBehind",
+"displayName": "Games Back",
+"shortDisplayName": "GB",
+"description": "Games Back",
+"abbreviation": "GB",
+"type": "gamesbehind",
+"value": 31.0,
+"displayValue": "31"
+},
+{
+"name": "losses",
+"displayName": "Losses",
+"shortDisplayName": "L",
+"description": "Losses",
+"abbreviation": "L",
+"type": "losses",
+"value": 52.0,
+"displayValue": "52"
+},
+{
+"name": "streak",
+"displayName": "Streak",
+"shortDisplayName": "STRK",
+"description": "Current Streak",
+"abbreviation": "STRK",
+"type": "streak",
+"value": -2.0,
+"displayValue": "L2"
+},
+{
+"name": "winPercent",
+"displayName": "Win Percentage",
+"shortDisplayName": "PCT",
+"description": "Winning Percentage",
+"abbreviation": "PCT",
+"type": "winpercent",
+"value": 0.36585367,
+"displayValue": ".366"
+},
+{
+"name": "wins",
+"displayName": "Wins",
+"shortDisplayName": "W",
+"description": "Wins",
+"abbreviation": "W",
+"type": "wins",
+"value": 30.0,
+"displayValue": "30"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/tor.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
 },
 {
 "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/tor.png",
@@ -23663,13 +23724,179 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2020-10-08T19:46Z"
+"lastUpdated": "2025-01-22T15:28Z"
+}
+]
+},
+{
+"team": "Brooklyn",
+"link": "https://www.espn.com/nba/team/_/name/bkn/brooklyn-nets",
+"id": "17",
+"uid": "s:40~l:46~t:17",
+"stats": [
+{
+"name": "gamesBehind",
+"displayName": "Games Back",
+"shortDisplayName": "GB",
+"description": "Games Back",
+"abbreviation": "GB",
+"type": "gamesbehind",
+"value": 35.0,
+"displayValue": "35"
+},
+{
+"name": "losses",
+"displayName": "Losses",
+"shortDisplayName": "L",
+"description": "Losses",
+"abbreviation": "L",
+"type": "losses",
+"value": 56.0,
+"displayValue": "56"
+},
+{
+"name": "streak",
+"displayName": "Streak",
+"shortDisplayName": "STRK",
+"description": "Current Streak",
+"abbreviation": "STRK",
+"type": "streak",
+"value": -3.0,
+"displayValue": "L3"
+},
+{
+"name": "winPercent",
+"displayName": "Win Percentage",
+"shortDisplayName": "PCT",
+"description": "Winning Percentage",
+"abbreviation": "PCT",
+"type": "winpercent",
+"value": 0.31707317,
+"displayValue": ".317"
+},
+{
+"name": "wins",
+"displayName": "Wins",
+"shortDisplayName": "W",
+"description": "Wins",
+"abbreviation": "W",
+"type": "wins",
+"value": 26.0,
+"displayValue": "26"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/bkn.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/bkn.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:13Z"
+}
+]
+},
+{
+"team": "Philadelphia",
+"link": "https://www.espn.com/nba/team/_/name/phi/philadelphia-76ers",
+"id": "20",
+"uid": "s:40~l:46~t:20",
+"stats": [
+{
+"name": "gamesBehind",
+"displayName": "Games Back",
+"shortDisplayName": "GB",
+"description": "Games Back",
+"abbreviation": "GB",
+"type": "gamesbehind",
+"value": 37.0,
+"displayValue": "37"
+},
+{
+"name": "losses",
+"displayName": "Losses",
+"shortDisplayName": "L",
+"description": "Losses",
+"abbreviation": "L",
+"type": "losses",
+"value": 58.0,
+"displayValue": "58"
+},
+{
+"name": "streak",
+"displayName": "Streak",
+"shortDisplayName": "STRK",
+"description": "Current Streak",
+"abbreviation": "STRK",
+"type": "streak",
+"value": -2.0,
+"displayValue": "L2"
+},
+{
+"name": "winPercent",
+"displayName": "Win Percentage",
+"shortDisplayName": "PCT",
+"description": "Winning Percentage",
+"abbreviation": "PCT",
+"type": "winpercent",
+"value": 0.29268292,
+"displayValue": ".293"
+},
+{
+"name": "wins",
+"displayName": "Wins",
+"shortDisplayName": "W",
+"description": "Wins",
+"abbreviation": "W",
+"type": "wins",
+"value": 24.0,
+"displayValue": "24"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/phi.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/phi.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 }
 ]
 },
-"header": "2023-24 Atlantic Standings",
+"header": "2024-25 Atlantic Standings",
 "href": "https://www.espn.com/nba/standings/_/group/1"
 }
 ]
