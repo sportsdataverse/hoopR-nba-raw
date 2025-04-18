@@ -1,4 +1,5 @@
 #!/bin/bash
+#### bash scripts/daily_nba_scraper.sh -s 2025 -e 2025 -r true > daily_nba.out
 while getopts s:e:r: flag
 do
     case "${flag}" in

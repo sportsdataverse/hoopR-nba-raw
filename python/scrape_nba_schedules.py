@@ -42,7 +42,7 @@ def download_schedule(season, path_to_schedules = None):
     for d in calendar:
         date_schedule = sdv.nba.espn_nba_schedule(dates = d, return_as_pandas = True)
         ev = pd.concat([ev, date_schedule], axis = 0, ignore_index = True)
-    ev = ev[ev["season_type"].isin([2, 3])]
+    ev = ev[ev["season_type"].isin([2, 3, 5])]
 
     ev = ev.drop_duplicates(subset=["game_id"], ignore_index = True)
 
