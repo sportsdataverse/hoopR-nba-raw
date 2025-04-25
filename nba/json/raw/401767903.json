@@ -2296,11 +2296,26 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/29?lang=en&region=us"
 },
-"status": {
-"id": "1",
-"name": "Active",
-"type": "active",
-"abbreviation": "Active"
+"status": "Day-To-Day",
+"injuries": {
+"status": "Day-To-Day",
+"date": "2025-04-25T03:17Z",
+"type": {
+"id": "6",
+"name": "INJURY_STATUS_DAYTODAY",
+"description": "day-to-day",
+"abbreviation": "DD"
+},
+"details": {
+"fantasyStatus": {
+"description": "GTD",
+"abbreviation": "GTD"
+},
+"type": "Hip",
+"location": "Torso",
+"side": "Left",
+"returnDate": "2025-04-26"
+}
 }
 },
 "statistics": [
@@ -3556,66 +3571,20 @@
 "uid": "s:40~l:46~e:401767904~c:401767904",
 "date": "2025-04-25T01:30:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Thu, April 24th at 9:30 PM EDT",
-"shortDetail": "4/24 - 9:30 PM EDT"
-},
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "TNT"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "FanDuel SN SE"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
 "id": "3",
-"type": "Away"
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
-"media": {
-"shortName": "FanDuel SN OK"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": false,
 "team": {
 "id": "29",
 "uid": "s:40~l:46~t:29",
@@ -3680,10 +3649,11 @@
 }
 ]
 },
-"score": "0"
+"score": "108"
 },
 {
 "homeAway": "away",
+"winner": true,
 "team": {
 "id": "25",
 "uid": "s:40~l:46~t:25",
@@ -3748,7 +3718,7 @@
 }
 ]
 },
-"score": "0"
+"score": "114"
 }
 ],
 "links": [
