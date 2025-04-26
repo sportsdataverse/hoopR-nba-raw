@@ -34270,26 +34270,26 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/2?lang=en&region=us"
 },
-"status": "Day-To-Day",
+"status": "Out",
 "injuries": {
-"status": "Day-To-Day",
-"date": "2025-04-24T21:14Z",
+"status": "Out",
+"date": "2025-04-25T22:25Z",
 "type": {
-"id": "6",
-"name": "INJURY_STATUS_DAYTODAY",
-"description": "day-to-day",
-"abbreviation": "DD"
+"id": "4",
+"name": "INJURY_STATUS_OUT",
+"description": "out",
+"abbreviation": "O"
 },
 "details": {
 "fantasyStatus": {
-"description": "GTD",
-"abbreviation": "GTD"
+"description": "OUT",
+"abbreviation": "OUT"
 },
 "type": "Hamstring",
 "location": "Leg",
 "detail": "Strain",
 "side": "Right",
-"returnDate": "2025-04-25"
+"returnDate": "2025-04-27"
 }
 }
 },
@@ -34370,27 +34370,11 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/2?lang=en&region=us"
 },
-"status": "Day-To-Day",
-"injuries": {
-"status": "Day-To-Day",
-"date": "2025-04-24T21:14Z",
-"type": {
-"id": "6",
-"name": "INJURY_STATUS_DAYTODAY",
-"description": "day-to-day",
-"abbreviation": "DD"
-},
-"details": {
-"fantasyStatus": {
-"description": "GTD",
-"abbreviation": "GTD"
-},
-"type": "Wrist",
-"location": "Arm",
-"detail": "Bruise",
-"side": "Right",
-"returnDate": "2025-04-25"
-}
+"status": {
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -35679,66 +35663,20 @@
 "uid": "s:40~l:46~e:401768030~c:401768030",
 "date": "2025-04-25T23:00:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Fri, April 25th at 7:00 PM EDT",
-"shortDetail": "4/25 - 7:00 PM EDT"
-},
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "ESPN"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
 "id": "3",
-"type": "Away"
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
-"media": {
-"shortName": "NBC Sports BO"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "FanDuel SN FL"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": true,
 "team": {
 "id": "19",
 "uid": "s:40~l:46~t:19",
@@ -35803,10 +35741,11 @@
 }
 ]
 },
-"score": "0"
+"score": "95"
 },
 {
 "homeAway": "away",
+"winner": false,
 "team": {
 "id": "2",
 "uid": "s:40~l:46~t:2",
@@ -35871,7 +35810,7 @@
 }
 ]
 },
-"score": "0"
+"score": "93"
 }
 ],
 "links": [
@@ -36137,8 +36076,8 @@
 {
 "id": "401768032",
 "uid": "s:40~l:46~e:401768032~c:401768032",
-"date": "2025-04-29T04:00:00Z",
-"timeValid": false,
+"date": "2025-04-30T00:30:00Z",
+"timeValid": true,
 "status": "pre",
 "statusType": {
 "id": "1",
@@ -36146,10 +36085,56 @@
 "state": "pre",
 "completed": false,
 "description": "Scheduled",
-"detail": "4/29 - TBD",
-"shortDetail": "TBD"
+"detail": "Tue, April 29th at 8:30 PM EDT",
+"shortDetail": "4/29 - 8:30 PM EDT"
 },
-"broadcasts": [],
+"broadcasts": [
+{
+"type": {
+"id": "1",
+"shortName": "TV"
+},
+"market": {
+"id": "1",
+"type": "National"
+},
+"media": {
+"shortName": "NBA TV"
+},
+"lang": "en",
+"region": "us"
+},
+{
+"type": {
+"id": "1",
+"shortName": "TV"
+},
+"market": {
+"id": "2",
+"type": "Home"
+},
+"media": {
+"shortName": "NBC Sports BO"
+},
+"lang": "en",
+"region": "us"
+},
+{
+"type": {
+"id": "1",
+"shortName": "TV"
+},
+"market": {
+"id": "3",
+"type": "Away"
+},
+"media": {
+"shortName": "FanDuel SN FL"
+},
+"lang": "en",
+"region": "us"
+}
+],
 "competitors": [
 {
 "homeAway": "home",
