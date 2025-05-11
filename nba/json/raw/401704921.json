@@ -1955,7 +1955,7 @@
 "status": "Out",
 "injuries": {
 "status": "Out",
-"date": "2025-05-07T18:05Z",
+"date": "2025-05-11T00:50Z",
 "type": {
 "id": "4",
 "name": "INJURY_STATUS_OUT",
@@ -1971,7 +1971,7 @@
 "location": "Leg",
 "detail": "Strain",
 "side": "Left",
-"returnDate": "2025-05-14"
+"returnDate": "2025-05-18"
 }
 }
 },
@@ -2046,7 +2046,7 @@
 "status": "Out",
 "injuries": {
 "status": "Out",
-"date": "2025-05-07T18:05Z",
+"date": "2025-05-11T00:50Z",
 "type": {
 "id": "4",
 "name": "INJURY_STATUS_OUT",
@@ -2062,7 +2062,7 @@
 "location": "Leg",
 "detail": "Strain",
 "side": "Left",
-"returnDate": "2025-05-14"
+"returnDate": "2025-05-18"
 }
 }
 },
@@ -3242,7 +3242,7 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "Series tied 1-1",
+"summary": "MIN leads series 2-1",
 "completed": false,
 "totalCompetitions": 7,
 "events": [
@@ -3621,52 +3621,20 @@
 "uid": "s:40~l:46~e:401769839~c:401769839",
 "date": "2025-05-11T00:30:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Sat, May 10th at 8:30 PM EDT",
-"shortDetail": "5/10 - 8:30 PM EDT"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "ABC"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "5",
-"shortName": "Radio"
-},
-"url": "https://cerebro.espn.com/cerebro/search/airing/a1300383790",
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "ERADM"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": false,
 "team": {
 "id": "9",
 "uid": "s:40~l:46~t:9",
@@ -3731,10 +3699,11 @@
 }
 ]
 },
-"score": "0"
+"score": "97"
 },
 {
 "homeAway": "away",
+"winner": true,
 "team": {
 "id": "16",
 "uid": "s:40~l:46~t:16",
@@ -3799,7 +3768,7 @@
 }
 ]
 },
-"score": "0"
+"score": "102"
 }
 ],
 "links": [
@@ -4035,8 +4004,8 @@
 {
 "id": "401769987",
 "uid": "s:40~l:46~e:401769987~c:401769987",
-"date": "2025-05-14T04:00:00Z",
-"timeValid": false,
+"date": "2025-05-15T01:30:00Z",
+"timeValid": true,
 "status": "pre",
 "statusType": {
 "id": "1",
@@ -4044,8 +4013,8 @@
 "state": "pre",
 "completed": false,
 "description": "Scheduled",
-"detail": "5/14 - TBD",
-"shortDetail": "TBD"
+"detail": "Wed, May 14th at 9:30 PM EDT",
+"shortDetail": "5/14 - 9:30 PM EDT"
 },
 "broadcasts": [
 {
@@ -7148,7 +7117,7 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "Series tied 1-1",
+"summary": "MIN leads series 2-1",
 "completed": false,
 "totalCompetitions": 7,
 "competitors": [
@@ -7164,7 +7133,7 @@
 {
 "id": "16",
 "uid": "s:40~l:46~t:16",
-"wins": 1,
+"wins": 2,
 "ties": 0,
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/16?lang=en&region=us"
@@ -26711,39 +26680,79 @@
 "uid": "s:40~l:46~t:25",
 "stats": [
 {
+"name": "gamesBehind",
+"displayName": "Games Back",
 "shortDisplayName": "GB",
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
+"value": 0.0,
 "displayValue": "-"
 },
 {
+"name": "losses",
+"displayName": "Losses",
 "shortDisplayName": "L",
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
+"value": 14.0,
 "displayValue": "14"
 },
 {
+"name": "streak",
+"displayName": "Streak",
 "shortDisplayName": "STRK",
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
+"value": 4.0,
 "displayValue": "W4"
 },
 {
+"name": "winPercent",
+"displayName": "Win Percentage",
 "shortDisplayName": "PCT",
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
+"value": 0.8292683,
 "displayValue": ".829"
 },
 {
+"name": "wins",
+"displayName": "Wins",
 "shortDisplayName": "W",
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
+"value": 68.0,
 "displayValue": "68"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/okc.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/okc.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -26754,39 +26763,79 @@
 "uid": "s:40~l:46~t:7",
 "stats": [
 {
+"name": "gamesBehind",
+"displayName": "Games Back",
 "shortDisplayName": "GB",
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
+"value": 18.0,
 "displayValue": "18"
 },
 {
+"name": "losses",
+"displayName": "Losses",
 "shortDisplayName": "L",
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
+"value": 32.0,
 "displayValue": "32"
 },
 {
+"name": "streak",
+"displayName": "Streak",
 "shortDisplayName": "STRK",
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
+"value": 3.0,
 "displayValue": "W3"
 },
 {
+"name": "winPercent",
+"displayName": "Win Percentage",
 "shortDisplayName": "PCT",
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
+"value": 0.6097561,
 "displayValue": ".610"
 },
 {
+"name": "wins",
+"displayName": "Wins",
 "shortDisplayName": "W",
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
+"value": 50.0,
 "displayValue": "50"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/den.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/den.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -26797,39 +26846,79 @@
 "uid": "s:40~l:46~t:16",
 "stats": [
 {
+"name": "gamesBehind",
+"displayName": "Games Back",
 "shortDisplayName": "GB",
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
+"value": 19.0,
 "displayValue": "19"
 },
 {
+"name": "losses",
+"displayName": "Losses",
 "shortDisplayName": "L",
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
+"value": 33.0,
 "displayValue": "33"
 },
 {
+"name": "streak",
+"displayName": "Streak",
 "shortDisplayName": "STRK",
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
+"value": 3.0,
 "displayValue": "W3"
 },
 {
+"name": "winPercent",
+"displayName": "Win Percentage",
 "shortDisplayName": "PCT",
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
+"value": 0.597561,
 "displayValue": ".598"
 },
 {
+"name": "wins",
+"displayName": "Wins",
 "shortDisplayName": "W",
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
+"value": 49.0,
 "displayValue": "49"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/min.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-07-18T19:53Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/min.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-07-18T19:54Z"
 }
 ]
 },
@@ -26840,39 +26929,79 @@
 "uid": "s:40~l:46~t:22",
 "stats": [
 {
+"name": "gamesBehind",
+"displayName": "Games Back",
 "shortDisplayName": "GB",
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
+"value": 32.0,
 "displayValue": "32"
 },
 {
+"name": "losses",
+"displayName": "Losses",
 "shortDisplayName": "L",
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
+"value": 46.0,
 "displayValue": "46"
 },
 {
+"name": "streak",
+"displayName": "Streak",
 "shortDisplayName": "STRK",
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
+"value": 1.0,
 "displayValue": "W1"
 },
 {
+"name": "winPercent",
+"displayName": "Win Percentage",
 "shortDisplayName": "PCT",
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
+"value": 0.4390244,
 "displayValue": ".439"
 },
 {
+"name": "wins",
+"displayName": "Wins",
 "shortDisplayName": "W",
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
+"value": 36.0,
 "displayValue": "36"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/por.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/por.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -26883,39 +27012,79 @@
 "uid": "s:40~l:46~t:26",
 "stats": [
 {
+"name": "gamesBehind",
+"displayName": "Games Back",
 "shortDisplayName": "GB",
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
+"value": 51.0,
 "displayValue": "51"
 },
 {
+"name": "losses",
+"displayName": "Losses",
 "shortDisplayName": "L",
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
+"value": 65.0,
 "displayValue": "65"
 },
 {
+"name": "streak",
+"displayName": "Streak",
 "shortDisplayName": "STRK",
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
+"value": -2.0,
 "displayValue": "L2"
 },
 {
+"name": "winPercent",
+"displayName": "Win Percentage",
 "shortDisplayName": "PCT",
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
+"value": 0.20731707,
 "displayValue": ".207"
 },
 {
+"name": "wins",
+"displayName": "Wins",
 "shortDisplayName": "W",
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
+"value": 17.0,
 "displayValue": "17"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/utah.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/utah.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 }
@@ -26934,39 +27103,79 @@
 "uid": "s:40~l:46~t:13",
 "stats": [
 {
+"name": "gamesBehind",
+"displayName": "Games Back",
 "shortDisplayName": "GB",
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
+"value": 0.0,
 "displayValue": "-"
 },
 {
+"name": "losses",
+"displayName": "Losses",
 "shortDisplayName": "L",
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
+"value": 32.0,
 "displayValue": "32"
 },
 {
+"name": "streak",
+"displayName": "Streak",
 "shortDisplayName": "STRK",
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
+"value": -1.0,
 "displayValue": "L1"
 },
 {
+"name": "winPercent",
+"displayName": "Win Percentage",
 "shortDisplayName": "PCT",
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
+"value": 0.6097561,
 "displayValue": ".610"
 },
 {
+"name": "wins",
+"displayName": "Wins",
 "shortDisplayName": "W",
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
+"value": 50.0,
 "displayValue": "50"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/lal.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/lal.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -26977,39 +27186,79 @@
 "uid": "s:40~l:46~t:12",
 "stats": [
 {
+"name": "gamesBehind",
+"displayName": "Games Back",
 "shortDisplayName": "GB",
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
+"value": 0.0,
 "displayValue": "-"
 },
 {
+"name": "losses",
+"displayName": "Losses",
 "shortDisplayName": "L",
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
+"value": 32.0,
 "displayValue": "32"
 },
 {
+"name": "streak",
+"displayName": "Streak",
 "shortDisplayName": "STRK",
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
+"value": 8.0,
 "displayValue": "W8"
 },
 {
+"name": "winPercent",
+"displayName": "Win Percentage",
 "shortDisplayName": "PCT",
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
+"value": 0.6097561,
 "displayValue": ".610"
 },
 {
+"name": "wins",
+"displayName": "Wins",
 "shortDisplayName": "W",
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
+"value": 50.0,
 "displayValue": "50"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/lac.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/lac.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -27020,39 +27269,79 @@
 "uid": "s:40~l:46~t:9",
 "stats": [
 {
+"name": "gamesBehind",
+"displayName": "Games Back",
 "shortDisplayName": "GB",
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
+"value": 2.0,
 "displayValue": "2"
 },
 {
+"name": "losses",
+"displayName": "Losses",
 "shortDisplayName": "L",
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
+"value": 34.0,
 "displayValue": "34"
 },
 {
+"name": "streak",
+"displayName": "Streak",
 "shortDisplayName": "STRK",
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
+"value": -1.0,
 "displayValue": "L1"
 },
 {
+"name": "winPercent",
+"displayName": "Win Percentage",
 "shortDisplayName": "PCT",
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
+"value": 0.58536583,
 "displayValue": ".585"
 },
 {
+"name": "wins",
+"displayName": "Wins",
 "shortDisplayName": "W",
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
+"value": 48.0,
 "displayValue": "48"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/gs.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/gs.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -27063,39 +27352,79 @@
 "uid": "s:40~l:46~t:23",
 "stats": [
 {
+"name": "gamesBehind",
+"displayName": "Games Back",
 "shortDisplayName": "GB",
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
+"value": 10.0,
 "displayValue": "10"
 },
 {
+"name": "losses",
+"displayName": "Losses",
 "shortDisplayName": "L",
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
+"value": 42.0,
 "displayValue": "42"
 },
 {
+"name": "streak",
+"displayName": "Streak",
 "shortDisplayName": "STRK",
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
+"value": 1.0,
 "displayValue": "W1"
 },
 {
+"name": "winPercent",
+"displayName": "Win Percentage",
 "shortDisplayName": "PCT",
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
+"value": 0.4878049,
 "displayValue": ".488"
 },
 {
+"name": "wins",
+"displayName": "Wins",
 "shortDisplayName": "W",
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
+"value": 40.0,
 "displayValue": "40"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/sac.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/sac.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -27106,39 +27435,79 @@
 "uid": "s:40~l:46~t:21",
 "stats": [
 {
+"name": "gamesBehind",
+"displayName": "Games Back",
 "shortDisplayName": "GB",
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
+"value": 14.0,
 "displayValue": "14"
 },
 {
+"name": "losses",
+"displayName": "Losses",
 "shortDisplayName": "L",
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
+"value": 46.0,
 "displayValue": "46"
 },
 {
+"name": "streak",
+"displayName": "Streak",
 "shortDisplayName": "STRK",
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
+"value": -1.0,
 "displayValue": "L1"
 },
 {
+"name": "winPercent",
+"displayName": "Win Percentage",
 "shortDisplayName": "PCT",
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
+"value": 0.4390244,
 "displayValue": ".439"
 },
 {
+"name": "wins",
+"displayName": "Wins",
 "shortDisplayName": "W",
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
+"value": 36.0,
 "displayValue": "36"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/phx.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/phx.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 }
