@@ -3198,7 +3198,7 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "Series tied 1-1",
+"summary": "MIN leads series 2-1",
 "completed": false,
 "totalCompetitions": 7,
 "events": [
@@ -3577,52 +3577,20 @@
 "uid": "s:40~l:46~e:401769839~c:401769839",
 "date": "2025-05-11T00:30:00Z",
 "timeValid": true,
-"status": "in",
+"status": "post",
 "statusType": {
-"id": "2",
-"name": "STATUS_IN_PROGRESS",
-"state": "in",
-"completed": false,
-"description": "In Progress",
-"detail": "7:21 - 3rd Quarter",
-"shortDetail": "7:21 - 3rd"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "ABC"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "5",
-"shortName": "Radio"
-},
-"url": "https://cerebro.espn.com/cerebro/search/airing/a1300383790",
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "ERADM"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": false,
 "team": {
 "id": "9",
 "uid": "s:40~l:46~t:9",
@@ -3687,10 +3655,11 @@
 }
 ]
 },
-"score": "50"
+"score": "97"
 },
 {
 "homeAway": "away",
+"winner": true,
 "team": {
 "id": "16",
 "uid": "s:40~l:46~t:16",
@@ -3755,34 +3724,34 @@
 }
 ]
 },
-"score": "49"
+"score": "102"
 }
 ],
 "links": [
 {
 "language": "en-US",
 "rel": [
-"live",
+"summary",
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nba/game?gameId=401769839",
+"href": "https://www.espn.com/nba/game/_/gameId/401769839/timberwolves-warriors",
 "text": "Gamecast",
-"shortText": "Gamecast",
+"shortText": "Summary",
 "isExternal": false,
 "isPremium": false
 },
 {
 "language": "en-US",
 "rel": [
-"live",
+"summary",
 "sportscenter",
 "app",
 "event"
 ],
 "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401769839",
 "text": "Gamecast",
-"shortText": "Gamecast",
+"shortText": "Summary",
 "isExternal": false,
 "isPremium": false
 }
@@ -7234,14 +7203,14 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "Series tied 1-1",
+"summary": "MIN leads series 2-1",
 "completed": false,
 "totalCompetitions": 7,
 "competitors": [
 {
 "id": "16",
 "uid": "s:40~l:46~t:16",
-"wins": 1,
+"wins": 2,
 "ties": 0,
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/16?lang=en&region=us"
