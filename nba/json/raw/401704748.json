@@ -570,9 +570,9 @@
 },
 "jersey": "2",
 "position": {
-"name": "Point Guard",
-"displayName": "Point Guard",
-"abbreviation": "PG"
+"name": "Guard",
+"displayName": "Guard",
+"abbreviation": "G"
 }
 },
 "starter": true,
@@ -670,12 +670,12 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/3908845.png",
 "alt": "John Collins"
 },
+"jersey": "20",
 "position": {
 "name": "Power Forward",
 "displayName": "Power Forward",
 "abbreviation": "PF"
-},
-"jersey": "20"
+}
 },
 "starter": false,
 "didNotPlay": false,
@@ -721,12 +721,12 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/3914285.png",
 "alt": "Drew Eubanks"
 },
+"jersey": "15",
 "position": {
 "name": "Power Forward",
 "displayName": "Power Forward",
 "abbreviation": "PF"
-},
-"jersey": "15"
+}
 },
 "starter": false,
 "didNotPlay": false,
@@ -925,12 +925,12 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/2528426.png",
 "alt": "Jordan Clarkson"
 },
+"jersey": "00",
 "position": {
 "name": "Guard",
 "displayName": "Guard",
 "abbreviation": "G"
-},
-"jersey": "00"
+}
 },
 "starter": false,
 "didNotPlay": false,
@@ -976,12 +976,12 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/4432817.png",
 "alt": "Johnny Juzang"
 },
-"jersey": "33",
 "position": {
 "name": "Guard",
 "displayName": "Guard",
 "abbreviation": "G"
-}
+},
+"jersey": "33"
 },
 "starter": false,
 "didNotPlay": false,
@@ -1966,12 +1966,12 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/3064447.png",
 "alt": "Delon Wright"
 },
-"jersey": "55",
 "position": {
-"name": "Shooting Guard",
-"displayName": "Shooting Guard",
-"abbreviation": "SG"
-}
+"name": "Guard",
+"displayName": "Guard",
+"abbreviation": "G"
+},
+"jersey": "55"
 },
 "starter": false,
 "didNotPlay": true,
@@ -2332,11 +2332,25 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/15?lang=en&region=us"
 },
-"status": {
-"id": "1",
-"name": "Active",
-"type": "active",
-"abbreviation": "Active"
+"status": "Day-To-Day",
+"injuries": {
+"status": "Day-To-Day",
+"date": "2025-09-30T15:43Z",
+"type": {
+"id": "6",
+"name": "INJURY_STATUS_DAYTODAY",
+"description": "day-to-day",
+"abbreviation": "DD"
+},
+"details": {
+"fantasyStatus": {
+"description": "GTD",
+"abbreviation": "GTD"
+},
+"type": "Illness",
+"location": "Other",
+"returnDate": "2025-10-06"
+}
 }
 },
 "statistics": [
@@ -2468,6 +2482,7 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/2528426.png",
 "alt": "Jordan Clarkson"
 },
+"jersey": "00",
 "position": {
 "abbreviation": "G"
 },
@@ -2542,12 +2557,12 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/4277811.png",
 "alt": "Collin Sexton"
 },
-"jersey": "2",
+"jersey": "8",
 "position": {
-"abbreviation": "PG"
+"abbreviation": "G"
 },
 "team": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/26?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/30?lang=en&region=us"
 },
 "status": {
 "id": "1",
@@ -3073,29 +3088,7 @@
 ]
 }
 ],
-"broadcasts": [
-{
-"type": {
-"id": "4",
-"shortName": "Streaming",
-"longName": "Streaming",
-"slug": "streaming"
-},
-"station": "Jazz+",
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"callLetters": "Jazz+",
-"name": "Jazz+",
-"shortName": "Jazz+"
-},
-"lang": "en",
-"region": "us",
-"isNational": false
-}
-],
+"broadcasts": [],
 "predictor": {},
 "pickcenter": [
 {
@@ -5697,7 +5690,7 @@
 "uid": "s:40~l:46~e:401704748",
 "season": {
 "year": 2025,
-"current": true,
+"current": false,
 "type": 2
 },
 "timeValid": true,
@@ -6158,22 +6151,6 @@
 "lang": "en",
 "region": "us",
 "isNational": false
-},
-{
-"type": {
-"id": "4",
-"shortName": "Streaming"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "Jazz+"
-},
-"lang": "en",
-"region": "us",
-"isNational": false
 }
 ],
 "series": [
@@ -6327,25 +6304,6 @@
 ],
 "href": "sportscenter://x-callback-url/showClubhouse?uid=s:40~l:46&section=scores",
 "text": "Schedule"
-},
-{
-"rel": [
-"standings",
-"desktop",
-"league"
-],
-"href": "https://www.espn.com/nba/standings",
-"text": "Standings"
-},
-{
-"rel": [
-"standings",
-"sportscenter",
-"app",
-"league"
-],
-"href": "sportscenter://x-callback-url/showClubhouse?uid=s:40~l:46&section=standings",
-"text": "Standings"
 },
 {
 "rel": [
@@ -22761,417 +22719,7 @@
 "url": "https://a.espncdn.com/media/motion/2024/1107/ss_20241107_205251169_26859861370/ss_20241107_205251169_26859861370.jpg"
 }
 ],
-"video": [
-{
-"id": 42257932,
-"dataSourceIdentifier": "54d62c463b3ed",
-"cerebroId": "672d6ef27762fb7c4d9eba7e",
-"pccId": "e4bb0a71-3b65-4926-a13d-c40b4f2392e1",
-"source": "espn",
-"headline": "Giannis turns steal into Statue of Liberty slam",
-"caption": "Giannis Antetokounmpo gets a pickpocket steal on John Collins and takes it all the way for an emphatic one-handed jam.",
-"title": "Giannis turns steal into Statue of Liberty slam",
-"description": "Giannis Antetokounmpo gets a pickpocket steal on John Collins and takes it all the way for an emphatic one-handed jam.",
-"lastModified": "2024-11-08T03:51:16Z",
-"originalPublishDate": "2024-11-08T01:52:43Z",
-"premium": false,
-"syndicatable": true,
-"duration": 18,
-"videoRatio": "16:9",
-"timeRestrictions": {
-"embargoDate": "2024-11-08T01:52:43Z",
-"expirationDate": "2025-07-31T04:00:00Z"
-},
-"deviceRestrictions": {
-"type": "whitelist",
-"devices": [
-"desktop",
-"ipad",
-"settop",
-"handset",
-"tablet"
-]
-},
-"geoRestrictions": {
-"type": "whitelist",
-"countries": [
-"CO",
-"SR",
-"GY",
-"PA",
-"BM",
-"ML",
-"VC",
-"TT",
-"RW",
-"BI",
-"NE",
-"TG",
-"KY",
-"UY",
-"ZW",
-"GH",
-"SC",
-"CV",
-"ZA",
-"BF",
-"VI",
-"TC",
-"BQ",
-"MW",
-"ST",
-"AI",
-"AG",
-"LR",
-"JM",
-"MS",
-"AU",
-"KE",
-"SL",
-"GN",
-"GB",
-"UK",
-"VE",
-"GA",
-"UM",
-"CD",
-"AO",
-"NG",
-"BO",
-"RE",
-"SN",
-"CL",
-"PE",
-"MH",
-"ZM",
-"DO",
-"SX",
-"FM",
-"CI",
-"GP",
-"BJ",
-"PR",
-"AR",
-"ET",
-"GT",
-"KN",
-"SV",
-"GW",
-"BB",
-"MZ",
-"CG",
-"NA",
-"NI",
-"PY",
-"MX",
-"SS",
-"BS",
-"GD",
-"MP",
-"GM",
-"SZ",
-"TZ",
-"GU",
-"MF",
-"BZ",
-"KM",
-"GF",
-"HT",
-"GQ",
-"EC",
-"CU",
-"UG",
-"MG",
-"MU",
-"PW",
-"LC",
-"AS",
-"BR",
-"CM",
-"MQ",
-"NZ",
-"FJ",
-"VG",
-"AW",
-"HN",
-"AM",
-"CF",
-"BW",
-"ER",
-"LS",
-"US",
-"CR"
-]
-},
-"gameId": 401704748,
-"thumbnail": "https://a.espncdn.com/media/motion/2024/1107/ss_20241107_205251169_26859861370/ss_20241107_205251169_26859861370.jpg",
-"images": [
-{
-"name": "Poster Image",
-"caption": "",
-"alt": "",
-"credit": "",
-"height": 324,
-"width": 576,
-"url": "https://media.video-cdn.espn.com/images/2024/1107/ss_20241107_205251169_26859861370/ss_20241107_205251169_26859861370.jpg"
-}
-],
-"posterImages": {
-"default": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1107/ss_20241107_205251169_26859861370/ss_20241107_205251169_26859861370_default.jpg",
-"width": 576,
-"height": 324
-},
-"full": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1107/ss_20241107_205251169_26859861370/ss_20241107_205251169_26859861370.jpg"
-},
-"wide": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1107/ss_20241107_205251169_26859861370/ss_20241107_205251169_26859861370_5x2.jpg"
-},
-"square": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1107/ss_20241107_205251169_26859861370/ss_20241107_205251169_26859861370_1x1.jpg"
-}
-},
-"links": {
-"web": {
-"href": "https://www.espn.com/video/clip?id=42257932",
-"self": {
-"href": "https://www.espn.com/video/clip?id=42257932",
-"dsi": {
-"href": "https://www.espn.com/video/clip?id=54d62c463b3ed"
-}
-},
-"seo": {
-"href": "https://www.espn.com/video/clip/_/id/42257932"
-}
-},
-"mobile": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/e4bb0a71-3b65-4926-a13d-c40b4f2392e1/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42257932",
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1107/ss_20241107_205251169_2685986/ss_20241107_205251169_2685986.mp4"
-},
-"alert": {
-"href": "https://m.espn.com/general/video/videoAlert?vid=42257932"
-},
-"streaming": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/e4bb0a71-3b65-4926-a13d-c40b4f2392e1/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42257932"
-},
-"progressiveDownload": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/e4bb0a71-3b65-4926-a13d-c40b4f2392e1/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42257932"
-}
-},
-"api": {
-"self": {
-"href": "https://content.core.api.espn.com/v1/video/clips/42257932"
-},
-"artwork": {
-"href": "https://artwork.api.espn.com/artwork/collections/media/e4bb0a71-3b65-4926-a13d-c40b4f2392e1"
-}
-},
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1107/ss_20241107_205251169_2685986/ss_20241107_205251169_2685986_360p30_1464k.mp4",
-"mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2024/1107/ss_20241107_205251169_2685986/ss_20241107_205251169_2685986.mp4"
-},
-"flash": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1107/ss_20241107_205251169_2685986/ss_20241107_205251169_2685986.smil"
-},
-"hds": {
-"href": "https://hds.video-cdn.espn.com/z/motion/2024/1107/ss_20241107_205251169_2685986/ss_20241107_205251169_2685986_rel.smil/manifest.f4m"
-},
-"HLS": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1107/ss_20241107_205251169_2685986/ss_20241107_205251169_2685986/playlist.m3u8",
-"HD": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1107/ss_20241107_205251169_2685986/ss_20241107_205251169_2685986/playlist.m3u8"
-},
-"cmaf": {
-"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2024/1107/ss_20241107_205251169_2685986/ss_20241107_205251169_2685986/playlist.m3u8"
-},
-"shield": {
-"href": "https://watch.auth.api.espn.com/video/auth/media/e4bb0a71-3b65-4926-a13d-c40b4f2392e1/asset"
-}
-},
-"HD": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1107/ss_20241107_205251169_2685986/ss_20241107_205251169_2685986_720p30_2896k.mp4"
-},
-"full": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1107/ss_20241107_205251169_2685986/ss_20241107_205251169_2685986_360p30_1464k.mp4"
-}
-},
-"sportscenter": {
-"href": "sportscenter://x-callback-url/showVideo?videoID=42257932&videoDSI=54d62c463b3ed"
-}
-},
-"categories": [
-{
-"id": 191422,
-"type": "topic",
-"guid": "9660cd01-90a5-2726-f826-03bcf57d32ae",
-"description": "nba highlight",
-"sportId": 0,
-"topicId": 707
-},
-{
-"id": 12025,
-"type": "league",
-"guid": "12c6e39f-b760-49b1-8e4c-b3eb90814c34",
-"description": "Fantasy NBA",
-"sportId": 0,
-"leagueId": 3090,
-"league": {
-"id": 3090,
-"description": "Fantasy NBA",
-"links": {
-"web": {},
-"mobile": {}
-}
-}
-},
-{
-"id": 4564,
-"type": "team",
-"uid": "s:40~l:46~t:26",
-"guid": "77cea2fb-1388-b7c8-d171-2e72b3aecbfb",
-"description": "Utah Jazz",
-"sportId": 46,
-"teamId": 26,
-"team": {
-"id": 26,
-"description": "Utah Jazz",
-"links": {
-"web": {
-"teams": {
-"href": "https://www.espn.com/nba/team/_/name/utah/utah-jazz"
-}
-},
-"mobile": {
-"teams": {
-"href": "https://www.espn.com/nba/team/_/name/utah/utah-jazz"
-}
-}
-}
-}
-},
-{
-"id": 117636,
-"type": "athlete",
-"uid": "s:40~l:46~a:3032977",
-"guid": "00985054-c4b3-4247-e825-ddf062d457c3",
-"description": "Giannis Antetokounmpo",
-"sportId": 46,
-"athleteId": 3032977,
-"athlete": {
-"id": 3032977,
-"description": "Giannis Antetokounmpo",
-"links": {
-"web": {
-"athletes": {
-"href": "https://www.espn.com/nba/player/_/id/3032977/giannis-antetokounmpo"
-}
-},
-"mobile": {
-"athletes": {
-"href": "https://www.espn.com/nba/player/_/id/3032977/giannis-antetokounmpo"
-}
-}
-}
-}
-},
-{
-"id": 9577,
-"type": "league",
-"uid": "s:40~l:46",
-"guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
-"description": "NBA",
-"sportId": 46,
-"leagueId": 46,
-"league": {
-"id": 46,
-"description": "NBA",
-"abbreviation": "NBA",
-"links": {
-"web": {
-"leagues": {
-"href": "https://www.espn.com/nba/"
-}
-},
-"mobile": {
-"leagues": {
-"href": "https://www.espn.com/nba/"
-}
-}
-}
-}
-},
-{
-"id": 4453,
-"type": "team",
-"uid": "s:40~l:46~t:15",
-"guid": "f59bbabc-eedb-9ad2-c5dd-9bcd9f450a2f",
-"description": "Milwaukee Bucks",
-"sportId": 46,
-"teamId": 15,
-"team": {
-"id": 15,
-"description": "Milwaukee Bucks",
-"links": {
-"web": {
-"teams": {
-"href": "https://www.espn.com/nba/team/_/name/mil/milwaukee-bucks"
-}
-},
-"mobile": {
-"teams": {
-"href": "https://www.espn.com/nba/team/_/name/mil/milwaukee-bucks"
-}
-}
-}
-}
-},
-{
-"type": "guid",
-"guid": "9660cd01-90a5-2726-f826-03bcf57d32ae"
-},
-{
-"type": "guid",
-"guid": "12c6e39f-b760-49b1-8e4c-b3eb90814c34"
-},
-{
-"type": "guid",
-"guid": "77cea2fb-1388-b7c8-d171-2e72b3aecbfb"
-},
-{
-"type": "guid",
-"guid": "00985054-c4b3-4247-e825-ddf062d457c3"
-},
-{
-"type": "guid",
-"guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154"
-},
-{
-"type": "guid",
-"guid": "cb2c58a3-9cf4-367e-8df1-6f472c6f76d5"
-},
-{
-"type": "guid",
-"guid": "f59bbabc-eedb-9ad2-c5dd-9bcd9f450a2f"
-}
-],
-"ad": {
-"sport": "nba",
-"bundle": "nba_top_plays"
-},
-"tracking": {
-"sportName": "nba",
-"leagueName": "No League",
-"coverageType": "OnePlay",
-"trackingName": "NBA_One-Play (Giannis turns steal into Statue of Liberty slam) 2024/11/08 ESHEET",
-"trackingId": "dm_20241108_NBA_giannis_turns_steal_into_statue_of_liberty_slam"
-},
-"contributingPartner": "wsc",
-"contributingSystem": "wsc"
-}
-],
+"video": [],
 "categories": [
 {
 "id": 4564,
@@ -23219,6 +22767,31 @@
 "mobile": {
 "leagues": {
 "href": "https://www.espn.com/nba/"
+}
+}
+}
+}
+},
+{
+"type": "event",
+"uid": "s:40~l:46~e:401704748",
+"guid": "cb2c58a3-9cf4-367e-8df1-6f472c6f76d5",
+"description": "Utah Jazz @ Milwaukee Bucks",
+"eventId": 401704748,
+"event": {
+"id": 401704748,
+"sport": "basketball",
+"league": "nba",
+"description": "Utah Jazz @ Milwaukee Bucks",
+"links": {
+"web": {
+"event": {
+"href": "https://www.espn.com/nba/game/_/gameId/401704748"
+}
+},
+"mobile": {
+"event": {
+"href": "https://www.espn.com/nba/game/_/gameId/401704748"
 }
 }
 }
@@ -23269,6 +22842,7 @@
 "keywords": [
 "Utah Jazz",
 "NBA",
+"Utah Jazz @ Milwaukee Bucks",
 "Milwaukee Bucks"
 ],
 "story": "MILWAUKEE -- \u2014 <a href=\"http://www.espn.com/nba/player/_/id/6606/damian-lillard\">Damian Lillard</a> scored 34 points, <a href=\"http://www.espn.com/nba/player/_/id/3032977/giannis-antetokounmpo\">Giannis Antetokounmpo</a> had 31 points and 16 rebounds and the <a href=\"http://www.espn.com/nba/team/_/name/mil/milwaukee-bucks\">Milwaukee Bucks</a> snapped a six-game skid, beating the <a href=\"http://www.espn.com/nba/team/_/name/utah/utah-jazz\">Utah Jazz</a> 123-100 on Thursday night.\n\n\r\n              Antetokounmpo was back in action after missing a <a href=\"https://apnews.com/article/bucks-cavaliers-score-f94c2d4f8cf7fa28ddd59418a73bc850\">116-114 loss</a> at Cleveland on Monday night because of a right adductor strain. \n\n\r\n              The Bucks hadn\u2019t lost six straight games since March 2015. They avoided their first seven-game skid since March 2014, when they dropped eight in a row.\n\n\r\n              <a href=\"http://www.espn.com/nba/player/_/id/2528426/jordan-clarkson\">Jordan Clarkson</a> had 18 off the bench to lead the Jazz.\n\n\r\n              Utah led 71-70 before the Bucks took command with a 17-1 run late in the third quarter. Lillard and Antetokounmpo combined to score Milwaukee\u2019s first 15 points in that spurt.\n\n\r\n              <hl2>Takeaways</hl2>\r\n              Jazz: Utah entered the night ranked 27th in the NBA in 3-pointers per game (11.3) and 29th in 3-point percentage (30.3%), but the Jazz went 14 of 26 from beyond the arc in the first half to lead 61-57 at the break. They were 3 of 15 in the second half.\n\n\r\n              Bucks: Milwaukee coach Doc Rivers shuffled his lineup by giving <a href=\"http://www.espn.com/nba/player/_/id/4432190/andre-jackson-jr\">Andre Jackson Jr</a>. his first start of the season and moving <a href=\"http://www.espn.com/nba/player/_/id/858/gary-trent\">Gary Trent</a> Jr. to a bench role.\n\n\r\n              <hl2>Key moment</hl2>\r\n              Utah led 61-60 when Antetokounmpo picked up his fourth foul with 10:26 left in the third quarter. Antetokounmpo never left the floor until 43.1 seconds remained in the period, but he didn't pick up another foul during that stretch and helped spark the 17-1 run that gave the Bucks some breathing room.\n\n\r\n              <hl2>Key stat</hl2>\r\n              Antetokounmpo had six offensive rebounds to increase his career total to 1,469 and become Milwaukee's career leader. Marques Johnson, now part of the Bucks' television broadcast team, had 1,468 offensive rebounds with the Bucks from 1977-84.\n\n\r\n              <hl2>Up next</hl2>\r\n              The Jazz are at Sacramento on Saturday. The Bucks are at New York on Friday night.\n\n\r\n              ------\n\n\r\n              AP NBA: <a href=\"https://apnews.com/hub/nba\">https://apnews.com/hub/nba</a>",
@@ -23299,19 +22873,18 @@
 "videos": [],
 "standings": {
 "fullViewLink": {
-"text": "Full Standings",
-"href": "https://www.espn.com/nba/standings"
+"text": "Full Standings"
 },
-"header": "2025 Standings",
+"header": "2026 Standings",
 "groups": [
 {
 "standings": {
 "entries": [
 {
-"team": "Oklahoma City",
-"link": "https://www.espn.com/nba/team/_/name/okc/oklahoma-city-thunder",
-"id": "25",
-"uid": "s:40~l:46~t:25",
+"team": "Denver",
+"link": "https://www.espn.com/nba/team/_/name/den/denver-nuggets",
+"id": "7",
+"uid": "s:40~l:46~t:7",
 "stats": [
 {
 "name": "gamesBehind",
@@ -23330,8 +22903,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 14.0,
-"displayValue": "14"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -23340,8 +22913,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 4.0,
-"displayValue": "W4"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -23350,8 +22923,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.8292683,
-"displayValue": ".829"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -23360,91 +22933,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 68.0,
-"displayValue": "68"
-}
-],
-"logo": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/okc.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2024-06-25T21:17Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/okc.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2024-06-25T21:14Z"
-}
-]
-},
-{
-"team": "Denver",
-"link": "https://www.espn.com/nba/team/_/name/den/denver-nuggets",
-"id": "7",
-"uid": "s:40~l:46~t:7",
-"stats": [
-{
-"name": "gamesBehind",
-"displayName": "Games Back",
-"shortDisplayName": "GB",
-"description": "Games Back",
-"abbreviation": "GB",
-"type": "gamesbehind",
-"value": 18.0,
-"displayValue": "18"
-},
-{
-"name": "losses",
-"displayName": "Losses",
-"shortDisplayName": "L",
-"description": "Losses",
-"abbreviation": "L",
-"type": "losses",
-"value": 32.0,
-"displayValue": "32"
-},
-{
-"name": "streak",
-"displayName": "Streak",
-"shortDisplayName": "STRK",
-"description": "Current Streak",
-"abbreviation": "STRK",
-"type": "streak",
-"value": 3.0,
-"displayValue": "W3"
-},
-{
-"name": "winPercent",
-"displayName": "Win Percentage",
-"shortDisplayName": "PCT",
-"description": "Winning Percentage",
-"abbreviation": "PCT",
-"type": "winpercent",
-"value": 0.6097561,
-"displayValue": ".610"
-},
-{
-"name": "wins",
-"displayName": "Wins",
-"shortDisplayName": "W",
-"description": "Wins",
-"abbreviation": "W",
-"type": "wins",
-"value": 50.0,
-"displayValue": "50"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -23486,8 +22976,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 19.0,
-"displayValue": "19"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -23496,8 +22986,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 33.0,
-"displayValue": "33"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -23506,8 +22996,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 3.0,
-"displayValue": "W3"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -23516,8 +23006,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.597561,
-"displayValue": ".598"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -23526,8 +23016,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 49.0,
-"displayValue": "49"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -23569,8 +23059,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 32.0,
-"displayValue": "32"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -23579,8 +23069,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 46.0,
-"displayValue": "46"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -23589,8 +23079,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -23599,8 +23089,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.4390244,
-"displayValue": ".439"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -23609,8 +23099,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 36.0,
-"displayValue": "36"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -23640,6 +23130,89 @@
 ]
 },
 {
+"team": "Oklahoma City",
+"link": "https://www.espn.com/nba/team/_/name/okc/oklahoma-city-thunder",
+"id": "25",
+"uid": "s:40~l:46~t:25",
+"stats": [
+{
+"name": "gamesBehind",
+"displayName": "Games Back",
+"shortDisplayName": "GB",
+"description": "Games Back",
+"abbreviation": "GB",
+"type": "gamesbehind",
+"value": 0.0,
+"displayValue": "-"
+},
+{
+"name": "losses",
+"displayName": "Losses",
+"shortDisplayName": "L",
+"description": "Losses",
+"abbreviation": "L",
+"type": "losses",
+"value": 0.0,
+"displayValue": "0"
+},
+{
+"name": "streak",
+"displayName": "Streak",
+"shortDisplayName": "STRK",
+"description": "Current Streak",
+"abbreviation": "STRK",
+"type": "streak",
+"value": 0.0,
+"displayValue": "-"
+},
+{
+"name": "winPercent",
+"displayName": "Win Percentage",
+"shortDisplayName": "PCT",
+"description": "Winning Percentage",
+"abbreviation": "PCT",
+"type": "winpercent",
+"value": 0.0,
+"displayValue": ".000"
+},
+{
+"name": "wins",
+"displayName": "Wins",
+"shortDisplayName": "W",
+"description": "Wins",
+"abbreviation": "W",
+"type": "wins",
+"value": 0.0,
+"displayValue": "0"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/okc.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/okc.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
+}
+]
+},
+{
 "team": "Utah",
 "link": "https://www.espn.com/nba/team/_/name/utah/utah-jazz",
 "id": "26",
@@ -23652,8 +23225,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 51.0,
-"displayValue": "51"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -23662,8 +23235,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 65.0,
-"displayValue": "65"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -23672,8 +23245,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -2.0,
-"displayValue": "L2"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -23682,8 +23255,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.20731707,
-"displayValue": ".207"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -23692,8 +23265,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 17.0,
-"displayValue": "17"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -23724,12 +23297,95 @@
 }
 ]
 },
-"header": "2024-25 Northwest Standings",
+"header": "2025-26 Northwest Standings",
 "href": "https://www.espn.com/nba/standings/_/group/11"
 },
 {
 "standings": {
 "entries": [
+{
+"team": "Chicago",
+"link": "https://www.espn.com/nba/team/_/name/chi/chicago-bulls",
+"id": "4",
+"uid": "s:40~l:46~t:4",
+"stats": [
+{
+"name": "gamesBehind",
+"displayName": "Games Back",
+"shortDisplayName": "GB",
+"description": "Games Back",
+"abbreviation": "GB",
+"type": "gamesbehind",
+"value": 0.0,
+"displayValue": "-"
+},
+{
+"name": "losses",
+"displayName": "Losses",
+"shortDisplayName": "L",
+"description": "Losses",
+"abbreviation": "L",
+"type": "losses",
+"value": 0.0,
+"displayValue": "0"
+},
+{
+"name": "streak",
+"displayName": "Streak",
+"shortDisplayName": "STRK",
+"description": "Current Streak",
+"abbreviation": "STRK",
+"type": "streak",
+"value": 0.0,
+"displayValue": "-"
+},
+{
+"name": "winPercent",
+"displayName": "Win Percentage",
+"shortDisplayName": "PCT",
+"description": "Winning Percentage",
+"abbreviation": "PCT",
+"type": "winpercent",
+"value": 0.0,
+"displayValue": ".000"
+},
+{
+"name": "wins",
+"displayName": "Wins",
+"shortDisplayName": "W",
+"description": "Wins",
+"abbreviation": "W",
+"type": "wins",
+"value": 0.0,
+"displayValue": "0"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/chi.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/chi.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:13Z"
+}
+]
+},
 {
 "team": "Cleveland",
 "link": "https://www.espn.com/nba/team/_/name/cle/cleveland-cavaliers",
@@ -23753,8 +23409,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 18.0,
-"displayValue": "18"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -23763,8 +23419,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -1.0,
-"displayValue": "L1"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -23773,8 +23429,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.7804878,
-"displayValue": ".780"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -23783,8 +23439,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 64.0,
-"displayValue": "64"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -23814,6 +23470,89 @@
 ]
 },
 {
+"team": "Detroit",
+"link": "https://www.espn.com/nba/team/_/name/det/detroit-pistons",
+"id": "8",
+"uid": "s:40~l:46~t:8",
+"stats": [
+{
+"name": "gamesBehind",
+"displayName": "Games Back",
+"shortDisplayName": "GB",
+"description": "Games Back",
+"abbreviation": "GB",
+"type": "gamesbehind",
+"value": 0.0,
+"displayValue": "-"
+},
+{
+"name": "losses",
+"displayName": "Losses",
+"shortDisplayName": "L",
+"description": "Losses",
+"abbreviation": "L",
+"type": "losses",
+"value": 0.0,
+"displayValue": "0"
+},
+{
+"name": "streak",
+"displayName": "Streak",
+"shortDisplayName": "STRK",
+"description": "Current Streak",
+"abbreviation": "STRK",
+"type": "streak",
+"value": 0.0,
+"displayValue": "-"
+},
+{
+"name": "winPercent",
+"displayName": "Win Percentage",
+"shortDisplayName": "PCT",
+"description": "Winning Percentage",
+"abbreviation": "PCT",
+"type": "winpercent",
+"value": 0.0,
+"displayValue": ".000"
+},
+{
+"name": "wins",
+"displayName": "Wins",
+"shortDisplayName": "W",
+"description": "Wins",
+"abbreviation": "W",
+"type": "wins",
+"value": 0.0,
+"displayValue": "0"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/det.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/det.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
+}
+]
+},
+{
 "team": "Indiana",
 "link": "https://www.espn.com/nba/team/_/name/ind/indiana-pacers",
 "id": "11",
@@ -23826,8 +23565,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 14.0,
-"displayValue": "14"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -23836,8 +23575,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 32.0,
-"displayValue": "32"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -23846,8 +23585,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -23856,8 +23595,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.6097561,
-"displayValue": ".610"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -23866,8 +23605,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 50.0,
-"displayValue": "50"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -23909,8 +23648,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 16.0,
-"displayValue": "16"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -23919,8 +23658,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 34.0,
-"displayValue": "34"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -23929,8 +23668,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 8.0,
-"displayValue": "W8"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -23939,8 +23678,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.58536583,
-"displayValue": ".585"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -23949,8 +23688,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 48.0,
-"displayValue": "48"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -23978,176 +23717,10 @@
 "lastUpdated": "2024-06-25T21:14Z"
 }
 ]
-},
-{
-"team": "Detroit",
-"link": "https://www.espn.com/nba/team/_/name/det/detroit-pistons",
-"id": "8",
-"uid": "s:40~l:46~t:8",
-"stats": [
-{
-"name": "gamesBehind",
-"displayName": "Games Back",
-"shortDisplayName": "GB",
-"description": "Games Back",
-"abbreviation": "GB",
-"type": "gamesbehind",
-"value": 20.0,
-"displayValue": "20"
-},
-{
-"name": "losses",
-"displayName": "Losses",
-"shortDisplayName": "L",
-"description": "Losses",
-"abbreviation": "L",
-"type": "losses",
-"value": 38.0,
-"displayValue": "38"
-},
-{
-"name": "streak",
-"displayName": "Streak",
-"shortDisplayName": "STRK",
-"description": "Current Streak",
-"abbreviation": "STRK",
-"type": "streak",
-"value": -2.0,
-"displayValue": "L2"
-},
-{
-"name": "winPercent",
-"displayName": "Win Percentage",
-"shortDisplayName": "PCT",
-"description": "Winning Percentage",
-"abbreviation": "PCT",
-"type": "winpercent",
-"value": 0.5365854,
-"displayValue": ".537"
-},
-{
-"name": "wins",
-"displayName": "Wins",
-"shortDisplayName": "W",
-"description": "Wins",
-"abbreviation": "W",
-"type": "wins",
-"value": 44.0,
-"displayValue": "44"
-}
-],
-"logo": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/det.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2024-06-25T21:17Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/det.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
-{
-"team": "Chicago",
-"link": "https://www.espn.com/nba/team/_/name/chi/chicago-bulls",
-"id": "4",
-"uid": "s:40~l:46~t:4",
-"stats": [
-{
-"name": "gamesBehind",
-"displayName": "Games Back",
-"shortDisplayName": "GB",
-"description": "Games Back",
-"abbreviation": "GB",
-"type": "gamesbehind",
-"value": 25.0,
-"displayValue": "25"
-},
-{
-"name": "losses",
-"displayName": "Losses",
-"shortDisplayName": "L",
-"description": "Losses",
-"abbreviation": "L",
-"type": "losses",
-"value": 43.0,
-"displayValue": "43"
-},
-{
-"name": "streak",
-"displayName": "Streak",
-"shortDisplayName": "STRK",
-"description": "Current Streak",
-"abbreviation": "STRK",
-"type": "streak",
-"value": 3.0,
-"displayValue": "W3"
-},
-{
-"name": "winPercent",
-"displayName": "Win Percentage",
-"shortDisplayName": "PCT",
-"description": "Winning Percentage",
-"abbreviation": "PCT",
-"type": "winpercent",
-"value": 0.47560975,
-"displayValue": ".476"
-},
-{
-"name": "wins",
-"displayName": "Wins",
-"shortDisplayName": "W",
-"description": "Wins",
-"abbreviation": "W",
-"type": "wins",
-"value": 39.0,
-"displayValue": "39"
-}
-],
-"logo": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/chi.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2024-06-25T21:17Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/chi.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2024-06-25T21:13Z"
-}
-]
-}
-]
-},
-"header": "2024-25 Central Standings",
+"header": "2025-26 Central Standings",
 "href": "https://www.espn.com/nba/standings/_/group/2"
 }
 ]

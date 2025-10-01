@@ -1078,12 +1078,12 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/4278129.png",
 "alt": "Deandre Ayton"
 },
+"jersey": "2",
 "position": {
 "name": "Center",
 "displayName": "Center",
 "abbreviation": "C"
-},
-"jersey": "2"
+}
 },
 "starter": false,
 "didNotPlay": true,
@@ -2131,7 +2131,7 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/3155526.png",
 "alt": "Dillon Brooks"
 },
-"jersey": "9",
+"jersey": "3",
 "position": {
 "abbreviation": "SF"
 },
@@ -2213,11 +2213,25 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/10?lang=en&region=us"
 },
-"status": {
-"id": "1",
-"name": "Active",
-"type": "active",
-"abbreviation": "Active"
+"status": "Out",
+"injuries": {
+"status": "Out",
+"date": "2025-09-22T20:02Z",
+"type": {
+"id": "4",
+"name": "INJURY_STATUS_OUT",
+"description": "out",
+"abbreviation": "O"
+},
+"details": {
+"fantasyStatus": {
+"description": "OUT",
+"abbreviation": "OUT"
+},
+"type": "Knee",
+"location": "Leg",
+"returnDate": "2026-04-12"
+}
 }
 },
 "statistics": [
@@ -2440,27 +2454,11 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/22?lang=en&region=us"
 },
-"status": "Day-To-Day",
-"injuries": {
-"status": "Day-To-Day",
-"date": "2025-06-24T14:51Z",
-"type": {
-"id": "6",
-"name": "INJURY_STATUS_DAYTODAY",
-"description": "day-to-day",
-"abbreviation": "DD"
-},
-"details": {
-"fantasyStatus": {
-"description": "GTD",
-"abbreviation": "GTD"
-},
-"type": "Thumb",
-"location": "Arm",
-"detail": "Sprain",
-"side": "Right",
-"returnDate": "2025-10-01"
-}
+"status": {
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -3240,31 +3238,254 @@
 ]
 }
 ],
-"broadcasts": [
+"broadcasts": [],
+"predictor": {},
+"pickcenter": [
 {
-"type": {
-"id": "4",
-"shortName": "Streaming",
-"longName": "Streaming",
-"slug": "streaming"
+"provider": {
+"id": "58",
+"name": "ESPN BET",
+"priority": 1,
+"logos": [
+{
+"href": "https://a.espncdn.com/i/espnbet/ESPN_Bet_Sportsbook_Light.svg",
+"rel": [
+"light"
+]
 },
-"station": "BlazerVision",
-"market": {
-"id": "2",
-"type": "Home"
+{
+"href": "https://a.espncdn.com/i/espnbet/ESPN_Bet_Sportsbook_Dark.svg",
+"rel": [
+"dark"
+]
+}
+]
 },
-"media": {
-"callLetters": "BlazerVision",
-"name": "BlazerVision",
-"shortName": "BlazerVision"
+"details": "HOU -11.5",
+"overUnder": 226.5,
+"spread": -11.5,
+"overOdds": -105.0,
+"underOdds": -115.0,
+"awayTeamOdds": {
+"favorite": false,
+"underdog": true,
+"moneyLine": 500,
+"spreadOdds": -105.0,
+"team": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/22?lang=en&region=us"
 },
-"lang": "en",
-"region": "us",
-"isNational": false
+"teamId": "22",
+"favoriteAtOpen": false
+},
+"homeTeamOdds": {
+"favorite": true,
+"underdog": false,
+"moneyLine": -725,
+"spreadOdds": -115.0,
+"team": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/10?lang=en&region=us"
+},
+"teamId": "10",
+"favoriteAtOpen": true
+},
+"links": [
+{
+"language": "en-US",
+"rel": [
+"home",
+"desktop",
+"bets",
+"espn-bet"
+],
+"href": "https://espnbet.app.link?%243p=a_espn&clr=espnbettingintegration&$canonical_url=/sport/basketball/organization/united-states/competition/nba/event/439cbd98-1a6f-4eb5-99a5-492e42b389fa&market_selection_id[0]=a0946c80-e722-44b2-a15d-5bc993ae5e39&odds_numerator[0]=33&odds_denominator[0]=29",
+"text": "Home Bet",
+"shortText": "Home Bet",
+"isExternal": true,
+"isPremium": false
+},
+{
+"language": "en-US",
+"rel": [
+"away",
+"desktop",
+"bets",
+"espn-bet"
+],
+"href": "https://espnbet.app.link?%243p=a_espn&clr=espnbettingintegration&$canonical_url=/sport/basketball/organization/united-states/competition/nba/event/439cbd98-1a6f-4eb5-99a5-492e42b389fa&market_selection_id[0]=c69b0802-2a0f-4139-8933-cb64a82a5897&odds_numerator[0]=6&odds_denominator[0]=1",
+"text": "Away Bet",
+"shortText": "Away Bet",
+"isExternal": true,
+"isPremium": false
+},
+{
+"language": "en-US",
+"rel": [
+"homeSpread",
+"desktop",
+"bets"
+],
+"href": "https://espnbet.app.link?%243p=a_espn&clr=espnbettingintegration&$canonical_url=/sport/basketball/organization/united-states/competition/nba/event/439cbd98-1a6f-4eb5-99a5-492e42b389fa&market_selection_id[0]=8ebb89a6-fa27-40f9-896f-f2f627053290&odds_numerator[0]=43&odds_denominator[0]=23",
+"text": "Home Point Spread",
+"shortText": "Home Point Spread",
+"isExternal": true,
+"isPremium": false
+},
+{
+"language": "en-US",
+"rel": [
+"awaySpread",
+"desktop",
+"bets"
+],
+"href": "https://espnbet.app.link?%243p=a_espn&clr=espnbettingintegration&$canonical_url=/sport/basketball/organization/united-states/competition/nba/event/439cbd98-1a6f-4eb5-99a5-492e42b389fa&market_selection_id[0]=81fdd3a2-4e7f-4bc5-a1ef-e26a27f14207&odds_numerator[0]=41&odds_denominator[0]=21",
+"text": "Away Point Spread",
+"shortText": "Away Point Spread",
+"isExternal": true,
+"isPremium": false
+},
+{
+"language": "en-US",
+"rel": [
+"over",
+"desktop",
+"bets"
+],
+"href": "https://espnbet.app.link?%243p=a_espn&clr=espnbettingintegration&$canonical_url=/sport/basketball/organization/united-states/competition/nba/event/439cbd98-1a6f-4eb5-99a5-492e42b389fa&market_selection_id[0]=6235dd47-e064-49a0-a4c5-ce4c40bf0d61&odds_numerator[0]=41&odds_denominator[0]=21",
+"text": "Over Odds",
+"shortText": "Over Odds",
+"isExternal": true,
+"isPremium": false
+},
+{
+"language": "en-US",
+"rel": [
+"under",
+"desktop",
+"bets"
+],
+"href": "https://espnbet.app.link?%243p=a_espn&clr=espnbettingintegration&$canonical_url=/sport/basketball/organization/united-states/competition/nba/event/439cbd98-1a6f-4eb5-99a5-492e42b389fa&market_selection_id[0]=17790843-a162-4b31-bccf-666f70f56526&odds_numerator[0]=43&odds_denominator[0]=23",
+"text": "Under Odds",
+"shortText": "Under Odds",
+"isExternal": true,
+"isPremium": false
+},
+{
+"language": "en-US",
+"rel": [
+"game",
+"desktop",
+"bets"
+],
+"href": "https://espnbet.app.link?%243p=a_espn&clr=espnbettingintegration&$canonical_url=/sport/basketball/organization/united-states/competition/nba/event/439cbd98-1a6f-4eb5-99a5-492e42b389fa",
+"text": "Game",
+"shortText": "Game",
+"isExternal": true,
+"isPremium": false
 }
 ],
-"predictor": {},
-"pickcenter": [],
+"moneyline": {
+"displayName": "Moneyline",
+"shortDisplayName": "ML",
+"home": {
+"close": {
+"odds": "-725",
+"outcome": "WIN",
+"icon": "https://a.espncdn.com/i/espnbet/espn-bet-checkmark-bold.png",
+"iconDark": "https://a.espncdn.com/i/espnbet/dark/espn-bet-checkmark-bold.png"
+},
+"open": {
+"odds": "-600"
+}
+},
+"away": {
+"close": {
+"odds": "+500",
+"outcome": "LOSS"
+},
+"open": {
+"odds": "+400"
+}
+}
+},
+"pointSpread": {
+"displayName": "Spread",
+"shortDisplayName": "Spread",
+"home": {
+"close": {
+"line": "-11.5",
+"odds": "-115",
+"outcome": "WIN",
+"icon": "https://a.espncdn.com/i/espnbet/espn-bet-checkmark-bold.png",
+"iconDark": "https://a.espncdn.com/i/espnbet/dark/espn-bet-checkmark-bold.png"
+},
+"open": {
+"line": "-9.5",
+"odds": "-110"
+}
+},
+"away": {
+"close": {
+"line": "+11.5",
+"odds": "-105",
+"outcome": "LOSS"
+},
+"open": {
+"line": "+9.5",
+"odds": "-110"
+}
+}
+},
+"total": {
+"displayName": "Total Points",
+"shortDisplayName": "Total",
+"over": {
+"close": {
+"line": "o226.5",
+"odds": "-105",
+"outcome": "LOSS"
+},
+"open": {
+"line": "o217.5",
+"odds": "-110"
+}
+},
+"under": {
+"close": {
+"line": "u226.5",
+"odds": "-115",
+"outcome": "WIN",
+"icon": "https://a.espncdn.com/i/espnbet/espn-bet-checkmark-bold.png",
+"iconDark": "https://a.espncdn.com/i/espnbet/dark/espn-bet-checkmark-bold.png"
+},
+"open": {
+"line": "u217.5",
+"odds": "-110"
+}
+}
+},
+"link": {
+"text": "See All on ESPN BET Sportsbook",
+"language": "en-US",
+"rel": [
+"main",
+"desktop",
+"bets"
+],
+"href": "https://www.espnbet.com",
+"isExternal": true,
+"isPremium": false
+},
+"header": {
+"logo": {
+"dark": "https://a.espncdn.com/i/espnbet/dark/espn-bet-square-off.svg",
+"light": "https://a.espncdn.com/i/espnbet/espn-bet-square-off.svg",
+"exclusivesLogoDark": "https://a.espncdn.com/i/espnbet/espn-bet-square-mint.svg",
+"exclusivesLogoLight": "https://a.espncdn.com/i/espnbet/espn-bet-square-mint.svg"
+},
+"text": "ESPN Bet Sportsbook"
+}
+}
+],
 "againstTheSpread": [
 {
 "team": {
@@ -5924,7 +6145,7 @@
 "uid": "s:40~l:46~e:401703400",
 "season": {
 "year": 2025,
-"current": true,
+"current": false,
 "type": 2
 },
 "timeValid": true,
@@ -6401,22 +6622,6 @@
 "lang": "en",
 "region": "us",
 "isNational": false
-},
-{
-"type": {
-"id": "4",
-"shortName": "Streaming"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "BlazerVision"
-},
-"lang": "en",
-"region": "us",
-"isNational": false
 }
 ],
 "series": [
@@ -6527,18 +6732,6 @@
 "shortText": "Team Stats",
 "isExternal": false,
 "isPremium": false
-},
-{
-"rel": [
-"videos",
-"desktop",
-"event"
-],
-"href": "https://www.espn.com/nba/video?gameId=401703400",
-"text": "Videos",
-"shortText": "Videos",
-"isExternal": false,
-"isPremium": false
 }
 ],
 "league": {
@@ -6586,25 +6779,6 @@
 ],
 "href": "sportscenter://x-callback-url/showClubhouse?uid=s:40~l:46&section=scores",
 "text": "Schedule"
-},
-{
-"rel": [
-"standings",
-"desktop",
-"league"
-],
-"href": "https://www.espn.com/nba/standings",
-"text": "Standings"
-},
-{
-"rel": [
-"standings",
-"sportscenter",
-"app",
-"league"
-],
-"href": "sportscenter://x-callback-url/showClubhouse?uid=s:40~l:46&section=standings",
-"text": "Standings"
 },
 {
 "rel": [
@@ -25150,591 +25324,7 @@
 "url": "https://a.espncdn.com/media/motion/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149.jpg"
 }
 ],
-"video": [
-{
-"id": 42553490,
-"dataSourceIdentifier": "19e11ef4591f9",
-"cerebroId": "67414ed61010222a5a47732a",
-"pccId": "031b8a00-66d0-40c2-8310-4ccff879b721",
-"source": "espn",
-"headline": "Portland Trail Blazers vs. Houston Rockets: Game Highlights",
-"caption": "Portland Trail Blazers vs. Houston Rockets: Game Highlights",
-"title": "Portland Trail Blazers vs. Houston Rockets: Game Highlights",
-"description": "Portland Trail Blazers vs. Houston Rockets: Game Highlights",
-"lastModified": "2024-11-23T03:42:57Z",
-"originalPublishDate": "2024-11-23T03:41:01Z",
-"premium": false,
-"syndicatable": true,
-"duration": 118,
-"videoRatio": "16:9",
-"timeRestrictions": {
-"embargoDate": "2024-11-23T03:41:01Z",
-"expirationDate": "2025-07-31T04:00:00Z"
-},
-"deviceRestrictions": {
-"type": "whitelist",
-"devices": [
-"desktop",
-"ipad",
-"settop",
-"handset",
-"tablet"
-]
-},
-"geoRestrictions": {
-"type": "whitelist",
-"countries": [
-"AU",
-"CU",
-"CG",
-"GB",
-"UK",
-"AS",
-"CO",
-"ER",
-"FJ",
-"SV",
-"GH",
-"SZ",
-"TG",
-"NA",
-"ML",
-"KE",
-"GF",
-"SL",
-"BI",
-"BS",
-"HT",
-"VG",
-"CV",
-"GU",
-"PW",
-"GP",
-"UG",
-"VE",
-"AG",
-"ZW",
-"GW",
-"PY",
-"MU",
-"CF",
-"CD",
-"MP",
-"SN",
-"SR",
-"EC",
-"NE",
-"HN",
-"JM",
-"BJ",
-"RE",
-"MZ",
-"AI",
-"MS",
-"MQ",
-"MW",
-"KN",
-"AO",
-"UM",
-"DO",
-"BR",
-"GY",
-"CM",
-"GQ",
-"BO",
-"GD",
-"TC",
-"GA",
-"RW",
-"BW",
-"BF",
-"ET",
-"NI",
-"SS",
-"BB",
-"MF",
-"SX",
-"AW",
-"PE",
-"MX",
-"KM",
-"GT",
-"CI",
-"PA",
-"US",
-"PR",
-"VI",
-"BZ",
-"TT",
-"ST",
-"VC",
-"TZ",
-"GN",
-"MH",
-"AM",
-"BM",
-"SC",
-"NG",
-"ZM",
-"AR",
-"BQ",
-"MG",
-"LC",
-"LS",
-"CL",
-"KY",
-"LR",
-"FM",
-"GM",
-"UY",
-"ZA",
-"NZ",
-"CR"
-]
-},
-"gameId": 401703400,
-"thumbnail": "https://a.espncdn.com/media/motion/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149.jpg",
-"images": [
-{
-"name": "Poster Image",
-"caption": "",
-"alt": "",
-"credit": "",
-"height": 324,
-"width": 576,
-"url": "https://media.video-cdn.espn.com/images/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149.jpg"
-}
-],
-"posterImages": {
-"default": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149_default.jpg",
-"width": 576,
-"height": 324
-},
-"full": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149.jpg"
-},
-"wide": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149_5x2.jpg"
-},
-"square": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149_1x1.jpg"
-}
-},
-"links": {
-"web": {
-"href": "https://www.espn.com/video/clip?id=42553490",
-"self": {
-"href": "https://www.espn.com/video/clip?id=42553490",
-"dsi": {
-"href": "https://www.espn.com/video/clip?id=19e11ef4591f9"
-}
-},
-"seo": {
-"href": "https://www.espn.com/video/clip/_/id/42553490"
-}
-},
-"mobile": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/031b8a00-66d0-40c2-8310-4ccff879b721/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42553490",
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149.mp4"
-},
-"alert": {
-"href": "https://m.espn.com/general/video/videoAlert?vid=42553490"
-},
-"streaming": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/031b8a00-66d0-40c2-8310-4ccff879b721/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42553490"
-},
-"progressiveDownload": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/031b8a00-66d0-40c2-8310-4ccff879b721/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42553490"
-}
-},
-"api": {
-"self": {
-"href": "https://content.core.api.espn.com/v1/video/clips/42553490"
-},
-"artwork": {
-"href": "https://artwork.api.espn.com/artwork/collections/media/031b8a00-66d0-40c2-8310-4ccff879b721"
-}
-},
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149_360p30_1464k.mp4",
-"mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149.mp4"
-},
-"flash": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149.smil"
-},
-"hds": {
-"href": "https://hds.video-cdn.espn.com/z/motion/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149_rel.smil/manifest.f4m"
-},
-"HLS": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149/playlist.m3u8",
-"HD": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149/playlist.m3u8"
-},
-"cmaf": {
-"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149/playlist.m3u8"
-},
-"shield": {
-"href": "https://watch.auth.api.espn.com/video/auth/media/031b8a00-66d0-40c2-8310-4ccff879b721/asset"
-}
-},
-"HD": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149_720p30_2896k.mp4"
-},
-"full": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_224111859_2702149/ss_20241122_224111859_2702149_360p30_1464k.mp4"
-}
-},
-"sportscenter": {
-"href": "sportscenter://x-callback-url/showVideo?videoID=42553490&videoDSI=19e11ef4591f9"
-}
-},
-"categories": [
-{
-"id": 492166,
-"type": "athlete",
-"uid": "s:40~l:46~a:4437244",
-"guid": "e9d2d871-df56-3068-8d5f-e3fc27f49a96",
-"description": "Jalen Green",
-"sportId": 46,
-"athleteId": 4437244,
-"athlete": {
-"id": 4437244,
-"description": "Jalen Green",
-"links": {
-"web": {
-"athletes": {
-"href": "https://www.espn.com/nba/player/_/id/4437244/jalen-green"
-}
-},
-"mobile": {
-"athletes": {
-"href": "https://www.espn.com/nba/player/_/id/4437244/jalen-green"
-}
-}
-}
-}
-},
-{
-"id": 191422,
-"type": "topic",
-"guid": "9660cd01-90a5-2726-f826-03bcf57d32ae",
-"description": "nba highlight",
-"sportId": 0,
-"topicId": 707
-},
-{
-"id": 633099,
-"type": "athlete",
-"uid": "s:40~l:46~a:4711272",
-"guid": "b2e3effa-a7ab-3837-8d7e-da8b05577441",
-"description": "Reed Sheppard",
-"sportId": 46,
-"athleteId": 4711272,
-"athlete": {
-"id": 4711272,
-"description": "Reed Sheppard",
-"links": {
-"web": {
-"athletes": {
-"href": "https://www.espn.com/nba/player/_/id/4711272/reed-sheppard"
-}
-},
-"mobile": {
-"athletes": {
-"href": "https://www.espn.com/nba/player/_/id/4711272/reed-sheppard"
-}
-}
-}
-}
-},
-{
-"id": 12025,
-"type": "league",
-"guid": "12c6e39f-b760-49b1-8e4c-b3eb90814c34",
-"description": "Fantasy NBA",
-"sportId": 0,
-"leagueId": 3090,
-"league": {
-"id": 3090,
-"description": "Fantasy NBA",
-"links": {
-"web": {},
-"mobile": {}
-}
-}
-},
-{
-"id": 599348,
-"type": "athlete",
-"uid": "s:40~l:46~a:4431736",
-"guid": "29bc5947-de2e-3a0a-abe0-05de2767e34a",
-"description": "Toumani Camara",
-"sportId": 46,
-"athleteId": 4431736,
-"athlete": {
-"id": 4431736,
-"description": "Toumani Camara",
-"links": {
-"web": {
-"athletes": {
-"href": "https://www.espn.com/nba/player/_/id/4431736/toumani-camara"
-}
-},
-"mobile": {
-"athletes": {
-"href": "https://www.espn.com/nba/player/_/id/4431736/toumani-camara"
-}
-}
-}
-}
-},
-{
-"id": 4659,
-"type": "team",
-"uid": "s:40~l:46~t:22",
-"guid": "ed294c02-3c44-db14-9e06-1b4e8cff9558",
-"description": "Portland Trail Blazers",
-"sportId": 46,
-"teamId": 22,
-"team": {
-"id": 22,
-"description": "Portland Trail Blazers",
-"links": {
-"web": {
-"teams": {
-"href": "https://www.espn.com/nba/team/_/name/por/portland-trail-blazers"
-}
-},
-"mobile": {
-"teams": {
-"href": "https://www.espn.com/nba/team/_/name/por/portland-trail-blazers"
-}
-}
-}
-}
-},
-{
-"id": 4517,
-"type": "team",
-"uid": "s:40~l:46~t:10",
-"guid": "78113ad4-1ac7-0c04-dada-388a6ff4e15e",
-"description": "Houston Rockets",
-"sportId": 46,
-"teamId": 10,
-"team": {
-"id": 10,
-"description": "Houston Rockets",
-"links": {
-"web": {
-"teams": {
-"href": "https://www.espn.com/nba/team/_/name/hou/houston-rockets"
-}
-},
-"mobile": {
-"teams": {
-"href": "https://www.espn.com/nba/team/_/name/hou/houston-rockets"
-}
-}
-}
-}
-},
-{
-"id": 568635,
-"type": "athlete",
-"uid": "s:40~l:46~a:5105565",
-"guid": "069d1202-d59b-31e4-9f66-db1e56f009f4",
-"description": "Donovan Clingan",
-"sportId": 46,
-"athleteId": 5105565,
-"athlete": {
-"id": 5105565,
-"description": "Donovan Clingan",
-"links": {
-"web": {
-"athletes": {
-"href": "https://www.espn.com/nba/player/_/id/5105565/donovan-clingan"
-}
-},
-"mobile": {
-"athletes": {
-"href": "https://www.espn.com/nba/player/_/id/5105565/donovan-clingan"
-}
-}
-}
-}
-},
-{
-"id": 9577,
-"type": "league",
-"uid": "s:40~l:46",
-"guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
-"description": "NBA",
-"sportId": 46,
-"leagueId": 46,
-"league": {
-"id": 46,
-"description": "NBA",
-"abbreviation": "NBA",
-"links": {
-"web": {
-"leagues": {
-"href": "https://www.espn.com/nba/"
-}
-},
-"mobile": {
-"leagues": {
-"href": "https://www.espn.com/nba/"
-}
-}
-}
-}
-},
-{
-"id": 533801,
-"type": "athlete",
-"uid": "s:40~l:46~a:4433192",
-"guid": "a610b84c-69a2-3ab4-abce-9dddb1f0b479",
-"description": "Tari Eason",
-"sportId": 46,
-"athleteId": 4433192,
-"athlete": {
-"id": 4433192,
-"description": "Tari Eason",
-"links": {
-"web": {
-"athletes": {
-"href": "https://www.espn.com/nba/player/_/id/4433192/tari-eason"
-}
-},
-"mobile": {
-"athletes": {
-"href": "https://www.espn.com/nba/player/_/id/4433192/tari-eason"
-}
-}
-}
-}
-},
-{
-"id": 169037,
-"type": "athlete",
-"uid": "s:40~l:46~a:3155526",
-"guid": "653c07b5-8537-14ac-f4c6-b4e37919aca0",
-"description": "Dillon Brooks",
-"sportId": 46,
-"athleteId": 3155526,
-"athlete": {
-"id": 3155526,
-"description": "Dillon Brooks",
-"links": {
-"web": {
-"athletes": {
-"href": "https://www.espn.com/nba/player/_/id/3155526/dillon-brooks"
-}
-},
-"mobile": {
-"athletes": {
-"href": "https://www.espn.com/nba/player/_/id/3155526/dillon-brooks"
-}
-}
-}
-}
-},
-{
-"id": 601969,
-"type": "athlete",
-"uid": "s:40~l:46~a:4684740",
-"guid": "d46a44b0-75e5-3475-a977-c64be5aaec40",
-"description": "Amen Thompson",
-"sportId": 46,
-"athleteId": 4684740,
-"athlete": {
-"id": 4684740,
-"description": "Amen Thompson",
-"links": {
-"web": {
-"athletes": {
-"href": "https://www.espn.com/nba/player/_/id/4684740/amen-thompson"
-}
-},
-"mobile": {
-"athletes": {
-"href": "https://www.espn.com/nba/player/_/id/4684740/amen-thompson"
-}
-}
-}
-}
-},
-{
-"type": "guid",
-"guid": "e9d2d871-df56-3068-8d5f-e3fc27f49a96"
-},
-{
-"type": "guid",
-"guid": "9660cd01-90a5-2726-f826-03bcf57d32ae"
-},
-{
-"type": "guid",
-"guid": "b2e3effa-a7ab-3837-8d7e-da8b05577441"
-},
-{
-"type": "guid",
-"guid": "12c6e39f-b760-49b1-8e4c-b3eb90814c34"
-},
-{
-"type": "guid",
-"guid": "29bc5947-de2e-3a0a-abe0-05de2767e34a"
-},
-{
-"type": "guid",
-"guid": "ed294c02-3c44-db14-9e06-1b4e8cff9558"
-},
-{
-"type": "guid",
-"guid": "78113ad4-1ac7-0c04-dada-388a6ff4e15e"
-},
-{
-"type": "guid",
-"guid": "069d1202-d59b-31e4-9f66-db1e56f009f4"
-},
-{
-"type": "guid",
-"guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154"
-},
-{
-"type": "guid",
-"guid": "aeaaef4b-9a4a-3950-a9ec-6748a95bf7f9"
-},
-{
-"type": "guid",
-"guid": "a610b84c-69a2-3ab4-abce-9dddb1f0b479"
-},
-{
-"type": "guid",
-"guid": "653c07b5-8537-14ac-f4c6-b4e37919aca0"
-},
-{
-"type": "guid",
-"guid": "d46a44b0-75e5-3475-a977-c64be5aaec40"
-}
-],
-"ad": {
-"sport": "nba",
-"bundle": "nba_top_plays"
-},
-"tracking": {
-"sportName": "nba",
-"leagueName": "No League",
-"coverageType": "OnePlay",
-"trackingName": "NBA_One-Play (Portland Trail Blazers vs. Houston Rockets: Game Highlights) 2024/11/23 ESHEET",
-"trackingId": "dm_20241123_NBA_portland_trail_blazers_vs_houston_rockets_game_highlights"
-},
-"contributingPartner": "wsc",
-"contributingSystem": "wsc"
-}
-],
+"video": [],
 "categories": [
 {
 "id": 4659,
@@ -25782,6 +25372,31 @@
 "mobile": {
 "leagues": {
 "href": "https://www.espn.com/nba/"
+}
+}
+}
+}
+},
+{
+"type": "event",
+"uid": "s:40~l:46~e:401703400",
+"guid": "aeaaef4b-9a4a-3950-a9ec-6748a95bf7f9",
+"description": "Portland Trail Blazers @ Houston Rockets",
+"eventId": 401703400,
+"event": {
+"id": 401703400,
+"sport": "basketball",
+"league": "nba",
+"description": "Portland Trail Blazers @ Houston Rockets",
+"links": {
+"web": {
+"event": {
+"href": "https://www.espn.com/nba/game/_/gameId/401703400"
+}
+},
+"mobile": {
+"event": {
+"href": "https://www.espn.com/nba/game/_/gameId/401703400"
 }
 }
 }
@@ -25832,6 +25447,7 @@
 "keywords": [
 "Portland Trail Blazers",
 "NBA",
+"Portland Trail Blazers @ Houston Rockets",
 "Houston Rockets"
 ],
 "story": "HOUSTON -- \u2014 <a href=\"http://www.espn.com/nba/player/_/id/3155526/dillon-brooks\">Dillon Brooks</a> scored a season-high 28 points and led the <a href=\"http://www.espn.com/nba/team/_/name/hou/houston-rockets\">Houston Rockets</a> to a 116-88 win over the <a href=\"http://www.espn.com/nba/team/_/name/por/portland-trail-blazers\">Portland Trail Blazers</a> in an NBA Cup game on Friday night.\n\n\r\n              Brooks matched a career-high with six 3-pointers on eight attempts, and the Rockets made 15 of 39 (38.5%) from beyond the arc.\n\n\r\n              <a href=\"http://www.espn.com/nba/player/_/id/4433192/tari-eason\">Tari Eason</a> scored 22 points off the bench, <a href=\"http://www.espn.com/nba/player/_/id/4437244/jalen-green\">Jalen Green</a> had 17 and <a href=\"http://www.espn.com/nba/player/_/id/4871144/alperen-sengun\">Alperen Sengun</a> added 14 as the Rockets won for the seventh time in eight games. Six of those wins were by double figures. Houston is 2-0 in NBA Cup play\n\n\r\n              For Portland, <a href=\"http://www.espn.com/nba/player/_/id/4683021/deni-avdija\">Deni Avdija</a> and <a href=\"http://www.espn.com/nba/player/_/id/4914336/shaedon-sharpe\">Shaedon Sharpe</a> scores 13 points apiece and <a href=\"http://www.espn.com/nba/player/_/id/4431736/toumani-camara\">Toumani Camara</a> had 11.\n\n\r\n              Portland has lost two straight games to open a four-game trip. They previously won three straight at home. The Trail Blazers are 1-1 in the in-season tournament.\n\n\r\n              <hl2>Takeaways</hl2>\r\n              Trail Blazers: Portland was missing two of its five leading scorers in <a href=\"http://www.espn.com/nba/player/_/id/4683678/scoot-henderson\">Scoot Henderson</a>, out for the first time with a left quad contusion, and <a href=\"http://www.espn.com/nba/player/_/id/4278129/deandre-ayton\">Deandre Ayton</a>, who remained sidelined with a deep contusion in his right index finger.\n\n\r\n              Rockets: Houston, at 12-5, has outscored opponents by 163 points through 17 games, the highest total through the first 17 games of a season in franchise history. The previous record of 131 was held by the defending champion 1996-97 Rockets, who started the season 15-2.\n\n\r\n              <hl2>Key moment</hl2>\r\n              The Rockets were trailing early when Eason checked in and provided a spark, scoring 12 points in an energetic 13 minutes in the first half. Eason finished with a game-best plus-minus of +33 points. \n\n\r\n              <hl2>Key stat</hl2>\r\n              Houston outscored Portland 23-7 in fast-break points and generated 28 points off Portland\u2019s 21 turnovers.\n\n\r\n              <hl2>Up next</hl2>\r\n              The Trail Blazers and the Rockets will meet again Saturday night in Houston for the second half of a back-to-back.\n\n\r\n              ------\n\n\r\n              AP NBA: <a href=\"https://apnews.com/hub/nba\">https://apnews.com/hub/nba</a>",
@@ -25859,2193 +25475,21 @@
 "allowSearch": true,
 "allowContentReactions": false
 },
-"videos": [
-{
-"id": 42551863,
-"cerebroId": "674133431010222a5a4739ae",
-"source": "espn",
-"headline": "Jalen Green takes flight for thunderous one-handed slam",
-"description": "Jalen Green takes flight for thunderous one-handed slam",
-"lastModified": "2024-11-23T02:40:33Z",
-"originalPublishDate": "2024-11-23T01:43:24Z",
-"duration": 29,
-"timeRestrictions": {
-"embargoDate": "2024-11-23T01:43:24Z",
-"expirationDate": "2025-07-31T04:00:00Z"
-},
-"deviceRestrictions": {
-"type": "whitelist",
-"devices": [
-"desktop",
-"ipad",
-"settop",
-"handset",
-"tablet"
-]
-},
-"geoRestrictions": {
-"type": "whitelist",
-"countries": [
-"AU",
-"CU",
-"CG",
-"GB",
-"UK",
-"AS",
-"CO",
-"ER",
-"FJ",
-"SV",
-"GH",
-"SZ",
-"TG",
-"NA",
-"ML",
-"KE",
-"GF",
-"SL",
-"BI",
-"BS",
-"HT",
-"VG",
-"CV",
-"GU",
-"PW",
-"GP",
-"UG",
-"VE",
-"AG",
-"ZW",
-"GW",
-"PY",
-"MU",
-"CF",
-"CD",
-"MP",
-"SN",
-"SR",
-"EC",
-"NE",
-"HN",
-"JM",
-"BJ",
-"RE",
-"MZ",
-"AI",
-"MS",
-"MQ",
-"MW",
-"KN",
-"AO",
-"UM",
-"DO",
-"BR",
-"GY",
-"CM",
-"GQ",
-"BO",
-"GD",
-"TC",
-"GA",
-"RW",
-"BW",
-"BF",
-"ET",
-"NI",
-"SS",
-"BB",
-"MF",
-"SX",
-"AW",
-"PE",
-"MX",
-"KM",
-"GT",
-"CI",
-"PA",
-"US",
-"PR",
-"VI",
-"BZ",
-"TT",
-"ST",
-"VC",
-"TZ",
-"GN",
-"MH",
-"AM",
-"BM",
-"SC",
-"NG",
-"ZM",
-"AR",
-"BQ",
-"MG",
-"LC",
-"LS",
-"CL",
-"KY",
-"LR",
-"FM",
-"GM",
-"UY",
-"ZA",
-"NZ",
-"CR"
-]
-},
-"thumbnail": "https://a.espncdn.com/media/motion/2024/1122/ss_20241122_204332698_27019161299/ss_20241122_204332698_27019161299.jpg",
-"links": {
-"web": {
-"href": "https://www.espn.com/video/clip?id=42551863",
-"self": {
-"href": "https://www.espn.com/video/clip?id=42551863",
-"dsi": {
-"href": "https://www.espn.com/video/clip?id=46a6b66a12ca7"
-}
-},
-"seo": {
-"href": "https://www.espn.com/video/clip/_/id/42551863"
-}
-},
-"mobile": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/56aba49d-47ca-43ae-9856-3e2ebe264300/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42551863",
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_204332698_2701916/ss_20241122_204332698_2701916.mp4"
-},
-"alert": {
-"href": "https://m.espn.com/general/video/videoAlert?vid=42551863"
-},
-"streaming": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/56aba49d-47ca-43ae-9856-3e2ebe264300/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42551863"
-},
-"progressiveDownload": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/56aba49d-47ca-43ae-9856-3e2ebe264300/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42551863"
-}
-},
-"api": {
-"self": {
-"href": "https://content.core.api.espn.com/v1/video/clips/42551863"
-},
-"artwork": {
-"href": "https://artwork.api.espn.com/artwork/collections/media/56aba49d-47ca-43ae-9856-3e2ebe264300"
-}
-},
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_204332698_2701916/ss_20241122_204332698_2701916_360p30_1464k.mp4",
-"mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2024/1122/ss_20241122_204332698_2701916/ss_20241122_204332698_2701916.mp4"
-},
-"flash": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_204332698_2701916/ss_20241122_204332698_2701916.smil"
-},
-"hds": {
-"href": "https://hds.video-cdn.espn.com/z/motion/2024/1122/ss_20241122_204332698_2701916/ss_20241122_204332698_2701916_rel.smil/manifest.f4m"
-},
-"HLS": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_204332698_2701916/ss_20241122_204332698_2701916/playlist.m3u8",
-"HD": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_204332698_2701916/ss_20241122_204332698_2701916/playlist.m3u8"
-},
-"cmaf": {
-"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2024/1122/ss_20241122_204332698_2701916/ss_20241122_204332698_2701916/playlist.m3u8"
-},
-"shield": {
-"href": "https://watch.auth.api.espn.com/video/auth/media/56aba49d-47ca-43ae-9856-3e2ebe264300/asset"
-}
-},
-"HD": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_204332698_2701916/ss_20241122_204332698_2701916_720p30_2896k.mp4"
-},
-"full": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_204332698_2701916/ss_20241122_204332698_2701916_360p30_1464k.mp4"
-}
-},
-"sportscenter": {
-"href": "sportscenter://x-callback-url/showVideo?videoID=42551863&videoDSI=46a6b66a12ca7"
-}
-},
-"ad": {
-"sport": "nba",
-"bundle": "nba_top_plays"
-},
-"tracking": {
-"sportName": "nba",
-"leagueName": "No League",
-"coverageType": "Final Game Highlight",
-"trackingName": "NBA_One-Play (Jalen Green skies for big slam) 2024/11/23 ESHEET",
-"trackingId": "dm_20241123_NBA_jalen_green_skies_for_big_slam"
-}
-},
-{
-"id": 42551675,
-"cerebroId": "67412fb11010222a5a473271",
-"source": "espn",
-"headline": "Toumani Camara denies Houston Rockets with swat",
-"description": "Toumani Camara denies Houston Rockets with swat",
-"lastModified": "2024-11-23T01:29:28Z",
-"originalPublishDate": "2024-11-23T01:28:09Z",
-"duration": 16,
-"timeRestrictions": {
-"embargoDate": "2024-11-23T01:28:09Z",
-"expirationDate": "2025-07-31T04:00:00Z"
-},
-"deviceRestrictions": {
-"type": "whitelist",
-"devices": [
-"desktop",
-"ipad",
-"settop",
-"handset",
-"tablet"
-]
-},
-"geoRestrictions": {
-"type": "whitelist",
-"countries": [
-"AU",
-"CU",
-"CG",
-"GB",
-"UK",
-"AS",
-"CO",
-"ER",
-"FJ",
-"SV",
-"GH",
-"SZ",
-"TG",
-"NA",
-"ML",
-"KE",
-"GF",
-"SL",
-"BI",
-"BS",
-"HT",
-"VG",
-"CV",
-"GU",
-"PW",
-"GP",
-"UG",
-"VE",
-"AG",
-"ZW",
-"GW",
-"PY",
-"MU",
-"CF",
-"CD",
-"MP",
-"SN",
-"SR",
-"EC",
-"NE",
-"HN",
-"JM",
-"BJ",
-"RE",
-"MZ",
-"AI",
-"MS",
-"MQ",
-"MW",
-"KN",
-"AO",
-"UM",
-"DO",
-"BR",
-"GY",
-"CM",
-"GQ",
-"BO",
-"GD",
-"TC",
-"GA",
-"RW",
-"BW",
-"BF",
-"ET",
-"NI",
-"SS",
-"BB",
-"MF",
-"SX",
-"AW",
-"PE",
-"MX",
-"KM",
-"GT",
-"CI",
-"PA",
-"US",
-"PR",
-"VI",
-"BZ",
-"TT",
-"ST",
-"VC",
-"TZ",
-"GN",
-"MH",
-"AM",
-"BM",
-"SC",
-"NG",
-"ZM",
-"AR",
-"BQ",
-"MG",
-"LC",
-"LS",
-"CL",
-"KY",
-"LR",
-"FM",
-"GM",
-"UY",
-"ZA",
-"NZ",
-"CR"
-]
-},
-"thumbnail": "https://a.espncdn.com/media/motion/2024/1122/ss_20241122_202818052_2701883/ss_20241122_202818052_2701883.jpg",
-"links": {
-"web": {
-"href": "https://www.espn.com/video/clip?id=42551675",
-"self": {
-"href": "https://www.espn.com/video/clip?id=42551675",
-"dsi": {
-"href": "https://www.espn.com/video/clip?id=164a78381a655"
-}
-},
-"seo": {
-"href": "https://www.espn.com/video/clip/_/id/42551675"
-}
-},
-"mobile": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/a3552422-c872-42f1-8f27-9774b723fcd5/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42551675",
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_202818052_2701883/ss_20241122_202818052_2701883.mp4"
-},
-"alert": {
-"href": "https://m.espn.com/general/video/videoAlert?vid=42551675"
-},
-"streaming": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/a3552422-c872-42f1-8f27-9774b723fcd5/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42551675"
-},
-"progressiveDownload": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/a3552422-c872-42f1-8f27-9774b723fcd5/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42551675"
-}
-},
-"api": {
-"self": {
-"href": "https://content.core.api.espn.com/v1/video/clips/42551675"
-},
-"artwork": {
-"href": "https://artwork.api.espn.com/artwork/collections/media/a3552422-c872-42f1-8f27-9774b723fcd5"
-}
-},
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_202818052_2701883/ss_20241122_202818052_2701883_360p30_1464k.mp4",
-"mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2024/1122/ss_20241122_202818052_2701883/ss_20241122_202818052_2701883.mp4"
-},
-"flash": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_202818052_2701883/ss_20241122_202818052_2701883.smil"
-},
-"hds": {
-"href": "https://hds.video-cdn.espn.com/z/motion/2024/1122/ss_20241122_202818052_2701883/ss_20241122_202818052_2701883_rel.smil/manifest.f4m"
-},
-"HLS": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_202818052_2701883/ss_20241122_202818052_2701883/playlist.m3u8",
-"HD": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_202818052_2701883/ss_20241122_202818052_2701883/playlist.m3u8"
-},
-"cmaf": {
-"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2024/1122/ss_20241122_202818052_2701883/ss_20241122_202818052_2701883/playlist.m3u8"
-},
-"shield": {
-"href": "https://watch.auth.api.espn.com/video/auth/media/a3552422-c872-42f1-8f27-9774b723fcd5/asset"
-}
-},
-"HD": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_202818052_2701883/ss_20241122_202818052_2701883_720p30_2896k.mp4"
-},
-"full": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_202818052_2701883/ss_20241122_202818052_2701883_360p30_1464k.mp4"
-}
-},
-"sportscenter": {
-"href": "sportscenter://x-callback-url/showVideo?videoID=42551675&videoDSI=164a78381a655"
-}
-},
-"ad": {
-"sport": "nba",
-"bundle": "nba_top_plays"
-},
-"tracking": {
-"sportName": "nba",
-"leagueName": "No League",
-"coverageType": "OnePlay",
-"trackingName": "NBA_One-Play (Toumani Camara denies Houston Rockets with swat) 2024/11/23 ESHEET",
-"trackingId": "dm_20241123_NBA_toumani_camara_denies_houston_rockets_with_swat"
-}
-},
-{
-"id": 42551803,
-"cerebroId": "674132317d3cc545989ee824",
-"source": "espn",
-"headline": "Amen Thompson fights off defender for and-1",
-"description": "Amen Thompson fights off defender for and-1",
-"lastModified": "2024-11-23T01:40:50Z",
-"originalPublishDate": "2024-11-23T01:38:51Z",
-"duration": 16,
-"timeRestrictions": {
-"embargoDate": "2024-11-23T01:38:51Z",
-"expirationDate": "2025-07-31T04:00:00Z"
-},
-"deviceRestrictions": {
-"type": "whitelist",
-"devices": [
-"desktop",
-"ipad",
-"settop",
-"handset",
-"tablet"
-]
-},
-"geoRestrictions": {
-"type": "whitelist",
-"countries": [
-"CV",
-"US",
-"AS",
-"GU",
-"MP",
-"PR",
-"VI",
-"UM",
-"VE",
-"EC",
-"MS",
-"ET",
-"GT",
-"ST",
-"GQ",
-"MF",
-"GM",
-"NE",
-"MZ",
-"PY",
-"PE",
-"ML",
-"BB",
-"NA",
-"CM",
-"SR",
-"UY",
-"GF",
-"PW",
-"CO",
-"ER",
-"SV",
-"RW",
-"GB",
-"UK",
-"CR",
-"MQ",
-"ZM",
-"ZW",
-"CF",
-"LC",
-"VC",
-"GN",
-"SZ",
-"GY",
-"AW",
-"BI",
-"SS",
-"MG",
-"AO",
-"HT",
-"LS",
-"KE",
-"RE",
-"TT",
-"BQ",
-"SC",
-"LR",
-"MH",
-"SX",
-"BS",
-"GP",
-"BM",
-"KM",
-"UG",
-"MX",
-"AM",
-"MU",
-"BF",
-"AU",
-"CL",
-"BR",
-"NZ",
-"BJ",
-"KN",
-"SL",
-"AI",
-"BW",
-"JM",
-"AR",
-"HN",
-"ZA",
-"DO",
-"GA",
-"GD",
-"FJ",
-"PA",
-"TZ",
-"VG",
-"TG",
-"CI",
-"NI",
-"GW",
-"FM",
-"KY",
-"CU",
-"CG",
-"SN",
-"AG",
-"CD",
-"GH",
-"MW",
-"TC",
-"BZ",
-"NG",
-"BO"
-]
-},
-"thumbnail": "https://a.espncdn.com/media/motion/2024/1122/ss_20241122_203858769_2701907/ss_20241122_203858769_2701907.jpg",
-"links": {
-"web": {
-"href": "https://www.espn.com/video/clip?id=42551803",
-"self": {
-"href": "https://www.espn.com/video/clip?id=42551803",
-"dsi": {
-"href": "https://www.espn.com/video/clip?id=59ca27fe0d357"
-}
-},
-"seo": {
-"href": "https://www.espn.com/video/clip/_/id/42551803"
-}
-},
-"mobile": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/86d1eb35-9df2-4230-8442-dd284617296f/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42551803",
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_203858769_2701907/ss_20241122_203858769_2701907.mp4"
-},
-"alert": {
-"href": "https://m.espn.com/general/video/videoAlert?vid=42551803"
-},
-"streaming": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/86d1eb35-9df2-4230-8442-dd284617296f/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42551803"
-},
-"progressiveDownload": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/86d1eb35-9df2-4230-8442-dd284617296f/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42551803"
-}
-},
-"api": {
-"self": {
-"href": "https://content.core.api.espn.com/v1/video/clips/42551803"
-},
-"artwork": {
-"href": "https://artwork.api.espn.com/artwork/collections/media/86d1eb35-9df2-4230-8442-dd284617296f"
-}
-},
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_203858769_2701907/ss_20241122_203858769_2701907_360p30_1464k.mp4",
-"mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2024/1122/ss_20241122_203858769_2701907/ss_20241122_203858769_2701907.mp4"
-},
-"flash": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_203858769_2701907/ss_20241122_203858769_2701907.smil"
-},
-"hds": {
-"href": "https://hds.video-cdn.espn.com/z/motion/2024/1122/ss_20241122_203858769_2701907/ss_20241122_203858769_2701907_rel.smil/manifest.f4m"
-},
-"HLS": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_203858769_2701907/ss_20241122_203858769_2701907/playlist.m3u8",
-"HD": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_203858769_2701907/ss_20241122_203858769_2701907/playlist.m3u8"
-},
-"cmaf": {
-"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2024/1122/ss_20241122_203858769_2701907/ss_20241122_203858769_2701907/playlist.m3u8"
-},
-"shield": {
-"href": "https://watch.auth.api.espn.com/video/auth/media/86d1eb35-9df2-4230-8442-dd284617296f/asset"
-}
-},
-"HD": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_203858769_2701907/ss_20241122_203858769_2701907_720p30_2896k.mp4"
-},
-"full": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_203858769_2701907/ss_20241122_203858769_2701907_360p30_1464k.mp4"
-}
-},
-"sportscenter": {
-"href": "sportscenter://x-callback-url/showVideo?videoID=42551803&videoDSI=59ca27fe0d357"
-}
-},
-"ad": {
-"sport": "nba",
-"bundle": "nba_top_plays"
-},
-"tracking": {
-"sportName": "nba",
-"leagueName": "No League",
-"coverageType": "OnePlay",
-"trackingName": "NBA_One-Play (Amen Thompson fights off defender for and-1) 2024/11/23 ESHEET",
-"trackingId": "dm_20241123_NBA_amen_thompson_fights_off_defender_for_and1"
-}
-},
-{
-"id": 42551900,
-"cerebroId": "674134090a4d1a28f91259eb",
-"source": "espn",
-"headline": "Tari Eason elevates for dunk Portland Trail Blazers",
-"description": "Tari Eason elevates for dunk Portland Trail Blazers",
-"lastModified": "2024-11-23T01:48:34Z",
-"originalPublishDate": "2024-11-23T01:46:42Z",
-"duration": 22,
-"timeRestrictions": {
-"embargoDate": "2024-11-23T01:46:42Z",
-"expirationDate": "2025-07-31T04:00:00Z"
-},
-"deviceRestrictions": {
-"type": "whitelist",
-"devices": [
-"desktop",
-"ipad",
-"settop",
-"handset",
-"tablet"
-]
-},
-"geoRestrictions": {
-"type": "whitelist",
-"countries": [
-"CG",
-"PR",
-"BZ",
-"GM",
-"BB",
-"SR",
-"NA",
-"SL",
-"ZW",
-"NI",
-"MS",
-"RW",
-"NE",
-"SN",
-"ER",
-"CU",
-"GT",
-"ML",
-"CV",
-"JM",
-"NZ",
-"PY",
-"UM",
-"AU",
-"KN",
-"GY",
-"GB",
-"UK",
-"LC",
-"ET",
-"GQ",
-"CF",
-"UG",
-"ST",
-"SS",
-"CL",
-"HN",
-"MW",
-"SV",
-"DO",
-"GU",
-"BJ",
-"CR",
-"BW",
-"KM",
-"PA",
-"LS",
-"GP",
-"CD",
-"VC",
-"BS",
-"FJ",
-"BO",
-"PE",
-"RE",
-"BQ",
-"TC",
-"KE",
-"AW",
-"MH",
-"BF",
-"SC",
-"MP",
-"TT",
-"AG",
-"PW",
-"GA",
-"AR",
-"VE",
-"MU",
-"AM",
-"GF",
-"MG",
-"MX",
-"AS",
-"HT",
-"MQ",
-"UY",
-"VI",
-"BM",
-"EC",
-"TG",
-"NG",
-"TZ",
-"VG",
-"CI",
-"CO",
-"AO",
-"KY",
-"GW",
-"ZM",
-"BR",
-"AI",
-"MZ",
-"MF",
-"US",
-"LR",
-"GD",
-"CM",
-"SX",
-"BI",
-"ZA",
-"FM",
-"SZ",
-"GN",
-"GH"
-]
-},
-"thumbnail": "https://a.espncdn.com/media/motion/2024/1122/ss_20241122_204650903_2701922/ss_20241122_204650903_2701922.jpg",
-"links": {
-"web": {
-"href": "https://www.espn.com/video/clip?id=42551900",
-"self": {
-"href": "https://www.espn.com/video/clip?id=42551900",
-"dsi": {
-"href": "https://www.espn.com/video/clip?id=f0eecee0fbcdd"
-}
-},
-"seo": {
-"href": "https://www.espn.com/video/clip/_/id/42551900"
-}
-},
-"mobile": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/c3bd288b-d191-48e1-8fff-0c638a679277/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42551900",
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_204650903_2701922/ss_20241122_204650903_2701922.mp4"
-},
-"alert": {
-"href": "https://m.espn.com/general/video/videoAlert?vid=42551900"
-},
-"streaming": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/c3bd288b-d191-48e1-8fff-0c638a679277/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42551900"
-},
-"progressiveDownload": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/c3bd288b-d191-48e1-8fff-0c638a679277/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42551900"
-}
-},
-"api": {
-"self": {
-"href": "https://content.core.api.espn.com/v1/video/clips/42551900"
-},
-"artwork": {
-"href": "https://artwork.api.espn.com/artwork/collections/media/c3bd288b-d191-48e1-8fff-0c638a679277"
-}
-},
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_204650903_2701922/ss_20241122_204650903_2701922_360p30_1464k.mp4",
-"mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2024/1122/ss_20241122_204650903_2701922/ss_20241122_204650903_2701922.mp4"
-},
-"flash": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_204650903_2701922/ss_20241122_204650903_2701922.smil"
-},
-"hds": {
-"href": "https://hds.video-cdn.espn.com/z/motion/2024/1122/ss_20241122_204650903_2701922/ss_20241122_204650903_2701922_rel.smil/manifest.f4m"
-},
-"HLS": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_204650903_2701922/ss_20241122_204650903_2701922/playlist.m3u8",
-"HD": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_204650903_2701922/ss_20241122_204650903_2701922/playlist.m3u8"
-},
-"cmaf": {
-"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2024/1122/ss_20241122_204650903_2701922/ss_20241122_204650903_2701922/playlist.m3u8"
-},
-"shield": {
-"href": "https://watch.auth.api.espn.com/video/auth/media/c3bd288b-d191-48e1-8fff-0c638a679277/asset"
-}
-},
-"HD": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_204650903_2701922/ss_20241122_204650903_2701922_720p30_2896k.mp4"
-},
-"full": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_204650903_2701922/ss_20241122_204650903_2701922_360p30_1464k.mp4"
-}
-},
-"sportscenter": {
-"href": "sportscenter://x-callback-url/showVideo?videoID=42551900&videoDSI=f0eecee0fbcdd"
-}
-},
-"ad": {
-"sport": "nba",
-"bundle": "nba_top_plays"
-},
-"tracking": {
-"sportName": "nba",
-"leagueName": "No League",
-"coverageType": "OnePlay",
-"trackingName": "NBA_One-Play (Tari Eason elevates for dunk Portland Trail Blazers) 2024/11/23 ESHEET",
-"trackingId": "dm_20241123_NBA_tari_eason_elevates_for_dunk_portland_trail_blazers"
-}
-},
-{
-"id": 42552014,
-"cerebroId": "674135930a4d1a28f9125f7b",
-"source": "espn",
-"headline": "Robert Williams III denies Houston Rockets with block",
-"description": "Robert Williams III denies Houston Rockets with block",
-"lastModified": "2024-11-23T01:54:52Z",
-"originalPublishDate": "2024-11-23T01:53:16Z",
-"duration": 29,
-"timeRestrictions": {
-"embargoDate": "2024-11-23T01:53:16Z",
-"expirationDate": "2025-07-31T04:00:00Z"
-},
-"deviceRestrictions": {
-"type": "whitelist",
-"devices": [
-"desktop",
-"ipad",
-"settop",
-"handset",
-"tablet"
-]
-},
-"geoRestrictions": {
-"type": "whitelist",
-"countries": [
-"CG",
-"PR",
-"BZ",
-"GM",
-"BB",
-"SR",
-"NA",
-"SL",
-"ZW",
-"NI",
-"MS",
-"RW",
-"NE",
-"SN",
-"ER",
-"CU",
-"GT",
-"ML",
-"CV",
-"JM",
-"NZ",
-"PY",
-"UM",
-"AU",
-"KN",
-"GY",
-"GB",
-"UK",
-"LC",
-"ET",
-"GQ",
-"CF",
-"UG",
-"ST",
-"SS",
-"CL",
-"HN",
-"MW",
-"SV",
-"DO",
-"GU",
-"BJ",
-"CR",
-"BW",
-"KM",
-"PA",
-"LS",
-"GP",
-"CD",
-"VC",
-"BS",
-"FJ",
-"BO",
-"PE",
-"RE",
-"BQ",
-"TC",
-"KE",
-"AW",
-"MH",
-"BF",
-"SC",
-"MP",
-"TT",
-"AG",
-"PW",
-"GA",
-"AR",
-"VE",
-"MU",
-"AM",
-"GF",
-"MG",
-"MX",
-"AS",
-"HT",
-"MQ",
-"UY",
-"VI",
-"BM",
-"EC",
-"TG",
-"NG",
-"TZ",
-"VG",
-"CI",
-"CO",
-"AO",
-"KY",
-"GW",
-"ZM",
-"BR",
-"AI",
-"MZ",
-"MF",
-"US",
-"LR",
-"GD",
-"CM",
-"SX",
-"BI",
-"ZA",
-"FM",
-"SZ",
-"GN",
-"GH"
-]
-},
-"thumbnail": "https://a.espncdn.com/media/motion/2024/1122/ss_20241122_205324344_2701942/ss_20241122_205324344_2701942.jpg",
-"links": {
-"web": {
-"href": "https://www.espn.com/video/clip?id=42552014",
-"self": {
-"href": "https://www.espn.com/video/clip?id=42552014",
-"dsi": {
-"href": "https://www.espn.com/video/clip?id=54511a7f15a89"
-}
-},
-"seo": {
-"href": "https://www.espn.com/video/clip/_/id/42552014"
-}
-},
-"mobile": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/1834e279-4df1-4bf6-b937-283f43005831/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42552014",
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_205324344_2701942/ss_20241122_205324344_2701942.mp4"
-},
-"alert": {
-"href": "https://m.espn.com/general/video/videoAlert?vid=42552014"
-},
-"streaming": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/1834e279-4df1-4bf6-b937-283f43005831/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42552014"
-},
-"progressiveDownload": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/1834e279-4df1-4bf6-b937-283f43005831/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42552014"
-}
-},
-"api": {
-"self": {
-"href": "https://content.core.api.espn.com/v1/video/clips/42552014"
-},
-"artwork": {
-"href": "https://artwork.api.espn.com/artwork/collections/media/1834e279-4df1-4bf6-b937-283f43005831"
-}
-},
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_205324344_2701942/ss_20241122_205324344_2701942_360p30_1464k.mp4",
-"mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2024/1122/ss_20241122_205324344_2701942/ss_20241122_205324344_2701942.mp4"
-},
-"flash": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_205324344_2701942/ss_20241122_205324344_2701942.smil"
-},
-"hds": {
-"href": "https://hds.video-cdn.espn.com/z/motion/2024/1122/ss_20241122_205324344_2701942/ss_20241122_205324344_2701942_rel.smil/manifest.f4m"
-},
-"HLS": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_205324344_2701942/ss_20241122_205324344_2701942/playlist.m3u8",
-"HD": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_205324344_2701942/ss_20241122_205324344_2701942/playlist.m3u8"
-},
-"cmaf": {
-"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2024/1122/ss_20241122_205324344_2701942/ss_20241122_205324344_2701942/playlist.m3u8"
-},
-"shield": {
-"href": "https://watch.auth.api.espn.com/video/auth/media/1834e279-4df1-4bf6-b937-283f43005831/asset"
-}
-},
-"HD": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_205324344_2701942/ss_20241122_205324344_2701942_720p30_2896k.mp4"
-},
-"full": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_205324344_2701942/ss_20241122_205324344_2701942_360p30_1464k.mp4"
-}
-},
-"sportscenter": {
-"href": "sportscenter://x-callback-url/showVideo?videoID=42552014&videoDSI=54511a7f15a89"
-}
-},
-"ad": {
-"sport": "nba",
-"bundle": "nba_top_plays"
-},
-"tracking": {
-"sportName": "nba",
-"leagueName": "No League",
-"coverageType": "OnePlay",
-"trackingName": "NBA_One-Play (Robert Williams III denies Houston Rockets with block) 2024/11/23 ESHEET",
-"trackingId": "dm_20241123_NBA_robert_williams_iii_denies_houston_rockets_with_block"
-}
-},
-{
-"id": 42552125,
-"cerebroId": "674137131010222a5a4743ef",
-"source": "espn",
-"headline": "Alperen Sengun rocks the rim with powerful jam",
-"description": "Alperen Sengun rocks the rim with powerful jam",
-"lastModified": "2024-11-23T02:00:51Z",
-"originalPublishDate": "2024-11-23T01:59:39Z",
-"duration": 17,
-"timeRestrictions": {
-"embargoDate": "2024-11-23T01:59:39Z",
-"expirationDate": "2025-07-31T04:00:00Z"
-},
-"deviceRestrictions": {
-"type": "whitelist",
-"devices": [
-"desktop",
-"ipad",
-"settop",
-"handset",
-"tablet"
-]
-},
-"geoRestrictions": {
-"type": "whitelist",
-"countries": [
-"AU",
-"CU",
-"CG",
-"GB",
-"UK",
-"AS",
-"CO",
-"ER",
-"FJ",
-"SV",
-"GH",
-"SZ",
-"TG",
-"NA",
-"ML",
-"KE",
-"GF",
-"SL",
-"BI",
-"BS",
-"HT",
-"VG",
-"CV",
-"GU",
-"PW",
-"GP",
-"UG",
-"VE",
-"AG",
-"ZW",
-"GW",
-"PY",
-"MU",
-"CF",
-"CD",
-"MP",
-"SN",
-"SR",
-"EC",
-"NE",
-"HN",
-"JM",
-"BJ",
-"RE",
-"MZ",
-"AI",
-"MS",
-"MQ",
-"MW",
-"KN",
-"AO",
-"UM",
-"DO",
-"BR",
-"GY",
-"CM",
-"GQ",
-"BO",
-"GD",
-"TC",
-"GA",
-"RW",
-"BW",
-"BF",
-"ET",
-"NI",
-"SS",
-"BB",
-"MF",
-"SX",
-"AW",
-"PE",
-"MX",
-"KM",
-"GT",
-"CI",
-"PA",
-"US",
-"PR",
-"VI",
-"BZ",
-"TT",
-"ST",
-"VC",
-"TZ",
-"GN",
-"MH",
-"AM",
-"BM",
-"SC",
-"NG",
-"ZM",
-"AR",
-"BQ",
-"MG",
-"LC",
-"LS",
-"CL",
-"KY",
-"LR",
-"FM",
-"GM",
-"UY",
-"ZA",
-"NZ",
-"CR"
-]
-},
-"thumbnail": "https://a.espncdn.com/media/motion/2024/1122/ss_20241122_205948399_2701958/ss_20241122_205948399_2701958.jpg",
-"links": {
-"web": {
-"href": "https://www.espn.com/video/clip?id=42552125",
-"self": {
-"href": "https://www.espn.com/video/clip?id=42552125",
-"dsi": {
-"href": "https://www.espn.com/video/clip?id=eef0104d2d474"
-}
-},
-"seo": {
-"href": "https://www.espn.com/video/clip/_/id/42552125"
-}
-},
-"mobile": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/b36b69ff-cf6d-4621-a637-f3b9dd88c397/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42552125",
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_205948399_2701958/ss_20241122_205948399_2701958.mp4"
-},
-"alert": {
-"href": "https://m.espn.com/general/video/videoAlert?vid=42552125"
-},
-"streaming": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/b36b69ff-cf6d-4621-a637-f3b9dd88c397/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42552125"
-},
-"progressiveDownload": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/b36b69ff-cf6d-4621-a637-f3b9dd88c397/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42552125"
-}
-},
-"api": {
-"self": {
-"href": "https://content.core.api.espn.com/v1/video/clips/42552125"
-},
-"artwork": {
-"href": "https://artwork.api.espn.com/artwork/collections/media/b36b69ff-cf6d-4621-a637-f3b9dd88c397"
-}
-},
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_205948399_2701958/ss_20241122_205948399_2701958_360p30_1464k.mp4",
-"mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2024/1122/ss_20241122_205948399_2701958/ss_20241122_205948399_2701958.mp4"
-},
-"flash": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_205948399_2701958/ss_20241122_205948399_2701958.smil"
-},
-"hds": {
-"href": "https://hds.video-cdn.espn.com/z/motion/2024/1122/ss_20241122_205948399_2701958/ss_20241122_205948399_2701958_rel.smil/manifest.f4m"
-},
-"HLS": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_205948399_2701958/ss_20241122_205948399_2701958/playlist.m3u8",
-"HD": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_205948399_2701958/ss_20241122_205948399_2701958/playlist.m3u8"
-},
-"cmaf": {
-"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2024/1122/ss_20241122_205948399_2701958/ss_20241122_205948399_2701958/playlist.m3u8"
-},
-"shield": {
-"href": "https://watch.auth.api.espn.com/video/auth/media/b36b69ff-cf6d-4621-a637-f3b9dd88c397/asset"
-}
-},
-"HD": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_205948399_2701958/ss_20241122_205948399_2701958_720p30_2896k.mp4"
-},
-"full": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_205948399_2701958/ss_20241122_205948399_2701958_360p30_1464k.mp4"
-}
-},
-"sportscenter": {
-"href": "sportscenter://x-callback-url/showVideo?videoID=42552125&videoDSI=eef0104d2d474"
-}
-},
-"ad": {
-"sport": "nba",
-"bundle": "nba_top_plays"
-},
-"tracking": {
-"sportName": "nba",
-"leagueName": "No League",
-"coverageType": "OnePlay",
-"trackingName": "NBA_One-Play (Alperen Sengun rocks the rim with powerful jam) 2024/11/23 ESHEET",
-"trackingId": "dm_20241123_NBA_alperen_sengun_rocks_the_rim_with_powerful_jam"
-}
-},
-{
-"id": 42552762,
-"cerebroId": "674142391010222a5a475f3c",
-"source": "espn",
-"headline": "Shaedon Sharpe somehow gets the and-1 to fall",
-"description": "Shaedon Sharpe somehow gets the and-1 to fall",
-"lastModified": "2024-11-23T02:48:56Z",
-"originalPublishDate": "2024-11-23T02:47:14Z",
-"duration": 14,
-"timeRestrictions": {
-"embargoDate": "2024-11-23T02:47:14Z",
-"expirationDate": "2025-07-31T04:00:00Z"
-},
-"deviceRestrictions": {
-"type": "whitelist",
-"devices": [
-"desktop",
-"ipad",
-"settop",
-"handset",
-"tablet"
-]
-},
-"geoRestrictions": {
-"type": "whitelist",
-"countries": [
-"AU",
-"CU",
-"CG",
-"GB",
-"UK",
-"AS",
-"CO",
-"ER",
-"FJ",
-"SV",
-"GH",
-"SZ",
-"TG",
-"NA",
-"ML",
-"KE",
-"GF",
-"SL",
-"BI",
-"BS",
-"HT",
-"VG",
-"CV",
-"GU",
-"PW",
-"GP",
-"UG",
-"VE",
-"AG",
-"ZW",
-"GW",
-"PY",
-"MU",
-"CF",
-"CD",
-"MP",
-"SN",
-"SR",
-"EC",
-"NE",
-"HN",
-"JM",
-"BJ",
-"RE",
-"MZ",
-"AI",
-"MS",
-"MQ",
-"MW",
-"KN",
-"AO",
-"UM",
-"DO",
-"BR",
-"GY",
-"CM",
-"GQ",
-"BO",
-"GD",
-"TC",
-"GA",
-"RW",
-"BW",
-"BF",
-"ET",
-"NI",
-"SS",
-"BB",
-"MF",
-"SX",
-"AW",
-"PE",
-"MX",
-"KM",
-"GT",
-"CI",
-"PA",
-"US",
-"PR",
-"VI",
-"BZ",
-"TT",
-"ST",
-"VC",
-"TZ",
-"GN",
-"MH",
-"AM",
-"BM",
-"SC",
-"NG",
-"ZM",
-"AR",
-"BQ",
-"MG",
-"LC",
-"LS",
-"CL",
-"KY",
-"LR",
-"FM",
-"GM",
-"UY",
-"ZA",
-"NZ",
-"CR"
-]
-},
-"thumbnail": "https://a.espncdn.com/media/motion/2024/1122/ss_20241122_214722319_2702055/ss_20241122_214722319_2702055.jpg",
-"links": {
-"web": {
-"href": "https://www.espn.com/video/clip?id=42552762",
-"self": {
-"href": "https://www.espn.com/video/clip?id=42552762",
-"dsi": {
-"href": "https://www.espn.com/video/clip?id=5fcf0c9d28097"
-}
-},
-"seo": {
-"href": "https://www.espn.com/video/clip/_/id/42552762"
-}
-},
-"mobile": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/100a9f31-b2c6-40b3-836d-9d3f5007b2d8/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42552762",
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_214722319_2702055/ss_20241122_214722319_2702055.mp4"
-},
-"alert": {
-"href": "https://m.espn.com/general/video/videoAlert?vid=42552762"
-},
-"streaming": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/100a9f31-b2c6-40b3-836d-9d3f5007b2d8/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42552762"
-},
-"progressiveDownload": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/100a9f31-b2c6-40b3-836d-9d3f5007b2d8/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42552762"
-}
-},
-"api": {
-"self": {
-"href": "https://content.core.api.espn.com/v1/video/clips/42552762"
-},
-"artwork": {
-"href": "https://artwork.api.espn.com/artwork/collections/media/100a9f31-b2c6-40b3-836d-9d3f5007b2d8"
-}
-},
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_214722319_2702055/ss_20241122_214722319_2702055_360p30_1464k.mp4",
-"mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2024/1122/ss_20241122_214722319_2702055/ss_20241122_214722319_2702055.mp4"
-},
-"flash": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_214722319_2702055/ss_20241122_214722319_2702055.smil"
-},
-"hds": {
-"href": "https://hds.video-cdn.espn.com/z/motion/2024/1122/ss_20241122_214722319_2702055/ss_20241122_214722319_2702055_rel.smil/manifest.f4m"
-},
-"HLS": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_214722319_2702055/ss_20241122_214722319_2702055/playlist.m3u8",
-"HD": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_214722319_2702055/ss_20241122_214722319_2702055/playlist.m3u8"
-},
-"cmaf": {
-"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2024/1122/ss_20241122_214722319_2702055/ss_20241122_214722319_2702055/playlist.m3u8"
-},
-"shield": {
-"href": "https://watch.auth.api.espn.com/video/auth/media/100a9f31-b2c6-40b3-836d-9d3f5007b2d8/asset"
-}
-},
-"HD": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_214722319_2702055/ss_20241122_214722319_2702055_720p30_2896k.mp4"
-},
-"full": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_214722319_2702055/ss_20241122_214722319_2702055_360p30_1464k.mp4"
-}
-},
-"sportscenter": {
-"href": "sportscenter://x-callback-url/showVideo?videoID=42552762&videoDSI=5fcf0c9d28097"
-}
-},
-"ad": {
-"sport": "nba",
-"bundle": "nba_top_plays"
-},
-"tracking": {
-"sportName": "nba",
-"leagueName": "No League",
-"coverageType": "OnePlay",
-"trackingName": "NBA_One-Play (Shaedon Sharpe somehow gets the and-1 to fall) 2024/11/23 ESHEET",
-"trackingId": "dm_20241123_NBA_shaedon_sharpe_somehow_gets_the_and1_to_fall"
-}
-},
-{
-"id": 42552954,
-"cerebroId": "674145520a4d1a28f91285b6",
-"source": "espn",
-"headline": "Tari Eason elevates for jam Portland Trail Blazers",
-"description": "Tari Eason elevates for jam Portland Trail Blazers",
-"lastModified": "2024-11-23T03:01:51Z",
-"originalPublishDate": "2024-11-23T03:00:26Z",
-"duration": 28,
-"timeRestrictions": {
-"embargoDate": "2024-11-23T03:00:26Z",
-"expirationDate": "2025-07-31T04:00:00Z"
-},
-"deviceRestrictions": {
-"type": "whitelist",
-"devices": [
-"desktop",
-"ipad",
-"settop",
-"handset",
-"tablet"
-]
-},
-"geoRestrictions": {
-"type": "whitelist",
-"countries": [
-"CG",
-"PR",
-"BZ",
-"GM",
-"BB",
-"SR",
-"NA",
-"SL",
-"ZW",
-"NI",
-"MS",
-"RW",
-"NE",
-"SN",
-"ER",
-"CU",
-"GT",
-"ML",
-"CV",
-"JM",
-"NZ",
-"PY",
-"UM",
-"AU",
-"KN",
-"GY",
-"GB",
-"UK",
-"LC",
-"ET",
-"GQ",
-"CF",
-"UG",
-"ST",
-"SS",
-"CL",
-"HN",
-"MW",
-"SV",
-"DO",
-"GU",
-"BJ",
-"CR",
-"BW",
-"KM",
-"PA",
-"LS",
-"GP",
-"CD",
-"VC",
-"BS",
-"FJ",
-"BO",
-"PE",
-"RE",
-"BQ",
-"TC",
-"KE",
-"AW",
-"MH",
-"BF",
-"SC",
-"MP",
-"TT",
-"AG",
-"PW",
-"GA",
-"AR",
-"VE",
-"MU",
-"AM",
-"GF",
-"MG",
-"MX",
-"AS",
-"HT",
-"MQ",
-"UY",
-"VI",
-"BM",
-"EC",
-"TG",
-"NG",
-"TZ",
-"VG",
-"CI",
-"CO",
-"AO",
-"KY",
-"GW",
-"ZM",
-"BR",
-"AI",
-"MZ",
-"MF",
-"US",
-"LR",
-"GD",
-"CM",
-"SX",
-"BI",
-"ZA",
-"FM",
-"SZ",
-"GN",
-"GH"
-]
-},
-"thumbnail": "https://a.espncdn.com/media/motion/2024/1122/ss_20241122_220036860_2702078/ss_20241122_220036860_2702078.jpg",
-"links": {
-"web": {
-"href": "https://www.espn.com/video/clip?id=42552954",
-"self": {
-"href": "https://www.espn.com/video/clip?id=42552954",
-"dsi": {
-"href": "https://www.espn.com/video/clip?id=21cfa506b81a7"
-}
-},
-"seo": {
-"href": "https://www.espn.com/video/clip/_/id/42552954"
-}
-},
-"mobile": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/538fe679-1e7f-4d56-b1cd-da948e1858aa/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42552954",
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_220036860_2702078/ss_20241122_220036860_2702078.mp4"
-},
-"alert": {
-"href": "https://m.espn.com/general/video/videoAlert?vid=42552954"
-},
-"streaming": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/538fe679-1e7f-4d56-b1cd-da948e1858aa/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42552954"
-},
-"progressiveDownload": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/538fe679-1e7f-4d56-b1cd-da948e1858aa/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42552954"
-}
-},
-"api": {
-"self": {
-"href": "https://content.core.api.espn.com/v1/video/clips/42552954"
-},
-"artwork": {
-"href": "https://artwork.api.espn.com/artwork/collections/media/538fe679-1e7f-4d56-b1cd-da948e1858aa"
-}
-},
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_220036860_2702078/ss_20241122_220036860_2702078_360p30_1464k.mp4",
-"mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2024/1122/ss_20241122_220036860_2702078/ss_20241122_220036860_2702078.mp4"
-},
-"flash": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_220036860_2702078/ss_20241122_220036860_2702078.smil"
-},
-"hds": {
-"href": "https://hds.video-cdn.espn.com/z/motion/2024/1122/ss_20241122_220036860_2702078/ss_20241122_220036860_2702078_rel.smil/manifest.f4m"
-},
-"HLS": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_220036860_2702078/ss_20241122_220036860_2702078/playlist.m3u8",
-"HD": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_220036860_2702078/ss_20241122_220036860_2702078/playlist.m3u8"
-},
-"cmaf": {
-"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2024/1122/ss_20241122_220036860_2702078/ss_20241122_220036860_2702078/playlist.m3u8"
-},
-"shield": {
-"href": "https://watch.auth.api.espn.com/video/auth/media/538fe679-1e7f-4d56-b1cd-da948e1858aa/asset"
-}
-},
-"HD": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_220036860_2702078/ss_20241122_220036860_2702078_720p30_2896k.mp4"
-},
-"full": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_220036860_2702078/ss_20241122_220036860_2702078_360p30_1464k.mp4"
-}
-},
-"sportscenter": {
-"href": "sportscenter://x-callback-url/showVideo?videoID=42552954&videoDSI=21cfa506b81a7"
-}
-},
-"ad": {
-"sport": "nba",
-"bundle": "nba_top_plays"
-},
-"tracking": {
-"sportName": "nba",
-"leagueName": "No League",
-"coverageType": "OnePlay",
-"trackingName": "NBA_One-Play (Tari Eason elevates for jam Portland Trail Blazers) 2024/11/23 ESHEET",
-"trackingId": "dm_20241123_NBA_tari_eason_elevates_for_jam_portland_trail_blazers"
-}
-},
-{
-"id": 42553139,
-"cerebroId": "674148890a4d1a28f9128982",
-"source": "espn",
-"headline": "Jeff Green skies for big slam",
-"description": "Jeff Green skies for big slam",
-"lastModified": "2024-11-23T03:16:51Z",
-"originalPublishDate": "2024-11-23T03:14:09Z",
-"duration": 19,
-"timeRestrictions": {
-"embargoDate": "2024-11-23T03:14:09Z",
-"expirationDate": "2025-07-31T04:00:00Z"
-},
-"deviceRestrictions": {
-"type": "whitelist",
-"devices": [
-"desktop",
-"ipad",
-"settop",
-"handset",
-"tablet"
-]
-},
-"geoRestrictions": {
-"type": "whitelist",
-"countries": [
-"CG",
-"PR",
-"BZ",
-"GM",
-"BB",
-"SR",
-"NA",
-"SL",
-"ZW",
-"NI",
-"MS",
-"RW",
-"NE",
-"SN",
-"ER",
-"CU",
-"GT",
-"ML",
-"CV",
-"JM",
-"NZ",
-"PY",
-"UM",
-"AU",
-"KN",
-"GY",
-"GB",
-"UK",
-"LC",
-"ET",
-"GQ",
-"CF",
-"UG",
-"ST",
-"SS",
-"CL",
-"HN",
-"MW",
-"SV",
-"DO",
-"GU",
-"BJ",
-"CR",
-"BW",
-"KM",
-"PA",
-"LS",
-"GP",
-"CD",
-"VC",
-"BS",
-"FJ",
-"BO",
-"PE",
-"RE",
-"BQ",
-"TC",
-"KE",
-"AW",
-"MH",
-"BF",
-"SC",
-"MP",
-"TT",
-"AG",
-"PW",
-"GA",
-"AR",
-"VE",
-"MU",
-"AM",
-"GF",
-"MG",
-"MX",
-"AS",
-"HT",
-"MQ",
-"UY",
-"VI",
-"BM",
-"EC",
-"TG",
-"NG",
-"TZ",
-"VG",
-"CI",
-"CO",
-"AO",
-"KY",
-"GW",
-"ZM",
-"BR",
-"AI",
-"MZ",
-"MF",
-"US",
-"LR",
-"GD",
-"CM",
-"SX",
-"BI",
-"ZA",
-"FM",
-"SZ",
-"GN",
-"GH"
-]
-},
-"thumbnail": "https://a.espncdn.com/media/motion/2024/1122/ss_20241122_221418229_2702093/ss_20241122_221418229_2702093.jpg",
-"links": {
-"web": {
-"href": "https://www.espn.com/video/clip?id=42553139",
-"self": {
-"href": "https://www.espn.com/video/clip?id=42553139",
-"dsi": {
-"href": "https://www.espn.com/video/clip?id=b39c3fc0f8c97"
-}
-},
-"seo": {
-"href": "https://www.espn.com/video/clip/_/id/42553139"
-}
-},
-"mobile": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/e52e0d71-65a8-46db-81fa-cbdabc67fa98/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42553139",
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_221418229_2702093/ss_20241122_221418229_2702093.mp4"
-},
-"alert": {
-"href": "https://m.espn.com/general/video/videoAlert?vid=42553139"
-},
-"streaming": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/e52e0d71-65a8-46db-81fa-cbdabc67fa98/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42553139"
-},
-"progressiveDownload": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/e52e0d71-65a8-46db-81fa-cbdabc67fa98/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42553139"
-}
-},
-"api": {
-"self": {
-"href": "https://content.core.api.espn.com/v1/video/clips/42553139"
-},
-"artwork": {
-"href": "https://artwork.api.espn.com/artwork/collections/media/e52e0d71-65a8-46db-81fa-cbdabc67fa98"
-}
-},
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_221418229_2702093/ss_20241122_221418229_2702093_360p30_1464k.mp4",
-"mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2024/1122/ss_20241122_221418229_2702093/ss_20241122_221418229_2702093.mp4"
-},
-"flash": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_221418229_2702093/ss_20241122_221418229_2702093.smil"
-},
-"hds": {
-"href": "https://hds.video-cdn.espn.com/z/motion/2024/1122/ss_20241122_221418229_2702093/ss_20241122_221418229_2702093_rel.smil/manifest.f4m"
-},
-"HLS": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_221418229_2702093/ss_20241122_221418229_2702093/playlist.m3u8",
-"HD": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_221418229_2702093/ss_20241122_221418229_2702093/playlist.m3u8"
-},
-"cmaf": {
-"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2024/1122/ss_20241122_221418229_2702093/ss_20241122_221418229_2702093/playlist.m3u8"
-},
-"shield": {
-"href": "https://watch.auth.api.espn.com/video/auth/media/e52e0d71-65a8-46db-81fa-cbdabc67fa98/asset"
-}
-},
-"HD": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_221418229_2702093/ss_20241122_221418229_2702093_720p30_2896k.mp4"
-},
-"full": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_221418229_2702093/ss_20241122_221418229_2702093_360p30_1464k.mp4"
-}
-},
-"sportscenter": {
-"href": "sportscenter://x-callback-url/showVideo?videoID=42553139&videoDSI=b39c3fc0f8c97"
-}
-},
-"ad": {
-"sport": "nba",
-"bundle": "nba_top_plays"
-},
-"tracking": {
-"sportName": "nba",
-"leagueName": "No League",
-"coverageType": "OnePlay",
-"trackingName": "NBA_One-Play (Jeff Green skies for big slam) 2024/11/23 ESHEET",
-"trackingId": "dm_20241123_NBA_jeff_green_skies_for_big_slam"
-}
-},
-{
-"id": 42553261,
-"cerebroId": "674149f87d3cc545989f1a2a",
-"source": "espn",
-"headline": "Check out this preposterous must-see assist by Reed Sheppard",
-"description": "Reed Sheppard shows incredible vision with this long-range, behind-the-back pass while looking the wrong way.",
-"lastModified": "2024-11-23T03:23:04Z",
-"originalPublishDate": "2024-11-23T03:20:18Z",
-"duration": 27,
-"timeRestrictions": {
-"embargoDate": "2024-11-23T03:20:18Z",
-"expirationDate": "2025-07-31T04:00:00Z"
-},
-"deviceRestrictions": {
-"type": "whitelist",
-"devices": [
-"desktop",
-"ipad",
-"settop",
-"handset",
-"tablet"
-]
-},
-"geoRestrictions": {
-"type": "whitelist",
-"countries": [
-"CV",
-"US",
-"AS",
-"GU",
-"MP",
-"PR",
-"VI",
-"UM",
-"VE",
-"EC",
-"MS",
-"ET",
-"GT",
-"ST",
-"GQ",
-"MF",
-"GM",
-"NE",
-"MZ",
-"PY",
-"PE",
-"ML",
-"BB",
-"NA",
-"CM",
-"SR",
-"UY",
-"GF",
-"PW",
-"CO",
-"ER",
-"SV",
-"RW",
-"GB",
-"UK",
-"CR",
-"MQ",
-"ZM",
-"ZW",
-"CF",
-"LC",
-"VC",
-"GN",
-"SZ",
-"GY",
-"AW",
-"BI",
-"SS",
-"MG",
-"AO",
-"HT",
-"LS",
-"KE",
-"RE",
-"TT",
-"BQ",
-"SC",
-"LR",
-"MH",
-"SX",
-"BS",
-"GP",
-"BM",
-"KM",
-"UG",
-"MX",
-"AM",
-"MU",
-"BF",
-"AU",
-"CL",
-"BR",
-"NZ",
-"BJ",
-"KN",
-"SL",
-"AI",
-"BW",
-"JM",
-"AR",
-"HN",
-"ZA",
-"DO",
-"GA",
-"GD",
-"FJ",
-"PA",
-"TZ",
-"VG",
-"TG",
-"CI",
-"NI",
-"GW",
-"FM",
-"KY",
-"CU",
-"CG",
-"SN",
-"AG",
-"CD",
-"GH",
-"MW",
-"TC",
-"BZ",
-"NG",
-"BO"
-]
-},
-"thumbnail": "https://a.espncdn.com/media/motion/2024/1122/ss_20241122_222025913_2702108/ss_20241122_222025913_2702108.jpg",
-"links": {
-"web": {
-"href": "https://www.espn.com/video/clip?id=42553261",
-"self": {
-"href": "https://www.espn.com/video/clip?id=42553261",
-"dsi": {
-"href": "https://www.espn.com/video/clip?id=07f09ffd54eff"
-}
-},
-"seo": {
-"href": "https://www.espn.com/video/clip/_/id/42553261"
-}
-},
-"mobile": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/d009b952-70dc-464e-8f42-f00cd942379b/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42553261",
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_222025913_2702108/ss_20241122_222025913_2702108.mp4"
-},
-"alert": {
-"href": "https://m.espn.com/general/video/videoAlert?vid=42553261"
-},
-"streaming": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/d009b952-70dc-464e-8f42-f00cd942379b/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42553261"
-},
-"progressiveDownload": {
-"href": "https://watch.auth.api.espn.com/video/auth/brightcove/d009b952-70dc-464e-8f42-f00cd942379b/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=42553261"
-}
-},
-"api": {
-"self": {
-"href": "https://content.core.api.espn.com/v1/video/clips/42553261"
-},
-"artwork": {
-"href": "https://artwork.api.espn.com/artwork/collections/media/d009b952-70dc-464e-8f42-f00cd942379b"
-}
-},
-"source": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_222025913_2702108/ss_20241122_222025913_2702108_360p30_1464k.mp4",
-"mezzanine": {
-"href": "https://media.video-origin.espn.com/espnvideo/2024/1122/ss_20241122_222025913_2702108/ss_20241122_222025913_2702108.mp4"
-},
-"flash": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_222025913_2702108/ss_20241122_222025913_2702108.smil"
-},
-"hds": {
-"href": "https://hds.video-cdn.espn.com/z/motion/2024/1122/ss_20241122_222025913_2702108/ss_20241122_222025913_2702108_rel.smil/manifest.f4m"
-},
-"HLS": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_222025913_2702108/ss_20241122_222025913_2702108/playlist.m3u8",
-"HD": {
-"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2024/1122/ss_20241122_222025913_2702108/ss_20241122_222025913_2702108/playlist.m3u8"
-},
-"cmaf": {
-"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2024/1122/ss_20241122_222025913_2702108/ss_20241122_222025913_2702108/playlist.m3u8"
-},
-"shield": {
-"href": "https://watch.auth.api.espn.com/video/auth/media/d009b952-70dc-464e-8f42-f00cd942379b/asset"
-}
-},
-"HD": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_222025913_2702108/ss_20241122_222025913_2702108_720p30_2896k.mp4"
-},
-"full": {
-"href": "https://media.video-cdn.espn.com/motion/2024/1122/ss_20241122_222025913_2702108/ss_20241122_222025913_2702108_360p30_1464k.mp4"
-}
-},
-"sportscenter": {
-"href": "sportscenter://x-callback-url/showVideo?videoID=42553261&videoDSI=07f09ffd54eff"
-}
-},
-"ad": {
-"sport": "nba",
-"bundle": "nba_instantreplay"
-},
-"tracking": {
-"sportName": "nba",
-"leagueName": "No League",
-"coverageType": "OnePlay",
-"trackingName": "NBA_One-Play (Check out this preposterous must-see assist by Reed Sheppard) 2024/11/23 ESHEET",
-"trackingId": "dm_20241123_NBA_check_out_this_preposterous_mustsee_assist_by_reed_sheppard"
-}
-}
-],
+"videos": [],
 "standings": {
 "fullViewLink": {
-"text": "Full Standings",
-"href": "https://www.espn.com/nba/standings"
+"text": "Full Standings"
 },
-"header": "2025 Standings",
+"header": "2026 Standings",
 "groups": [
 {
 "standings": {
 "entries": [
 {
-"team": "Oklahoma City",
-"link": "https://www.espn.com/nba/team/_/name/okc/oklahoma-city-thunder",
-"id": "25",
-"uid": "s:40~l:46~t:25",
+"team": "Denver",
+"link": "https://www.espn.com/nba/team/_/name/den/denver-nuggets",
+"id": "7",
+"uid": "s:40~l:46~t:7",
 "stats": [
 {
 "name": "gamesBehind",
@@ -28064,8 +25508,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 14.0,
-"displayValue": "14"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -28074,8 +25518,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 4.0,
-"displayValue": "W4"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -28084,8 +25528,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.8292683,
-"displayValue": ".829"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -28094,91 +25538,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 68.0,
-"displayValue": "68"
-}
-],
-"logo": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/okc.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2024-06-25T21:17Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/okc.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2024-06-25T21:14Z"
-}
-]
-},
-{
-"team": "Denver",
-"link": "https://www.espn.com/nba/team/_/name/den/denver-nuggets",
-"id": "7",
-"uid": "s:40~l:46~t:7",
-"stats": [
-{
-"name": "gamesBehind",
-"displayName": "Games Back",
-"shortDisplayName": "GB",
-"description": "Games Back",
-"abbreviation": "GB",
-"type": "gamesbehind",
-"value": 18.0,
-"displayValue": "18"
-},
-{
-"name": "losses",
-"displayName": "Losses",
-"shortDisplayName": "L",
-"description": "Losses",
-"abbreviation": "L",
-"type": "losses",
-"value": 32.0,
-"displayValue": "32"
-},
-{
-"name": "streak",
-"displayName": "Streak",
-"shortDisplayName": "STRK",
-"description": "Current Streak",
-"abbreviation": "STRK",
-"type": "streak",
-"value": 3.0,
-"displayValue": "W3"
-},
-{
-"name": "winPercent",
-"displayName": "Win Percentage",
-"shortDisplayName": "PCT",
-"description": "Winning Percentage",
-"abbreviation": "PCT",
-"type": "winpercent",
-"value": 0.6097561,
-"displayValue": ".610"
-},
-{
-"name": "wins",
-"displayName": "Wins",
-"shortDisplayName": "W",
-"description": "Wins",
-"abbreviation": "W",
-"type": "wins",
-"value": 50.0,
-"displayValue": "50"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -28220,8 +25581,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 19.0,
-"displayValue": "19"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -28230,8 +25591,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 33.0,
-"displayValue": "33"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -28240,8 +25601,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 3.0,
-"displayValue": "W3"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -28250,8 +25611,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.597561,
-"displayValue": ".598"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -28260,8 +25621,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 49.0,
-"displayValue": "49"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -28303,8 +25664,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 32.0,
-"displayValue": "32"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -28313,8 +25674,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 46.0,
-"displayValue": "46"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -28323,8 +25684,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -28333,8 +25694,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.4390244,
-"displayValue": ".439"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -28343,8 +25704,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 36.0,
-"displayValue": "36"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -28374,6 +25735,89 @@
 ]
 },
 {
+"team": "Oklahoma City",
+"link": "https://www.espn.com/nba/team/_/name/okc/oklahoma-city-thunder",
+"id": "25",
+"uid": "s:40~l:46~t:25",
+"stats": [
+{
+"name": "gamesBehind",
+"displayName": "Games Back",
+"shortDisplayName": "GB",
+"description": "Games Back",
+"abbreviation": "GB",
+"type": "gamesbehind",
+"value": 0.0,
+"displayValue": "-"
+},
+{
+"name": "losses",
+"displayName": "Losses",
+"shortDisplayName": "L",
+"description": "Losses",
+"abbreviation": "L",
+"type": "losses",
+"value": 0.0,
+"displayValue": "0"
+},
+{
+"name": "streak",
+"displayName": "Streak",
+"shortDisplayName": "STRK",
+"description": "Current Streak",
+"abbreviation": "STRK",
+"type": "streak",
+"value": 0.0,
+"displayValue": "-"
+},
+{
+"name": "winPercent",
+"displayName": "Win Percentage",
+"shortDisplayName": "PCT",
+"description": "Winning Percentage",
+"abbreviation": "PCT",
+"type": "winpercent",
+"value": 0.0,
+"displayValue": ".000"
+},
+{
+"name": "wins",
+"displayName": "Wins",
+"shortDisplayName": "W",
+"description": "Wins",
+"abbreviation": "W",
+"type": "wins",
+"value": 0.0,
+"displayValue": "0"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/okc.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/okc.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
+}
+]
+},
+{
 "team": "Utah",
 "link": "https://www.espn.com/nba/team/_/name/utah/utah-jazz",
 "id": "26",
@@ -28386,8 +25830,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 51.0,
-"displayValue": "51"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -28396,8 +25840,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 65.0,
-"displayValue": "65"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -28406,8 +25850,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -2.0,
-"displayValue": "L2"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -28416,8 +25860,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.20731707,
-"displayValue": ".207"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -28426,8 +25870,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 17.0,
-"displayValue": "17"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -28458,17 +25902,17 @@
 }
 ]
 },
-"header": "2024-25 Northwest Standings",
+"header": "2025-26 Northwest Standings",
 "href": "https://www.espn.com/nba/standings/_/group/11"
 },
 {
 "standings": {
 "entries": [
 {
-"team": "Houston",
-"link": "https://www.espn.com/nba/team/_/name/hou/houston-rockets",
-"id": "10",
-"uid": "s:40~l:46~t:10",
+"team": "New Orleans",
+"link": "https://www.espn.com/nba/team/_/name/no/new-orleans-pelicans",
+"id": "3",
+"uid": "s:40~l:46~t:3",
 "stats": [
 {
 "name": "gamesBehind",
@@ -28487,8 +25931,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 30.0,
-"displayValue": "30"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -28497,8 +25941,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -3.0,
-"displayValue": "L3"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -28507,8 +25951,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.63414633,
-"displayValue": ".634"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -28517,13 +25961,13 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 52.0,
-"displayValue": "52"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
 {
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/hou.png",
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/no.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -28534,90 +25978,7 @@
 "lastUpdated": "2024-06-25T21:17Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/hou.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2025-01-22T15:28Z"
-}
-]
-},
-{
-"team": "Memphis",
-"link": "https://www.espn.com/nba/team/_/name/mem/memphis-grizzlies",
-"id": "29",
-"uid": "s:40~l:46~t:29",
-"stats": [
-{
-"name": "gamesBehind",
-"displayName": "Games Back",
-"shortDisplayName": "GB",
-"description": "Games Back",
-"abbreviation": "GB",
-"type": "gamesbehind",
-"value": 4.0,
-"displayValue": "4"
-},
-{
-"name": "losses",
-"displayName": "Losses",
-"shortDisplayName": "L",
-"description": "Losses",
-"abbreviation": "L",
-"type": "losses",
-"value": 34.0,
-"displayValue": "34"
-},
-{
-"name": "streak",
-"displayName": "Streak",
-"shortDisplayName": "STRK",
-"description": "Current Streak",
-"abbreviation": "STRK",
-"type": "streak",
-"value": 1.0,
-"displayValue": "W1"
-},
-{
-"name": "winPercent",
-"displayName": "Win Percentage",
-"shortDisplayName": "PCT",
-"description": "Winning Percentage",
-"abbreviation": "PCT",
-"type": "winpercent",
-"value": 0.58536583,
-"displayValue": ".585"
-},
-{
-"name": "wins",
-"displayName": "Wins",
-"shortDisplayName": "W",
-"description": "Wins",
-"abbreviation": "W",
-"type": "wins",
-"value": 48.0,
-"displayValue": "48"
-}
-],
-"logo": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/mem.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2024-06-25T21:17Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/mem.png",
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/no.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -28643,8 +26004,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 13.0,
-"displayValue": "13"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -28653,8 +26014,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 43.0,
-"displayValue": "43"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -28663,8 +26024,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -1.0,
-"displayValue": "L1"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -28673,8 +26034,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.47560975,
-"displayValue": ".476"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -28683,8 +26044,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 39.0,
-"displayValue": "39"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -28714,6 +26075,89 @@
 ]
 },
 {
+"team": "Houston",
+"link": "https://www.espn.com/nba/team/_/name/hou/houston-rockets",
+"id": "10",
+"uid": "s:40~l:46~t:10",
+"stats": [
+{
+"name": "gamesBehind",
+"displayName": "Games Back",
+"shortDisplayName": "GB",
+"description": "Games Back",
+"abbreviation": "GB",
+"type": "gamesbehind",
+"value": 0.0,
+"displayValue": "-"
+},
+{
+"name": "losses",
+"displayName": "Losses",
+"shortDisplayName": "L",
+"description": "Losses",
+"abbreviation": "L",
+"type": "losses",
+"value": 0.0,
+"displayValue": "0"
+},
+{
+"name": "streak",
+"displayName": "Streak",
+"shortDisplayName": "STRK",
+"description": "Current Streak",
+"abbreviation": "STRK",
+"type": "streak",
+"value": 0.0,
+"displayValue": "-"
+},
+{
+"name": "winPercent",
+"displayName": "Win Percentage",
+"shortDisplayName": "PCT",
+"description": "Winning Percentage",
+"abbreviation": "PCT",
+"type": "winpercent",
+"value": 0.0,
+"displayValue": ".000"
+},
+{
+"name": "wins",
+"displayName": "Wins",
+"shortDisplayName": "W",
+"description": "Wins",
+"abbreviation": "W",
+"type": "wins",
+"value": 0.0,
+"displayValue": "0"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/hou.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/hou.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2025-01-22T15:28Z"
+}
+]
+},
+{
 "team": "San Antonio",
 "link": "https://www.espn.com/nba/team/_/name/sa/san-antonio-spurs",
 "id": "24",
@@ -28726,8 +26170,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 18.0,
-"displayValue": "18"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -28736,8 +26180,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 48.0,
-"displayValue": "48"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -28746,8 +26190,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -28756,8 +26200,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.41463414,
-"displayValue": ".415"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -28766,8 +26210,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 34.0,
-"displayValue": "34"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -28797,10 +26241,10 @@
 ]
 },
 {
-"team": "New Orleans",
-"link": "https://www.espn.com/nba/team/_/name/no/new-orleans-pelicans",
-"id": "3",
-"uid": "s:40~l:46~t:3",
+"team": "Memphis",
+"link": "https://www.espn.com/nba/team/_/name/mem/memphis-grizzlies",
+"id": "29",
+"uid": "s:40~l:46~t:29",
 "stats": [
 {
 "name": "gamesBehind",
@@ -28809,8 +26253,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 31.0,
-"displayValue": "31"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -28819,8 +26263,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 61.0,
-"displayValue": "61"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -28829,8 +26273,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -7.0,
-"displayValue": "L7"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -28839,8 +26283,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.25609756,
-"displayValue": ".256"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -28849,13 +26293,13 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 21.0,
-"displayValue": "21"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
 {
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/no.png",
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/mem.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -28866,7 +26310,7 @@
 "lastUpdated": "2024-06-25T21:17Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/no.png",
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/mem.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -28881,7 +26325,7 @@
 }
 ]
 },
-"header": "2024-25 Southwest Standings",
+"header": "2025-26 Southwest Standings",
 "href": "https://www.espn.com/nba/standings/_/group/10"
 }
 ]

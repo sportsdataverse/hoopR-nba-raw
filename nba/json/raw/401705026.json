@@ -1507,12 +1507,12 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/5105592.png",
 "alt": "Cam Whitmore"
 },
+"jersey": "7",
 "position": {
 "name": "Forward",
 "displayName": "Forward",
 "abbreviation": "F"
-},
-"jersey": "7"
+}
 },
 "starter": false,
 "didNotPlay": false,
@@ -2138,11 +2138,25 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/10?lang=en&region=us"
 },
-"status": {
-"id": "1",
-"name": "Active",
-"type": "active",
-"abbreviation": "Active"
+"status": "Out",
+"injuries": {
+"status": "Out",
+"date": "2025-09-22T20:02Z",
+"type": {
+"id": "4",
+"name": "INJURY_STATUS_OUT",
+"description": "out",
+"abbreviation": "O"
+},
+"details": {
+"fantasyStatus": {
+"description": "OUT",
+"abbreviation": "OUT"
+},
+"type": "Knee",
+"location": "Leg",
+"returnDate": "2026-04-12"
+}
 }
 },
 "statistics": [
@@ -2366,10 +2380,10 @@
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/20?lang=en&region=us"
 },
 "status": {
-"id": "1",
-"name": "Active",
-"type": "active",
-"abbreviation": "Active"
+"id": "9",
+"name": "Free Agent",
+"type": "free-agent",
+"abbreviation": "FA"
 }
 },
 "statistics": [
@@ -2440,26 +2454,11 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/6?lang=en&region=us"
 },
-"status": "Day-To-Day",
-"injuries": {
-"status": "Day-To-Day",
-"date": "2025-07-15T18:05Z",
-"type": {
-"id": "6",
-"name": "INJURY_STATUS_DAYTODAY",
-"description": "day-to-day",
-"abbreviation": "DD"
-},
-"details": {
-"fantasyStatus": {
-"description": "GTD",
-"abbreviation": "GTD"
-},
-"type": "Foot",
-"location": "Leg",
-"side": "Right",
-"returnDate": "2025-10-01"
-}
+"status": {
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -2542,7 +2541,7 @@
 "status": "Out",
 "injuries": {
 "status": "Out",
-"date": "2025-07-03T22:08Z",
+"date": "2025-09-29T16:06Z",
 "type": {
 "id": "4",
 "name": "INJURY_STATUS_OUT",
@@ -3349,29 +3348,7 @@
 ]
 }
 ],
-"broadcasts": [
-{
-"type": {
-"id": "4",
-"shortName": "Streaming",
-"longName": "Streaming",
-"slug": "streaming"
-},
-"station": "Mavs.com",
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"callLetters": "Mavs.com",
-"name": "Mavs.com",
-"shortName": "Mavs.com"
-},
-"lang": "en",
-"region": "us",
-"isNational": false
-}
-],
+"broadcasts": [],
 "predictor": {},
 "pickcenter": [
 {
@@ -6028,7 +6005,7 @@
 "uid": "s:40~l:46~e:401705026",
 "season": {
 "year": 2025,
-"current": true,
+"current": false,
 "type": 2
 },
 "timeValid": true,
@@ -6505,22 +6482,6 @@
 "lang": "en",
 "region": "us",
 "isNational": false
-},
-{
-"type": {
-"id": "4",
-"shortName": "Streaming"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "Mavs.com"
-},
-"lang": "en",
-"region": "us",
-"isNational": false
 }
 ],
 "series": [
@@ -6682,25 +6643,6 @@
 ],
 "href": "sportscenter://x-callback-url/showClubhouse?uid=s:40~l:46&section=scores",
 "text": "Schedule"
-},
-{
-"rel": [
-"standings",
-"desktop",
-"league"
-],
-"href": "https://www.espn.com/nba/standings",
-"text": "Standings"
-},
-{
-"rel": [
-"standings",
-"sportscenter",
-"app",
-"league"
-],
-"href": "sportscenter://x-callback-url/showClubhouse?uid=s:40~l:46&section=standings",
-"text": "Standings"
 },
 {
 "rel": [
@@ -23544,6 +23486,31 @@
 }
 },
 {
+"type": "event",
+"uid": "s:40~l:46~e:401705026",
+"guid": "84899bd6-b4aa-3e61-9253-d28d76d88867",
+"description": "Dallas Mavericks @ Houston Rockets",
+"eventId": 401705026,
+"event": {
+"id": 401705026,
+"sport": "basketball",
+"league": "nba",
+"description": "Dallas Mavericks @ Houston Rockets",
+"links": {
+"web": {
+"event": {
+"href": "https://www.espn.com/nba/game/_/gameId/401705026"
+}
+},
+"mobile": {
+"event": {
+"href": "https://www.espn.com/nba/game/_/gameId/401705026"
+}
+}
+}
+}
+},
+{
 "id": 4517,
 "type": "team",
 "uid": "s:40~l:46~t:10",
@@ -23588,6 +23555,7 @@
 "keywords": [
 "Dallas Mavericks",
 "NBA",
+"Dallas Mavericks @ Houston Rockets",
 "Houston Rockets"
 ],
 "story": "HOUSTON -- \u2014 <a href=\"http://www.espn.com/nba/player/_/id/4871144/alperen-sengun\">Alperen Sengun</a> had 23 points, <a href=\"http://www.espn.com/nba/player/_/id/4437244/jalen-green\">Jalen Green</a> added 22 and the <a href=\"http://www.espn.com/nba/team/_/name/hou/houston-rockets\">Houston Rockets</a> built a big lead early in the second half and sailed to a 110-99 victory over the <a href=\"http://www.espn.com/nba/team/_/name/dal/dallas-mavericks\">Dallas Mavericks</a> on Wednesday night.\n\n\r\n              <a href=\"http://www.espn.com/nba/player/_/id/3155526/dillon-brooks\">Dillon Brooks</a> had 19 points and <a href=\"http://www.espn.com/nba/player/_/id/5105592/cam-whitmore\">Cam Whitmore</a> added 18 to help the Rockets get back on track after dropping two straight.\n\n\r\n              The Mavericks led by four midway through the second quarter before Houston used a 21-8 run to take a 61-52 lead into halftime. Green made eight points in that stretch and Whitmore added two 3-pointers.\n\n\r\n              The Rockets then opened the second half with an 11-4 spurt that pushed it to 72-56 with nine minutes left in the third.\n\n\r\n              Houston was up by 14 entering the fourth and maintained a double-digit lead throughout the quarter.\n\n\r\n              <a href=\"http://www.espn.com/nba/player/_/id/6442/kyrie-irving\">Kyrie Irving</a> (shoulder), <a href=\"http://www.espn.com/nba/player/_/id/6475/klay-thompson\">Klay Thompson</a> (illness) and <a href=\"http://www.espn.com/nba/player/_/id/4683688/dereck-lively-ii\">Dereck Lively II</a> (hip) returned after sitting out Monday. But <a href=\"http://www.espn.com/nba/player/_/id/4278594/naji-marshall\">Naji Marshall</a> remained out serving a four-game suspension for his role in a fight against the Suns.\n\n\r\n              <a href=\"http://www.espn.com/nba/player/_/id/4397014/quentin-grimes\">Quentin Grimes</a> led the Mavericks with 17 points off the bench. Thompson and Irving added 16 each.\n\n\r\n              <hl2>Takeaways </hl2>\r\n              Mavericks: Lost for the third time in four games playing without <a href=\"http://www.espn.com/nba/player/_/id/3945274/luka-doncic\">Luka Doncic</a>, who strained his calf on Christmas Day. They\u2019ll need to find a way to win without the star, who will be out at least a month.\n\n\r\n              Rockets: Didn\u2019t miss a beat without the bench scoring of <a href=\"http://www.espn.com/nba/player/_/id/4684740/amen-thompson\">Amen Thompson</a>, who served the first of a two-game suspension for a fight with Miami\u2019s <a href=\"http://www.espn.com/nba/player/_/id/4395725/tyler-herro\">Tyler Herro</a> Sunday night.\n\n\r\n              <hl2>Key moment</hl2>\r\n              Houston\u2019s 32-12 run to end the first half and start the second half.\n\n\r\n              <hl2>Key stat</hl2>\r\n              Houston\u2019s victory was helped by making 18 of 23 free throws compared to just 8 of 16 by Dallas.\n\n\r\n              <hl2>Up next</hl2>\r\n              Both teams are back in action Friday night. Dallas hosts Cleveland, and Houston hosts Boston.\n\n\r\n              ------\n\n\r\n              AP NBA: <a href=\"https://apnews.com/hub/nba\">https://apnews.com/hub/nba</a>",
@@ -23618,19 +23586,18 @@
 "videos": [],
 "standings": {
 "fullViewLink": {
-"text": "Full Standings",
-"href": "https://www.espn.com/nba/standings"
+"text": "Full Standings"
 },
-"header": "2025 Standings",
+"header": "2026 Standings",
 "groups": [
 {
 "standings": {
 "entries": [
 {
-"team": "Houston",
-"link": "https://www.espn.com/nba/team/_/name/hou/houston-rockets",
-"id": "10",
-"uid": "s:40~l:46~t:10",
+"team": "New Orleans",
+"link": "https://www.espn.com/nba/team/_/name/no/new-orleans-pelicans",
+"id": "3",
+"uid": "s:40~l:46~t:3",
 "stats": [
 {
 "name": "gamesBehind",
@@ -23649,8 +23616,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 30.0,
-"displayValue": "30"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -23659,8 +23626,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -3.0,
-"displayValue": "L3"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -23669,8 +23636,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.63414633,
-"displayValue": ".634"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -23679,13 +23646,13 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 52.0,
-"displayValue": "52"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
 {
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/hou.png",
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/no.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -23696,90 +23663,7 @@
 "lastUpdated": "2024-06-25T21:17Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/hou.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2025-01-22T15:28Z"
-}
-]
-},
-{
-"team": "Memphis",
-"link": "https://www.espn.com/nba/team/_/name/mem/memphis-grizzlies",
-"id": "29",
-"uid": "s:40~l:46~t:29",
-"stats": [
-{
-"name": "gamesBehind",
-"displayName": "Games Back",
-"shortDisplayName": "GB",
-"description": "Games Back",
-"abbreviation": "GB",
-"type": "gamesbehind",
-"value": 4.0,
-"displayValue": "4"
-},
-{
-"name": "losses",
-"displayName": "Losses",
-"shortDisplayName": "L",
-"description": "Losses",
-"abbreviation": "L",
-"type": "losses",
-"value": 34.0,
-"displayValue": "34"
-},
-{
-"name": "streak",
-"displayName": "Streak",
-"shortDisplayName": "STRK",
-"description": "Current Streak",
-"abbreviation": "STRK",
-"type": "streak",
-"value": 1.0,
-"displayValue": "W1"
-},
-{
-"name": "winPercent",
-"displayName": "Win Percentage",
-"shortDisplayName": "PCT",
-"description": "Winning Percentage",
-"abbreviation": "PCT",
-"type": "winpercent",
-"value": 0.58536583,
-"displayValue": ".585"
-},
-{
-"name": "wins",
-"displayName": "Wins",
-"shortDisplayName": "W",
-"description": "Wins",
-"abbreviation": "W",
-"type": "wins",
-"value": 48.0,
-"displayValue": "48"
-}
-],
-"logo": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/mem.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2024-06-25T21:17Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/mem.png",
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/no.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -23805,8 +23689,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 13.0,
-"displayValue": "13"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -23815,8 +23699,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 43.0,
-"displayValue": "43"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -23825,8 +23709,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -1.0,
-"displayValue": "L1"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -23835,8 +23719,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.47560975,
-"displayValue": ".476"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -23845,8 +23729,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 39.0,
-"displayValue": "39"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -23876,6 +23760,89 @@
 ]
 },
 {
+"team": "Houston",
+"link": "https://www.espn.com/nba/team/_/name/hou/houston-rockets",
+"id": "10",
+"uid": "s:40~l:46~t:10",
+"stats": [
+{
+"name": "gamesBehind",
+"displayName": "Games Back",
+"shortDisplayName": "GB",
+"description": "Games Back",
+"abbreviation": "GB",
+"type": "gamesbehind",
+"value": 0.0,
+"displayValue": "-"
+},
+{
+"name": "losses",
+"displayName": "Losses",
+"shortDisplayName": "L",
+"description": "Losses",
+"abbreviation": "L",
+"type": "losses",
+"value": 0.0,
+"displayValue": "0"
+},
+{
+"name": "streak",
+"displayName": "Streak",
+"shortDisplayName": "STRK",
+"description": "Current Streak",
+"abbreviation": "STRK",
+"type": "streak",
+"value": 0.0,
+"displayValue": "-"
+},
+{
+"name": "winPercent",
+"displayName": "Win Percentage",
+"shortDisplayName": "PCT",
+"description": "Winning Percentage",
+"abbreviation": "PCT",
+"type": "winpercent",
+"value": 0.0,
+"displayValue": ".000"
+},
+{
+"name": "wins",
+"displayName": "Wins",
+"shortDisplayName": "W",
+"description": "Wins",
+"abbreviation": "W",
+"type": "wins",
+"value": 0.0,
+"displayValue": "0"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/hou.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/hou.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2025-01-22T15:28Z"
+}
+]
+},
+{
 "team": "San Antonio",
 "link": "https://www.espn.com/nba/team/_/name/sa/san-antonio-spurs",
 "id": "24",
@@ -23888,8 +23855,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 18.0,
-"displayValue": "18"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -23898,8 +23865,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 48.0,
-"displayValue": "48"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -23908,8 +23875,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -23918,8 +23885,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.41463414,
-"displayValue": ".415"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -23928,8 +23895,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 34.0,
-"displayValue": "34"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -23959,10 +23926,10 @@
 ]
 },
 {
-"team": "New Orleans",
-"link": "https://www.espn.com/nba/team/_/name/no/new-orleans-pelicans",
-"id": "3",
-"uid": "s:40~l:46~t:3",
+"team": "Memphis",
+"link": "https://www.espn.com/nba/team/_/name/mem/memphis-grizzlies",
+"id": "29",
+"uid": "s:40~l:46~t:29",
 "stats": [
 {
 "name": "gamesBehind",
@@ -23971,8 +23938,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 31.0,
-"displayValue": "31"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -23981,8 +23948,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 61.0,
-"displayValue": "61"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -23991,8 +23958,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -7.0,
-"displayValue": "L7"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -24001,8 +23968,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.25609756,
-"displayValue": ".256"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -24011,13 +23978,13 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 21.0,
-"displayValue": "21"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
 {
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/no.png",
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/mem.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -24028,7 +23995,7 @@
 "lastUpdated": "2024-06-25T21:17Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/no.png",
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/mem.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -24043,7 +24010,7 @@
 }
 ]
 },
-"header": "2024-25 Southwest Standings",
+"header": "2025-26 Southwest Standings",
 "href": "https://www.espn.com/nba/standings/_/group/10"
 }
 ]

@@ -1789,12 +1789,12 @@
 "href": "https://a.espncdn.com/i/headshots/nba/players/full/4576086.png",
 "alt": "Bryce McGowens"
 },
-"jersey": "11",
 "position": {
 "name": "Guard",
 "displayName": "Guard",
 "abbreviation": "G"
-}
+},
+"jersey": "11"
 },
 "starter": false,
 "didNotPlay": true,
@@ -2089,10 +2089,10 @@
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2025/teams/22?lang=en&region=us"
 },
 "status": {
-"id": "1",
-"name": "Active",
-"type": "active",
-"abbreviation": "Active"
+"id": "9",
+"name": "Free Agent",
+"type": "free-agent",
+"abbreviation": "FA"
 }
 },
 "statistics": [
@@ -3268,29 +3268,7 @@
 ]
 }
 ],
-"broadcasts": [
-{
-"type": {
-"id": "4",
-"shortName": "Streaming",
-"longName": "Streaming",
-"slug": "streaming"
-},
-"station": "BlazerVision",
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"callLetters": "BlazerVision",
-"name": "BlazerVision",
-"shortName": "BlazerVision"
-},
-"lang": "en",
-"region": "us",
-"isNational": false
-}
-],
+"broadcasts": [],
 "predictor": {},
 "pickcenter": [
 {
@@ -6057,7 +6035,7 @@
 "uid": "s:40~l:46~e:401704792",
 "season": {
 "year": 2025,
-"current": true,
+"current": false,
 "type": 2
 },
 "timeValid": true,
@@ -6534,22 +6512,6 @@
 "lang": "en",
 "region": "us",
 "isNational": false
-},
-{
-"type": {
-"id": "4",
-"shortName": "Streaming"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "BlazerVision"
-},
-"lang": "en",
-"region": "us",
-"isNational": false
 }
 ],
 "series": [
@@ -6711,25 +6673,6 @@
 ],
 "href": "sportscenter://x-callback-url/showClubhouse?uid=s:40~l:46&section=scores",
 "text": "Schedule"
-},
-{
-"rel": [
-"standings",
-"desktop",
-"league"
-],
-"href": "https://www.espn.com/nba/standings",
-"text": "Standings"
-},
-{
-"rel": [
-"standings",
-"sportscenter",
-"app",
-"league"
-],
-"href": "sportscenter://x-callback-url/showClubhouse?uid=s:40~l:46&section=standings",
-"text": "Standings"
 },
 {
 "rel": [
@@ -24285,6 +24228,31 @@
 }
 },
 {
+"type": "event",
+"uid": "s:40~l:46~e:401704792",
+"guid": "75525e2e-b012-3f56-8730-9c9d06399d59",
+"description": "Minnesota Timberwolves @ Portland Trail Blazers",
+"eventId": 401704792,
+"event": {
+"id": 401704792,
+"sport": "basketball",
+"league": "nba",
+"description": "Minnesota Timberwolves @ Portland Trail Blazers",
+"links": {
+"web": {
+"event": {
+"href": "https://www.espn.com/nba/game/_/gameId/401704792"
+}
+},
+"mobile": {
+"event": {
+"href": "https://www.espn.com/nba/game/_/gameId/401704792"
+}
+}
+}
+}
+},
+{
 "id": 9577,
 "type": "league",
 "uid": "s:40~l:46",
@@ -24354,6 +24322,7 @@
 ],
 "keywords": [
 "Portland Trail Blazers",
+"Minnesota Timberwolves @ Portland Trail Blazers",
 "NBA",
 "Minnesota Timberwolves"
 ],
@@ -24385,19 +24354,18 @@
 "videos": [],
 "standings": {
 "fullViewLink": {
-"text": "Full Standings",
-"href": "https://www.espn.com/nba/standings"
+"text": "Full Standings"
 },
-"header": "2025 Standings",
+"header": "2026 Standings",
 "groups": [
 {
 "standings": {
 "entries": [
 {
-"team": "Oklahoma City",
-"link": "https://www.espn.com/nba/team/_/name/okc/oklahoma-city-thunder",
-"id": "25",
-"uid": "s:40~l:46~t:25",
+"team": "Denver",
+"link": "https://www.espn.com/nba/team/_/name/den/denver-nuggets",
+"id": "7",
+"uid": "s:40~l:46~t:7",
 "stats": [
 {
 "name": "gamesBehind",
@@ -24416,8 +24384,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 14.0,
-"displayValue": "14"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -24426,8 +24394,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 4.0,
-"displayValue": "W4"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -24436,8 +24404,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.8292683,
-"displayValue": ".829"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -24446,91 +24414,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 68.0,
-"displayValue": "68"
-}
-],
-"logo": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/okc.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2024-06-25T21:17Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/okc.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2024-06-25T21:14Z"
-}
-]
-},
-{
-"team": "Denver",
-"link": "https://www.espn.com/nba/team/_/name/den/denver-nuggets",
-"id": "7",
-"uid": "s:40~l:46~t:7",
-"stats": [
-{
-"name": "gamesBehind",
-"displayName": "Games Back",
-"shortDisplayName": "GB",
-"description": "Games Back",
-"abbreviation": "GB",
-"type": "gamesbehind",
-"value": 18.0,
-"displayValue": "18"
-},
-{
-"name": "losses",
-"displayName": "Losses",
-"shortDisplayName": "L",
-"description": "Losses",
-"abbreviation": "L",
-"type": "losses",
-"value": 32.0,
-"displayValue": "32"
-},
-{
-"name": "streak",
-"displayName": "Streak",
-"shortDisplayName": "STRK",
-"description": "Current Streak",
-"abbreviation": "STRK",
-"type": "streak",
-"value": 3.0,
-"displayValue": "W3"
-},
-{
-"name": "winPercent",
-"displayName": "Win Percentage",
-"shortDisplayName": "PCT",
-"description": "Winning Percentage",
-"abbreviation": "PCT",
-"type": "winpercent",
-"value": 0.6097561,
-"displayValue": ".610"
-},
-{
-"name": "wins",
-"displayName": "Wins",
-"shortDisplayName": "W",
-"description": "Wins",
-"abbreviation": "W",
-"type": "wins",
-"value": 50.0,
-"displayValue": "50"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -24572,8 +24457,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 19.0,
-"displayValue": "19"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -24582,8 +24467,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 33.0,
-"displayValue": "33"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -24592,8 +24477,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 3.0,
-"displayValue": "W3"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -24602,8 +24487,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.597561,
-"displayValue": ".598"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -24612,8 +24497,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 49.0,
-"displayValue": "49"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -24655,8 +24540,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 32.0,
-"displayValue": "32"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -24665,8 +24550,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 46.0,
-"displayValue": "46"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -24675,8 +24560,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -24685,8 +24570,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.4390244,
-"displayValue": ".439"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -24695,8 +24580,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 36.0,
-"displayValue": "36"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -24726,6 +24611,89 @@
 ]
 },
 {
+"team": "Oklahoma City",
+"link": "https://www.espn.com/nba/team/_/name/okc/oklahoma-city-thunder",
+"id": "25",
+"uid": "s:40~l:46~t:25",
+"stats": [
+{
+"name": "gamesBehind",
+"displayName": "Games Back",
+"shortDisplayName": "GB",
+"description": "Games Back",
+"abbreviation": "GB",
+"type": "gamesbehind",
+"value": 0.0,
+"displayValue": "-"
+},
+{
+"name": "losses",
+"displayName": "Losses",
+"shortDisplayName": "L",
+"description": "Losses",
+"abbreviation": "L",
+"type": "losses",
+"value": 0.0,
+"displayValue": "0"
+},
+{
+"name": "streak",
+"displayName": "Streak",
+"shortDisplayName": "STRK",
+"description": "Current Streak",
+"abbreviation": "STRK",
+"type": "streak",
+"value": 0.0,
+"displayValue": "-"
+},
+{
+"name": "winPercent",
+"displayName": "Win Percentage",
+"shortDisplayName": "PCT",
+"description": "Winning Percentage",
+"abbreviation": "PCT",
+"type": "winpercent",
+"value": 0.0,
+"displayValue": ".000"
+},
+{
+"name": "wins",
+"displayName": "Wins",
+"shortDisplayName": "W",
+"description": "Wins",
+"abbreviation": "W",
+"type": "wins",
+"value": 0.0,
+"displayValue": "0"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/okc.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/okc.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
+}
+]
+},
+{
 "team": "Utah",
 "link": "https://www.espn.com/nba/team/_/name/utah/utah-jazz",
 "id": "26",
@@ -24738,8 +24706,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 51.0,
-"displayValue": "51"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -24748,8 +24716,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 65.0,
-"displayValue": "65"
+"value": 0.0,
+"displayValue": "0"
 },
 {
 "name": "streak",
@@ -24758,8 +24726,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -2.0,
-"displayValue": "L2"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "winPercent",
@@ -24768,8 +24736,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.20731707,
-"displayValue": ".207"
+"value": 0.0,
+"displayValue": ".000"
 },
 {
 "name": "wins",
@@ -24778,8 +24746,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 17.0,
-"displayValue": "17"
+"value": 0.0,
+"displayValue": "0"
 }
 ],
 "logo": [
@@ -24810,7 +24778,7 @@
 }
 ]
 },
-"header": "2024-25 Northwest Standings",
+"header": "2025-26 Northwest Standings",
 "href": "https://www.espn.com/nba/standings/_/group/11"
 }
 ]
