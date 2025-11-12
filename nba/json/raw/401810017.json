@@ -2591,27 +2591,11 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2026/teams/23?lang=en&region=us"
 },
-"status": "Day-To-Day",
-"injuries": {
-"status": "Day-To-Day",
-"date": "2025-11-11T01:33Z",
-"type": {
-"id": "6",
-"name": "INJURY_STATUS_DAYTODAY",
-"description": "day-to-day",
-"abbreviation": "DD"
-},
-"details": {
-"fantasyStatus": {
-"description": "GTD",
-"abbreviation": "GTD"
-},
-"type": "Ribs",
-"location": "Torso",
-"detail": "Bruise",
-"side": "Left",
-"returnDate": "2025-11-11"
-}
+"status": {
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -2855,66 +2839,20 @@
 "uid": "s:40~l:46~e:401810067~c:401810067",
 "date": "2025-11-12T04:00:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Tue, November 11th at 11:00 PM EST",
-"shortDetail": "11/11 - 11:00 PM EST"
-},
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "NBC"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "4",
-"shortName": "Streaming"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "Peacock"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
 "id": "3",
-"type": "Away"
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
-"media": {
-"shortName": "Altitude Sports"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": false,
 "team": {
 "id": "23",
 "uid": "s:40~l:46~t:23",
@@ -2979,10 +2917,11 @@
 }
 ]
 },
-"score": "0"
+"score": "108"
 },
 {
 "homeAway": "away",
+"winner": true,
 "team": {
 "id": "7",
 "uid": "s:40~l:46~t:7",
@@ -3047,7 +2986,7 @@
 }
 ]
 },
-"score": "0"
+"score": "122"
 }
 ],
 "links": [
@@ -6848,7 +6787,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Jump Ball"
 },
 {
 "id": "4018100177",
@@ -6890,7 +6830,8 @@
 "x": 28,
 "y": 27
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "4018100179",
@@ -6927,7 +6868,8 @@
 "x": 21,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "40181001710",
@@ -6964,7 +6906,8 @@
 "x": 21,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "40181001711",
@@ -7006,7 +6949,8 @@
 "x": 41,
 "y": 22
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "40181001713",
@@ -7043,7 +6987,8 @@
 "x": 22,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "40181001715",
@@ -7080,7 +7025,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "Missed FT"
 },
 {
 "id": "40181001716",
@@ -7110,7 +7056,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "40181001717",
@@ -7147,7 +7094,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "40181001718",
@@ -7189,7 +7137,8 @@
 "x": 25,
 "y": 16
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "40181001720",
@@ -7226,7 +7175,8 @@
 "x": 13,
 "y": 4
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "40181001721",
@@ -7263,7 +7213,8 @@
 "x": 13,
 "y": 4
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "40181001722",
@@ -7300,7 +7251,8 @@
 "x": 36,
 "y": 8
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "40181001724",
@@ -7342,7 +7294,8 @@
 "x": 26,
 "y": 9
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "40181001726",
@@ -7384,7 +7337,8 @@
 "x": 39,
 "y": 22
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "40181001728",
@@ -7426,7 +7380,8 @@
 "x": 13,
 "y": 12
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "40181001730",
@@ -7463,7 +7418,8 @@
 "x": 15,
 "y": 10
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "40181001733",
@@ -7500,7 +7456,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "40181001734",
@@ -7537,7 +7494,8 @@
 "x": 41,
 "y": 20
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "40181001735",
@@ -7574,7 +7532,8 @@
 "x": 25,
 "y": 8
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "40181001736",
@@ -7611,7 +7570,8 @@
 "x": 25,
 "y": 8
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "40181001737",
@@ -7648,7 +7608,8 @@
 "x": 17,
 "y": 7
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "40181001738",
@@ -7685,7 +7646,8 @@
 "x": 17,
 "y": 7
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "40181001739",
@@ -7722,7 +7684,8 @@
 "x": 22,
 "y": 4
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "40181001740",
@@ -7759,7 +7722,8 @@
 "x": 22,
 "y": 4
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "40181001741",
@@ -7796,7 +7760,8 @@
 "x": 22,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "40181001742",
@@ -7833,7 +7798,8 @@
 "x": 5,
 "y": 15
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "40181001743",
@@ -7863,7 +7829,8 @@
 "x": 5,
 "y": 15
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "40181001745",
@@ -7905,7 +7872,8 @@
 "x": 35,
 "y": 10
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "40181001746",
@@ -7942,7 +7910,8 @@
 "x": 37,
 "y": 24
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "40181001747",
@@ -7972,7 +7941,8 @@
 "x": 37,
 "y": 24
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "40181001749",
@@ -8014,7 +7984,8 @@
 "x": 49,
 "y": 4
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "40181001752",
@@ -8051,7 +8022,8 @@
 "x": 21,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "40181001753",
@@ -8088,7 +8060,8 @@
 "x": 21,
 "y": 1
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "40181001754",
@@ -8125,7 +8098,8 @@
 "x": 29,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "40181001755",
@@ -8162,7 +8136,8 @@
 "x": 29,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "40181001756",
@@ -8199,7 +8174,8 @@
 "x": 40,
 "y": 23
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "40181001757",
@@ -8236,7 +8212,8 @@
 "x": 40,
 "y": 23
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "40181001758",
@@ -8273,7 +8250,8 @@
 "x": 25,
 "y": 0
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "40181001759",
@@ -8303,7 +8281,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Timeout"
 },
 {
 "id": "40181001760",
@@ -8345,7 +8324,8 @@
 "x": 28,
 "y": 13
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "40181001762",
@@ -8387,7 +8367,8 @@
 "x": 23,
 "y": 7
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "40181001764",
@@ -8424,7 +8405,8 @@
 "x": 4,
 "y": 16
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "40181001765",
@@ -8461,7 +8443,8 @@
 "x": 4,
 "y": 16
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "40181001766",
@@ -8498,7 +8481,8 @@
 "x": 29,
 "y": 3
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "40181001767",
@@ -8535,7 +8519,8 @@
 "x": 22,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "40181001769",
@@ -8572,7 +8557,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "40181001770",
@@ -8614,7 +8600,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "40181001771",
@@ -8656,7 +8643,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "40181001772",
@@ -8698,7 +8686,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "40181001776",
@@ -8735,7 +8724,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "40181001777",
@@ -8777,7 +8767,8 @@
 "x": 5,
 "y": 16
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "40181001779",
@@ -8814,7 +8805,8 @@
 "x": 2,
 "y": 8
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "40181001780",
@@ -8851,7 +8843,8 @@
 "x": 2,
 "y": 8
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "40181001781",
@@ -8893,7 +8886,8 @@
 "x": 27,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "40181001783",
@@ -8930,7 +8924,8 @@
 "x": 11,
 "y": 22
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "40181001784",
@@ -8967,7 +8962,8 @@
 "x": 11,
 "y": 22
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "40181001785",
@@ -9004,7 +9000,8 @@
 "x": 27,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "40181001786",
@@ -9041,7 +9038,8 @@
 "x": 30,
 "y": 4
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "40181001788",
@@ -9078,7 +9076,8 @@
 "x": 30,
 "y": 4
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "40181001789",
@@ -9120,7 +9119,8 @@
 "x": 22,
 "y": 0
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "40181001791",
@@ -9162,7 +9162,8 @@
 "x": 27,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "40181001793",
@@ -9204,7 +9205,8 @@
 "x": 27,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "40181001795",
@@ -9234,7 +9236,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Timeout"
 },
 {
 "id": "40181001796",
@@ -9276,7 +9279,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "40181001797",
@@ -9318,7 +9322,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017100",
@@ -9360,7 +9365,8 @@
 "x": 37,
 "y": 24
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "401810017102",
@@ -9402,7 +9408,8 @@
 "x": 26,
 "y": 8
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017104",
@@ -9439,7 +9446,8 @@
 "x": 31,
 "y": 26
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017105",
@@ -9476,7 +9484,8 @@
 "x": 31,
 "y": 26
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017106",
@@ -9513,7 +9522,8 @@
 "x": 12,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017107",
@@ -9550,7 +9560,8 @@
 "x": 12,
 "y": 1
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017108",
@@ -9592,7 +9603,8 @@
 "x": 39,
 "y": 3
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017110",
@@ -9629,7 +9641,8 @@
 "x": 9,
 "y": 20
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017111",
@@ -9666,7 +9679,8 @@
 "x": 9,
 "y": 20
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017112",
@@ -9703,7 +9717,8 @@
 "x": 21,
 "y": 3
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017113",
@@ -9740,7 +9755,8 @@
 "x": 8,
 "y": 14
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017114",
@@ -9782,7 +9798,8 @@
 "x": 22,
 "y": 4
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017116",
@@ -9819,7 +9836,8 @@
 "x": 28,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017117",
@@ -9856,7 +9874,8 @@
 "x": 28,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017118",
@@ -9893,7 +9912,8 @@
 "x": 25,
 "y": 0
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017119",
@@ -9923,7 +9943,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Timeout"
 },
 {
 "id": "401810017120",
@@ -9965,7 +9986,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017121",
@@ -10007,7 +10029,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017122",
@@ -10049,7 +10072,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017123",
@@ -10091,7 +10115,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017128",
@@ -10128,7 +10153,8 @@
 "x": 11,
 "y": 8
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017129",
@@ -10165,7 +10191,8 @@
 "x": 12,
 "y": 7
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017131",
@@ -10202,7 +10229,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017132",
@@ -10244,7 +10272,8 @@
 "x": 17,
 "y": 24
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017134",
@@ -10281,7 +10310,8 @@
 "x": 21,
 "y": 12
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017135",
@@ -10318,7 +10348,8 @@
 "x": 21,
 "y": 12
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017136",
@@ -10360,7 +10391,8 @@
 "x": 23,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017138",
@@ -10397,7 +10429,8 @@
 "x": 41,
 "y": 3
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017139",
@@ -10434,7 +10467,8 @@
 "x": 34,
 "y": 10
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017140",
@@ -10471,7 +10505,8 @@
 "x": 34,
 "y": 10
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017141",
@@ -10513,7 +10548,8 @@
 "x": 8,
 "y": 21
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "401810017143",
@@ -10555,7 +10591,8 @@
 "x": 1,
 "y": 3
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "401810017145",
@@ -10592,7 +10629,8 @@
 "x": 27,
 "y": 26
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017147",
@@ -10629,7 +10667,8 @@
 "x": 30,
 "y": 27
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017148",
@@ -10666,7 +10705,8 @@
 "x": 30,
 "y": 27
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017149",
@@ -10703,7 +10743,8 @@
 "x": 27,
 "y": 3
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017151",
@@ -10733,7 +10774,8 @@
 "x": 27,
 "y": 3
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017152",
@@ -10760,7 +10802,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "End of 1st"
 },
 {
 "id": "401810017153",
@@ -10802,7 +10845,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017156",
@@ -10844,7 +10888,8 @@
 "x": 27,
 "y": 8
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017158",
@@ -10881,7 +10926,8 @@
 "x": 12,
 "y": 3
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017159",
@@ -10918,7 +10964,8 @@
 "x": 27,
 "y": 11
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017160",
@@ -10955,7 +11002,8 @@
 "x": 27,
 "y": 11
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017161",
@@ -10992,7 +11040,8 @@
 "x": 15,
 "y": 26
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017162",
@@ -11022,7 +11071,8 @@
 "x": 15,
 "y": 26
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017164",
@@ -11064,7 +11114,8 @@
 "x": 23,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017166",
@@ -11101,7 +11152,8 @@
 "x": 44,
 "y": 21
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017168",
@@ -11143,7 +11195,8 @@
 "x": 20,
 "y": 9
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017170",
@@ -11173,7 +11226,8 @@
 "x": 20,
 "y": 9
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017171",
@@ -11203,7 +11257,8 @@
 "x": 20,
 "y": 16
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017172",
@@ -11245,7 +11300,8 @@
 "x": 39,
 "y": 24
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "401810017174",
@@ -11287,7 +11343,8 @@
 "x": 6,
 "y": 18
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "401810017176",
@@ -11324,7 +11381,8 @@
 "x": 29,
 "y": 7
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017178",
@@ -11361,7 +11419,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017179",
@@ -11398,7 +11457,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017180",
@@ -11435,7 +11495,8 @@
 "x": 29,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017181",
@@ -11472,7 +11533,8 @@
 "x": 29,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017182",
@@ -11509,7 +11571,8 @@
 "x": 22,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017183",
@@ -11539,7 +11602,8 @@
 "x": 22,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017185",
@@ -11576,7 +11640,8 @@
 "x": 46,
 "y": 13
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017186",
@@ -11613,7 +11678,8 @@
 "x": 46,
 "y": 13
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017187",
@@ -11655,7 +11721,8 @@
 "x": 21,
 "y": 8
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017189",
@@ -11692,7 +11759,8 @@
 "x": 33,
 "y": 15
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017191",
@@ -11729,7 +11797,8 @@
 "x": 29,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017192",
@@ -11766,7 +11835,8 @@
 "x": 29,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017194",
@@ -11803,7 +11873,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017195",
@@ -11840,7 +11911,8 @@
 "x": 1,
 "y": 8
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017196",
@@ -11877,7 +11949,8 @@
 "x": 1,
 "y": 8
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017197",
@@ -11914,7 +11987,8 @@
 "x": 22,
 "y": 12
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017199",
@@ -11944,7 +12018,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Violation"
 },
 {
 "id": "401810017200",
@@ -11981,7 +12056,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017201",
@@ -12023,7 +12099,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017202",
@@ -12065,7 +12142,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017203",
@@ -12107,7 +12185,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017207",
@@ -12144,7 +12223,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "Missed FT"
 },
 {
 "id": "401810017208",
@@ -12181,7 +12261,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017209",
@@ -12223,7 +12304,8 @@
 "x": 22,
 "y": 3
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017210",
@@ -12260,7 +12342,8 @@
 "x": 22,
 "y": 3
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017212",
@@ -12297,7 +12380,8 @@
 "x": 27,
 "y": 9
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017213",
@@ -12334,7 +12418,8 @@
 "x": 27,
 "y": 9
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017214",
@@ -12371,7 +12456,8 @@
 "x": 29,
 "y": 3
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017215",
@@ -12408,7 +12494,8 @@
 "x": 24,
 "y": 9
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017216",
@@ -12450,7 +12537,8 @@
 "x": 2,
 "y": 2
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "401810017218",
@@ -12487,7 +12575,8 @@
 "x": 23,
 "y": 26
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017219",
@@ -12524,7 +12613,8 @@
 "x": 23,
 "y": 26
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017220",
@@ -12561,7 +12651,8 @@
 "x": 23,
 "y": 22
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017221",
@@ -12598,7 +12689,8 @@
 "x": 23,
 "y": 22
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017222",
@@ -12635,7 +12727,8 @@
 "x": 45,
 "y": 18
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017223",
@@ -12672,7 +12765,8 @@
 "x": 45,
 "y": 18
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017225",
@@ -12702,7 +12796,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Timeout"
 },
 {
 "id": "401810017226",
@@ -12744,7 +12839,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017227",
@@ -12786,7 +12882,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017228",
@@ -12828,7 +12925,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017232",
@@ -12865,7 +12963,8 @@
 "x": 23,
 "y": 16
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017233",
@@ -12902,7 +13001,8 @@
 "x": 23,
 "y": 16
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017234",
@@ -12939,7 +13039,8 @@
 "x": 12,
 "y": 22
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017235",
@@ -12976,7 +13077,8 @@
 "x": 12,
 "y": 22
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017236",
@@ -13018,7 +13120,8 @@
 "x": 21,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017238",
@@ -13055,7 +13158,8 @@
 "x": 22,
 "y": 1
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017240",
@@ -13097,7 +13201,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017242",
@@ -13134,7 +13239,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017243",
@@ -13171,7 +13277,8 @@
 "x": 13,
 "y": 13
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017244",
@@ -13213,7 +13320,8 @@
 "x": 22,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017246",
@@ -13250,7 +13358,8 @@
 "x": 22,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017247",
@@ -13287,7 +13396,8 @@
 "x": 49,
 "y": 2
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017248",
@@ -13324,7 +13434,8 @@
 "x": 49,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017249",
@@ -13361,7 +13472,8 @@
 "x": 3,
 "y": 3
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017250",
@@ -13398,7 +13510,8 @@
 "x": 3,
 "y": 3
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017251",
@@ -13435,7 +13548,8 @@
 "x": 29,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017252",
@@ -13472,7 +13586,8 @@
 "x": 16,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017253",
@@ -13509,7 +13624,8 @@
 "x": 23,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017254",
@@ -13546,7 +13662,8 @@
 "x": 23,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017255",
@@ -13583,7 +13700,8 @@
 "x": 21,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017256",
@@ -13620,7 +13738,8 @@
 "x": 21,
 "y": 1
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017257",
@@ -13657,7 +13776,8 @@
 "x": 21,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017258",
@@ -13694,7 +13814,8 @@
 "x": 23,
 "y": 3
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017259",
@@ -13731,7 +13852,8 @@
 "x": 23,
 "y": 3
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017265",
@@ -13768,7 +13890,8 @@
 "x": 24,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017260",
@@ -13805,7 +13928,8 @@
 "x": 27,
 "y": 10
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017261",
@@ -13842,7 +13966,8 @@
 "x": 27,
 "y": 10
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017262",
@@ -13884,7 +14009,8 @@
 "x": 22,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017263",
@@ -13921,7 +14047,8 @@
 "x": 22,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017266",
@@ -13963,7 +14090,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017267",
@@ -14005,7 +14133,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017270",
@@ -14042,7 +14171,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017274",
@@ -14084,7 +14214,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017271",
@@ -14121,7 +14252,8 @@
 "x": 23,
 "y": 3
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017272",
@@ -14158,7 +14290,8 @@
 "x": 23,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017276",
@@ -14195,7 +14328,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017277",
@@ -14237,7 +14371,8 @@
 "x": 27,
 "y": 7
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017279",
@@ -14274,7 +14409,8 @@
 "x": 47,
 "y": 15
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017281",
@@ -14311,7 +14447,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017282",
@@ -14348,7 +14485,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017283",
@@ -14390,7 +14528,8 @@
 "x": 41,
 "y": 9
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017284",
@@ -14427,7 +14566,8 @@
 "x": 5,
 "y": 16
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "401810017285",
@@ -14464,7 +14604,8 @@
 "x": 20,
 "y": 18
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017286",
@@ -14501,7 +14642,8 @@
 "x": 20,
 "y": 18
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017287",
@@ -14538,7 +14680,8 @@
 "x": 29,
 "y": 3
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017289",
@@ -14575,7 +14718,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017290",
@@ -14605,7 +14749,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Timeout"
 },
 {
 "id": "401810017293",
@@ -14647,7 +14792,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017294",
@@ -14689,7 +14835,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017297",
@@ -14726,7 +14873,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017298",
@@ -14763,7 +14911,8 @@
 "x": 35,
 "y": 0
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017299",
@@ -14800,7 +14949,8 @@
 "x": 23,
 "y": 9
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017301",
@@ -14837,7 +14987,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017302",
@@ -14874,7 +15025,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "Missed FT"
 },
 {
 "id": "401810017303",
@@ -14911,7 +15063,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017304",
@@ -14953,7 +15106,8 @@
 "x": 26,
 "y": 27
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "401810017308",
@@ -14990,7 +15144,8 @@
 "x": 14,
 "y": 10
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017309",
@@ -15027,7 +15182,8 @@
 "x": 14,
 "y": 10
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017310",
@@ -15064,7 +15220,8 @@
 "x": 22,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017311",
@@ -15101,7 +15258,8 @@
 "x": 28,
 "y": 26
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017312",
@@ -15138,7 +15296,8 @@
 "x": 28,
 "y": 26
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017313",
@@ -15180,7 +15339,8 @@
 "x": 26,
 "y": 6
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017315",
@@ -15217,7 +15377,8 @@
 "x": 26,
 "y": 6
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017316",
@@ -15259,7 +15420,8 @@
 "x": 30,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017318",
@@ -15301,7 +15463,8 @@
 "x": 7,
 "y": 19
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "401810017320",
@@ -15338,7 +15501,8 @@
 "x": 29,
 "y": 9
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017322",
@@ -15375,7 +15539,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017323",
@@ -15412,7 +15577,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017324",
@@ -15449,7 +15615,8 @@
 "x": 48,
 "y": 6
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017325",
@@ -15486,7 +15653,8 @@
 "x": 48,
 "y": 6
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017326",
@@ -15523,7 +15691,8 @@
 "x": 3,
 "y": 1
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017327",
@@ -15560,7 +15729,8 @@
 "x": 3,
 "y": 1
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017328",
@@ -15602,7 +15772,8 @@
 "x": 24,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017330",
@@ -15639,7 +15810,8 @@
 "x": 8,
 "y": 28
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017331",
@@ -15669,7 +15841,8 @@
 "x": 8,
 "y": 28
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017332",
@@ -15696,7 +15869,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Halftime"
 },
 {
 "id": "401810017334",
@@ -15733,7 +15907,8 @@
 "x": 23,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017335",
@@ -15770,7 +15945,8 @@
 "x": 23,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017336",
@@ -15807,7 +15983,8 @@
 "x": 25,
 "y": 0
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017337",
@@ -15844,7 +16021,8 @@
 "x": 11,
 "y": 7
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017338",
@@ -15881,7 +16059,8 @@
 "x": 3,
 "y": 1
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017339",
@@ -15918,7 +16097,8 @@
 "x": 3,
 "y": 1
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017340",
@@ -15955,7 +16135,8 @@
 "x": 19,
 "y": 8
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017341",
@@ -15992,7 +16173,8 @@
 "x": 19,
 "y": 8
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017342",
@@ -16029,7 +16211,8 @@
 "x": 23,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017343",
@@ -16071,7 +16254,8 @@
 "x": 22,
 "y": 6
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017345",
@@ -16108,7 +16292,8 @@
 "x": 11,
 "y": 25
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017346",
@@ -16145,7 +16330,8 @@
 "x": 11,
 "y": 25
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017347",
@@ -16182,7 +16368,8 @@
 "x": 38,
 "y": 24
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017348",
@@ -16219,7 +16406,8 @@
 "x": 38,
 "y": 24
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017349",
@@ -16256,7 +16444,8 @@
 "x": 28,
 "y": 3
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017351",
@@ -16293,7 +16482,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017352",
@@ -16330,7 +16520,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "Missed FT"
 },
 {
 "id": "401810017353",
@@ -16367,7 +16558,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017354",
@@ -16409,7 +16601,8 @@
 "x": 22,
 "y": 5
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017356",
@@ -16439,7 +16632,8 @@
 "x": 22,
 "y": 5
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017358",
@@ -16476,7 +16670,8 @@
 "x": 34,
 "y": 5
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017359",
@@ -16513,7 +16708,8 @@
 "x": 34,
 "y": 5
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017360",
@@ -16550,7 +16746,8 @@
 "x": 31,
 "y": 12
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017361",
@@ -16587,7 +16784,8 @@
 "x": 31,
 "y": 12
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017365",
@@ -16624,7 +16822,8 @@
 "x": 22,
 "y": 1
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017363",
@@ -16654,7 +16853,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Timeout"
 },
 {
 "id": "401810017364",
@@ -16684,7 +16884,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Challenge"
 },
 {
 "id": "401810017366",
@@ -16726,7 +16927,8 @@
 "x": 24,
 "y": 3
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017368",
@@ -16763,7 +16965,8 @@
 "x": 23,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017370",
@@ -16800,7 +17003,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017371",
@@ -16837,7 +17041,8 @@
 "x": 6,
 "y": 18
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017372",
@@ -16874,7 +17079,8 @@
 "x": 6,
 "y": 18
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017373",
@@ -16916,7 +17122,8 @@
 "x": 22,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017375",
@@ -16953,7 +17160,8 @@
 "x": 19,
 "y": 13
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017377",
@@ -16990,7 +17198,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017378",
@@ -17027,7 +17236,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017379",
@@ -17069,7 +17279,8 @@
 "x": 22,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017381",
@@ -17106,7 +17317,8 @@
 "x": 20,
 "y": 18
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017382",
@@ -17148,7 +17360,8 @@
 "x": 14,
 "y": 16
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017384",
@@ -17185,7 +17398,8 @@
 "x": 29,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017386",
@@ -17222,7 +17436,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017387",
@@ -17259,7 +17474,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "Missed FT"
 },
 {
 "id": "401810017388",
@@ -17296,7 +17512,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017389",
@@ -17333,7 +17550,8 @@
 "x": 31,
 "y": 26
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017390",
@@ -17370,7 +17588,8 @@
 "x": 31,
 "y": 26
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017391",
@@ -17407,7 +17626,8 @@
 "x": 23,
 "y": 3
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017392",
@@ -17444,7 +17664,8 @@
 "x": 8,
 "y": 20
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017393",
@@ -17481,7 +17702,8 @@
 "x": 8,
 "y": 20
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017395",
@@ -17523,7 +17745,8 @@
 "x": 19,
 "y": 15
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017397",
@@ -17553,7 +17776,8 @@
 "x": 19,
 "y": 15
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017399",
@@ -17595,7 +17819,8 @@
 "x": 25,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017401",
@@ -17632,7 +17857,8 @@
 "x": 22,
 "y": 8
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017403",
@@ -17669,7 +17895,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017404",
@@ -17711,7 +17938,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017405",
@@ -17753,7 +17981,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017408",
@@ -17790,7 +18019,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017409",
@@ -17832,7 +18062,8 @@
 "x": 24,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017411",
@@ -17869,7 +18100,8 @@
 "x": 3,
 "y": 13
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017412",
@@ -17906,7 +18138,8 @@
 "x": 3,
 "y": 13
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017413",
@@ -17943,7 +18176,8 @@
 "x": 47,
 "y": 3
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017414",
@@ -17980,7 +18214,8 @@
 "x": 47,
 "y": 3
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017415",
@@ -18017,7 +18252,8 @@
 "x": 18,
 "y": 9
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017417",
@@ -18054,7 +18290,8 @@
 "x": 18,
 "y": 9
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017418",
@@ -18096,7 +18333,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017420",
@@ -18133,7 +18371,8 @@
 "x": 7,
 "y": 19
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017421",
@@ -18170,7 +18409,8 @@
 "x": 7,
 "y": 19
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017422",
@@ -18207,7 +18447,8 @@
 "x": 29,
 "y": 14
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017424",
@@ -18244,7 +18485,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017425",
@@ -18281,7 +18523,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017426",
@@ -18318,7 +18561,8 @@
 "x": 33,
 "y": 16
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017427",
@@ -18355,7 +18599,8 @@
 "x": 3,
 "y": 13
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017428",
@@ -18392,7 +18637,8 @@
 "x": 3,
 "y": 13
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017429",
@@ -18429,7 +18675,8 @@
 "x": 27,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017430",
@@ -18466,7 +18713,8 @@
 "x": 27,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017431",
@@ -18508,7 +18756,8 @@
 "x": 31,
 "y": 8
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017433",
@@ -18545,7 +18794,8 @@
 "x": 43,
 "y": 20
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017434",
@@ -18582,7 +18832,8 @@
 "x": 43,
 "y": 20
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017435",
@@ -18624,7 +18875,8 @@
 "x": 2,
 "y": 6
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "401810017437",
@@ -18666,7 +18918,8 @@
 "x": 27,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017439",
@@ -18703,7 +18956,8 @@
 "x": 34,
 "y": 26
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017440",
@@ -18740,7 +18994,8 @@
 "x": 34,
 "y": 26
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017441",
@@ -18777,7 +19032,8 @@
 "x": 25,
 "y": 0
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017442",
@@ -18814,7 +19070,8 @@
 "x": 38,
 "y": 15
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017443",
@@ -18851,7 +19108,8 @@
 "x": 38,
 "y": 15
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017444",
@@ -18888,7 +19146,8 @@
 "x": 3,
 "y": 2
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017445",
@@ -18925,7 +19184,8 @@
 "x": 3,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017446",
@@ -18967,7 +19227,8 @@
 "x": 21,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017448",
@@ -18997,7 +19258,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Timeout"
 },
 {
 "id": "401810017449",
@@ -19039,7 +19301,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017450",
@@ -19081,7 +19344,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017451",
@@ -19123,7 +19387,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017452",
@@ -19165,7 +19430,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017453",
@@ -19207,7 +19473,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017454",
@@ -19249,7 +19516,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017461",
@@ -19291,7 +19559,8 @@
 "x": 21,
 "y": 7
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017463",
@@ -19328,7 +19597,8 @@
 "x": 29,
 "y": 6
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017464",
@@ -19365,7 +19635,8 @@
 "x": 29,
 "y": 6
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017465",
@@ -19402,7 +19673,8 @@
 "x": 49,
 "y": 10
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017466",
@@ -19439,7 +19711,8 @@
 "x": 49,
 "y": 10
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017467",
@@ -19476,7 +19749,8 @@
 "x": 28,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017469",
@@ -19513,7 +19787,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017470",
@@ -19550,7 +19825,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017471",
@@ -19592,7 +19868,8 @@
 "x": 29,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017473",
@@ -19634,7 +19911,8 @@
 "x": 47,
 "y": 13
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "401810017475",
@@ -19676,7 +19954,8 @@
 "x": 24,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017477",
@@ -19713,7 +19992,8 @@
 "x": 18,
 "y": 7
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017479",
@@ -19750,7 +20030,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017480",
@@ -19787,7 +20068,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "Missed FT"
 },
 {
 "id": "401810017481",
@@ -19824,7 +20106,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017482",
@@ -19866,7 +20149,8 @@
 "x": 24,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017484",
@@ -19908,7 +20192,8 @@
 "x": 26,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017486",
@@ -19950,7 +20235,8 @@
 "x": 26,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017488",
@@ -19987,7 +20273,8 @@
 "x": 14,
 "y": 24
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017489",
@@ -20024,7 +20311,8 @@
 "x": 14,
 "y": 24
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017491",
@@ -20066,7 +20354,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017493",
@@ -20103,7 +20392,8 @@
 "x": 34,
 "y": 16
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017494",
@@ -20140,7 +20430,8 @@
 "x": 14,
 "y": 15
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017497",
@@ -20182,7 +20473,8 @@
 "x": 25,
 "y": 11
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017504",
@@ -20224,7 +20516,8 @@
 "x": 24,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017506",
@@ -20251,7 +20544,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "End of 3rd"
 },
 {
 "id": "401810017508",
@@ -20293,7 +20587,8 @@
 "x": 15,
 "y": 6
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017511",
@@ -20330,7 +20625,8 @@
 "x": 30,
 "y": 6
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017515",
@@ -20367,7 +20663,8 @@
 "x": 4,
 "y": 18
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017513",
@@ -20397,7 +20694,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Timeout"
 },
 {
 "id": "401810017514",
@@ -20427,7 +20725,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Challenge"
 },
 {
 "id": "401810017516",
@@ -20464,7 +20763,8 @@
 "x": 10,
 "y": 5
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017518",
@@ -20501,7 +20801,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017519",
@@ -20538,7 +20839,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "Missed FT"
 },
 {
 "id": "401810017520",
@@ -20575,7 +20877,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017521",
@@ -20617,7 +20920,8 @@
 "x": 17,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017523",
@@ -20659,7 +20963,8 @@
 "x": 22,
 "y": 4
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017525",
@@ -20696,7 +21001,8 @@
 "x": 23,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017527",
@@ -20733,7 +21039,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017528",
@@ -20770,7 +21077,8 @@
 "x": 19,
 "y": 6
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017529",
@@ -20807,7 +21115,8 @@
 "x": 19,
 "y": 6
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017530",
@@ -20844,7 +21153,8 @@
 "x": 33,
 "y": 7
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017532",
@@ -20881,7 +21191,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017533",
@@ -20918,7 +21229,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "Missed FT"
 },
 {
 "id": "401810017534",
@@ -20955,7 +21267,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017535",
@@ -20992,7 +21305,8 @@
 "x": 35,
 "y": 24
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017536",
@@ -21029,7 +21343,8 @@
 "x": 35,
 "y": 24
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017537",
@@ -21066,7 +21381,8 @@
 "x": 32,
 "y": 12
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017538",
@@ -21103,7 +21419,8 @@
 "x": 28,
 "y": 13
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017540",
@@ -21145,7 +21462,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017541",
@@ -21187,7 +21505,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017551",
@@ -21229,7 +21548,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017544",
@@ -21266,7 +21586,8 @@
 "x": 29,
 "y": 11
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017545",
@@ -21303,7 +21624,8 @@
 "x": 41,
 "y": 6
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017546",
@@ -21340,7 +21662,8 @@
 "x": 41,
 "y": 6
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017547",
@@ -21377,7 +21700,8 @@
 "x": 16,
 "y": 3
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017548",
@@ -21414,7 +21738,8 @@
 "x": 16,
 "y": 3
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017549",
@@ -21451,7 +21776,8 @@
 "x": 32,
 "y": 13
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017550",
@@ -21488,7 +21814,8 @@
 "x": 32,
 "y": 13
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017553",
@@ -21525,7 +21852,8 @@
 "x": 2,
 "y": 1
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017554",
@@ -21562,7 +21890,8 @@
 "x": 2,
 "y": 1
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017555",
@@ -21599,7 +21928,8 @@
 "x": 11,
 "y": 14
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017556",
@@ -21629,7 +21959,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Timeout"
 },
 {
 "id": "401810017557",
@@ -21671,7 +22002,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017558",
@@ -21713,7 +22045,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017559",
@@ -21755,7 +22088,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017560",
@@ -21797,7 +22131,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017565",
@@ -21839,7 +22174,8 @@
 "x": 33,
 "y": 23
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "401810017567",
@@ -21881,7 +22217,8 @@
 "x": 37,
 "y": 13
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017569",
@@ -21923,7 +22260,8 @@
 "x": 47,
 "y": 12
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "401810017571",
@@ -21965,7 +22303,8 @@
 "x": 22,
 "y": 27
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "401810017573",
@@ -22007,7 +22346,8 @@
 "x": 22,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017575",
@@ -22044,7 +22384,8 @@
 "x": 28,
 "y": 14
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017577",
@@ -22086,7 +22427,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017578",
@@ -22128,7 +22470,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017581",
@@ -22165,7 +22508,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Violation"
 },
 {
 "id": "401810017582",
@@ -22202,7 +22546,8 @@
 "x": 13,
 "y": 14
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017583",
@@ -22239,7 +22584,8 @@
 "x": 13,
 "y": 14
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017584",
@@ -22281,7 +22627,8 @@
 "x": 24,
 "y": 5
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017586",
@@ -22318,7 +22665,8 @@
 "x": 38,
 "y": 24
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "401810017587",
@@ -22360,7 +22708,8 @@
 "x": 25,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017589",
@@ -22402,7 +22751,8 @@
 "x": 3,
 "y": 5
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "+3 Points"
 },
 {
 "id": "401810017591",
@@ -22439,7 +22789,8 @@
 "x": 25,
 "y": 3
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017592",
@@ -22476,7 +22827,8 @@
 "x": 28,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017593",
@@ -22513,7 +22865,8 @@
 "x": 28,
 "y": 2
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017594",
@@ -22550,7 +22903,8 @@
 "x": 7,
 "y": 19
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017596",
@@ -22592,7 +22946,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017598",
@@ -22629,7 +22984,8 @@
 "x": 28,
 "y": 3
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017600",
@@ -22666,7 +23022,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017601",
@@ -22703,7 +23060,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017603",
@@ -22740,7 +23098,8 @@
 "x": 2,
 "y": 3
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017604",
@@ -22770,7 +23129,8 @@
 "x": 2,
 "y": 3
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017606",
@@ -22807,7 +23167,8 @@
 "x": 43,
 "y": 18
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017607",
@@ -22844,7 +23205,8 @@
 "x": 43,
 "y": 18
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017608",
@@ -22881,7 +23243,8 @@
 "x": 2,
 "y": 1
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017609",
@@ -22918,7 +23281,8 @@
 "x": 2,
 "y": 1
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017610",
@@ -22960,7 +23324,8 @@
 "x": 24,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017612",
@@ -22990,7 +23355,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Timeout"
 },
 {
 "id": "401810017613",
@@ -23032,7 +23398,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Substitution"
 },
 {
 "id": "401810017615",
@@ -23069,7 +23436,8 @@
 "x": 21,
 "y": 4
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017617",
@@ -23106,7 +23474,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017618",
@@ -23143,7 +23512,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017619",
@@ -23180,7 +23550,8 @@
 "x": 19,
 "y": 7
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017620",
@@ -23217,7 +23588,8 @@
 "x": 19,
 "y": 7
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017621",
@@ -23254,7 +23626,8 @@
 "x": 25,
 "y": 0
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017622",
@@ -23296,7 +23669,8 @@
 "x": 19,
 "y": 8
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017624",
@@ -23333,7 +23707,8 @@
 "x": 22,
 "y": 3
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017625",
@@ -23370,7 +23745,8 @@
 "x": 22,
 "y": 3
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017626",
@@ -23407,7 +23783,8 @@
 "x": 18,
 "y": 7
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017628",
@@ -23444,7 +23821,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "+1 Point"
 },
 {
 "id": "401810017629",
@@ -23486,7 +23864,8 @@
 "x": 28,
 "y": 1
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017631",
@@ -23523,7 +23902,8 @@
 "x": 34,
 "y": 25
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017632",
@@ -23560,7 +23940,8 @@
 "x": 34,
 "y": 25
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017633",
@@ -23602,7 +23983,8 @@
 "x": 29,
 "y": 10
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017635",
@@ -23644,7 +24026,8 @@
 "x": 8,
 "y": 21
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017637",
@@ -23686,7 +24069,8 @@
 "x": 28,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017641",
@@ -23716,7 +24100,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Challenge"
 },
 {
 "id": "401810017642",
@@ -23746,7 +24131,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Challenge"
 },
 {
 "id": "401810017643",
@@ -23788,7 +24174,8 @@
 "x": 26,
 "y": 21
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017645",
@@ -23825,7 +24212,8 @@
 "x": 25,
 "y": 21
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017647",
@@ -23862,7 +24250,8 @@
 "x": 25,
 "y": 21
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Turnover"
 },
 {
 "id": "401810017648",
@@ -23892,7 +24281,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Timeout"
 },
 {
 "id": "401810017649",
@@ -23922,7 +24312,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Challenge"
 },
 {
 "id": "401810017650",
@@ -23959,7 +24350,8 @@
 "x": 38,
 "y": 15
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "Missed FG"
 },
 {
 "id": "401810017651",
@@ -23996,7 +24388,8 @@
 "x": 38,
 "y": 15
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017652",
@@ -24033,7 +24426,8 @@
 "x": 39,
 "y": 26
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017653",
@@ -24063,7 +24457,8 @@
 "x": 39,
 "y": 26
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017655",
@@ -24100,7 +24495,8 @@
 "x": 47,
 "y": 4
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017656",
@@ -24137,7 +24533,8 @@
 "x": 47,
 "y": 4
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017657",
@@ -24174,7 +24571,8 @@
 "x": 29,
 "y": 2
 },
-"pointsAttempted": 2
+"pointsAttempted": 2,
+"shortDescription": "+2 Points"
 },
 {
 "id": "401810017658",
@@ -24211,7 +24609,8 @@
 "x": 27,
 "y": 24
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017660",
@@ -24248,7 +24647,8 @@
 "x": 8,
 "y": 13
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Foul"
 },
 {
 "id": "401810017662",
@@ -24285,7 +24685,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "Missed FT"
 },
 {
 "id": "401810017663",
@@ -24315,7 +24716,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017664",
@@ -24352,7 +24754,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 1
+"pointsAttempted": 1,
+"shortDescription": "Missed FT"
 },
 {
 "id": "401810017665",
@@ -24389,7 +24792,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017666",
@@ -24426,7 +24830,8 @@
 "x": 10,
 "y": 41
 },
-"pointsAttempted": 3
+"pointsAttempted": 3,
+"shortDescription": "Missed 3PT"
 },
 {
 "id": "401810017667",
@@ -24456,7 +24861,8 @@
 "x": 10,
 "y": 41
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "Rebound"
 },
 {
 "id": "401810017668",
@@ -24483,7 +24889,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "End of 4th"
 },
 {
 "id": "401810017669",
@@ -24510,7 +24917,8 @@
 "x": -214748340,
 "y": -214748365
 },
-"pointsAttempted": 0
+"pointsAttempted": 0,
+"shortDescription": "End of Game"
 }
 ],
 "article": {
@@ -26640,89 +27048,6 @@
 ]
 },
 {
-"team": "Golden State",
-"link": "https://www.espn.com/nba/team/_/name/gs/golden-state-warriors",
-"id": "9",
-"uid": "s:40~l:46~t:9",
-"stats": [
-{
-"name": "gamesBehind",
-"displayName": "Games Back",
-"shortDisplayName": "GB",
-"description": "Games Back",
-"abbreviation": "GB",
-"type": "gamesbehind",
-"value": 2.0,
-"displayValue": "2"
-},
-{
-"name": "losses",
-"displayName": "Losses",
-"shortDisplayName": "L",
-"description": "Losses",
-"abbreviation": "L",
-"type": "losses",
-"value": 5.0,
-"displayValue": "5"
-},
-{
-"name": "streak",
-"displayName": "Streak",
-"shortDisplayName": "STRK",
-"description": "Current Streak",
-"abbreviation": "STRK",
-"type": "streak",
-"value": 1.0,
-"displayValue": "W1"
-},
-{
-"name": "winPercent",
-"displayName": "Win Percentage",
-"shortDisplayName": "PCT",
-"description": "Winning Percentage",
-"abbreviation": "PCT",
-"type": "winpercent",
-"value": 0.54545456,
-"displayValue": ".545"
-},
-{
-"name": "wins",
-"displayName": "Wins",
-"shortDisplayName": "W",
-"description": "Wins",
-"abbreviation": "W",
-"type": "wins",
-"value": 6.0,
-"displayValue": "6"
-}
-],
-"logo": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/gs.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2024-06-25T21:17Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/gs.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2024-06-25T21:14Z"
-}
-]
-},
-{
 "team": "Phoenix",
 "link": "https://www.espn.com/nba/team/_/name/phx/phoenix-suns",
 "id": "21",
@@ -26806,10 +27131,10 @@
 ]
 },
 {
-"team": "Sacramento",
-"link": "https://www.espn.com/nba/team/_/name/sac/sacramento-kings",
-"id": "23",
-"uid": "s:40~l:46~t:23",
+"team": "Golden State",
+"link": "https://www.espn.com/nba/team/_/name/gs/golden-state-warriors",
+"id": "9",
+"uid": "s:40~l:46~t:9",
 "stats": [
 {
 "name": "gamesBehind",
@@ -26818,8 +27143,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 4.5,
-"displayValue": "4.5"
+"value": 2.5,
+"displayValue": "2.5"
 },
 {
 "name": "losses",
@@ -26828,8 +27153,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 7.0,
-"displayValue": "7"
+"value": 6.0,
+"displayValue": "6"
 },
 {
 "name": "streak",
@@ -26838,8 +27163,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -2.0,
-"displayValue": "L2"
+"value": -1.0,
+"displayValue": "L1"
 },
 {
 "name": "winPercent",
@@ -26848,8 +27173,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.3,
-"displayValue": ".300"
+"value": 0.5,
+"displayValue": ".500"
 },
 {
 "name": "wins",
@@ -26858,13 +27183,13 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 3.0,
-"displayValue": "3"
+"value": 6.0,
+"displayValue": "6"
 }
 ],
 "logo": [
 {
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/sac.png",
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/gs.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -26875,7 +27200,7 @@
 "lastUpdated": "2024-06-25T21:17Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/sac.png",
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/gs.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -26970,6 +27295,89 @@
 "lastUpdated": "2024-06-25T21:14Z"
 }
 ]
+},
+{
+"team": "Sacramento",
+"link": "https://www.espn.com/nba/team/_/name/sac/sacramento-kings",
+"id": "23",
+"uid": "s:40~l:46~t:23",
+"stats": [
+{
+"name": "gamesBehind",
+"displayName": "Games Back",
+"shortDisplayName": "GB",
+"description": "Games Back",
+"abbreviation": "GB",
+"type": "gamesbehind",
+"value": 5.0,
+"displayValue": "5"
+},
+{
+"name": "losses",
+"displayName": "Losses",
+"shortDisplayName": "L",
+"description": "Losses",
+"abbreviation": "L",
+"type": "losses",
+"value": 8.0,
+"displayValue": "8"
+},
+{
+"name": "streak",
+"displayName": "Streak",
+"shortDisplayName": "STRK",
+"description": "Current Streak",
+"abbreviation": "STRK",
+"type": "streak",
+"value": -3.0,
+"displayValue": "L3"
+},
+{
+"name": "winPercent",
+"displayName": "Win Percentage",
+"shortDisplayName": "PCT",
+"description": "Winning Percentage",
+"abbreviation": "PCT",
+"type": "winpercent",
+"value": 0.27272728,
+"displayValue": ".273"
+},
+{
+"name": "wins",
+"displayName": "Wins",
+"shortDisplayName": "W",
+"description": "Wins",
+"abbreviation": "W",
+"type": "wins",
+"value": 3.0,
+"displayValue": "3"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/sac.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/sac.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
+}
+]
 }
 ]
 },
@@ -27014,8 +27422,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 2.0,
-"displayValue": "W2"
+"value": 3.0,
+"displayValue": "W3"
 },
 {
 "name": "winPercent",
@@ -27024,8 +27432,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.90909094,
-"displayValue": ".909"
+"value": 0.9166667,
+"displayValue": ".917"
 },
 {
 "name": "wins",
@@ -27034,8 +27442,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 10.0,
-"displayValue": "10"
+"value": 11.0,
+"displayValue": "11"
 }
 ],
 "logo": [
@@ -27097,8 +27505,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 4.0,
-"displayValue": "W4"
+"value": 5.0,
+"displayValue": "W5"
 },
 {
 "name": "winPercent",
@@ -27107,8 +27515,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.7777778,
-"displayValue": ".778"
+"value": 0.8,
+"displayValue": ".800"
 },
 {
 "name": "wins",
@@ -27117,8 +27525,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 7.0,
-"displayValue": "7"
+"value": 8.0,
+"displayValue": "8"
 }
 ],
 "logo": [
@@ -27160,8 +27568,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 3.0,
-"displayValue": "3"
+"value": 3.5,
+"displayValue": "3.5"
 },
 {
 "name": "losses",
@@ -27243,8 +27651,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 4.5,
-"displayValue": "4.5"
+"value": 5.0,
+"displayValue": "5"
 },
 {
 "name": "losses",
@@ -27346,8 +27754,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -3.0,
-"displayValue": "L3"
+"value": 1.0,
+"displayValue": "W1"
 },
 {
 "name": "winPercent",
@@ -27356,8 +27764,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.3,
-"displayValue": ".300"
+"value": 0.36363637,
+"displayValue": ".364"
 },
 {
 "name": "wins",
@@ -27366,8 +27774,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 3.0,
-"displayValue": "3"
+"value": 4.0,
+"displayValue": "4"
 }
 ],
 "logo": [
