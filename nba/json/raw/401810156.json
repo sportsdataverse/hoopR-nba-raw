@@ -2369,11 +2369,25 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2026/teams/10?lang=en&region=us"
 },
-"status": {
-"id": "1",
-"name": "Active",
-"type": "active",
-"abbreviation": "Active"
+"status": "Day-To-Day",
+"injuries": {
+"status": "Day-To-Day",
+"date": "2025-12-02T05:27Z",
+"type": {
+"id": "6",
+"name": "INJURY_STATUS_DAYTODAY",
+"description": "day-to-day",
+"abbreviation": "DD"
+},
+"details": {
+"fantasyStatus": {
+"description": "GTD",
+"abbreviation": "GTD"
+},
+"type": "Rest",
+"location": "Other",
+"returnDate": "2025-12-03"
+}
 }
 },
 "statistics": [
@@ -2619,82 +2633,21 @@
 "uid": "s:40~l:46~e:401810171~c:401810171",
 "date": "2025-12-02T02:00:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Mon, December 1st at 9:00 PM EST",
-"shortDetail": "12/1 - 9:00 PM EST"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
 "neutralSite": false,
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "3",
-"type": "Away"
-},
-"media": {
-"shortName": "Space City Home Network"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "KJZZ-TV"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "4",
-"shortName": "Streaming"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "Jazz+"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "6",
-"shortName": "Subscription Package"
-},
-"market": {
-"id": "3",
-"type": "Away"
-},
-"media": {
-"shortName": "NBA League Pass"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": true,
 "team": {
 "id": "26",
 "uid": "s:40~l:46~t:26",
@@ -2759,10 +2712,11 @@
 }
 ]
 },
-"score": "0"
+"score": "133"
 },
 {
 "homeAway": "away",
+"winner": false,
 "team": {
 "id": "10",
 "uid": "s:40~l:46~t:10",
@@ -2827,7 +2781,7 @@
 }
 ]
 },
-"score": "0"
+"score": "125"
 }
 ],
 "links": [
@@ -3337,18 +3291,18 @@
 "pickcenter": [
 {
 "provider": {
-"id": "58",
-"name": "ESPN BET",
+"id": "100",
+"name": "Draft Kings",
 "priority": 1,
 "logos": [
 {
-"href": "https://a.espncdn.com/i/espnbet/ESPN_Bet_Light.svg",
+"href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg",
 "rel": [
 "light"
 ]
 },
 {
-"href": "https://a.espncdn.com/i/espnbet/ESPN_Bet_Dark.svg",
+"href": "https://a.espncdn.com/i/betting/Draftkings_Dark.svg",
 "rel": [
 "dark"
 ]
@@ -3358,13 +3312,13 @@
 "details": "HOU -11.5",
 "overUnder": 233.5,
 "spread": 11.5,
-"overOdds": -110.0,
-"underOdds": -110.0,
+"overOdds": -108.0,
+"underOdds": -112.0,
 "awayTeamOdds": {
 "favorite": true,
 "underdog": false,
-"moneyLine": -650,
-"spreadOdds": -110.0,
+"moneyLine": -575,
+"spreadOdds": -108.0,
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2026/teams/10?lang=en&region=us"
 },
@@ -3375,7 +3329,7 @@
 "favorite": false,
 "underdog": true,
 "moneyLine": 425,
-"spreadOdds": -110.0,
+"spreadOdds": -112.0,
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2026/teams/26?lang=en&region=us"
 },
@@ -3389,9 +3343,9 @@
 "home",
 "desktop",
 "bets",
-"espn-bet"
+"draft-kings"
 ],
-"href": "https://espnbet.app.link/integrations?%243p=a_espn&clr=espnbettingintegration&$canonical_url=/sport/basketball/organization/united-states/competition/nba/event/0ce3a183-e340-4e00-98b1-870674719741&market_selection_id[0]=8a3f61bd-14f8-4f26-a0da-125a9b281242&odds_numerator[0]=21&odds_denominator[0]=4",
+"href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33217867%3Foutcomes%3D0ML82402046_1",
 "text": "Home Bet",
 "shortText": "Home Bet",
 "isExternal": true,
@@ -3403,9 +3357,9 @@
 "away",
 "desktop",
 "bets",
-"espn-bet"
+"draft-kings"
 ],
-"href": "https://espnbet.app.link/integrations?%243p=a_espn&clr=espnbettingintegration&$canonical_url=/sport/basketball/organization/united-states/competition/nba/event/0ce3a183-e340-4e00-98b1-870674719741&market_selection_id[0]=9c040a19-bb68-41ad-bde4-5e03056d38f8&odds_numerator[0]=15&odds_denominator[0]=13",
+"href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33217867%3Foutcomes%3D0ML82402046_3",
 "text": "Away Bet",
 "shortText": "Away Bet",
 "isExternal": true,
@@ -3418,7 +3372,7 @@
 "desktop",
 "bets"
 ],
-"href": "https://espnbet.app.link/integrations?%243p=a_espn&clr=espnbettingintegration&$canonical_url=/sport/basketball/organization/united-states/competition/nba/event/0ce3a183-e340-4e00-98b1-870674719741&market_selection_id[0]=d73af7d5-d709-4fab-a81c-2f2e296372ea&odds_numerator[0]=21&odds_denominator[0]=11",
+"href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33217867%3Foutcomes%3D0HC82402046P1150_1",
 "text": "Home Point Spread",
 "shortText": "Home Point Spread",
 "isExternal": true,
@@ -3431,7 +3385,7 @@
 "desktop",
 "bets"
 ],
-"href": "https://espnbet.app.link/integrations?%243p=a_espn&clr=espnbettingintegration&$canonical_url=/sport/basketball/organization/united-states/competition/nba/event/0ce3a183-e340-4e00-98b1-870674719741&market_selection_id[0]=4035131a-6a99-4ec6-9837-018263abe45c&odds_numerator[0]=21&odds_denominator[0]=11",
+"href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33217867%3Foutcomes%3D0HC82402046N1150_3",
 "text": "Away Point Spread",
 "shortText": "Away Point Spread",
 "isExternal": true,
@@ -3444,7 +3398,7 @@
 "desktop",
 "bets"
 ],
-"href": "https://espnbet.app.link/integrations?%243p=a_espn&clr=espnbettingintegration&$canonical_url=/sport/basketball/organization/united-states/competition/nba/event/0ce3a183-e340-4e00-98b1-870674719741&market_selection_id[0]=ab561c55-06a2-4bcd-ab95-d2e430e95309&odds_numerator[0]=21&odds_denominator[0]=11",
+"href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33217867%3Foutcomes%3D0OU82402046O23350_1",
 "text": "Over Odds",
 "shortText": "Over Odds",
 "isExternal": true,
@@ -3457,7 +3411,7 @@
 "desktop",
 "bets"
 ],
-"href": "https://espnbet.app.link/integrations?%243p=a_espn&clr=espnbettingintegration&$canonical_url=/sport/basketball/organization/united-states/competition/nba/event/0ce3a183-e340-4e00-98b1-870674719741&market_selection_id[0]=6dc81463-5b0a-4941-b2a1-ead9629cd2b5&odds_numerator[0]=21&odds_denominator[0]=11",
+"href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33217867%3Foutcomes%3D0OU82402046U23350_3",
 "text": "Under Odds",
 "shortText": "Under Odds",
 "isExternal": true,
@@ -3470,105 +3424,13 @@
 "desktop",
 "bets"
 ],
-"href": "https://espnbet.app.link/integrations?%243p=a_espn&clr=espnbettingintegration&$canonical_url=/sport/basketball/organization/united-states/competition/nba/event/0ce3a183-e340-4e00-98b1-870674719741",
+"href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33217867",
 "text": "Game",
 "shortText": "Game",
 "isExternal": true,
 "isPremium": false
 }
 ],
-"moneyline": {
-"displayName": "Moneyline",
-"shortDisplayName": "ML",
-"home": {
-"close": {
-"odds": "+425",
-"outcome": "LOSS"
-},
-"open": {
-"odds": "+450"
-}
-},
-"away": {
-"close": {
-"odds": "-650",
-"outcome": "WIN",
-"icon": "https://a.espncdn.com/i/espnbet/espn-bet-checkmark-bold.png",
-"iconDark": "https://a.espncdn.com/i/espnbet/dark/espn-bet-checkmark-bold.png"
-},
-"open": {
-"odds": "-700"
-}
-}
-},
-"pointSpread": {
-"displayName": "Spread",
-"shortDisplayName": "Spread",
-"home": {
-"close": {
-"line": "+11.5",
-"odds": "-110",
-"outcome": "LOSS"
-},
-"open": {
-"line": "+12.5",
-"odds": "-120"
-}
-},
-"away": {
-"close": {
-"line": "-11.5",
-"odds": "-110",
-"outcome": "WIN",
-"icon": "https://a.espncdn.com/i/espnbet/espn-bet-checkmark-bold.png",
-"iconDark": "https://a.espncdn.com/i/espnbet/dark/espn-bet-checkmark-bold.png"
-},
-"open": {
-"line": "-12.5",
-"odds": "EVEN"
-}
-}
-},
-"total": {
-"displayName": "Total",
-"shortDisplayName": "Total",
-"over": {
-"close": {
-"line": "o233.5",
-"odds": "-110",
-"outcome": "LOSS"
-},
-"open": {
-"line": "o235.5",
-"odds": "-110"
-}
-},
-"under": {
-"close": {
-"line": "u233.5",
-"odds": "-110",
-"outcome": "WIN",
-"icon": "https://a.espncdn.com/i/espnbet/espn-bet-checkmark-bold.png",
-"iconDark": "https://a.espncdn.com/i/espnbet/dark/espn-bet-checkmark-bold.png"
-},
-"open": {
-"line": "u235.5",
-"odds": "-110"
-}
-}
-},
-"link": {
-"text": "See All on ESPN BET Sportsbook",
-"language": "en-US",
-"rel": [
-"main",
-"desktop",
-"bets"
-],
-"href": "https://www.espnbet.com'",
-"isExternal": true,
-"isPremium": false
-},
 "header": {
 "logo": {
 "dark": "https://a.espncdn.com/i/espnbet/dark/espn-bet-square-off.svg",
@@ -3576,10 +3438,10 @@
 "exclusivesLogoDark": "https://a.espncdn.com/i/espnbet/espn-bet-square-mint.svg",
 "exclusivesLogoLight": "https://a.espncdn.com/i/espnbet/espn-bet-square-mint.svg"
 },
-"text": "ESPN Bet Sportsbook"
+"text": "Game Odds"
 },
 "footer": {
-"disclaimer": "Odds by ESPN BET 21+ Gambling Problem? Call 1-800-GAMBLER"
+"disclaimer": "Odds by DraftKings\nGAMBLING PROBLEM? CALL 1-800-GAMBLER, (800) 327-5050 or visit gamblinghelplinema.org (MA). Call 877-8-HOPENY/text HOPENY (467369) (NY).\nPlease Gamble Responsibly. 888-789-7777/visit ccpg.org (CT), or visit www.mdgamblinghelp.org (MD).\n21+ and present in most states. (18+ DC/KY/NH/WY). Void in ONT/OR/NH. Eligibility restrictions apply. On behalf of Boot Hill Casino & Resort (KS). Terms: sportsbook.draftkings.com/promos."
 }
 }
 ],
@@ -26944,8 +26806,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 4.0,
-"displayValue": "4"
+"value": 5.0,
+"displayValue": "5"
 },
 {
 "name": "streak",
@@ -26954,8 +26816,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 3.0,
-"displayValue": "W3"
+"value": -1.0,
+"displayValue": "L1"
 },
 {
 "name": "winPercent",
@@ -26964,8 +26826,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.7647059,
-"displayValue": ".765"
+"value": 0.7222222,
+"displayValue": ".722"
 },
 {
 "name": "wins",
@@ -27017,8 +26879,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 1.0,
-"displayValue": "1"
+"value": 0.5,
+"displayValue": "0.5"
 },
 {
 "name": "losses",
@@ -27100,8 +26962,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 6.0,
-"displayValue": "6"
+"value": 5.5,
+"displayValue": "5.5"
 },
 {
 "name": "losses",
@@ -27183,8 +27045,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 9.0,
-"displayValue": "9"
+"value": 8.0,
+"displayValue": "8"
 },
 {
 "name": "losses",
@@ -27203,8 +27065,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": 2.0,
+"displayValue": "W2"
 },
 {
 "name": "winPercent",
@@ -27213,8 +27075,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.2857143,
-"displayValue": ".286"
+"value": 0.3181818,
+"displayValue": ".318"
 },
 {
 "name": "wins",
@@ -27223,8 +27085,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 6.0,
-"displayValue": "6"
+"value": 7.0,
+"displayValue": "7"
 }
 ],
 "logo": [
@@ -27266,8 +27128,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 12.0,
-"displayValue": "12"
+"value": 11.5,
+"displayValue": "11.5"
 },
 {
 "name": "losses",
@@ -27442,8 +27304,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 5.0,
-"displayValue": "5"
+"value": 5.5,
+"displayValue": "5.5"
 },
 {
 "name": "losses",
@@ -27452,8 +27314,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 5.0,
-"displayValue": "5"
+"value": 6.0,
+"displayValue": "6"
 },
 {
 "name": "streak",
@@ -27462,8 +27324,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": -1.0,
+"displayValue": "L1"
 },
 {
 "name": "winPercent",
@@ -27472,8 +27334,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.7368421,
-"displayValue": ".737"
+"value": 0.7,
+"displayValue": ".700"
 },
 {
 "name": "wins",
@@ -27691,8 +27553,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 13.0,
-"displayValue": "13"
+"value": 12.5,
+"displayValue": "12.5"
 },
 {
 "name": "losses",
@@ -27711,8 +27573,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -1.0,
-"displayValue": "L1"
+"value": 1.0,
+"displayValue": "W1"
 },
 {
 "name": "winPercent",
@@ -27721,8 +27583,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.31578946,
-"displayValue": ".316"
+"value": 0.35,
+"displayValue": ".350"
 },
 {
 "name": "wins",
@@ -27731,8 +27593,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 6.0,
-"displayValue": "6"
+"value": 7.0,
+"displayValue": "7"
 }
 ],
 "logo": [
