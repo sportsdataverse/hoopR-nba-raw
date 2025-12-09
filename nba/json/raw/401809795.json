@@ -1961,27 +1961,11 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2026/teams/21?lang=en&region=us"
 },
-"status": "Day-To-Day",
-"injuries": {
-"status": "Day-To-Day",
-"date": "2025-12-07T23:40Z",
-"type": {
-"id": "6",
-"name": "INJURY_STATUS_DAYTODAY",
-"description": "day-to-day",
-"abbreviation": "DD"
-},
-"details": {
-"fantasyStatus": {
-"description": "GTD",
-"abbreviation": "GTD"
-},
-"type": "Ankle",
-"location": "Leg",
-"detail": "Soreness",
-"side": "Left",
-"returnDate": "2025-12-08"
-}
+"status": {
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -2069,12 +2053,12 @@
 },
 "details": {
 "fantasyStatus": {
-"description": "OUT",
-"abbreviation": "OUT"
+"description": "GTD",
+"abbreviation": "GTD"
 },
 "type": "Groin",
 "location": "Groin",
-"detail": "Not Specified",
+"detail": "Strain",
 "side": "Right",
 "returnDate": "2025-12-10"
 }
@@ -2729,97 +2713,21 @@
 "uid": "s:40~l:46~e:401810220~c:401810220",
 "date": "2025-12-09T00:30:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Mon, December 8th at 7:30 PM EST",
-"shortDetail": "12/8 - 7:30 PM EST"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
 "neutralSite": false,
-"broadcasts": [
-{
-"type": {
-"id": "4",
-"shortName": "Streaming"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "Peacock"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "FanDuel SN North"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "Arizona's Family 3TV"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "4",
-"shortName": "Streaming"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "Suns Live"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "6",
-"shortName": "Subscription Package"
-},
-"market": {
-"id": "3",
-"type": "Away"
-},
-"media": {
-"shortName": "NBA League Pass"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": false,
 "team": {
 "id": "16",
 "uid": "s:40~l:46~t:16",
@@ -2884,10 +2792,11 @@
 }
 ]
 },
-"score": "0"
+"score": "105"
 },
 {
 "homeAway": "away",
+"winner": true,
 "team": {
 "id": "21",
 "uid": "s:40~l:46~t:21",
@@ -2952,7 +2861,7 @@
 }
 ]
 },
-"score": "0"
+"score": "108"
 }
 ],
 "links": [
@@ -27805,7 +27714,8 @@
 "leagueName": "NBA",
 "coverageType": "Final Game Highlight",
 "trackingName": "NBA_One-Play (Minnesota Timberwolves vs. Phoenix Suns: Game Highlights) 2025/11/22 ESHEET",
-"trackingId": "dm_20251122_NBA_minnesota_timberwolves_vs_phoenix_suns_game_highlights"
+"trackingId": "dm_20251122_NBA_minnesota_timberwolves_vs_phoenix_suns_game_highlights",
+"program": "NBA"
 },
 "contributingPartner": "wsc",
 "contributingSystem": "wsc"
@@ -28179,7 +28089,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Julius Randle knocks down the 3-pointer) 2025/11/22 ESHEET",
-"trackingId": "dm_20251122_NBA_julius_randle_knocks_down_the_3pointer"
+"trackingId": "dm_20251122_NBA_julius_randle_knocks_down_the_3pointer",
+"program": "NBA"
 }
 },
 {
@@ -28399,7 +28310,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Ryan Dunn with the massive block at the rim) 2025/11/22 ESHEET",
-"trackingId": "dm_20251122_NBA_ryan_dunn_with_the_massive_block_at_the_rim"
+"trackingId": "dm_20251122_NBA_ryan_dunn_with_the_massive_block_at_the_rim",
+"program": "NBA"
 }
 },
 {
@@ -28619,7 +28531,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Anthony Edwards gets the hoop and the harm) 2025/11/22 ESHEET",
-"trackingId": "dm_20251122_NBA_anthony_edwards_gets_the_hoop_and_the_harm"
+"trackingId": "dm_20251122_NBA_anthony_edwards_gets_the_hoop_and_the_harm",
+"program": "NBA"
 }
 },
 {
@@ -28839,7 +28752,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Jamaree Bouyea takes flight for alley-oop slam) 2025/11/22 ESHEET",
-"trackingId": "dm_20251122_NBA_jamaree_bouyea_takes_flight_for_alleyoop_slam"
+"trackingId": "dm_20251122_NBA_jamaree_bouyea_takes_flight_for_alleyoop_slam",
+"program": "NBA"
 }
 },
 {
@@ -29062,7 +28976,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Jaden McDaniels somehow gets the and-1 to fall) 2025/11/22 ESHEET",
-"trackingId": "dm_20251122_NBA_jaden_mcdaniels_somehow_gets_the_and1_to_fall"
+"trackingId": "dm_20251122_NBA_jaden_mcdaniels_somehow_gets_the_and1_to_fall",
+"program": "NBA"
 }
 },
 {
@@ -29282,7 +29197,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Anthony Edwards buries trey against vs. Phoenix Suns) 2025/11/22 ESHEET",
-"trackingId": "dm_20251122_NBA_anthony_edwards_buries_trey_against_vs_phoenix_suns"
+"trackingId": "dm_20251122_NBA_anthony_edwards_buries_trey_against_vs_phoenix_suns",
+"program": "NBA"
 }
 },
 {
@@ -29502,7 +29418,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Dillon Brooks knocks down the triple) 2025/11/22 ESHEET",
-"trackingId": "dm_20251122_NBA_dillon_brooks_knocks_down_the_triple"
+"trackingId": "dm_20251122_NBA_dillon_brooks_knocks_down_the_triple",
+"program": "NBA"
 }
 },
 {
@@ -29722,7 +29639,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Donte DiVincenzo knocks down the trey) 2025/11/22 ESHEET",
-"trackingId": "dm_20251122_NBA_donte_divincenzo_knocks_down_the_trey"
+"trackingId": "dm_20251122_NBA_donte_divincenzo_knocks_down_the_trey",
+"program": "NBA"
 }
 },
 {
@@ -29942,7 +29860,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Rudy Gobert throws down the hammer) 2025/11/22 ESHEET",
-"trackingId": "dm_20251122_NBA_rudy_gobert_throws_down_the_hammer"
+"trackingId": "dm_20251122_NBA_rudy_gobert_throws_down_the_hammer",
+"program": "NBA"
 }
 },
 {
@@ -30162,7 +30081,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Donte DiVincenzo buries 3 against vs. Phoenix Suns) 2025/11/22 ESHEET",
-"trackingId": "dm_20251122_NBA_donte_divincenzo_buries_3_against_vs_phoenix_suns"
+"trackingId": "dm_20251122_NBA_donte_divincenzo_buries_3_against_vs_phoenix_suns",
+"program": "NBA"
 }
 },
 {
@@ -30382,7 +30302,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Jordan Goodwin drills 3-point shot Phoenix Suns vs. Minnesota Timberwolves) 2025/11/22 ESHEET",
-"trackingId": "dm_20251122_NBA_jordan_goodwin_drills_3point_shot_phoenix_suns_vs_minnesota_timberwolves"
+"trackingId": "dm_20251122_NBA_jordan_goodwin_drills_3point_shot_phoenix_suns_vs_minnesota_timberwolves",
+"program": "NBA"
 }
 },
 {
@@ -30606,7 +30527,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Suns rally for dramatic win over Wolves) 2025/11/22 ESHEET",
-"trackingId": "dm_20251122_NBA_suns_rally_for_dramatic_win_over_wolves"
+"trackingId": "dm_20251122_NBA_suns_rally_for_dramatic_win_over_wolves",
+"program": "NBA"
 }
 }
 ],
@@ -30799,8 +30721,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 7.5,
-"displayValue": "7.5"
+"value": 8.0,
+"displayValue": "8"
 },
 {
 "name": "losses",
@@ -30809,8 +30731,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 8.0,
-"displayValue": "8"
+"value": 9.0,
+"displayValue": "9"
 },
 {
 "name": "streak",
@@ -30819,8 +30741,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 5.0,
-"displayValue": "W5"
+"value": -1.0,
+"displayValue": "L1"
 },
 {
 "name": "winPercent",
@@ -30829,8 +30751,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.65217394,
-"displayValue": ".652"
+"value": 0.625,
+"displayValue": ".625"
 },
 {
 "name": "wins",
@@ -31141,8 +31063,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 4.0,
-"displayValue": "4"
+"value": 3.5,
+"displayValue": "3.5"
 },
 {
 "name": "losses",
@@ -31161,8 +31083,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -1.0,
-"displayValue": "L1"
+"value": 1.0,
+"displayValue": "W1"
 },
 {
 "name": "winPercent",
@@ -31171,8 +31093,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.5652174,
-"displayValue": ".565"
+"value": 0.5833333,
+"displayValue": ".583"
 },
 {
 "name": "wins",
@@ -31181,8 +31103,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 13.0,
-"displayValue": "13"
+"value": 14.0,
+"displayValue": "14"
 }
 ],
 "logo": [
@@ -31307,8 +31229,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 11.0,
-"displayValue": "11"
+"value": 11.5,
+"displayValue": "11.5"
 },
 {
 "name": "losses",
@@ -31317,8 +31239,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 17.0,
-"displayValue": "17"
+"value": 18.0,
+"displayValue": "18"
 },
 {
 "name": "streak",
@@ -31327,8 +31249,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": -1.0,
+"displayValue": "L1"
 },
 {
 "name": "winPercent",
@@ -31337,8 +31259,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.26086956,
-"displayValue": ".261"
+"value": 0.25,
+"displayValue": ".250"
 },
 {
 "name": "wins",

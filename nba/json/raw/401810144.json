@@ -2171,11 +2171,26 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2026/teams/4?lang=en&region=us"
 },
-"status": {
-"id": "1",
-"name": "Active",
-"type": "active",
-"abbreviation": "Active"
+"status": "Day-To-Day",
+"injuries": {
+"status": "Day-To-Day",
+"date": "2025-12-08T18:40Z",
+"type": {
+"id": "6",
+"name": "INJURY_STATUS_DAYTODAY",
+"description": "day-to-day",
+"abbreviation": "DD"
+},
+"details": {
+"fantasyStatus": {
+"description": "GTD",
+"abbreviation": "GTD"
+},
+"type": "Thumb",
+"location": "Arm",
+"side": "Not Specified",
+"returnDate": "2025-12-12"
+}
 }
 },
 "statistics": [
@@ -2263,8 +2278,8 @@
 },
 "details": {
 "fantasyStatus": {
-"description": "OUT",
-"abbreviation": "OUT"
+"description": "GTD",
+"abbreviation": "GTD"
 },
 "type": "Ankle",
 "location": "Leg",
@@ -2890,6 +2905,21 @@
 },
 "media": {
 "shortName": "Pelicans.com"
+},
+"lang": "en",
+"region": "us"
+},
+{
+"type": {
+"id": "6",
+"shortName": "Subscription Package"
+},
+"market": {
+"id": "3",
+"type": "Away"
+},
+"media": {
+"shortName": "NBA League Pass"
 },
 "lang": "en",
 "region": "us"
@@ -28255,7 +28285,8 @@
 "leagueName": "NBA",
 "coverageType": "Final Game Highlight",
 "trackingName": "NBA_One-Play (Chicago Bulls vs. New Orleans Pelicans: Game Highlights) 2025/11/25 ESHEET",
-"trackingId": "dm_20251125_NBA_chicago_bulls_vs_new_orleans_pelicans_game_highlights"
+"trackingId": "dm_20251125_NBA_chicago_bulls_vs_new_orleans_pelicans_game_highlights",
+"program": "NBA"
 },
 "contributingPartner": "wsc",
 "contributingSystem": "wsc"
@@ -28633,7 +28664,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Matas Buzelis throws down the hammer) 2025/11/25 ESHEET",
-"trackingId": "dm_20251125_NBA_matas_buzelis_throws_down_the_hammer"
+"trackingId": "dm_20251125_NBA_matas_buzelis_throws_down_the_hammer",
+"program": "NBA"
 }
 },
 {
@@ -28857,7 +28889,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Trey Murphy III gets the basket plus the foul) 2025/11/25 ESHEET",
-"trackingId": "dm_20251125_NBA_trey_murphy_iii_gets_the_basket_plus_the_foul"
+"trackingId": "dm_20251125_NBA_trey_murphy_iii_gets_the_basket_plus_the_foul",
+"program": "NBA"
 }
 },
 {
@@ -29078,7 +29111,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Yves Missi elevates for the big-time block) 2025/11/25 ESHEET",
-"trackingId": "dm_20251125_NBA_yves_missi_elevates_for_the_bigtime_block"
+"trackingId": "dm_20251125_NBA_yves_missi_elevates_for_the_bigtime_block",
+"program": "NBA"
 }
 },
 {
@@ -29299,7 +29333,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Micah Peavy rocks the rim with powerful slam dunk) 2025/11/25 ESHEET",
-"trackingId": "dm_20251125_NBA_micah_peavy_rocks_the_rim_with_powerful_slam_dunk"
+"trackingId": "dm_20251125_NBA_micah_peavy_rocks_the_rim_with_powerful_slam_dunk",
+"program": "NBA"
 }
 },
 {
@@ -29520,7 +29555,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Ayo Dosunmu gets the basket plus the foul) 2025/11/25 ESHEET",
-"trackingId": "dm_20251125_NBA_ayo_dosunmu_gets_the_basket_plus_the_foul"
+"trackingId": "dm_20251125_NBA_ayo_dosunmu_gets_the_basket_plus_the_foul",
+"program": "NBA"
 }
 },
 {
@@ -29741,7 +29777,8 @@
 "leagueName": "NBA",
 "coverageType": "OnePlay",
 "trackingName": "NBA_One-Play (Yves Missi with the massive swat at the rim) 2025/11/25 ESHEET",
-"trackingId": "dm_20251125_NBA_yves_missi_with_the_massive_swat_at_the_rim"
+"trackingId": "dm_20251125_NBA_yves_missi_with_the_massive_swat_at_the_rim",
+"program": "NBA"
 }
 }
 ],
@@ -30100,8 +30137,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 13.5,
-"displayValue": "13.5"
+"value": 13.0,
+"displayValue": "13"
 },
 {
 "name": "losses",
@@ -30120,8 +30157,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": 2.0,
+"displayValue": "W2"
 },
 {
 "name": "winPercent",
@@ -30130,8 +30167,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.2173913,
-"displayValue": ".217"
+"value": 0.25,
+"displayValue": ".250"
 },
 {
 "name": "wins",
@@ -30140,8 +30177,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 5.0,
-"displayValue": "5"
+"value": 6.0,
+"displayValue": "6"
 }
 ],
 "logo": [
@@ -30276,8 +30313,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 0.5,
-"displayValue": "0.5"
+"value": 0.0,
+"displayValue": "-"
 },
 {
 "name": "losses",
@@ -30296,8 +30333,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -1.0,
-"displayValue": "L1"
+"value": 1.0,
+"displayValue": "W1"
 },
 {
 "name": "winPercent",
@@ -30306,8 +30343,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.6818182,
-"displayValue": ".682"
+"value": 0.6956522,
+"displayValue": ".696"
 },
 {
 "name": "wins",
@@ -30316,8 +30353,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 15.0,
-"displayValue": "15"
+"value": 16.0,
+"displayValue": "16"
 }
 ],
 "logo": [
@@ -30525,8 +30562,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 13.5,
-"displayValue": "13.5"
+"value": 14.0,
+"displayValue": "14"
 },
 {
 "name": "losses",
@@ -30535,8 +30572,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 21.0,
-"displayValue": "21"
+"value": 22.0,
+"displayValue": "22"
 },
 {
 "name": "streak",
@@ -30545,8 +30582,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -6.0,
-"displayValue": "L6"
+"value": -7.0,
+"displayValue": "L7"
 },
 {
 "name": "winPercent",
@@ -30555,8 +30592,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.125,
-"displayValue": ".125"
+"value": 0.12,
+"displayValue": ".120"
 },
 {
 "name": "wins",
