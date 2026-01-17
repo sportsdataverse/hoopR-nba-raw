@@ -2111,27 +2111,11 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2026/teams/20?lang=en&region=us"
 },
-"status": "Day-To-Day",
-"injuries": {
-"status": "Day-To-Day",
-"date": "2026-01-15T22:04Z",
-"type": {
-"id": "6",
-"name": "INJURY_STATUS_DAYTODAY",
-"description": "day-to-day",
-"abbreviation": "DD"
-},
-"details": {
-"fantasyStatus": {
-"description": "GTD",
-"abbreviation": "GTD"
-},
-"type": "Knee",
-"location": "Leg",
-"detail": "Not Specified",
-"side": "Left",
-"returnDate": "2026-01-16"
-}
+"status": {
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -2207,27 +2191,11 @@
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2026/teams/20?lang=en&region=us"
 },
-"status": "Day-To-Day",
-"injuries": {
-"status": "Day-To-Day",
-"date": "2026-01-15T22:06Z",
-"type": {
-"id": "6",
-"name": "INJURY_STATUS_DAYTODAY",
-"description": "day-to-day",
-"abbreviation": "DD"
-},
-"details": {
-"fantasyStatus": {
-"description": "GTD",
-"abbreviation": "GTD"
-},
-"type": "Knee",
-"location": "Leg",
-"detail": "Not Specified",
-"side": "Left",
-"returnDate": "2026-01-16"
-}
+"status": {
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -3065,67 +3033,21 @@
 "uid": "s:40~l:46~e:401810444~c:401810444",
 "date": "2026-01-17T00:00:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Fri, January 16th at 7:00 PM EST",
-"shortDetail": "1/16 - 7:00 PM EST"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
 "neutralSite": false,
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "ESPN"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "3",
-"type": "Away"
-},
-"media": {
-"shortName": "FanDuel SN OH"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "NBC Sports Phil"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": false,
 "team": {
 "id": "20",
 "uid": "s:40~l:46~t:20",
@@ -3190,10 +3112,11 @@
 }
 ]
 },
-"score": "0"
+"score": "115"
 },
 {
 "homeAway": "away",
+"winner": true,
 "team": {
 "id": "5",
 "uid": "s:40~l:46~t:5",
@@ -3258,7 +3181,7 @@
 }
 ]
 },
-"score": "0"
+"score": "117"
 }
 ],
 "links": [
@@ -29451,8 +29374,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 7.5,
-"displayValue": "7.5"
+"value": 7.0,
+"displayValue": "7"
 },
 {
 "name": "losses",
@@ -29471,8 +29394,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": 2.0,
+"displayValue": "W2"
 },
 {
 "name": "winPercent",
@@ -29481,8 +29404,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.54761904,
-"displayValue": ".548"
+"value": 0.55813956,
+"displayValue": ".558"
 },
 {
 "name": "wins",
@@ -29491,8 +29414,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 23.0,
-"displayValue": "23"
+"value": 24.0,
+"displayValue": "24"
 }
 ],
 "logo": [
@@ -29534,8 +29457,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 10.5,
-"displayValue": "10.5"
+"value": 11.0,
+"displayValue": "11"
 },
 {
 "name": "losses",
@@ -29544,8 +29467,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 21.0,
-"displayValue": "21"
+"value": 22.0,
+"displayValue": "22"
 },
 {
 "name": "streak",
@@ -29554,8 +29477,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": -1.0,
+"displayValue": "L1"
 },
 {
 "name": "winPercent",
@@ -29564,8 +29487,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.475,
-"displayValue": ".475"
+"value": 0.46341464,
+"displayValue": ".463"
 },
 {
 "name": "wins",
@@ -29700,8 +29623,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 21.0,
-"displayValue": "21"
+"value": 20.5,
+"displayValue": "20.5"
 },
 {
 "name": "losses",
@@ -29720,8 +29643,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -1.0,
-"displayValue": "L1"
+"value": 1.0,
+"displayValue": "W1"
 },
 {
 "name": "winPercent",
@@ -29730,8 +29653,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.2195122,
-"displayValue": ".220"
+"value": 0.23809524,
+"displayValue": ".238"
 },
 {
 "name": "wins",
@@ -29740,8 +29663,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 9.0,
-"displayValue": "9"
+"value": 10.0,
+"displayValue": "10"
 }
 ],
 "logo": [
@@ -29959,8 +29882,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 1.0,
-"displayValue": "1"
+"value": 1.5,
+"displayValue": "1.5"
 },
 {
 "name": "losses",
@@ -29969,8 +29892,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 17.0,
-"displayValue": "17"
+"value": 18.0,
+"displayValue": "18"
 },
 {
 "name": "streak",
@@ -29979,8 +29902,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": 1.0,
-"displayValue": "W1"
+"value": -1.0,
+"displayValue": "L1"
 },
 {
 "name": "winPercent",
@@ -29989,8 +29912,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.5952381,
-"displayValue": ".595"
+"value": 0.5813953,
+"displayValue": ".581"
 },
 {
 "name": "wins",
@@ -30042,8 +29965,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 2.5,
-"displayValue": "2.5"
+"value": 3.0,
+"displayValue": "3"
 },
 {
 "name": "losses",
@@ -30052,8 +29975,8 @@
 "description": "Losses",
 "abbreviation": "L",
 "type": "losses",
-"value": 17.0,
-"displayValue": "17"
+"value": 18.0,
+"displayValue": "18"
 },
 {
 "name": "streak",
@@ -30062,8 +29985,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -1.0,
-"displayValue": "L1"
+"value": -2.0,
+"displayValue": "L2"
 },
 {
 "name": "winPercent",
@@ -30072,8 +29995,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.5641026,
-"displayValue": ".564"
+"value": 0.55,
+"displayValue": ".550"
 },
 {
 "name": "wins",
@@ -30125,8 +30048,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 13.0,
-"displayValue": "13"
+"value": 12.5,
+"displayValue": "12.5"
 },
 {
 "name": "losses",
@@ -30145,8 +30068,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -5.0,
-"displayValue": "L5"
+"value": 1.0,
+"displayValue": "W1"
 },
 {
 "name": "winPercent",
@@ -30155,8 +30078,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.28947368,
-"displayValue": ".289"
+"value": 0.30769232,
+"displayValue": ".308"
 },
 {
 "name": "wins",
@@ -30165,8 +30088,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 11.0,
-"displayValue": "11"
+"value": 12.0,
+"displayValue": "12"
 }
 ],
 "logo": [
