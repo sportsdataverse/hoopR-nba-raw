@@ -2690,67 +2690,22 @@
 "uid": "s:40~l:46~e:401810626~c:401810626",
 "date": "2026-02-11T00:30:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Tue, February 10th at 7:30 PM EST",
-"shortDetail": "2/10 - 7:30 PM EST"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final/OT",
+"shortDetail": "Final/OT",
+"altDetail": "OT"
 },
 "neutralSite": false,
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "3",
-"type": "Away"
-},
-"media": {
-"shortName": "FanDuel SN IN"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "2",
-"type": "Home"
-},
-"media": {
-"shortName": "MSG"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "6",
-"shortName": "Subscription Package"
-},
-"market": {
-"id": "3",
-"type": "Away"
-},
-"media": {
-"shortName": "NBA League Pass"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": false,
 "team": {
 "id": "18",
 "uid": "s:40~l:46~t:18",
@@ -2815,10 +2770,11 @@
 }
 ]
 },
-"score": "0"
+"score": "134"
 },
 {
 "homeAway": "away",
+"winner": true,
 "team": {
 "id": "11",
 "uid": "s:40~l:46~t:11",
@@ -2883,7 +2839,7 @@
 }
 ]
 },
-"score": "0"
+"score": "137"
 }
 ],
 "links": [
@@ -28726,89 +28682,6 @@
 "standings": {
 "entries": [
 {
-"team": "New York",
-"link": "https://www.espn.com/nba/team/_/name/ny/new-york-knicks",
-"id": "18",
-"uid": "s:40~l:46~t:18",
-"stats": [
-{
-"name": "gamesBehind",
-"displayName": "Games Back",
-"shortDisplayName": "GB",
-"description": "Games Back",
-"abbreviation": "GB",
-"type": "gamesbehind",
-"value": 0.0,
-"displayValue": "-"
-},
-{
-"name": "losses",
-"displayName": "Losses",
-"shortDisplayName": "L",
-"description": "Losses",
-"abbreviation": "L",
-"type": "losses",
-"value": 19.0,
-"displayValue": "19"
-},
-{
-"name": "streak",
-"displayName": "Streak",
-"shortDisplayName": "STRK",
-"description": "Current Streak",
-"abbreviation": "STRK",
-"type": "streak",
-"value": 1.0,
-"displayValue": "W1"
-},
-{
-"name": "winPercent",
-"displayName": "Win Percentage",
-"shortDisplayName": "PCT",
-"description": "Winning Percentage",
-"abbreviation": "PCT",
-"type": "winpercent",
-"value": 0.6415094,
-"displayValue": ".642"
-},
-{
-"name": "wins",
-"displayName": "Wins",
-"shortDisplayName": "W",
-"description": "Wins",
-"abbreviation": "W",
-"type": "wins",
-"value": 34.0,
-"displayValue": "34"
-}
-],
-"logo": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/ny.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2024-06-25T21:17Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/ny.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2024-06-25T21:14Z"
-}
-]
-},
-{
 "team": "Boston",
 "link": "https://www.espn.com/nba/team/_/name/bos/boston-celtics",
 "id": "2",
@@ -28888,6 +28761,89 @@
 "dark"
 ],
 "lastUpdated": "2024-06-25T21:13Z"
+}
+]
+},
+{
+"team": "New York",
+"link": "https://www.espn.com/nba/team/_/name/ny/new-york-knicks",
+"id": "18",
+"uid": "s:40~l:46~t:18",
+"stats": [
+{
+"name": "gamesBehind",
+"displayName": "Games Back",
+"shortDisplayName": "GB",
+"description": "Games Back",
+"abbreviation": "GB",
+"type": "gamesbehind",
+"value": 0.5,
+"displayValue": "0.5"
+},
+{
+"name": "losses",
+"displayName": "Losses",
+"shortDisplayName": "L",
+"description": "Losses",
+"abbreviation": "L",
+"type": "losses",
+"value": 20.0,
+"displayValue": "20"
+},
+{
+"name": "streak",
+"displayName": "Streak",
+"shortDisplayName": "STRK",
+"description": "Current Streak",
+"abbreviation": "STRK",
+"type": "streak",
+"value": -1.0,
+"displayValue": "L1"
+},
+{
+"name": "winPercent",
+"displayName": "Win Percentage",
+"shortDisplayName": "PCT",
+"description": "Winning Percentage",
+"abbreviation": "PCT",
+"type": "winpercent",
+"value": 0.6296296,
+"displayValue": ".630"
+},
+{
+"name": "wins",
+"displayName": "Wins",
+"shortDisplayName": "W",
+"description": "Wins",
+"abbreviation": "W",
+"type": "wins",
+"value": 34.0,
+"displayValue": "34"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500/ny.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T21:17Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/ny.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T21:14Z"
 }
 ]
 },
@@ -29495,8 +29451,8 @@
 "description": "Games Back",
 "abbreviation": "GB",
 "type": "gamesbehind",
-"value": 26.5,
-"displayValue": "26.5"
+"value": 26.0,
+"displayValue": "26"
 },
 {
 "name": "losses",
@@ -29515,8 +29471,8 @@
 "description": "Current Streak",
 "abbreviation": "STRK",
 "type": "streak",
-"value": -4.0,
-"displayValue": "L4"
+"value": 1.0,
+"displayValue": "W1"
 },
 {
 "name": "winPercent",
@@ -29525,8 +29481,8 @@
 "description": "Winning Percentage",
 "abbreviation": "PCT",
 "type": "winpercent",
-"value": 0.24528302,
-"displayValue": ".245"
+"value": 0.25925925,
+"displayValue": ".259"
 },
 {
 "name": "wins",
@@ -29535,8 +29491,8 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 13.0,
-"displayValue": "13"
+"value": 14.0,
+"displayValue": "14"
 }
 ],
 "logo": [
