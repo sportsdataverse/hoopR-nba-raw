@@ -2387,11 +2387,27 @@
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2026/teams/16?lang=en&region=us",
 "id": "16"
 },
-"status": {
-"id": "1",
-"name": "Active",
-"type": "active",
-"abbreviation": "Active"
+"status": "Day-To-Day",
+"injuries": {
+"status": "Day-To-Day",
+"date": "2026-04-26T02:18Z",
+"type": {
+"id": "6",
+"name": "INJURY_STATUS_DAYTODAY",
+"description": "day-to-day",
+"abbreviation": "DD"
+},
+"details": {
+"fantasyStatus": {
+"description": "GTD",
+"abbreviation": "GTD",
+"displayDescription": "GTD"
+},
+"type": "Knee",
+"location": "Leg",
+"side": "Left",
+"returnDate": "2026-04-27"
+}
 }
 },
 "statistics": [
@@ -2564,11 +2580,27 @@
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2026/teams/16?lang=en&region=us",
 "id": "16"
 },
-"status": {
-"id": "1",
-"name": "Active",
-"type": "active",
-"abbreviation": "Active"
+"status": "Day-To-Day",
+"injuries": {
+"status": "Day-To-Day",
+"date": "2026-04-26T02:18Z",
+"type": {
+"id": "6",
+"name": "INJURY_STATUS_DAYTODAY",
+"description": "day-to-day",
+"abbreviation": "DD"
+},
+"details": {
+"fantasyStatus": {
+"description": "GTD",
+"abbreviation": "GTD",
+"displayDescription": "GTD"
+},
+"type": "Knee",
+"location": "Leg",
+"side": "Left",
+"returnDate": "2026-04-27"
+}
 }
 },
 "statistics": [
@@ -3945,37 +3977,21 @@
 "uid": "s:40~l:46~e:401869399~c:401869399",
 "date": "2026-04-26T00:30:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Sat, April 25th at 8:30 PM EDT",
-"shortDetail": "4/25 - 8:30 PM EDT"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
 "neutralSite": false,
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "ABC"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": true,
 "team": {
 "id": "16",
 "uid": "s:40~l:46~t:16",
@@ -4040,10 +4056,11 @@
 }
 ]
 },
-"score": "0"
+"score": "112"
 },
 {
 "homeAway": "away",
+"winner": false,
 "team": {
 "id": "7",
 "uid": "s:40~l:46~t:7",
@@ -4108,7 +4125,7 @@
 }
 ]
 },
-"score": "0"
+"score": "96"
 }
 ],
 "links": [
