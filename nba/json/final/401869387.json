@@ -34617,10 +34617,6 @@
 {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/events/401869393?lang=en&region=us",
 "id": "401869393"
-},
-{
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/events/401869394?lang=en&region=us",
-"id": "401869394"
 }
 ],
 "startDate": "2026-04-18T04:00Z"
@@ -40291,27 +40287,11 @@
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2026/teams/18?lang=en&region=us",
 "id": "18"
 },
-"status": "Day-To-Day",
-"injuries": {
-"status": "Day-To-Day",
-"date": "2026-04-29T21:08Z",
-"type": {
-"id": "6",
-"name": "INJURY_STATUS_DAYTODAY",
-"description": "day-to-day",
-"abbreviation": "DD"
-},
-"details": {
-"fantasyStatus": {
-"description": "GTD",
-"abbreviation": "GTD",
-"displayDescription": "GTD"
-},
-"type": "Back",
-"location": "Torso",
-"detail": "Bruise",
-"returnDate": "2026-04-30"
-}
+"status": {
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -42202,37 +42182,21 @@
 "uid": "s:40~l:46~e:401869393~c:401869393",
 "date": "2026-04-30T23:00:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Thu, April 30th at 7:00 PM EDT",
-"shortDetail": "4/30 - 7:00 PM EDT"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
 "neutralSite": false,
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "ESPN"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": false,
 "team": {
 "id": "1",
 "uid": "s:40~l:46~t:1",
@@ -42297,10 +42261,11 @@
 }
 ]
 },
-"score": "0"
+"score": "89"
 },
 {
 "homeAway": "away",
+"winner": true,
 "team": {
 "id": "18",
 "uid": "s:40~l:46~t:18",
@@ -42365,7 +42330,7 @@
 }
 ]
 },
-"score": "0"
+"score": "140"
 }
 ],
 "links": [
@@ -42391,191 +42356,6 @@
 "event"
 ],
 "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401869393",
-"text": "Gamecast",
-"shortText": "Summary",
-"isExternal": false,
-"isPremium": false
-}
-]
-},
-{
-"id": "401869394",
-"uid": "s:40~l:46~e:401869394~c:401869394",
-"date": "2026-05-02T04:00:00Z",
-"timeValid": false,
-"status": "pre",
-"statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "5/2 - TBD",
-"shortDetail": "TBD"
-},
-"neutralSite": false,
-"broadcasts": [],
-"competitors": [
-{
-"homeAway": "home",
-"team": {
-"id": "18",
-"uid": "s:40~l:46~t:18",
-"displayName": "New York Knicks",
-"abbreviation": "NY",
-"links": [
-{
-"href": "https://www.espn.com/nba/team/_/name/ny/new-york-knicks",
-"text": "Clubhouse"
-},
-{
-"href": "https://www.espn.com/nba/team/schedule/_/name/ny",
-"text": "Schedule"
-}
-],
-"logo": "https://a.espncdn.com/i/teamlogos/nba/500/ny.png",
-"logos": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/ny.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2024-06-25T21:17Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/ny.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"dark"
-],
-"lastUpdated": "2024-06-25T21:13Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard"
-],
-"lastUpdated": "2024-06-25T21:18Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/ny.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2024-06-25T21:14Z"
-}
-]
-},
-"score": "0"
-},
-{
-"homeAway": "away",
-"team": {
-"id": "1",
-"uid": "s:40~l:46~t:1",
-"displayName": "Atlanta Hawks",
-"abbreviation": "ATL",
-"links": [
-{
-"href": "https://www.espn.com/nba/team/_/name/atl/atlanta-hawks",
-"text": "Clubhouse"
-},
-{
-"href": "https://www.espn.com/nba/team/schedule/_/name/atl",
-"text": "Schedule"
-}
-],
-"logo": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
-"logos": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2024-06-25T21:17Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/atl.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"dark"
-],
-"lastUpdated": "2024-06-25T21:13Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard"
-],
-"lastUpdated": "2024-06-25T21:18Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/atl.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2024-06-25T21:13Z"
-}
-]
-},
-"score": "0"
-}
-],
-"links": [
-{
-"language": "en-US",
-"rel": [
-"summary",
-"desktop",
-"event"
-],
-"href": "https://www.espn.com/nba/game/_/gameId/401869394/hawks-knicks",
-"text": "Gamecast",
-"shortText": "Summary",
-"isExternal": false,
-"isPremium": false
-},
-{
-"language": "en-US",
-"rel": [
-"summary",
-"sportscenter",
-"app",
-"event"
-],
-"href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401869394",
 "text": "Gamecast",
 "shortText": "Summary",
 "isExternal": false,
@@ -43681,10 +43461,6 @@
 {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/events/401869393?lang=en&region=us",
 "id": "401869393"
-},
-{
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/events/401869394?lang=en&region=us",
-"id": "401869394"
 }
 ],
 "startDate": "2026-04-18T04:00Z"
