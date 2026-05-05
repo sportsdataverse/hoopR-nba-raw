@@ -2012,28 +2012,11 @@
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2026/teams/16?lang=en&region=us",
 "id": "16"
 },
-"status": "Out",
-"injuries": {
-"status": "Out",
-"date": "2026-05-03T22:03Z",
-"type": {
-"id": "4",
-"name": "INJURY_STATUS_OUT",
-"description": "out",
-"abbreviation": "O"
-},
-"details": {
-"fantasyStatus": {
-"description": "GTD",
-"abbreviation": "GTD",
-"displayDescription": "GTD"
-},
-"type": "Knee",
-"location": "Leg",
-"detail": "Bruise",
-"side": "Left",
-"returnDate": "2026-05-04"
-}
+"status": {
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -3175,12 +3158,12 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "Series starts 5/4",
+"summary": "MIN leads series 1-0",
 "completed": false,
 "totalCompetitions": 7,
 "seriesLabel": "Playoffs",
-"seriesScore": "0-0",
-"shortSummary": "Postseason Series",
+"seriesScore": "1-0",
+"shortSummary": "MIN leads series",
 "round": "West Semifinals",
 "events": [
 {
@@ -3188,52 +3171,21 @@
 "uid": "s:40~l:46~e:401871152~c:401871152",
 "date": "2026-05-05T01:30:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Mon, May 4th at 9:30 PM EDT",
-"shortDetail": "5/4 - 9:30 PM EDT"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
 "neutralSite": false,
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "NBCSN"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "4",
-"shortName": "Streaming"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "Peacock"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": false,
 "team": {
 "id": "24",
 "uid": "s:40~l:46~t:24",
@@ -3298,10 +3250,11 @@
 }
 ]
 },
-"score": "0"
+"score": "102"
 },
 {
 "homeAway": "away",
+"winner": true,
 "team": {
 "id": "16",
 "uid": "s:40~l:46~t:16",
@@ -3366,7 +3319,7 @@
 }
 ]
 },
-"score": "0"
+"score": "104"
 }
 ],
 "links": [
@@ -8098,14 +8051,14 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "Series starts 5/4",
+"summary": "MIN leads series 1-0",
 "completed": false,
 "totalCompetitions": 7,
 "competitors": [
 {
 "id": "16",
 "uid": "s:40~l:46~t:16",
-"wins": 0,
+"wins": 1,
 "ties": 0,
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2026/teams/16?lang=en&region=us"
