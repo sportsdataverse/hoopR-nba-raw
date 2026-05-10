@@ -2444,28 +2444,11 @@
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2026/teams/13?lang=en&region=us",
 "id": "13"
 },
-"status": "Day-To-Day",
-"injuries": {
-"status": "Day-To-Day",
-"date": "2026-05-09T00:07Z",
-"type": {
-"id": "6",
-"name": "INJURY_STATUS_DAYTODAY",
-"description": "day-to-day",
-"abbreviation": "DD"
-},
-"details": {
-"fantasyStatus": {
-"description": "GTD",
-"abbreviation": "GTD",
-"displayDescription": "GTD"
-},
-"type": "Finger",
-"location": "Arm",
-"detail": "Dislocated",
-"side": "Right",
-"returnDate": "2026-05-09"
-}
+"status": {
+"id": "1",
+"name": "Active",
+"type": "active",
+"abbreviation": "Active"
 }
 },
 "statistics": [
@@ -3270,11 +3253,11 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "OKC leads series 2-0",
+"summary": "OKC leads series 3-0",
 "completed": false,
 "totalCompetitions": 7,
 "seriesLabel": "Playoffs",
-"seriesScore": "2-0",
+"seriesScore": "3-0",
 "shortSummary": "OKC leads series",
 "round": "West Semifinals",
 "events": [
@@ -3655,53 +3638,21 @@
 "uid": "s:40~l:46~e:401871328~c:401871328",
 "date": "2026-05-10T00:30:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Sat, May 9th at 8:30 PM EDT",
-"shortDetail": "5/9 - 8:30 PM EDT"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
 "neutralSite": false,
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "ABC"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "5",
-"shortName": "Radio"
-},
-"url": "https://cerebro.espn.com/cerebro/search/airing/a1302900673",
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "ERADM"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": false,
 "team": {
 "id": "13",
 "uid": "s:40~l:46~t:13",
@@ -3766,10 +3717,11 @@
 }
 ]
 },
-"score": "0"
+"score": "108"
 },
 {
 "homeAway": "away",
+"winner": true,
 "team": {
 "id": "25",
 "uid": "s:40~l:46~t:25",
@@ -3834,7 +3786,7 @@
 }
 ]
 },
-"score": "0"
+"score": "131"
 }
 ],
 "links": [
@@ -7760,14 +7712,14 @@
 "type": "playoff",
 "title": "Playoff Series",
 "description": "Playoff Series",
-"summary": "OKC leads series 2-0",
+"summary": "OKC leads series 3-0",
 "completed": false,
 "totalCompetitions": 7,
 "competitors": [
 {
 "id": "25",
 "uid": "s:40~l:46~t:25",
-"wins": 2,
+"wins": 3,
 "ties": 0,
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nba/seasons/2026/teams/25?lang=en&region=us"
