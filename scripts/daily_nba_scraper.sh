@@ -16,6 +16,7 @@ do
     python3 python/scrape_nba_schedules.py -s $i -e $i -r $RESCRAPE
     python3 python/scrape_nba_json.py -s $i -e $i -r $RESCRAPE
     python3 python/scrape_nba_standings.py -s $i -e $i -r $RESCRAPE
+    python3 python/scrape_nba_game_rosters.py -s $i -e $i -r $RESCRAPE
     git pull
     git add .
     git pull  >> /dev/null
