@@ -43,6 +43,52 @@ logger = logging.getLogger(__name__)
 PATH_TO_OUTPUT = "nba/draft/json"
 DEFAULT_THREADS = 1
 
+# CORE-API season-draft athletes collection (returned in draft order). The
+# site-API draft picks carry no athlete, so we walk this to supply the drafted
+# players.
+DRAFT_PROSPECTS_REF = (
+    "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/"
+    "seasons/{season}/draft/athletes"
+)
+
+
+def _resp_json(resp: Any) -> Any:
+    return resp.json() if hasattr(resp, "json") else json.loads(
+        getattr(resp, "text", resp)
+    )
+
+
+def _draft_prospects_in_order(season: int) -> list:
+    """Walk the CORE-API season-draft athletes (paginated $refs) and return the
+    prospect entities in draft order. The first len(picks) map 1:1 to overall
+    picks 1..N; later prospects are undrafted. Verified against 2025 (Cooper
+    Flagg #1, Dylan Harper #2, ...)."""
+    out: list = []
+    base = DRAFT_PROSPECTS_REF.format(season=int(season))
+    page = 1
+    try:
+        while True:
+            sep = "&" if "?" in base else "?"
+            pg = _resp_json(download(f"{base}{sep}page={page}&limit=100"))
+            for it in pg.get("items", []):
+                ref = it.get("$ref") if isinstance(it, dict) else None
+                if not ref:
+                    continue
+                try:
+                    out.append(_resp_json(download(ref)))
+                except Exception as e:  # noqa: BLE001
+                    logger.warning(
+                        f"draft {season}: prospect fetch failed: {e!r}"
+                    )
+            if page >= pg.get("pageCount", 1):
+                break
+            page += 1
+            if page > 20:
+                break
+    except Exception as e:  # noqa: BLE001
+        logger.warning(f"draft {season}: prospect walk failed: {e!r}")
+    return out
+
 
 def download_draft(
     season: int, output_dir: Path, rerun_existing: bool
@@ -59,13 +105,18 @@ def download_draft(
             "http://site.api.espn.com/apis/site/v2/sports/basketball/nba/"
             f"draft?year={int(season)}"
         )
-        resp = download(url)
-        raw = resp.json() if hasattr(resp, "json") else json.loads(
-            getattr(resp, "text", resp)
-        )
+        raw = _resp_json(download(url))
+        # Inject drafted players: site-API picks have no athlete, so map the
+        # core-API prospects (draft order) onto picks[i]["athlete"] -- the
+        # downstream R parser (espn_nba_08_draft_creation.R) reads pick.athlete.
+        prospects = _draft_prospects_in_order(int(season))
+        picks = raw.get("picks") or []
+        for idx, pk in enumerate(picks):
+            if idx < len(prospects) and isinstance(pk, dict):
+                pk["athlete"] = prospects[idx]
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(raw, f, indent=0, sort_keys=False)
-        return f"ok {season}"
+        return f"ok {season} ({len(prospects)} prospects -> {len(picks)} picks)"
     except Exception as e:
         logger.warning(f"season={season} failed: {e!r}")
         return f"err {season}: {e}"
