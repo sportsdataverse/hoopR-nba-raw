@@ -19,6 +19,7 @@ do
     python3 python/scrape_nba_game_rosters.py -s $i -e $i -r $RESCRAPE
     python3 python/scrape_nba_draft.py -s $i -e $i -r $RESCRAPE
     python3 python/scrape_nba_player_stats.py -s $i -e $i -r $RESCRAPE
+    python3 python/scrape_nba_team_stats.py -s $i -e $i -r $RESCRAPE
     git pull
     git add .
     git pull  >> /dev/null
