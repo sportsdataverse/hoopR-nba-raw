@@ -3608,53 +3608,21 @@
 "uid": "s:40~l:46~e:401859966~c:401859966",
 "date": "2026-06-11T00:30:00Z",
 "timeValid": true,
-"status": "pre",
+"status": "post",
 "statusType": {
-"id": "1",
-"name": "STATUS_SCHEDULED",
-"state": "pre",
-"completed": false,
-"description": "Scheduled",
-"detail": "Wed, June 10th at 8:30 PM EDT",
-"shortDetail": "6/10 - 8:30 PM EDT"
+"id": "3",
+"name": "STATUS_FINAL",
+"state": "post",
+"completed": true,
+"description": "Final",
+"detail": "Final",
+"shortDetail": "Final"
 },
 "neutralSite": false,
-"broadcasts": [
-{
-"type": {
-"id": "1",
-"shortName": "TV"
-},
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "ABC"
-},
-"lang": "en",
-"region": "us"
-},
-{
-"type": {
-"id": "5",
-"shortName": "Radio"
-},
-"url": "https://cerebro.espn.com/cerebro/search/airing/a1303160466",
-"market": {
-"id": "1",
-"type": "National"
-},
-"media": {
-"shortName": "ERADM"
-},
-"lang": "en",
-"region": "us"
-}
-],
 "competitors": [
 {
 "homeAway": "home",
+"winner": true,
 "team": {
 "id": "18",
 "uid": "s:40~l:46~t:18",
@@ -3719,10 +3687,11 @@
 }
 ]
 },
-"score": "0"
+"score": "107"
 },
 {
 "homeAway": "away",
+"winner": false,
 "team": {
 "id": "24",
 "uid": "s:40~l:46~t:24",
@@ -3787,7 +3756,7 @@
 }
 ]
 },
-"score": "0"
+"score": "106"
 }
 ],
 "links": [
@@ -3848,6 +3817,22 @@
 },
 "media": {
 "shortName": "ABC"
+},
+"lang": "en",
+"region": "us"
+},
+{
+"type": {
+"id": "5",
+"shortName": "Radio"
+},
+"url": "https://cerebro.espn.com/cerebro/search/airing/a1303161414",
+"market": {
+"id": "1",
+"type": "National"
+},
+"media": {
+"shortName": "ERADM"
 },
 "lang": "en",
 "region": "us"
@@ -8107,6 +8092,16 @@
 },
 {
 "rel": [
+"rankings",
+"sportscenter",
+"app",
+"league"
+],
+"href": "sportscenter://x-callback-url/showClubhouse?uid=s:40~l:46&section=rankings",
+"text": "Rankings"
+},
+{
+"rel": [
 "scores",
 "desktop",
 "league"
@@ -8131,6 +8126,16 @@
 "league"
 ],
 "href": "https://www.espn.com/nba/stats",
+"text": "Stats"
+},
+{
+"rel": [
+"stats",
+"sportscenter",
+"app",
+"league"
+],
+"href": "sportscenter://x-callback-url/showClubhouse?uid=s:40~l:46&section=stats",
 "text": "Stats"
 },
 {
