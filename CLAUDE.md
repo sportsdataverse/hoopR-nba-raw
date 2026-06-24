@@ -34,17 +34,24 @@ This is the **ESPN NBA** raw cache. Do not confuse with:
 
 ## Build & Development Commands
 
-The repo is driven by `scripts/daily_nba_scraper.sh`, which sequences
-schedule scraping then per-game JSON scraping, then commits + pushes. All
-seasons are integer years.
+The repo is driven by `scripts/daily_nba_scraper.sh`, which loops the
+season range and runs **eight** scrapers per season (schedules, json,
+standings, game_rosters, draft, player_stats, team_stats, team_rosters),
+then commits + pushes. All seasons are integer years.
 
 ```sh
 # Full daily flow for one or more seasons (the entry point CI uses)
 bash scripts/daily_nba_scraper.sh -s 2025 -e 2025 -r false
 
-# Or call the scrapers directly when iterating
-python3 python/scrape_nba_schedules.py -s 2025 -e 2025 -r false
-python3 python/scrape_nba_json.py      -s 2025 -e 2025 -r false
+# Or call any scraper directly when iterating
+python3 python/scrape_nba_schedules.py    -s 2025 -e 2025 -r false
+python3 python/scrape_nba_json.py         -s 2025 -e 2025 -r false
+python3 python/scrape_nba_standings.py    -s 2025 -e 2025 -r false
+python3 python/scrape_nba_game_rosters.py -s 2025 -e 2025 -r false
+python3 python/scrape_nba_draft.py        -s 2025 -e 2025 -r false
+python3 python/scrape_nba_player_stats.py -s 2025 -e 2025 -r false
+python3 python/scrape_nba_team_stats.py   -s 2025 -e 2025 -r false
+python3 python/scrape_nba_team_rosters.py -s 2025 -e 2025 -r false
 
 # Helpers (not part of the daily flow)
 python3 python/process_nba_schedules.py
@@ -53,13 +60,17 @@ python3 python/nba_pbp_creation.py
 ```
 
 `-r true` forces re-scrape of games already on disk; `-r false` skips
-existing files. Output paths the scrapers write under:
+existing files. **The `-r` flag defaults to `TRUE`** when unset
+(`RESCRAPE=${RESCRAPE:-TRUE}`), so CI always passes `-r false` explicitly.
+Output paths the scrapers write under:
 
 - `nba/schedules/{rds,parquet}/nba_schedule_{year}.{ext}`
 - `nba/nba_schedule_master.parquet` — concatenated master schedule
 - `nba/json/final/{game_id}.json` — final clean payload, consumed by `hoopR-nba-data`
 - `nba/json/raw/{game_id}.json`   — raw ESPN response (kept for forensics)
 - `nba/errors/`                   — failed-game records
+- `nba/{standings,game_rosters,draft,player_season_stats,team_stats,team_rosters}/` — per-dataset payloads
+- `logs/hoopR_nba_raw_logfile_{year}.log` — per-season run log, committed separately
 
 The scrapers default to `season_type in (2, 3, 5)` for regular season,
 postseason, and play-in. Pre-2002 seasons are clamped to 2002 in
@@ -71,15 +82,22 @@ postseason, and play-in. Pre-2002 seasons are clamped to 2002 in
 python/
   scrape_nba_schedules.py     # ESPN schedule scrape -> nba/schedules/
   scrape_nba_json.py          # Per-game JSON scrape -> nba/json/final/{game_id}.json
-  process_nba_schedules.py    # Schedule post-processing
+  scrape_nba_standings.py     # -> nba/standings/
+  scrape_nba_game_rosters.py  # -> nba/game_rosters/
+  scrape_nba_draft.py         # -> nba/draft/
+  scrape_nba_player_stats.py  # -> nba/player_season_stats/
+  scrape_nba_team_stats.py    # -> nba/team_stats/
+  scrape_nba_team_rosters.py  # -> nba/team_rosters/
+  process_nba_schedules.py    # Schedule post-processing (helper, not in daily flow)
   add_game_links_to_schedule.py
   nba_pbp_creation.py         # PBP compile prototype (not in daily flow)
 scripts/
-  daily_nba_scraper.sh        # CI entry point
+  daily_nba_scraper.sh        # CI entry point — per-season loop over 8 scrapers
 nba/                          # Committed scraped output (consumed downstream)
   schedules/{rds,parquet}/
   json/{raw,final}/
   errors/
+  standings/  game_rosters/  draft/  player_season_stats/  team_stats/  team_rosters/
 .github/workflows/
   hoopR_nba_data_trigger.yaml # Fires repository_dispatch (event-type daily_nba_data) on push
 requirements.txt              # Python deps, pinned via sportsdataverse-py
@@ -88,9 +106,9 @@ requirements.txt              # Python deps, pinned via sportsdataverse-py
 ## Daily Workflow
 
 The current CI driver is `scripts/daily_nba_scraper.sh`, invoked by the
-sportsdataverse umbrella scheduler. It runs `scrape_nba_schedules.py`
-then `scrape_nba_json.py` per season, commits any new files under
-`nba/`, and pushes. That push fires
+sportsdataverse umbrella scheduler. It runs the eight scrapers per season,
+commits any new files under `nba/`, and pushes (a second commit pushes the
+per-season log under `logs/`). That push fires
 `.github/workflows/hoopR_nba_data_trigger.yaml`, which dispatches
 `daily_nba_data` against `sportsdataverse/hoopR-nba-data`.
 
