@@ -22,10 +22,9 @@ score across the requested season range. That release is the authoritative
 cannot supply historical rosters).
 
 Requirements:
-    Uses the generic cross-league ``_espn_basketball_player_stats`` helper
-    in sportsdataverse-py (``sportsdataverse/wbb/wbb_player_stats.py``),
-    invoked with ``league="nba"``. There is no ``sportsdataverse.nba``
-    re-export yet, so import the generic helper directly.
+    Uses ``espn_nba_player_stats`` from sportsdataverse-py
+    (``sportsdataverse/nba/nba_player_stats.py``). The league is baked into
+    that module, so no ``league=`` argument is needed.
 """
 
 from __future__ import annotations
@@ -41,9 +40,9 @@ from pathlib import Path
 
 from tqdm import tqdm
 
-# Generic basketball player-stats helper; league="nba" builds the
+# Per-league player-stats helper; builds the
 # site.web.api.espn.com/.../basketball/nba/athletes/{id}/stats URL.
-from sportsdataverse.wbb.wbb_player_stats import _espn_basketball_player_stats
+from sportsdataverse.nba.nba_player_stats import espn_nba_player_stats
 from sportsdataverse.dl_utils import download
 
 
@@ -103,9 +102,7 @@ def download_player_stats(athlete_id: int, season: int, rerun_existing: bool) ->
     try:
         # season is forwarded for API symmetry but ESPN ignores it -- the
         # payload always carries the full career in categories[].statistics[].
-        raw = _espn_basketball_player_stats(
-            league="nba", athlete_id=int(athlete_id), season=int(season), raw=True
-        )
+        raw = espn_nba_player_stats(athlete_id=int(athlete_id), season=int(season), raw=True)
         if isinstance(raw, (bytes, str)):
             raw = json.loads(raw)
         with open(out_path, "w", encoding="utf-8") as f:
@@ -116,17 +113,10 @@ def download_player_stats(athlete_id: int, season: int, rerun_existing: bool) ->
         return f"err {athlete_id}: {e}"
 
 
-def download_player_stats_batch(
-    athlete_ids: list[int], season: int, rerun_existing: bool, cores: int
-) -> None:
+def download_player_stats_batch(athlete_ids: list[int], season: int, rerun_existing: bool, cores: int) -> None:
     threads = min(cores, max(1, len(athlete_ids)))
     with concurrent.futures.ThreadPoolExecutor(max_workers=threads) as executor:
-        futs = {
-            executor.submit(
-                download_player_stats, aid, season, rerun_existing
-            ): aid
-            for aid in athlete_ids
-        }
+        futs = {executor.submit(download_player_stats, aid, season, rerun_existing): aid for aid in athlete_ids}
         for fut in tqdm(
             concurrent.futures.as_completed(futs),
             total=len(futs),
@@ -145,9 +135,7 @@ def main() -> None:
     Path(PATH_TO_OUTPUT).mkdir(parents=True, exist_ok=True)
 
     athlete_ids = _athlete_ids_for_range(start_year, end_year)
-    logger.info(
-        f"range={start_year}-{end_year} unique athletes={len(athlete_ids)}"
-    )
+    logger.info(f"range={start_year}-{end_year} unique athletes={len(athlete_ids)}")
     if not athlete_ids:
         logger.info("No athlete ids resolved; skipping")
         return
@@ -155,14 +143,9 @@ def main() -> None:
     t0 = time.time()
     # Pass end_year as the nominal season arg (ignored by ESPN; kept for the
     # signature). One fetch per athlete returns all of their seasons.
-    download_player_stats_batch(
-        athlete_ids, end_year, args.rerun_existing, cores
-    )
+    download_player_stats_batch(athlete_ids, end_year, args.rerun_existing, cores)
     t1 = time.time()
-    logger.info(
-        f"{(t1 - t0) / 60:.2f} minutes to download {len(athlete_ids)} "
-        f"player-stat payloads."
-    )
+    logger.info(f"{(t1 - t0) / 60:.2f} minutes to download {len(athlete_ids)} player-stat payloads.")
 
     gc.collect()
 
@@ -193,8 +176,7 @@ if __name__ == "__main__":
         dest="cores",
         type=int,
         default=DEFAULT_THREADS,
-        help="Concurrent worker threads (default 4 -- ESPN rate-limits the "
-        "per-athlete endpoint aggressively).",
+        help="Concurrent worker threads (default 4 -- ESPN rate-limits the per-athlete endpoint aggressively).",
     )
     parser.add_argument(
         "--rerun_existing",
