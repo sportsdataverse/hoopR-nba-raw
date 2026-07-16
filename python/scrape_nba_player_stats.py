@@ -22,9 +22,14 @@ score across the requested season range. That release is the authoritative
 cannot supply historical rosters).
 
 Requirements:
-    Uses ``espn_nba_player_stats`` from sportsdataverse-py
-    (``sportsdataverse/nba/nba_player_stats.py``). The league is baked into
-    that module, so no ``league=`` argument is needed.
+    Uses ``espn_nba_player_stats_v3`` from sportsdataverse-py, which is the
+    site.web.api ``common/v3 .../athletes/{id}/stats`` career endpoint this
+    output has always been built from.
+
+    NOT ``espn_nba_player_stats`` -- despite the name, that is the core-v2
+    ``/athletes/{id}/statistics`` endpoint: a different API returning a
+    different, season-scoped payload (``$ref``/``season``/``athlete``/
+    ``splits``) that the downstream parser cannot read.
 """
 
 from __future__ import annotations
@@ -40,9 +45,10 @@ from pathlib import Path
 
 from tqdm import tqdm
 
-# Per-league player-stats helper; builds the
-# site.web.api.espn.com/.../basketball/nba/athletes/{id}/stats URL.
-from sportsdataverse.nba.nba_player_stats import espn_nba_player_stats
+# _v3 == the site.web.api common/v3 .../athletes/{id}/stats career endpoint.
+# The unsuffixed espn_nba_player_stats is core-v2 and returns a different
+# payload -- see the module docstring. Do not "simplify" this import.
+from sportsdataverse.nba import espn_nba_player_stats_v3
 from sportsdataverse.dl_utils import download
 
 
@@ -102,7 +108,9 @@ def download_player_stats(athlete_id: int, season: int, rerun_existing: bool) ->
     try:
         # season is forwarded for API symmetry but ESPN ignores it -- the
         # payload always carries the full career in categories[].statistics[].
-        raw = espn_nba_player_stats(athlete_id=int(athlete_id), season=int(season), raw=True)
+        raw = espn_nba_player_stats_v3(
+            athlete_id=int(athlete_id), season=int(season), return_parsed=False
+        )
         if isinstance(raw, (bytes, str)):
             raw = json.loads(raw)
         with open(out_path, "w", encoding="utf-8") as f:
@@ -113,10 +121,15 @@ def download_player_stats(athlete_id: int, season: int, rerun_existing: bool) ->
         return f"err {athlete_id}: {e}"
 
 
-def download_player_stats_batch(athlete_ids: list[int], season: int, rerun_existing: bool, cores: int) -> None:
+def download_player_stats_batch(
+    athlete_ids: list[int], season: int, rerun_existing: bool, cores: int
+) -> None:
     threads = min(cores, max(1, len(athlete_ids)))
     with concurrent.futures.ThreadPoolExecutor(max_workers=threads) as executor:
-        futs = {executor.submit(download_player_stats, aid, season, rerun_existing): aid for aid in athlete_ids}
+        futs = {
+            executor.submit(download_player_stats, aid, season, rerun_existing): aid
+            for aid in athlete_ids
+        }
         for fut in tqdm(
             concurrent.futures.as_completed(futs),
             total=len(futs),
@@ -145,7 +158,9 @@ def main() -> None:
     # signature). One fetch per athlete returns all of their seasons.
     download_player_stats_batch(athlete_ids, end_year, args.rerun_existing, cores)
     t1 = time.time()
-    logger.info(f"{(t1 - t0) / 60:.2f} minutes to download {len(athlete_ids)} player-stat payloads.")
+    logger.info(
+        f"{(t1 - t0) / 60:.2f} minutes to download {len(athlete_ids)} player-stat payloads."
+    )
 
     gc.collect()
 
