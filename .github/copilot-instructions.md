@@ -25,8 +25,8 @@ Do not confuse with `hoopR-nba-stats-raw` (NBA Stats API cache) or
 
 ```sh
 bash scripts/daily_nba_scraper.sh -s 2025 -e 2025 -r false
-python3 python/scrape_nba_schedules.py -s 2025 -e 2025 -r false
-python3 python/scrape_nba_json.py      -s 2025 -e 2025 -r false
+python3 python/espn_nba_01_schedules_scrape.py    -s 2025 -e 2025 -r false
+python3 python/espn_nba_02_pbp_scrape.py          -s 2025 -e 2025 -r false
 ```
 
 `-r true` forces re-scrape; `-r false` skips files already on disk. Outputs:

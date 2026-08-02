@@ -10,7 +10,7 @@ Unlike the per-athlete stats endpoint, this team endpoint DOES honor the
 season's ``results.stats`` categories), so output is season-keyed.
 
 Team ids are sourced from this season's NBA schedule parquet
-(``home_id`` / ``away_id``) committed by ``scrape_nba_schedules.py``.
+(``home_id`` / ``away_id``) committed by ``espn_nba_01_schedules_scrape.py``.
 
 Requirements:
     Uses the generic cross-league ``_espn_basketball_team_stats`` helper in

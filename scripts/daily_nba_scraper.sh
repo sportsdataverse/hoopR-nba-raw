@@ -17,7 +17,7 @@ mkdir -p logs
 
 # Scraper failures used to be swallowed: each scraper ran bare, so a crash left
 # the loop running, the partial day got committed, and the job still exited 0.
-# scrape_nba_player_stats.py sat dead for two sportsdataverse-py release cycles
+# espn_nba_06_player_stats_scrape.py sat dead for two sportsdataverse-py release cycles
 # that way -- aborting at import on a removed symbol, every day, silently green.
 #
 # run_scraper keeps that resilience (one dead scraper must not stop the others,
@@ -51,15 +51,15 @@ do
         git pull >> /dev/null
         git config --local user.email "action@github.com"
         git config --local user.name "Github Action"
-        run_scraper schedules    python3 python/scrape_nba_schedules.py    -s $i -e $i -r $RESCRAPE
-        run_scraper json         python3 python/scrape_nba_json.py         -s $i -e $i -r $RESCRAPE
-        run_scraper standings    python3 python/scrape_nba_standings.py    -s $i -e $i -r $RESCRAPE
-        run_scraper game_rosters python3 python/scrape_nba_game_rosters.py -s $i -e $i -r $RESCRAPE
-        run_scraper draft        python3 python/scrape_nba_draft.py        -s $i -e $i -r $RESCRAPE
-        run_scraper player_stats python3 python/scrape_nba_player_stats.py -s $i -e $i -r $RESCRAPE
-        run_scraper team_stats   python3 python/scrape_nba_team_stats.py   -s $i -e $i -r $RESCRAPE
-        run_scraper team_rosters python3 python/scrape_nba_team_rosters.py -s $i -e $i -r $RESCRAPE
-        run_scraper player_core  python3 python/scrape_nba_player_core.py  -s $i -e $i -r $RESCRAPE
+        run_scraper schedules    python3 python/espn_nba_01_schedules_scrape.py    -s $i -e $i -r $RESCRAPE
+        run_scraper json         python3 python/espn_nba_02_pbp_scrape.py          -s $i -e $i -r $RESCRAPE
+        run_scraper standings    python3 python/espn_nba_03_standings_scrape.py    -s $i -e $i -r $RESCRAPE
+        run_scraper game_rosters python3 python/espn_nba_04_game_rosters_scrape.py -s $i -e $i -r $RESCRAPE
+        run_scraper draft        python3 python/espn_nba_05_draft_scrape.py        -s $i -e $i -r $RESCRAPE
+        run_scraper player_stats python3 python/espn_nba_06_player_stats_scrape.py -s $i -e $i -r $RESCRAPE
+        run_scraper team_stats   python3 python/espn_nba_07_team_stats_scrape.py   -s $i -e $i -r $RESCRAPE
+        run_scraper team_rosters python3 python/espn_nba_08_team_rosters_scrape.py -s $i -e $i -r $RESCRAPE
+        run_scraper player_core  python3 python/espn_nba_09_player_core_scrape.py  -s $i -e $i -r $RESCRAPE
         git pull >> /dev/null
         git add nba/* >> /dev/null
         git add nba/nba_schedule_master.* >> /dev/null

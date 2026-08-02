@@ -44,15 +44,15 @@ player_core), then commits + pushes. All seasons are integer years.
 bash scripts/daily_nba_scraper.sh -s 2025 -e 2025 -r false
 
 # Or call any scraper directly when iterating
-python3 python/scrape_nba_schedules.py    -s 2025 -e 2025 -r false
-python3 python/scrape_nba_json.py         -s 2025 -e 2025 -r false
-python3 python/scrape_nba_standings.py    -s 2025 -e 2025 -r false
-python3 python/scrape_nba_game_rosters.py -s 2025 -e 2025 -r false
-python3 python/scrape_nba_draft.py        -s 2025 -e 2025 -r false
-python3 python/scrape_nba_player_stats.py -s 2025 -e 2025 -r false
-python3 python/scrape_nba_team_stats.py   -s 2025 -e 2025 -r false
-python3 python/scrape_nba_team_rosters.py -s 2025 -e 2025 -r false
-python3 python/scrape_nba_player_core.py  -s 2025 -e 2025 -r false
+python3 python/espn_nba_01_schedules_scrape.py    -s 2025 -e 2025 -r false
+python3 python/espn_nba_02_pbp_scrape.py          -s 2025 -e 2025 -r false
+python3 python/espn_nba_03_standings_scrape.py    -s 2025 -e 2025 -r false
+python3 python/espn_nba_04_game_rosters_scrape.py -s 2025 -e 2025 -r false
+python3 python/espn_nba_05_draft_scrape.py        -s 2025 -e 2025 -r false
+python3 python/espn_nba_06_player_stats_scrape.py -s 2025 -e 2025 -r false
+python3 python/espn_nba_07_team_stats_scrape.py   -s 2025 -e 2025 -r false
+python3 python/espn_nba_08_team_rosters_scrape.py -s 2025 -e 2025 -r false
+python3 python/espn_nba_09_player_core_scrape.py  -s 2025 -e 2025 -r false
 ```
 
 `-r true` forces re-scrape of games already on disk; `-r false` skips
@@ -71,21 +71,21 @@ Output paths the scrapers write under:
 
 The scrapers default to `season_type in (2, 3, 5)` for regular season,
 postseason, and play-in. Pre-2002 seasons are clamped to 2002 in
-`scrape_nba_schedules.py`.
+`espn_nba_01_schedules_scrape.py`.
 
 ## Project Structure
 
 ```
 python/
-  scrape_nba_schedules.py     # ESPN schedule scrape -> nba/schedules/
-  scrape_nba_json.py          # Per-game JSON scrape -> nba/json/final/{game_id}.json
-  scrape_nba_standings.py     # -> nba/standings/
-  scrape_nba_game_rosters.py  # -> nba/game_rosters/
-  scrape_nba_draft.py         # -> nba/draft/
-  scrape_nba_player_stats.py  # -> nba/player_season_stats/
-  scrape_nba_team_stats.py    # -> nba/team_stats/
-  scrape_nba_team_rosters.py  # -> nba/team_rosters/
-  scrape_nba_player_core.py   # -> nba/player_core/
+  espn_nba_01_schedules_scrape.py    # ESPN schedule scrape -> nba/schedules/
+  espn_nba_02_pbp_scrape.py          # Per-game JSON scrape -> nba/json/final/{game_id}.json
+  espn_nba_03_standings_scrape.py    # -> nba/standings/
+  espn_nba_04_game_rosters_scrape.py # -> nba/game_rosters/
+  espn_nba_05_draft_scrape.py        # -> nba/draft/
+  espn_nba_06_player_stats_scrape.py # -> nba/player_season_stats/
+  espn_nba_07_team_stats_scrape.py   # -> nba/team_stats/
+  espn_nba_08_team_rosters_scrape.py # -> nba/team_rosters/
+  espn_nba_09_player_core_scrape.py  # -> nba/player_core/
 scripts/
   daily_nba_scraper.sh        # CI entry point — per-season loop over 9 scrapers
 nba/                          # Committed scraped output (consumed downstream)
@@ -132,12 +132,12 @@ here.
 
 ## Project-Specific Gotchas
 
-- `python/scrape_nba_json.py` writes JSON under `nba/json/final/{game_id}.json`. Downstream `hoopR-nba-data` reads from `https://raw.githubusercontent.com/sportsdataverse/hoopR-nba-raw/main/nba/...`, so the file paths and commit-to-`main` are load-bearing.
+- `python/espn_nba_02_pbp_scrape.py` writes JSON under `nba/json/final/{game_id}.json`. Downstream `hoopR-nba-data` reads from `https://raw.githubusercontent.com/sportsdataverse/hoopR-nba-raw/main/nba/...`, so the file paths and commit-to-`main` are load-bearing.
 - The per-push `hoopR_nba_data_trigger.yaml` workflow only fires on `push` and `workflow_dispatch`. Force-pushes can land changes without firing downstream jobs — push normally.
 - Large additions of `nba/json/final/*.json` files inflate the repo. Don't reorganize the `nba/` tree without coordinating the change in `hoopR-nba-data`'s creation scripts (`R/espn_nba_0[1-3]_*.R`).
 - ESPN JSON schema drift is handled in `sportsdataverse-py` (the call boundary). If a scraper starts dropping fields, fix the SDK first; this repo should stay thin.
 - The shell driver uses `git pull` between steps and silently swallows output. If the scraper appears stuck, check `hoopR_nba_raw_logfile.txt` and `daily_nba.out` at the repo root — those carry the actual scraper output.
-- Pre-2002 seasons are clamped to 2002 in `scrape_nba_schedules.py`; passing `-s 1999` will not back-fill earlier years.
+- Pre-2002 seasons are clamped to 2002 in `espn_nba_01_schedules_scrape.py`; passing `-s 1999` will not back-fill earlier years.
 
 ## Commit Convention
 
@@ -149,8 +149,8 @@ For human-authored commits (code changes, not daily scrape output), use
 [Conventional Commits](https://www.conventionalcommits.org/):
 
 ```
-feat(scrape): add play-in season_type=5 to scrape_nba_schedules.py
-fix(scrape): handle 503s in scrape_nba_json without aborting the season loop
+feat(scrape): add play-in season_type=5 to espn_nba_01_schedules_scrape.py
+fix(scrape): handle 503s in espn_nba_02_pbp_scrape without aborting the season loop
 chore(deps): bump sportsdataverse-py pin in requirements.txt
 ci: align push trigger with new workflow secret name
 ```

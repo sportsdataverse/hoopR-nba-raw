@@ -15,7 +15,7 @@
 flowchart TB;
     subgraph A[hoopR-nba-raw];
         direction TB;
-        A1[python/scrape_nba_schedules.py]-->A2[python/scrape_nba_json.py];
+        A1[python/espn_nba_01_schedules_scrape.py]-->A2[python/espn_nba_02_pbp_scrape.py];
     end;
 
     subgraph B[hoopR-nba-data];
@@ -37,6 +37,8 @@ flowchart TB;
     B-->C3;
 
 ```
+
+Script numbers are run order; `scripts/daily_nba_scraper.sh` is the daily driver (the 00 role).
 
 [hoopR-nba-raw data repository (source: ESPN)](https://github.com/sportsdataverse/hoopR-nba-raw)
 

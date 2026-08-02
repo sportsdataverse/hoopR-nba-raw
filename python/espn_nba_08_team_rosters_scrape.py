@@ -12,7 +12,7 @@ captures a snapshot-as-of-scrape-time; only the in-progress season is truly
 season files reflect whatever the roster was when scraped.
 
 Team ids are sourced from this season's NBA schedule parquet
-(``home_id`` / ``away_id``) committed by ``scrape_nba_schedules.py``.
+(``home_id`` / ``away_id``) committed by ``espn_nba_01_schedules_scrape.py``.
 
 Requirements:
     Uses the generic cross-league ``_espn_basketball_team_roster`` helper in

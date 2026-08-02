@@ -7,7 +7,7 @@ navigates ``boxscore.players`` to build the per-game tidy roster frame
 (one row per athlete-team-game).
 
 Endpoint: ``site.api.espn.com/apis/site/v2/sports/basketball/nba/summary``
-This is the same comprehensive game-summary endpoint scrape_nba_json.py
+This is the same comprehensive game-summary endpoint espn_nba_02_pbp_scrape.py
 hits for play-by-play; it includes ``boxscore.players`` with per-team
 roster + per-athlete stats / starter / DNP / ejected flags.
 
