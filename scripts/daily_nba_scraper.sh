@@ -59,6 +59,7 @@ do
         run_scraper player_stats python3 python/scrape_nba_player_stats.py -s $i -e $i -r $RESCRAPE
         run_scraper team_stats   python3 python/scrape_nba_team_stats.py   -s $i -e $i -r $RESCRAPE
         run_scraper team_rosters python3 python/scrape_nba_team_rosters.py -s $i -e $i -r $RESCRAPE
+        run_scraper player_core  python3 python/scrape_nba_player_core.py  -s $i -e $i -r $RESCRAPE
         git pull >> /dev/null
         git add nba/* >> /dev/null
         git add nba/nba_schedule_master.* >> /dev/null
