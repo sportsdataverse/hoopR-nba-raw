@@ -53,11 +53,6 @@ python3 python/scrape_nba_player_stats.py -s 2025 -e 2025 -r false
 python3 python/scrape_nba_team_stats.py   -s 2025 -e 2025 -r false
 python3 python/scrape_nba_team_rosters.py -s 2025 -e 2025 -r false
 python3 python/scrape_nba_player_core.py  -s 2025 -e 2025 -r false
-
-# Helpers (not part of the daily flow)
-python3 python/process_nba_schedules.py
-python3 python/add_game_links_to_schedule.py
-python3 python/nba_pbp_creation.py
 ```
 
 `-r true` forces re-scrape of games already on disk; `-r false` skips
@@ -91,9 +86,6 @@ python/
   scrape_nba_team_stats.py    # -> nba/team_stats/
   scrape_nba_team_rosters.py  # -> nba/team_rosters/
   scrape_nba_player_core.py   # -> nba/player_core/
-  process_nba_schedules.py    # Schedule post-processing (helper, not in daily flow)
-  add_game_links_to_schedule.py
-  nba_pbp_creation.py         # PBP compile prototype (not in daily flow)
 scripts/
   daily_nba_scraper.sh        # CI entry point — per-season loop over 9 scrapers
 nba/                          # Committed scraped output (consumed downstream)
