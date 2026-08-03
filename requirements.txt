@@ -1,30 +1,33 @@
 -i https://pypi.org/simple
-aniso8601>=6.0.0
-attrs>=19.1.0
-click>=7.1.1
-cycler>=0.10.0
-itsdangerous>=1.1.0
-Jinja2>=2.11.1
-jsonschema>=3.0.1
-markupsafe>=1.1.1
-six>=1.14.0
-Werkzeug>=0.16.0
-xgboost>=1.2.0
-numpy>=1.19.4
-pandas>=1.1.4
+
 # Tracks sdv-py main: the stages import sportsdataverse.scrape.espn (the shared
 # ESPN raw engine), which is on main and not yet in a PyPI release.
 #
 # A bare `>=` floor is not a pin on a host with a persistent site-packages --
 # pip does not upgrade an already-satisfied requirement. `>=0.0.32` let
 # wehoop-wnba-raw's runner sit on 0.0.50 for 25 releases and fail for three
-# weeks. Always install with --upgrade:
+# weeks. And for a git source, --upgrade is not enough either: pip decides
+# satisfaction by VERSION, so a branch reporting an already-installed version
+# is a silent no-op. Install with:
 #   pip install --upgrade -r requirements.txt
+#   pip install --force-reinstall --no-deps \
+#     "sportsdataverse @ git+https://github.com/sportsdataverse/sportsdataverse-py@main"
 sportsdataverse[all] @ git+https://github.com/sportsdataverse/sportsdataverse-py@main
+
+# Imported directly by python/*.py.
+numpy>=1.19.4
+pandas>=1.1.4
 pyreadr>=0.4.7
-pyarrow>=11.0.0
 tqdm>=4.65.0
 
-# argparse and pathlib were removed on 2026-08-03. Both are stdlib since Python
-# 3.4; the PyPI packages of those names are abandoned Python-2 backports, and
-# installing `pathlib` shadows the stdlib module on modern interpreters.
+# Not imported, but required by pandas.to_parquet, which the schedule stages use.
+pyarrow>=11.0.0
+
+# Pruned 2026-08-03, verified against the actual imports in python/*.py:
+#   aniso8601, attrs, click, cycler, itsdangerous, Jinja2, jsonschema,
+#   markupsafe, six, Werkzeug  -- a Flask/API skeleton's dependency list that
+#     was copied in and never used by anything here.
+#   xgboost -- not imported; sportsdataverse[all] pulls it when it is needed.
+#   argparse, pathlib -- stdlib since Python 3.4. The PyPI packages of those
+#     names are abandoned Python-2 backports, and installing `pathlib` shadows
+#     the stdlib module on modern interpreters.
