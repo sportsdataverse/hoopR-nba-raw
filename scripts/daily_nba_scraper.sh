@@ -32,6 +32,11 @@ PY
 then
     echo "FATAL: the sportsdataverse surface these scrapers need is missing."
     echo "       Fix: pip install --upgrade -r requirements.txt"
+    echo "         && pip install --force-reinstall --no-deps \\"
+    echo "            'sportsdataverse @ git+https://github.com/sportsdataverse/sportsdataverse-py@main'"
+    echo "       The second line is required, not belt-and-braces: pip decides"
+    echo "       satisfaction by VERSION, so a git branch whose version string"
+    echo "       has not changed is a silent no-op even with --upgrade."
     exit 1
 fi
 
