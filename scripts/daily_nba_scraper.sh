@@ -15,6 +15,21 @@ RESCRAPE=${RESCRAPE:-TRUE}
 echo "Rescrape set to: $RESCRAPE"
 mkdir -p logs
 
+# Resolve the interpreter. The project is uv-managed (pyproject.toml +
+# uv.lock), so `uv run` gets the exact locked environment -- including the
+# sdv-py commit the lock pins, which is the whole point of moving off the
+# ambient install. Falls back to system python3 where uv is not present yet, so
+# this driver keeps working on a host mid-migration.
+if command -v uv >/dev/null 2>&1; then
+    uv sync --quiet || echo "WARN: uv sync failed; continuing with the existing venv"
+    PY="uv run --no-sync python"
+    echo "Interpreter: uv-managed project venv"
+else
+    PY="python3"
+    echo "WARN: uv not found; using system python3. Install uv for the locked env:"
+    echo "      curl -LsSf https://astral.sh/uv/install.sh | sh"
+fi
+
 # Fail fast on a stale sportsdataverse, BEFORE any scraping.
 #
 # The sibling hoopR-mbb-raw lost espn_mbb_06 for two sportsdataverse-py release
@@ -23,7 +38,7 @@ mkdir -p logs
 # scraping to it on 2026-08-02, because pip does not upgrade an
 # already-satisfied `>=` requirement on a host with persistent site-packages.
 # This repo runs off-GitHub, so nothing else would surface the skew.
-if ! python3 - <<'PY'
+if ! $PY - <<'PY'
 from sportsdataverse.dl_utils import download  # noqa: F401
 from sportsdataverse.scrape.espn.cli import str2bool  # noqa: F401
 from sportsdataverse.scrape.espn.persist import write_payload  # noqa: F401
@@ -31,12 +46,16 @@ import sportsdataverse.nba  # noqa: F401
 PY
 then
     echo "FATAL: the sportsdataverse surface these scrapers need is missing."
-    echo "       Fix: pip install --upgrade -r requirements.txt"
-    echo "         && pip install --force-reinstall --no-deps \\"
-    echo "            'sportsdataverse @ git+https://github.com/sportsdataverse/sportsdataverse-py@main'"
-    echo "       The second line is required, not belt-and-braces: pip decides"
-    echo "       satisfaction by VERSION, so a git branch whose version string"
-    echo "       has not changed is a silent no-op even with --upgrade."
+    echo "       Fix (uv-managed project):  uv sync --upgrade-package sportsdataverse"
+    echo ""
+    echo "       If uv is unavailable and you are falling back to pip, note that"
+    echo "       --upgrade alone is NOT enough: pip decides satisfaction by"
+    echo "       VERSION, so a git branch whose version string has not changed"
+    echo "       is a silent no-op. You need:"
+    echo "         pip install --force-reinstall --no-deps \\"
+    echo "           'sportsdataverse @ git+https://github.com/sportsdataverse/sportsdataverse-py@main'"
+    echo "       uv does not have that failure mode, which is why this repo"
+    echo "       moved to pyproject.toml + uv.lock."
     exit 1
 fi
 
@@ -76,15 +95,15 @@ do
         git pull >> /dev/null
         git config --local user.email "action@github.com"
         git config --local user.name "Github Action"
-        run_scraper schedules    python3 python/espn_nba_01_schedules_scrape.py    -s $i -e $i -r $RESCRAPE
-        run_scraper json         python3 python/espn_nba_02_pbp_scrape.py          -s $i -e $i -r $RESCRAPE
-        run_scraper standings    python3 python/espn_nba_03_standings_scrape.py    -s $i -e $i -r $RESCRAPE
-        run_scraper game_rosters python3 python/espn_nba_04_game_rosters_scrape.py -s $i -e $i -r $RESCRAPE
-        run_scraper draft        python3 python/espn_nba_05_draft_scrape.py        -s $i -e $i -r $RESCRAPE
-        run_scraper player_stats python3 python/espn_nba_06_player_stats_scrape.py -s $i -e $i -r $RESCRAPE
-        run_scraper team_stats   python3 python/espn_nba_07_team_stats_scrape.py   -s $i -e $i -r $RESCRAPE
-        run_scraper team_rosters python3 python/espn_nba_08_team_rosters_scrape.py -s $i -e $i -r $RESCRAPE
-        run_scraper player_core  python3 python/espn_nba_09_player_core_scrape.py  -s $i -e $i -r $RESCRAPE
+        run_scraper schedules    $PY python/espn_nba_01_schedules_scrape.py    -s $i -e $i -r $RESCRAPE
+        run_scraper json         $PY python/espn_nba_02_pbp_scrape.py          -s $i -e $i -r $RESCRAPE
+        run_scraper standings    $PY python/espn_nba_03_standings_scrape.py    -s $i -e $i -r $RESCRAPE
+        run_scraper game_rosters $PY python/espn_nba_04_game_rosters_scrape.py -s $i -e $i -r $RESCRAPE
+        run_scraper draft        $PY python/espn_nba_05_draft_scrape.py        -s $i -e $i -r $RESCRAPE
+        run_scraper player_stats $PY python/espn_nba_06_player_stats_scrape.py -s $i -e $i -r $RESCRAPE
+        run_scraper team_stats   $PY python/espn_nba_07_team_stats_scrape.py   -s $i -e $i -r $RESCRAPE
+        run_scraper team_rosters $PY python/espn_nba_08_team_rosters_scrape.py -s $i -e $i -r $RESCRAPE
+        run_scraper player_core  $PY python/espn_nba_09_player_core_scrape.py  -s $i -e $i -r $RESCRAPE
         git pull >> /dev/null
         git add nba/* >> /dev/null
         git add nba/nba_schedule_master.* >> /dev/null

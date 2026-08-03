@@ -1,0 +1,47 @@
+[project]
+name = "hoopr-nba-raw-scrape"
+version = "0.1.0"
+description = "ESPN NBA raw payload scrapers for the hoopR-nba-raw archive."
+requires-python = ">=3.11"
+# Verified against the actual import set of python/*.py, which is exactly
+# numpy, pandas, pyreadr, sportsdataverse, tqdm plus stdlib. pyarrow is not
+# imported but pandas.to_parquet needs it and the schedule stages write parquet.
+dependencies = [
+    "sportsdataverse",
+    "numpy>=1.23",
+    "pandas>=2.0",
+    "pyarrow>=15.0",
+    "pyreadr>=0.4.7",
+    "tqdm>=4.66",
+]
+
+[dependency-groups]
+# Declared, not assumed: `uv run ruff` executes inside the synced project env,
+# which has no access to a globally-installed tool.
+dev = ["ruff>=0.6"]
+
+# The scrapers import sportsdataverse.scrape.espn, the shared ESPN raw engine,
+# which lands on main ahead of PyPI.
+#
+# Note for anyone installing by hand rather than with `uv sync`: pip decides
+# satisfaction by VERSION, so `pip install --upgrade` against a git branch whose
+# version string has not changed is a silent no-op -- it clones, resolves, builds
+# and then skips. uv does not have that failure mode; it resolves the branch to a
+# commit and records it in uv.lock, which is the reason this repo moved off
+# requirements.txt.
+[tool.uv.sources]
+sportsdataverse = { git = "https://github.com/sportsdataverse/sportsdataverse-py", branch = "main" }
+
+# Not an installable package: python/ holds numbered entrypoints run by path,
+# with no importable package beside them. uv still manages the venv and lock.
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+# Pin the rule set explicitly; relying on ruff's defaults makes the gate
+# version-sensitive and can turn a green tree red with no code change.
+select = ["E4", "E7", "E9", "F", "I"]
+ignore = ["E712"]
