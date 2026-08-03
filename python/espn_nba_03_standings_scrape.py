@@ -32,6 +32,7 @@ from typing import Any
 from tqdm import tqdm
 
 from sportsdataverse.nba import espn_nba_standings
+from sportsdataverse.scrape.espn.persist import write_payload
 
 
 logging.basicConfig(
@@ -54,8 +55,9 @@ def download_standings(
         # New unified endpoint: default (return_parsed=False) yields the raw
         # ESPN response dict.
         raw: dict[str, Any] = espn_nba_standings(season=int(season))
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(raw, f, indent=0, sort_keys=False)
+        if not write_payload(out_path, raw, indent=0):
+            logger.warning(f"refused error/empty payload: {out_path}")
+            return f"refused {out_path.stem}"
         return f"ok {season}"
     except Exception as e:
         logger.warning(f"season={season} failed: {e!r}")

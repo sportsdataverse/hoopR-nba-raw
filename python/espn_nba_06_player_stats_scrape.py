@@ -50,6 +50,7 @@ from tqdm import tqdm
 # payload -- see the module docstring. Do not "simplify" this import.
 from sportsdataverse.nba import espn_nba_player_stats_v3
 from sportsdataverse.dl_utils import download
+from sportsdataverse.scrape.espn.persist import write_payload
 
 
 logging.basicConfig(
@@ -113,8 +114,9 @@ def download_player_stats(athlete_id: int, season: int, rerun_existing: bool) ->
         )
         if isinstance(raw, (bytes, str)):
             raw = json.loads(raw)
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(raw, f, indent=0, sort_keys=False)
+        if not write_payload(out_path, raw, indent=0):
+            logger.warning(f"refused error/empty payload: {out_path}")
+            return f"refused {out_path.stem}"
         return f"ok {athlete_id}"
     except Exception as e:  # noqa: BLE001
         logger.warning(f"athlete_id={athlete_id} failed: {e!r}")

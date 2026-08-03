@@ -40,6 +40,7 @@ from tqdm import tqdm
 # Bypass the broken espn_nba_game_rosters helper (see module docstring);
 # call ESPN's summary endpoint via the SDK's HTTP helper instead.
 from sportsdataverse.dl_utils import download
+from sportsdataverse.scrape.espn.persist import write_payload
 
 
 logging.basicConfig(
@@ -113,8 +114,9 @@ def download_game_rosters(
     try:
         url = SUMMARY_URL.format(game_id=int(game_id))
         raw: dict[str, Any] = download(url).json()
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(raw, f, indent=0, sort_keys=False)
+        if not write_payload(out_path, raw, indent=0):
+            logger.warning(f"refused error/empty payload: {out_path}")
+            return f"refused {out_path.stem}"
         return f"ok {game_id}"
     except Exception as e:
         # Per-game tolerance: 404s, schema drift, transient ESPN failures

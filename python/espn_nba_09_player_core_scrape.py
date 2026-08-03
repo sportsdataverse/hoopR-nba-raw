@@ -52,6 +52,7 @@ from tqdm import tqdm
 
 from sportsdataverse.nba import espn_nba_player_core
 from sportsdataverse.dl_utils import download
+from sportsdataverse.scrape.espn.persist import write_payload
 
 
 logging.basicConfig(
@@ -117,8 +118,9 @@ def download_player_core(athlete_id, rerun_existing):
         raw = espn_nba_player_core(athlete_id=int(athlete_id), return_parsed=False)
         if isinstance(raw, (bytes, str)):
             raw = json.loads(raw)
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(raw, f, indent=0, sort_keys=False)
+        if not write_payload(out_path, raw, indent=0):
+            logger.warning(f"refused error/empty payload: {out_path}")
+            return f"refused {out_path.stem}"
         return f"ok {athlete_id}"
     except Exception as e:  # noqa: BLE001
         logger.warning(f"athlete_id={athlete_id} failed: {e!r}")

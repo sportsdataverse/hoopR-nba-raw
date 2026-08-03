@@ -31,6 +31,7 @@ from pathlib import Path
 from tqdm import tqdm
 
 from sportsdataverse.wbb.wbb_team_stats import _espn_basketball_team_stats
+from sportsdataverse.scrape.espn.persist import write_payload
 
 
 logging.basicConfig(
@@ -83,8 +84,9 @@ def download_team_stats(
         )
         if isinstance(raw, (bytes, str)):
             raw = json.loads(raw)
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(raw, f, indent=0, sort_keys=False)
+        if not write_payload(out_path, raw, indent=0):
+            logger.warning(f"refused error/empty payload: {out_path}")
+            return f"refused {out_path.stem}"
         return f"ok {team_id}"
     except Exception as e:  # noqa: BLE001
         logger.warning(f"season={season} team_id={team_id} failed: {e!r}")

@@ -9,6 +9,7 @@ import time
 import gc
 from itertools import repeat
 from pathlib import Path
+from sportsdataverse.scrape.espn.cli import str2bool
 
 logging.basicConfig(level=logging.INFO, filename="hoopR_nba_raw_logfile.txt")
 logger = logging.getLogger(__name__)
@@ -75,19 +76,6 @@ def main():
     glued_data["status_display_clock"] = glued_data["status_display_clock"].astype(str)
     glued_data.to_parquet(final_file_name, index=False)
     gcol = gc.collect()
-
-
-def str2bool(value):
-    """Parse a shell-supplied boolean flag.
-
-    argparse's ``type=bool`` is a trap: ``bool("false")`` is ``True``, so
-    ``-r false`` silently forced a full re-scrape. Mirrors the wehoop-wbb-raw
-    house converter -- unrecognised text parses as False, because the
-    expensive mistake is re-scraping the archive, not skipping a run.
-    """
-    if isinstance(value, bool):
-        return value
-    return str(value).strip().lower() in ("1", "true", "t", "yes", "y", "on")
 
 
 if __name__ == "__main__":

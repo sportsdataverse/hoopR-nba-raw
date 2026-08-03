@@ -32,6 +32,7 @@ from typing import Any
 from tqdm import tqdm
 
 from sportsdataverse.dl_utils import download
+from sportsdataverse.scrape.espn.persist import write_payload
 
 
 logging.basicConfig(
@@ -114,8 +115,9 @@ def download_draft(
         for idx, pk in enumerate(picks):
             if idx < len(prospects) and isinstance(pk, dict):
                 pk["athlete"] = prospects[idx]
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(raw, f, indent=0, sort_keys=False)
+        if not write_payload(out_path, raw, indent=0):
+            logger.warning(f"refused error/empty payload: {out_path}")
+            return f"refused {out_path.stem}"
         return f"ok {season} ({len(prospects)} prospects -> {len(picks)} picks)"
     except Exception as e:
         logger.warning(f"season={season} failed: {e!r}")

@@ -12,9 +12,19 @@ Werkzeug>=0.16.0
 xgboost>=1.2.0
 numpy>=1.19.4
 pandas>=1.1.4
-sportsdataverse[all]>=0.0.32
+# Tracks sdv-py main: the stages import sportsdataverse.scrape.espn (the shared
+# ESPN raw engine), which is on main and not yet in a PyPI release.
+#
+# A bare `>=` floor is not a pin on a host with a persistent site-packages --
+# pip does not upgrade an already-satisfied requirement. `>=0.0.32` let
+# wehoop-wnba-raw's runner sit on 0.0.50 for 25 releases and fail for three
+# weeks. Always install with --upgrade:
+#   pip install --upgrade -r requirements.txt
+sportsdataverse[all] @ git+https://github.com/sportsdataverse/sportsdataverse-py@main
 pyreadr>=0.4.7
 pyarrow>=11.0.0
-argparse>=1.4.0
 tqdm>=4.65.0
-pathlib>=1.0.1
+
+# argparse and pathlib were removed on 2026-08-03. Both are stdlib since Python
+# 3.4; the PyPI packages of those names are abandoned Python-2 backports, and
+# installing `pathlib` shadows the stdlib module on modern interpreters.

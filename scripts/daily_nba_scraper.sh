@@ -15,6 +15,26 @@ RESCRAPE=${RESCRAPE:-TRUE}
 echo "Rescrape set to: $RESCRAPE"
 mkdir -p logs
 
+# Fail fast on a stale sportsdataverse, BEFORE any scraping.
+#
+# The sibling hoopR-mbb-raw lost espn_mbb_06 for two sportsdataverse-py release
+# cycles to exactly this: the stage aborted at import on a removed symbol every
+# day while the run stayed green. wehoop-wnba-raw lost three weeks of in-season
+# scraping to it on 2026-08-02, because pip does not upgrade an
+# already-satisfied `>=` requirement on a host with persistent site-packages.
+# This repo runs off-GitHub, so nothing else would surface the skew.
+if ! python3 - <<'PY'
+from sportsdataverse.dl_utils import download  # noqa: F401
+from sportsdataverse.scrape.espn.cli import str2bool  # noqa: F401
+from sportsdataverse.scrape.espn.persist import write_payload  # noqa: F401
+import sportsdataverse.nba  # noqa: F401
+PY
+then
+    echo "FATAL: the sportsdataverse surface these scrapers need is missing."
+    echo "       Fix: pip install --upgrade -r requirements.txt"
+    exit 1
+fi
+
 # Scraper failures used to be swallowed: each scraper ran bare, so a crash left
 # the loop running, the partial day got committed, and the job still exited 0.
 # espn_nba_06_player_stats_scrape.py sat dead for two sportsdataverse-py release cycles
