@@ -15,20 +15,14 @@ RESCRAPE=${RESCRAPE:-TRUE}
 echo "Rescrape set to: $RESCRAPE"
 mkdir -p logs
 
-# Resolve the interpreter. The project is uv-managed (pyproject.toml +
-# uv.lock), so `uv run` gets the exact locked environment -- including the
-# sdv-py commit the lock pins, which is the whole point of moving off the
-# ambient install. Falls back to system python3 where uv is not present yet, so
-# this driver keeps working on a host mid-migration.
-if command -v uv >/dev/null 2>&1; then
-    uv sync --quiet || echo "WARN: uv sync failed; continuing with the existing venv"
-    PY="uv run --no-sync python"
-    echo "Interpreter: uv-managed project venv"
-else
-    PY="python3"
-    echo "WARN: uv not found; using system python3. Install uv for the locked env:"
-    echo "      curl -LsSf https://astral.sh/uv/install.sh | sh"
-fi
+# Resolve the interpreter once, via the shared resolver. Deliberately not
+# `uv run`: that resyncs the venv to the lockfile mid-sweep (it can swap
+# sportsdataverse under a running multi-hour scrape) and makes uv a RUNTIME
+# dependency of every scrape. Build the venv ahead of time with `uv sync`.
+# shellcheck source=scripts/_venv.sh
+. "$(dirname "${BASH_SOURCE[0]}")/_venv.sh"
+PY="$SDV_PY"
+echo "Interpreter: $PY"
 
 # Fail fast on a stale sportsdataverse, BEFORE any scraping.
 #
