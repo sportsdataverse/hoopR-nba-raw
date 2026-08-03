@@ -168,7 +168,7 @@ if __name__ == "__main__":
         "--end_year", "-e", type=int, help="End year of NBA Schedule period (YYYY), eg. 2023 for 2022-23 season"
     )
     parser.add_argument(
-        "--rescrape", "-r", type=str2bool, default=True, help="Rescrape all games in the schedule period"
+        "--rescrape", "-r", type=str2bool, default=False, help="Rescrape all games in the schedule period"
     )
     parser.add_argument(
         "--process", "-p", type=str2bool, default=True, help="Run processing pipeline for games in the schedule period"
