@@ -43,15 +43,14 @@ import logging
 import time
 from pathlib import Path
 
-from tqdm import tqdm
+from sportsdataverse.dl_utils import download
 
 # _v3 == the site.web.api common/v3 .../athletes/{id}/stats career endpoint.
 # The unsuffixed espn_nba_player_stats is core-v2 and returns a different
 # payload -- see the module docstring. Do not "simplify" this import.
 from sportsdataverse.nba import espn_nba_player_stats_v3
-from sportsdataverse.dl_utils import download
 from sportsdataverse.scrape.espn.persist import write_payload
-
+from tqdm import tqdm
 
 logging.basicConfig(
     level=logging.INFO,

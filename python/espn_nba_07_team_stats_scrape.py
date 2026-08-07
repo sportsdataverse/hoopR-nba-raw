@@ -28,11 +28,9 @@ import logging
 import time
 from pathlib import Path
 
-from tqdm import tqdm
-
-from sportsdataverse.wbb.wbb_team_stats import _espn_basketball_team_stats
 from sportsdataverse.scrape.espn.persist import write_payload
-
+from sportsdataverse.wbb.wbb_team_stats import _espn_basketball_team_stats
+from tqdm import tqdm
 
 logging.basicConfig(
     level=logging.INFO,

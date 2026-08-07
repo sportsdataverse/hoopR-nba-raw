@@ -23,17 +23,14 @@ from __future__ import annotations
 import argparse
 import concurrent.futures
 import gc
-import json
 import logging
 import time
 from pathlib import Path
 from typing import Any
 
-from tqdm import tqdm
-
 from sportsdataverse.nba import espn_nba_standings
 from sportsdataverse.scrape.espn.persist import write_payload
-
+from tqdm import tqdm
 
 logging.basicConfig(
     level=logging.INFO,

@@ -3,17 +3,17 @@ import concurrent.futures
 import gc
 import json
 import logging
-import numpy as np
 import os
-import pyreadr
-import pandas as pd
-import sportsdataverse as sdv
 import time
 import traceback
 from itertools import repeat
 from pathlib import Path
-from sportsdataverse.scrape.espn.cli import str2bool
 
+import numpy as np
+import pandas as pd
+import pyreadr
+import sportsdataverse as sdv
+from sportsdataverse.scrape.espn.cli import str2bool
 
 logging.basicConfig(level=logging.INFO, filename="hoopR_nba_raw_logfile.txt")
 logger = logging.getLogger(__name__)
@@ -30,7 +30,11 @@ def download_game_pbps(games, process, path_to_raw, path_to_final):
     threads = min(MAX_THREADS, len(games))
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=threads) as executor:
-        result = list(executor.map(download_game, games, repeat(process), repeat(path_to_raw), repeat(path_to_final)))
+        result = list(
+            executor.map(
+                download_game, games, repeat(process), repeat(path_to_raw), repeat(path_to_final)
+            )
+        )
         return result
 
 
@@ -45,22 +49,22 @@ def download_game(game, process, path_to_raw, path_to_final):
         g = sdv.nba.espn_nba_pbp(game_id=game, raw=True)
         with open(f"{path_to_raw_json}{game}.json", "w") as f:
             json.dump(g, f, indent=0, sort_keys=False)
-    except TypeError as e:
+    except TypeError:
         logger.exception(f"TypeError: game_id = {game}\n {traceback.format_exc()}")
         pass
-    except IndexError as e:
+    except IndexError:
         logger.exception(f"IndexError:  game_id = {game}\n {traceback.format_exc()}")
         pass
-    except KeyError as e:
+    except KeyError:
         logger.exception(f"KeyError: game_id =  game_id = {game}\n {traceback.format_exc()}")
         pass
-    except ValueError as e:
+    except ValueError:
         logger.exception(f"DecodeError: game_id = {game}\n {traceback.format_exc()}")
         pass
-    except AttributeError as e:
+    except AttributeError:
         logger.exception(f"AttributeError: game_id = {game}\n {traceback.format_exc()}")
         pass
-    except Exception as e:
+    except Exception:
         logger.exception(f"Exception: game_id = {game}\n {traceback.format_exc()}")
         pass
     if process == True:
@@ -71,25 +75,25 @@ def download_game(game, process, path_to_raw, path_to_final):
             fp = f"{path_to_final_json}{game}.json"
             with open(fp, "w") as f:
                 json.dump(result, f, indent=0, sort_keys=False)
-        except FileNotFoundError as e:
+        except FileNotFoundError:
             logger.exception(f"FileNotFoundError: game_id = {game}\n {traceback.format_exc()}")
             pass
-        except TypeError as e:
+        except TypeError:
             logger.exception(f"TypeError: game_id = {game}\n {traceback.format_exc()}")
             pass
-        except IndexError as e:
+        except IndexError:
             logger.exception(f"IndexError:  game_id = {game}\n {traceback.format_exc()}")
             pass
-        except KeyError as e:
+        except KeyError:
             logger.exception(f"KeyError: game_id =  game_id = {game}\n {traceback.format_exc()}")
             pass
-        except ValueError as e:
+        except ValueError:
             logger.exception(f"DecodeError: game_id = {game}\n {traceback.format_exc()}")
             pass
-        except AttributeError as e:
+        except AttributeError:
             logger.exception(f"AttributeError: game_id = {game}\n {traceback.format_exc()}")
             pass
-        except Exception as e:
+        except Exception:
             logger.exception(f"Exception: game_id = {game}\n {traceback.format_exc()}")
             pass
 
@@ -102,7 +106,9 @@ def add_game_to_schedule(schedule, year):
     schedule["game_json_url"] = np.where(
         schedule["game_json"] == True,
         schedule["game_id"].apply(
-            lambda x: f"https://raw.githubusercontent.com/sportsdataverse/hoopR-nba-raw/main/nba/json/final/{x}.json"
+            lambda x: (
+                f"https://raw.githubusercontent.com/sportsdataverse/hoopR-nba-raw/main/nba/json/final/{x}.json"
+            )
         ),
         None,
     )
@@ -125,24 +131,31 @@ def main():
     years_arr = range(start_year, end_year + 1)
 
     for year in years_arr:
-        schedule = pd.read_parquet(f"nba/schedules/parquet/nba_schedule_{year}.parquet", engine="auto", columns=None)
+        schedule = pd.read_parquet(
+            f"nba/schedules/parquet/nba_schedule_{year}.parquet", engine="auto", columns=None
+        )
         schedule = schedule.sort_values(by=["season", "season_type"], ascending=True)
         schedule["game_id"] = schedule["game_id"].astype(int)
         completed_schedule = schedule[schedule["status_type_completed"] == True]
         if args.rescrape == False:
-            game_files = [int(game_file.replace(".json", "")) for game_file in os.listdir(path_to_final)]
+            game_files = [
+                int(game_file.replace(".json", "")) for game_file in os.listdir(path_to_final)
+            ]
             completed_schedule = completed_schedule[~completed_schedule["game_id"].isin(game_files)]
         completed_schedule = completed_schedule[completed_schedule["season"] >= 2002]
 
         logger.info(f"Scraping NBA PBP for {year}...")
-        games = completed_schedule[(completed_schedule["season"] == year)].reset_index()["game_id"].tolist()
+        games = (
+            completed_schedule[(completed_schedule["season"] == year)]
+            .reset_index()["game_id"]
+            .tolist()
+        )
 
         if len(games) == 0:
             logger.info(f"{len(games)} Games to be scraped, skipping")
 
         elif len(games) > 0:
             logger.info(f"Number of Games: {len(games)}")
-            bad_schedule_keys = pd.DataFrame()
             t0 = time.time()
             download_game_pbps(games, process, path_to_raw, path_to_final)
             t1 = time.time()
@@ -165,13 +178,24 @@ if __name__ == "__main__":
         help="Start year of NBA Schedule period (YYYY), eg. 2023 for 2022-23 season",
     )
     parser.add_argument(
-        "--end_year", "-e", type=int, help="End year of NBA Schedule period (YYYY), eg. 2023 for 2022-23 season"
+        "--end_year",
+        "-e",
+        type=int,
+        help="End year of NBA Schedule period (YYYY), eg. 2023 for 2022-23 season",
     )
     parser.add_argument(
-        "--rescrape", "-r", type=str2bool, default=False, help="Rescrape all games in the schedule period"
+        "--rescrape",
+        "-r",
+        type=str2bool,
+        default=False,
+        help="Rescrape all games in the schedule period",
     )
     parser.add_argument(
-        "--process", "-p", type=str2bool, default=True, help="Run processing pipeline for games in the schedule period"
+        "--process",
+        "-p",
+        type=str2bool,
+        default=True,
+        help="Run processing pipeline for games in the schedule period",
     )
     args = parser.parse_args()
 

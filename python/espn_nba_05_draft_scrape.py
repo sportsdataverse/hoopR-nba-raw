@@ -29,11 +29,9 @@ import time
 from pathlib import Path
 from typing import Any
 
-from tqdm import tqdm
-
 from sportsdataverse.dl_utils import download
 from sportsdataverse.scrape.espn.persist import write_payload
-
+from tqdm import tqdm
 
 logging.basicConfig(
     level=logging.INFO,

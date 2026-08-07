@@ -1,14 +1,15 @@
 import argparse
 import concurrent.futures
+import gc
 import logging
 import os
-import pyreadr
-import pandas as pd
-import sportsdataverse as sdv
 import time
-import gc
 from itertools import repeat
 from pathlib import Path
+
+import pandas as pd
+import pyreadr
+import sportsdataverse as sdv
 from sportsdataverse.scrape.espn.cli import str2bool
 
 logging.basicConfig(level=logging.INFO, filename="hoopR_nba_raw_logfile.txt")
@@ -62,7 +63,9 @@ def main():
         t0 = time.time()
         download_game_schedules(years_arr, path_to_schedules)
         t1 = time.time()
-        logger.info(f"{(t1 - t0) / 60} minutes to download {len(years_arr)} years of season schedules.")
+        logger.info(
+            f"{(t1 - t0) / 60} minutes to download {len(years_arr)} years of season schedules."
+        )
 
     parquet_files = [
         pos_parquet.replace(".parquet", "")
@@ -71,19 +74,31 @@ def main():
     ]
     glued_data = pd.DataFrame()
     for index, js in enumerate(parquet_files):
-        x = pd.read_parquet(f"{path_to_schedules}/parquet/{js}.parquet", engine="auto", columns=None)
+        x = pd.read_parquet(
+            f"{path_to_schedules}/parquet/{js}.parquet", engine="auto", columns=None
+        )
         glued_data = pd.concat([glued_data, x], axis=0)
     glued_data["status_display_clock"] = glued_data["status_display_clock"].astype(str)
     glued_data.to_parquet(final_file_name, index=False)
-    gcol = gc.collect()
+    gc.collect()
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--start_year", "-s", type=int, required=True, help="Start year of NBA Schedule period (YYYY)")
+    parser.add_argument(
+        "--start_year",
+        "-s",
+        type=int,
+        required=True,
+        help="Start year of NBA Schedule period (YYYY)",
+    )
     parser.add_argument("--end_year", "-e", type=int, help="End year of NBA Schedule period (YYYY)")
     parser.add_argument(
-        "--rescrape", "-r", type=str2bool, default=False, help="Rescrape all games in the schedule period"
+        "--rescrape",
+        "-r",
+        type=str2bool,
+        default=False,
+        help="Rescrape all games in the schedule period",
     )
     args = parser.parse_args()
 
