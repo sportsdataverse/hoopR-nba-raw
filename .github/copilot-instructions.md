@@ -41,7 +41,7 @@ python3 python/espn_nba_02_pbp_scrape.py          -s 2025 -e 2025 -r false
 - Follow the parent SDK's Python conventions: snake_case, 4-space indent.
 - Prefer `pathlib.Path`, `concurrent.futures.ThreadPoolExecutor` for parallelism, `tqdm` for progress.
 - Don't add bespoke ESPN parsing here — call into `sportsdataverse.nba.*` and persist its output.
-- Keep `requirements.txt` minimal and pin via `sportsdataverse[all]>=...`.
+- Deps live in `pyproject.toml` + `uv.lock` (no `requirements.txt`); `sportsdataverse` is pinned to git `main` via `[tool.uv.sources]`.
 - Log to `hoopR_nba_raw_logfile.txt` via the module-level `logger`; the shell driver redirects scraper stdout to `daily_nba.out`.
 
 ## Cross-Repo References

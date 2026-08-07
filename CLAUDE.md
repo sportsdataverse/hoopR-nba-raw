@@ -95,7 +95,8 @@ nba/                          # Committed scraped output (consumed downstream)
   standings/  game_rosters/  draft/  player_season_stats/  team_stats/  team_rosters/
 .github/workflows/
   hoopR_nba_data_trigger.yaml # Fires repository_dispatch (event-type daily_nba_data) on push
-requirements.txt              # Python deps, pinned via sportsdataverse-py
+pyproject.toml                # uv-managed deps; sportsdataverse pinned to git main
+uv.lock                       # committed lockfile (uv sync --frozen in CI)
 ```
 
 ## Daily Workflow
@@ -118,7 +119,7 @@ per-season log under `logs/`). That push fires
   normally; never force-push to `main`.
 
 The Python scrapers depend on `sportsdataverse-py` (declared in
-`requirements.txt`); they call `sdv.nba.espn_nba_pbp(game_id, raw=True)`,
+`pyproject.toml`, pinned to git `main` via `[tool.uv.sources]`); they call `sdv.nba.espn_nba_pbp(game_id, raw=True)`,
 `sdv.nba.espn_nba_calendar()`, and `sdv.nba.espn_nba_schedule()`. Bug
 fixes to ESPN parsing belong in `sportsdataverse-py` NBA modules — not
 here.
@@ -151,7 +152,7 @@ For human-authored commits (code changes, not daily scrape output), use
 ```
 feat(scrape): add play-in season_type=5 to espn_nba_01_schedules_scrape.py
 fix(scrape): handle 503s in espn_nba_02_pbp_scrape without aborting the season loop
-chore(deps): bump sportsdataverse-py pin in requirements.txt
+chore(deps): re-lock uv.lock against sportsdataverse-py main
 ci: align push trigger with new workflow secret name
 ```
 
