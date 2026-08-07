@@ -18,7 +18,7 @@ dependencies = [
 [dependency-groups]
 # Declared, not assumed: `uv run ruff` executes inside the synced project env,
 # which has no access to a globally-installed tool.
-dev = ["ruff>=0.6"]
+dev = ["pytest>=8.0", "ruff>=0.6"]
 
 # The scrapers import sportsdataverse.scrape.espn, the shared ESPN raw engine,
 # which lands on main ahead of PyPI.
@@ -36,6 +36,16 @@ sportsdataverse = { git = "https://github.com/sportsdataverse/sportsdataverse-py
 # with no importable package beside them. uv still manages the venv and lock.
 [tool.uv]
 package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["python"]
+markers = [
+    # Reads the committed nba/ archive tree, which PR CI does not check out
+    # (sparse checkout of the code only). None yet; registered so archive-backed
+    # tests can be added without touching CI.
+    "archive: requires the committed nba/ payload tree",
+]
 
 [tool.ruff]
 line-length = 100
