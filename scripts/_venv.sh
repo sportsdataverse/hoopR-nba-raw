@@ -72,3 +72,31 @@ if [ -z "$SDV_PY" ] || [ ! -x "$SDV_PY" ]; then
 fi
 
 export SDV_PY
+# Import preflight -- the check that makes the ambient-python fallback safe.
+#
+# The fallback hands back whatever `python3` is on PATH, which may carry a stale
+# or entirely different sportsdataverse. On 2026-08-12 a venv sweep removed the
+# .venv from nearly every repo on this box; cron's PATH had no /root/.local/bin,
+# so the `uv sync` bootstrap could not fire and resolution fell through to
+# /usr/bin/python3 -- Python 3.8 with a years-old dist-packages sportsdataverse.
+# wehoop-wnba-raw ran that way, red, every morning for six days before anyone
+# noticed. This resolver has always documented that its fallback is safe "ONLY
+# because every driver runs an import preflight"; this is that preflight.
+#
+# Call immediately after sourcing, naming the modules the caller imports. Exits 3
+# (distinct from the resolver's 2) so a wrong interpreter is one loud stop.
+sdv_preflight() {
+  local mods=("$@")
+  [ "${#mods[@]}" -eq 0 ] && mods=(sportsdataverse)
+  local m out
+  for m in "${mods[@]}"; do
+    if ! out=$("$SDV_PY" -c "import $m" 2>&1); then
+      echo "FATAL: preflight failed -- cannot import '$m'." >&2
+      echo "       Interpreter: $SDV_PY" >&2
+      echo "$out" | sed 's/^/       /' >&2
+      echo "       Fix: run 'uv sync' in $_sdv_repo" >&2
+      echo "            (no uv? curl -LsSf https://astral.sh/uv/install.sh | sh)" >&2
+      exit 3
+    fi
+  done
+}

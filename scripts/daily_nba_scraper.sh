@@ -24,6 +24,10 @@ mkdir -p logs
 PY="$SDV_PY"
 echo "Interpreter: $PY"
 
+# The resolver's last-resort ambient-python fallback is only safe with this
+# check -- see sdv_preflight in scripts/_venv.sh.
+sdv_preflight sportsdataverse.scrape.espn sportsdataverse.nba
+
 # Fail fast on a stale sportsdataverse, BEFORE any scraping.
 #
 # The sibling hoopR-mbb-raw lost espn_mbb_06 for two sportsdataverse-py release
