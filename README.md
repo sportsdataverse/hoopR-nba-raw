@@ -51,3 +51,15 @@ Script numbers are run order; `scripts/daily_nba_scraper.sh` is the daily driver
 [hoopR-mbb-data repository (source: ESPN)](https://github.com/sportsdataverse/hoopR-mbb-data)
 
 [hoopR-kp-data Repo (source: KenPom)](https://github.com/sportsdataverse/hoopR-kp-data)
+
+## Automation & status
+
+<!-- BEGIN GENERATED: status -->
+
+| workflow | schedule | last run |
+|---|---|---|
+| [![orphan_scripts.yml](https://github.com/sportsdataverse/hoopR-nba-raw/actions/workflows/orphan_scripts.yml/badge.svg)](https://github.com/sportsdataverse/hoopR-nba-raw/actions/workflows/orphan_scripts.yml) | on push / PR / dispatch | 2026-08-19 |
+| [![tests.yml](https://github.com/sportsdataverse/hoopR-nba-raw/actions/workflows/tests.yml/badge.svg)](https://github.com/sportsdataverse/hoopR-nba-raw/actions/workflows/tests.yml) | on push / PR / dispatch | 2026-08-19 |
+| [![hoopR_nba_data_trigger.yaml](https://github.com/sportsdataverse/hoopR-nba-raw/actions/workflows/hoopR_nba_data_trigger.yaml/badge.svg)](https://github.com/sportsdataverse/hoopR-nba-raw/actions/workflows/hoopR_nba_data_trigger.yaml) | on push / dispatch | 2026-08-19 |
+
+<!-- END GENERATED: status -->
