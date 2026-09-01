@@ -108,6 +108,45 @@ daily drivers (the `00` role); stage numbers are intended build order, not run o
 
 [hoopR-kp-data repository (source: KenPom, dormant)](https://github.com/sportsdataverse/hoopR-kp-data)
 
+## Repository layout
+
+<!-- BEGIN GENERATED: layout -->
+
+```
+hoopR-nba-raw/
+├── logs/   # per-run logs (gitignored where large)
+├── nba/
+│   ├── draft/
+│   ├── game_rosters/
+│   ├── json/
+│   ├── player_core/
+│   ├── player_season_stats/
+│   ├── schedules/
+│   ├── standings/
+│   ├── team_rosters/
+│   └── team_stats/
+├── ops/   # cron definitions and runbooks
+│   └── oneoff/
+├── python/   # Python pipeline stages, numbered in build order
+│   ├── espn_nba_01_schedules_scrape.py
+│   ├── espn_nba_02_pbp_scrape.py
+│   ├── espn_nba_03_standings_scrape.py
+│   ├── espn_nba_04_game_rosters_scrape.py
+│   ├── espn_nba_05_draft_scrape.py
+│   ├── espn_nba_06_player_stats_scrape.py
+│   ├── espn_nba_07_team_stats_scrape.py
+│   ├── espn_nba_08_team_rosters_scrape.py
+│   └── espn_nba_09_player_core_scrape.py
+├── scripts/   # bash drivers (the daily/weekly entry points)
+│   ├── _venv.sh
+│   └── daily_nba_scraper.sh
+└── tests/   # test suite
+    ├── test_cli_contract.py
+    └── test_scripts_importable.py
+```
+
+<!-- END GENERATED: layout -->
+
 ## Reports & explainers
 
 <!-- BEGIN GENERATED: reports -->
