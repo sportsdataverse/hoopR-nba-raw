@@ -8,6 +8,10 @@ env:
 jobs:
     hoopR_nba_data_trigger:
         runs-on: ubuntu-latest
+        # `on: push` has no branch filter here, and the dispatch payload is hardcoded to
+        # refs/heads/main, so a feature-branch or tag push started a production build of
+        # work that had not landed (cfbfastR-cfb-raw#10). Same guard as that repo.
+        if: github.ref == 'refs/heads/main'
         steps:
             - name: Trigger hoopR NBA Data
               uses: peter-evans/repository-dispatch@v4
