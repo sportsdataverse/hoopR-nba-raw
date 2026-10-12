@@ -49,8 +49,8 @@ def download_schedule(season, path_to_schedules=None):
 
 
 def main():
-    if args.start_year < 2002:
-        start_year = 2002
+    if args.start_year < 1994:
+        start_year = 1994
     else:
         start_year = args.start_year
     if args.end_year is None:

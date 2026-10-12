@@ -119,8 +119,8 @@ def add_game_to_schedule(schedule, year):
 
 def main():
 
-    if args.start_year < 2002:
-        start_year = 2002
+    if args.start_year < 1994:
+        start_year = 1994
     else:
         start_year = args.start_year
     if args.end_year is None:
@@ -142,7 +142,7 @@ def main():
                 int(game_file.replace(".json", "")) for game_file in os.listdir(path_to_final)
             ]
             completed_schedule = completed_schedule[~completed_schedule["game_id"].isin(game_files)]
-        completed_schedule = completed_schedule[completed_schedule["season"] >= 2002]
+        completed_schedule = completed_schedule[completed_schedule["season"] >= 1994]
 
         logger.info(f"Scraping NBA PBP for {year}...")
         games = (
