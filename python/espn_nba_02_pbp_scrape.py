@@ -11,8 +11,8 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-import pyreadr
 import sportsdataverse as sdv
+from espn_nba_01_schedules_scrape import write_schedule
 from sportsdataverse.scrape.espn.cli import str2bool
 
 logging.basicConfig(level=logging.INFO, filename="hoopR_nba_raw_logfile.txt")
@@ -112,8 +112,11 @@ def add_game_to_schedule(schedule, year):
         ),
         None,
     )
-    schedule.to_parquet(f"nba/schedules/parquet/nba_schedule_{year}.parquet", index=None)
-    pyreadr.write_rds(f"nba/schedules/rds/nba_schedule_{year}.rds", schedule, compress="gzip")
+    write_schedule(
+        schedule,
+        f"nba/schedules/parquet/nba_schedule_{year}.parquet",
+        f"nba/schedules/rds/nba_schedule_{year}.rds",
+    )
     return
 
 

@@ -20,6 +20,61 @@ final_file_name = "nba/nba_schedule_master.parquet"
 MAX_THREADS = 30
 
 
+#: Every ``id`` / ``*_id`` column of a schedule frame is published as Int64 (R double in the rds), whatever
+#: sportsdataverse-py returns: text ids before its Int64 id contract (#1003), nullable Int64 after it.
+#: ``game_id`` and ``tournament_id`` included.
+def _is_id(col):
+    return col == "id" or col.endswith("_id")
+
+
+_INT_TEXT = r"^-?\d+(\.0+)?$"
+
+
+def cast_ids_int64(df):
+    """Cast every ``id`` / ``*_id`` column to pandas' nullable Int64, in place, and return the frame.
+
+    Strict: text is stripped and ``""`` is null; a whole-number float is accepted and NaN is null; any other
+    value (``"abc"``, ``1.5``) raises ValueError naming the column instead of being nulled.
+    """
+    for col in [c for c in df.columns if _is_id(c)]:
+        s = df[col]
+        if pd.api.types.is_integer_dtype(s):
+            df[col] = s.astype("Int64")
+            continue
+        if pd.api.types.is_float_dtype(s):
+            num = s
+        else:
+            text = s.astype("string").str.strip()
+            text = text.mask(text == "", pd.NA)
+            bad = text.notna() & ~text.fillna("0").str.fullmatch(_INT_TEXT)
+            if bad.any():
+                raise ValueError(f"{col}: not an integer id: {text[bad].unique()[:5].tolist()}")
+            num = pd.to_numeric(text)
+        if (num.notna() & (num % 1 != 0)).any():
+            raise ValueError(f"{col}: not an integer id: {num[num % 1 != 0].unique()[:5].tolist()}")
+        df[col] = num.astype("Int64")
+    return df
+
+
+def write_schedule(df, parquet_path, rds_path=None):
+    """Cast the ids, then write the parquet (Int64) and the rds.
+
+    The rds goes through pyreadr, which cannot write a pandas nullable Int64 holding a missing value and
+    stringifies the nested columns; ``sportsdataverse._rds.write_rds`` keeps NA but rejects those nested
+    columns. So each Int64 column is written to the rds as a double: an R double id, missing as NaN
+    (``is.na()`` is TRUE), as ``tournament_id`` has always been.
+    """
+    df = cast_ids_int64(df)
+    df.to_parquet(parquet_path, index=False)
+    if rds_path is not None:
+        rds = df.copy()
+        for col in rds.columns:
+            if str(rds[col].dtype) == "Int64":
+                rds[col] = rds[col].astype("float64")
+        pyreadr.write_rds(rds_path, rds, compress="gzip")
+    return df
+
+
 def download_game_schedules(seasons, path_to_schedules):
     threads = min(MAX_THREADS, len(seasons))
 
@@ -44,8 +99,11 @@ def download_schedule(season, path_to_schedules=None):
     Path(f"{path_to_schedules}/parquet").mkdir(parents=True, exist_ok=True)
     Path(f"{path_to_schedules}/rds").mkdir(parents=True, exist_ok=True)
     if path_to_schedules is not None:
-        ev.to_parquet(f"{path_to_schedules}/parquet/nba_schedule_{season}.parquet", index=False)
-        pyreadr.write_rds(f"{path_to_schedules}/rds/nba_schedule_{season}.rds", ev, compress="gzip")
+        write_schedule(
+            ev,
+            f"{path_to_schedules}/parquet/nba_schedule_{season}.parquet",
+            f"{path_to_schedules}/rds/nba_schedule_{season}.rds",
+        )
 
 
 def main():
@@ -77,7 +135,7 @@ def main():
         x = pd.read_parquet(
             f"{path_to_schedules}/parquet/{js}.parquet", engine="auto", columns=None
         )
-        glued_data = pd.concat([glued_data, x], axis=0)
+        glued_data = pd.concat([glued_data, cast_ids_int64(x)], axis=0)
     glued_data["status_display_clock"] = glued_data["status_display_clock"].astype(str)
     glued_data.to_parquet(final_file_name, index=False)
     gc.collect()
