@@ -20,7 +20,7 @@ final_file_name = "nba/nba_schedule_master.parquet"
 MAX_THREADS = 30
 
 
-#: Every ``id`` / ``*_id`` column of a schedule frame is published as Int64 (R double in the rds), whatever
+#: Every ``id`` / ``*_id`` column of a schedule frame is published as Int64 (R integer in the rds), whatever
 #: sportsdataverse-py returns: text ids before its Int64 id contract (#1003), nullable Int64 after it.
 #: ``game_id`` and ``tournament_id`` included.
 def _is_id(col):
@@ -59,17 +59,21 @@ def cast_ids_int64(df):
 def write_schedule(df, parquet_path, rds_path=None):
     """Cast the ids, then write the parquet (Int64) and the rds.
 
-    The rds goes through pyreadr, which cannot write a pandas nullable Int64 holding a missing value and
-    stringifies the nested columns; ``sportsdataverse._rds.write_rds`` keeps NA but rejects those nested
-    columns. So each Int64 column is written to the rds as a double: an R double id, missing as NaN
-    (``is.na()`` is TRUE), as ``tournament_id`` has always been.
+    The rds goes through pyreadr, which cannot write a pandas nullable Int64 holding a missing value
+    (``sportsdataverse._rds.write_rds`` keeps NA but rejects the nested schedule columns). So the ids go
+    to the rds as nullable Int32, an R integer with NA (every ESPN id fits in 32 bits; a larger one
+    raises), and any other Int64 column as a double.
     """
     df = cast_ids_int64(df)
     df.to_parquet(parquet_path, index=False)
     if rds_path is not None:
         rds = df.copy()
         for col in rds.columns:
-            if str(rds[col].dtype) == "Int64":
+            if _is_id(col):
+                if (rds[col].abs() > 2**31 - 1).any():  # astype("Int32") would wrap silently
+                    raise ValueError(f"{col}: an id does not fit an R integer")
+                rds[col] = rds[col].astype("Int32")
+            elif str(rds[col].dtype) == "Int64":
                 rds[col] = rds[col].astype("float64")
         pyreadr.write_rds(rds_path, rds, compress="gzip")
     return df

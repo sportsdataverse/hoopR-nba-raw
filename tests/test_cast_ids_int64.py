@@ -3,8 +3,9 @@
 import math
 
 import pandas as pd
+import pyreadr
 import pytest
-from espn_nba_01_schedules_scrape import cast_ids_int64
+from espn_nba_01_schedules_scrape import cast_ids_int64, write_schedule
 
 
 def test_text_float_and_int_ids_become_int64_with_nulls_kept():
@@ -31,3 +32,18 @@ def test_text_float_and_int_ids_become_int64_with_nulls_kept():
 def test_non_integer_id_raises(bad):
     with pytest.raises(ValueError, match="home_id"):
         cast_ids_int64(pd.DataFrame({"home_id": bad}))
+
+
+def test_rds_ids_are_r_integers_with_na(tmp_path):
+    df = pd.DataFrame({"game_id": [401, 402], "home_id": ["12", ""], "attendance": [5, 6]})
+    write_schedule(df, tmp_path / "s.parquet", str(tmp_path / "s.rds"))
+    assert str(pd.read_parquet(tmp_path / "s.parquet")["home_id"].dtype) == "Int64"
+    rds = pyreadr.read_r(str(tmp_path / "s.rds"))[None]
+    assert rds["home_id"].isna().tolist() == [False, True] and rds["game_id"].tolist() == [401, 402]
+
+
+def test_rds_id_too_big_for_r_integer_raises(tmp_path):
+    with pytest.raises(ValueError, match="game_id"):
+        write_schedule(
+            pd.DataFrame({"game_id": [2**31]}), tmp_path / "s.parquet", str(tmp_path / "s.rds")
+        )
