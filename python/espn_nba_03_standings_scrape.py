@@ -49,9 +49,12 @@ def download_standings(
     if out_path.exists() and not rerun_existing:
         return f"skip {season}"
     try:
-        # New unified endpoint: default (return_parsed=False) yields the raw
-        # ESPN response dict.
-        raw: dict[str, Any] = espn_nba_standings(season=int(season))
+        # The unified endpoint now defaults to return_parsed=True (a polars
+        # frame), which write_payload cannot persist: season 2027 was never
+        # captured. Ask for the raw ESPN response dict explicitly.
+        raw: dict[str, Any] = espn_nba_standings(
+            season=int(season), return_parsed=False
+        )
         if not write_payload(out_path, raw, indent=0):
             logger.warning(f"refused error/empty payload: {out_path}")
             return f"refused {out_path.stem}"
