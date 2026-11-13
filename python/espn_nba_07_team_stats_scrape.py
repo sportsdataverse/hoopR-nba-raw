@@ -128,7 +128,7 @@ def scrape_season(season: int, cores: int, rerun_existing: bool) -> None:
 
 
 def main() -> None:
-    start_year = 2002 if args.start_year < 2002 else args.start_year
+    start_year = 1994 if args.start_year < 1994 else args.start_year
     end_year = args.end_year if args.end_year is not None else start_year
     cores = args.cores if args.cores is not None else DEFAULT_THREADS
 
