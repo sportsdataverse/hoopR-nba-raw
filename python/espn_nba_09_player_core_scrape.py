@@ -141,7 +141,7 @@ def download_player_core_batch(athlete_ids, rerun_existing, cores):
 
 
 def main():
-    start_year = max(args.start_year, 2002)  # player_box release starts 2002
+    start_year = max(args.start_year, 1994)  # player_box release starts 1994
     end_year = args.end_year if args.end_year is not None else start_year
     cores = args.cores if args.cores is not None else DEFAULT_THREADS
 
