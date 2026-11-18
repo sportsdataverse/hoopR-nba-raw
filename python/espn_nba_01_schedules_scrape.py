@@ -56,6 +56,51 @@ def cast_ids_int64(df):
     return df
 
 
+#: ESPN moved to 40xxxxxxx game ids with the 2012-13 season; before it, a 4002xxxxx id is ESPN's alternate copy
+#: of a game it already lists under its old id (every Chicago Bulls game of 1998-99 and 1999-2000).
+_ALT_ID_FLOOR = 400_000_000
+_ALT_ID_LAST_SEASON = 2012
+
+
+def clean_schedule(ev, season):
+    """Keep only ``season``'s games, each once.
+
+    ESPN files the 1998-99 lockout games under both the 1999 and the 2000 calendars and keeps a second,
+    4002xxxxx-id copy of every Bulls game of those two seasons (some with off-canon opponent ids, so a
+    (date, home, away) key does not catch them). Three rules, applied in order:
+
+    1. Before 2012-13, drop an alternate id that shares its US Eastern date and a team with an old-id game
+       (an alternate with no such twin is a real game and stays).
+    2. Drop rows ESPN labels with another season.
+    3. Drop rows dated outside 1 July of ``season - 1`` to 31 October of ``season`` (the 2020 bubble ended in
+       October; a lockout game labeled 2000 is dated February-May 1999).
+
+    Every other season's committed schedule is unchanged by these rules (tests/test_clean_schedule.py).
+    """
+    day = pd.to_datetime(ev["date"], utc=True).dt.tz_convert("America/New_York").dt.date
+    gid = pd.to_numeric(ev["game_id"])
+    alt = gid >= _ALT_ID_FLOOR
+    if season <= _ALT_ID_LAST_SEASON and alt.any():
+        old = ev[~alt]
+        seen = {
+            (d, t) for d, h, a in zip(day[~alt], old["home_id"], old["away_id"]) for t in (h, a)
+        }
+        twin = pd.Series(
+            [
+                alt.iloc[i] and ((d, h) in seen or (d, a) in seen)
+                for i, (d, h, a) in enumerate(zip(day, ev["home_id"], ev["away_id"]))
+            ],
+            index=ev.index,
+        )
+        keep = ~twin
+    else:
+        keep = pd.Series(True, index=ev.index)
+    keep &= pd.to_numeric(ev["season"]) == season
+    start, end = pd.Timestamp(f"{season - 1}-07-01").date(), pd.Timestamp(f"{season}-10-31").date()
+    keep &= (day >= start) & (day <= end)
+    return ev[keep].reset_index(drop=True)
+
+
 def write_schedule(df, parquet_path, rds_path=None):
     """Cast the ids, then write the parquet (Int64) and the rds.
 
@@ -99,6 +144,7 @@ def download_schedule(season, path_to_schedules=None):
     ev = ev[ev["season_type"].isin([2, 3, 5])]
 
     ev = ev.drop_duplicates(subset=["game_id"], ignore_index=True)
+    ev = clean_schedule(ev, season)
 
     Path(f"{path_to_schedules}/parquet").mkdir(parents=True, exist_ok=True)
     Path(f"{path_to_schedules}/rds").mkdir(parents=True, exist_ok=True)
